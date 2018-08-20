@@ -18,44 +18,28 @@
 </template>
 
 <script>
+const axios = require('axios');
+
 export default {
   name: "RankingList",
   data: function() {
     return {
-      anchorList: [
-        {
-          id: 0,
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        },
-        {
-          id: 1,
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        }
-      ]
+      anchorList: []
     };
   },
 
 created () {
-    this.anchorList = [
-        {
-          id: 0,
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        },
-        {
-          id: 1,
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        }
-      ]
+   axios.get('http://localhost:8445/ranking-list', {
+	headers: {'Access-Control-Allow-Origin': '*'}
+    }).then((response) => {
+        console.log(response);
+        this.anchorList = response.data
+    }).catch(function (error) {
+        console.log(error);
+    });
   }
 };
+
 </script>
 
 
