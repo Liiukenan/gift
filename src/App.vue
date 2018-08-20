@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <!-- <img src="./assets/logo.png"> -->
+    <RankingList/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import RankingList from './components/RankingList'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    RankingList
   }
 }
 </script>
