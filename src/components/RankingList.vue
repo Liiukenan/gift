@@ -1,17 +1,18 @@
 <template>
     <div class="ranking-list">
-        <h1>礼物之星</h1>
         <div>
-            <md-list>
-                <md-list-item v-for="x of others" :key="x.id">
-                <span>{{x.id}}</span>
-                <md-avatar>
-                    <img v-bind:src="`${x.avatar}`" width="200"/> 
-                </md-avatar>
-                <span class="md-list-item-text">{{x.name}}</span>
-                <span class="value">{{x.value}}</span>
-                </md-list-item>
-            </md-list>
+          <v-ons-list>
+            <v-ons-list-item class="item" v-for="x of others" :key="x.id" modifier="longdivider">
+              <div class="left">
+                <span class="anchor_id">{{x.id}}</span>
+                <img class="list-item__thumbnail item_img" v-bind:src="`${x.avatar}`" />
+              </div>
+              <div class="item_name" >
+                <span class="list-item__title">{{x.name}}</span>
+              </div>
+              <div class="right item_rank">{{x.value}}</div>
+            </v-ons-list-item>
+          </v-ons-list>
         </div>
     </div>
 
@@ -33,11 +34,7 @@ export default {
         rankingList: "rankingList"
     }),
     ...mapGetters({
-        first: "first",
-        second: "second",
-        third: "third",
-        others: "others",
-        mySelf: "mySelf"
+        others: "others"
     })
   },
 
@@ -55,10 +52,32 @@ export default {
 };
 </script>
 
-
 <style>
-.value {
-  color: #22c;
-}
+
+  .item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .anchor_id{
+    margin-left: 10px;
+    color: rgba(0,0,0,0.40);;
+  }
+
+  .item_img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+  }
+
+  .item_name{
+    margin-left: 10px;
+
+  }
+  .item_rank{
+    margin-right: 16px;
+    color: rgba(0,0,0,0.40);;
+  }
+
 </style>
 

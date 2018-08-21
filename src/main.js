@@ -2,17 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
 import Vuex from 'vuex'
-
 import store from './store'
+import 'onsenui/css/onsenui.css';
+import 'onsenui/css/onsen-css-components.css';
+import VueOnsen from 'vue-onsenui';
 
-Vue.use(VueMaterial)
-Vue.use(Vuex)
+Vue.use(VueOnsen);
+Vue.use(Vuex);
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
@@ -20,4 +20,4 @@ new Vue({
   components: { App },
   template: '<App/>',
   store
-})
+});

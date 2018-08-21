@@ -45,6 +45,6 @@ const store = new Vuex.Store({
             state.rankingList = payload.rankingList
         }
     }
-})
+});
 
 export default store

@@ -1,6 +1,6 @@
 var Koa = require('koa');
 var Router = require('koa-router');
-var debug = require('debug')('api-demo')
+var debug = require('debug')('api-demo');
 var cors = require('koa-cors');
 var app = new Koa();
 
@@ -16,8 +16,7 @@ router.get('/ranking-list', (ctx, next) => {
           name: "test",
           avatar: "https://placeimg.com/40/40/people/5",
           value: 100
-        },
-        {
+        }, {
           id: 1,
           jid: "test@lbesec.com",
           name: "test",
@@ -58,7 +57,7 @@ router.get('/ranking-list', (ctx, next) => {
             name: "test",
             avatar: "https://placeimg.com/40/40/people/5",
             value: 100
-        }  
+        }
       ]
 });
 
