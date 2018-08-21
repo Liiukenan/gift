@@ -44,6 +44,7 @@ export default {
 
   methods: {
     fetchData() {
+      this.$i18n.locale = "en" // 切换语言
       console.log("fetchData");
       this.$store.dispatch("FETCH_RANKING_LIST", {myJid: "test"}).then(() => {
       });
