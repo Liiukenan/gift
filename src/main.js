@@ -5,9 +5,12 @@ import App from './App'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import Vuex from 'vuex'
+
+import store from './store'
 
 Vue.use(VueMaterial)
-
+Vue.use(Vuex)
 
 Vue.config.productionTip = false
 
@@ -15,5 +18,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store
 })

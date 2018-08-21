@@ -3,7 +3,7 @@
         <h1>礼物之星</h1>
         <div>
             <md-list>
-                <md-list-item v-for="x of anchorList" :key="x.id">
+                <md-list-item v-for="x of others" :key="x.id">
                 <span>{{x.id}}</span>
                 <md-avatar>
                     <img v-bind:src="`${x.avatar}`" width="200"/> 
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-const axios = require('axios');
+import { mapGetters, mapState } from "vuex";
 
 export default {
   name: "RankingList",
@@ -28,26 +28,37 @@ export default {
     };
   },
 
-created () {
-   axios.get('http://localhost:8445/ranking-list', {
-	headers: {'Access-Control-Allow-Origin': '*'}
-    }).then((response) => {
-        console.log(response);
-        this.anchorList = response.data
-    }).catch(function (error) {
-        console.log(error);
-    });
+  computed:{
+    ...mapState({
+        rankingList: "rankingList"
+    }),
+    ...mapGetters({
+        first: "first",
+        second: "second",
+        third: "third",
+        others: "others",
+        mySelf: "mySelf"
+    })
+  },
+
+  created() {
+    this.fetchData()
+  },
+
+  methods: {
+    fetchData() {
+      console.log("fetchData");
+      this.$store.dispatch("FETCH_RANKING_LIST", {myJid: "test"}).then(() => {
+      });
+    }
   }
 };
-
 </script>
 
 
 <style>
-
-.value{
-	color:#22c;
+.value {
+  color: #22c;
 }
-
 </style>
 
