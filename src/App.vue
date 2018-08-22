@@ -7,6 +7,7 @@
   </div>
 </template>
 
+<script src="./common/jsInteractive.js"></script>
 <script>
 import RankingList from './components/RankingList'
 import TopRank from './components/TopRank'

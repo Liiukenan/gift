@@ -8,17 +8,17 @@
               <img style="width: 35%" src="../resource/top_second.png"/>
               <div class="second_img_wrap" style="margin-top: -10%">
                 <div class="img_box">
-                  <img class="list-item__thumbnail img_content" v-bind:src="`${secondAnchor.avatar}`" />
+                  <img class="list-item__thumbnail img_content" v-bind:src="`${secondAnchor.avatarUrl}`" />
                 </div>
             </div>
               </div>
             </div>
           </div>
           <div class="anchor_name second_anchor">
-          <span class="name">{{secondAnchor.name}}</span>
+          <span class="name">{{secondAnchor.nickname}}</span>
           </div>
           <div class="anchor_rank">
-          <span class="value">{{secondAnchor.value}}</span>
+          <span class="value">{{secondAnchor.ranking}}</span>
           </div>
         </div>
 
@@ -29,17 +29,17 @@
               <img style="width: 40%" src="../resource/top_first.png"/>
               <div class="first_img_wrap" style="margin-top: -10%">
                 <div class="img_box">
-                  <img class="list-item__thumbnail img_content" v-bind:src="`${firstAnchor.avatar}`" />
+                  <img class="list-item__thumbnail img_content" v-bind:src="`${firstAnchor.avatarUrl}`" />
                 </div>
               </div>
             </div>
           </div>
           </div>
           <div class="anchor_name first_name">
-            <span class="name">{{firstAnchor.name}}</span>
+            <span class="name">{{firstAnchor.nickname}}</span>
           </div>
           <div class="anchor_rank">
-            <span class="value">{{firstAnchor.value}}</span>
+            <span class="value">{{firstAnchor.ranking}}</span>
           </div>
         </div>
 
@@ -50,17 +50,17 @@
                 <img style="width: 30%" src="../resource/top_third.png"/>
                 <div class="third_img_wrap" style="margin-top: -10%">
                   <div class="img_box">
-                    <img class="list-item__thumbnail img_content" v-bind:src="`${thirdAnchor.avatar}`" />
+                    <img class="list-item__thumbnail img_content" v-bind:src="`${thirdAnchor.avatarUrl}`" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="anchor_name">
-            <span class="name">{{thirdAnchor.name}}</span>
+            <span class="name">{{thirdAnchor.nickname}}</span>
           </div>
           <div class="anchor_rank">
-            <span class="value">{{thirdAnchor.value}}</span>
+            <span class="value">{{thirdAnchor.ranking}}</span>
           </div>
         </div>
 

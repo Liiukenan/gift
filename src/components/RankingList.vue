@@ -2,15 +2,15 @@
     <div class="ranking-list">
         <div>
           <v-ons-list>
-            <v-ons-list-item class="item" v-for="x of others" :key="x.id" modifier="longdivider">
+            <v-ons-list-item class="item" v-for="x of others" :key="x.ranking" modifier="longdivider">
               <div class="left">
-                <span class="anchor_id">{{x.id}}</span>
-                <img class="list-item__thumbnail item_img" v-bind:src="`${x.avatar}`" />
+                <span class="anchor_id">{{x.ranking}}</span>
+                <img class="list-item__thumbnail item_img" v-bind:src="`${x.avatarUrl}`" />
               </div>
               <div class="item_name" >
-                <span class="list-item__title">{{x.name}}</span>
+                <span class="list-item__title">{{x.nickname}}</span>
               </div>
-              <div class="right item_rank">{{x.value}}</div>
+              <div class="right item_rank">{{x.gifts}}</div>
             </v-ons-list-item>
           </v-ons-list>
         </div>
