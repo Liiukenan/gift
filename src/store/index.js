@@ -13,13 +13,13 @@ const store = new Vuex.Store({
     },
     getters: {
         first: state => {
-            return state.rankingList[0]
+            return state.rankingList[0] == undefined? {} : state.rankingList[0]
         },
         second: state => {
-            return state.rankingList[1]
+            return state.rankingList[1] == undefined? {} : state.rankingList[1]
         },
         third: state => {
-            return state.rankingList[2]
+            return state.rankingList[2] == undefined? {} : state.rankingList[2]
         },
         others: state => {
             return state.rankingList.slice(3)
