@@ -9,56 +9,17 @@ app.use(cors());
 var router = new Router();
 
 router.get('/ranking-list', (ctx, next) => {
-    ctx.body = [
-        {
-          id: 0,
-          jid: "test@lbesec.com",
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        }, {
-          id: 1,
-          jid: "test@lbesec.com",
-          name: "test",
-          avatar: "https://placeimg.com/40/40/people/5",
-          value: 100
-        },
-        {
-            id: 2,
+    let ret = [];
+    for(var i = 0; i < 30; i++){
+        ret.push({
+            id: i,
             jid: "test@lbesec.com",
             name: "test",
             avatar: "https://placeimg.com/40/40/people/5",
             value: 100
-        },
-        {
-            id: 3,
-            jid: "test@lbesec.com",
-            name: "test",
-            avatar: "https://placeimg.com/40/40/people/5",
-            value: 100
-        },
-        {
-            id: 4,
-            jid: "test@lbesec.com",
-            name: "test",
-            avatar: "https://placeimg.com/40/40/people/5",
-            value: 100
-        },
-        {
-            id: 5,
-            jid: "test@lbesec.com",
-            name: "test",
-            avatar: "https://placeimg.com/40/40/people/5",
-            value: 100
-        },
-        {
-            id: 6,
-            jid: "test@lbesec.com",
-            name: "test",
-            avatar: "https://placeimg.com/40/40/people/5",
-            value: 100
-        }
-      ]
+        });
+    }
+    ctx.body = ret;
 });
 
 app
