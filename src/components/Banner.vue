@@ -81,7 +81,8 @@
 
   .banner_float {
     right: 0;
-    font-size: 10px;
+    font-size: 12px;
+    color: white;
     margin-top: 8px;
     text-transform: Capitalize;
     background-image:  linear-gradient(-180deg, #CA8EFF 0%, #007EE9 100%);

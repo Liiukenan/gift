@@ -1,6 +1,5 @@
 <template>
-  <div id="app" class="scroll-y" >
-
+  <v-app id="app" class="scroll-y" >
     <banner />
     <v-tabs centered hide-slider="true"  @input="changeTab">
       <div class="tab_title">
@@ -29,9 +28,8 @@
         </v-tab-item>
     </v-tabs>
     <my-self class="mine_rank" />
-  </div>
+  </v-app>
 </template>
-
 
 <script>
 import RankingList from './components/RankingList'
@@ -61,7 +59,6 @@ export default {
   }
 }
 </script>
-
 
 <style>
 #app {
