@@ -35,6 +35,7 @@
   </div>
 </template>
 
+
 <script>
 import RankingList from './components/RankingList'
 import TopRank from './components/TopRank'
@@ -63,6 +64,7 @@ export default {
   }
 }
 </script>
+
 
 <style>
 #app {

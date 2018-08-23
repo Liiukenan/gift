@@ -2,7 +2,7 @@
     <div class="ranking-list">
         <div>
           <v-ons-list>
-            <v-ons-list-item class="item" v-for="x of others" :key="x.ranking" modifier="longdivider">
+            <v-ons-list-item class="item" v-for="x of others" :key="x.ranking" modifier="longdivider" v-on:click="personDetail(x.jid)">
               <div class="left">
                 <span class="anchor_id">{{x.ranking}}</span>
                 <img class="list-item__thumbnail item_img" v-bind:src="`${x.avatarUrl}`" />
@@ -20,6 +20,7 @@
 
 <script>
 import { mapGetters, mapState } from "vuex";
+import {jumpPersonDetail} from "../common/jsInteractive"
 
 export default {
   name: "RankingList",
@@ -44,10 +45,12 @@ export default {
 
   methods: {
     fetchData() {
-      this.$i18n.locale = "en" // 切换语言
       console.log("fetchData");
-      this.$store.dispatch("FETCH_RANKING_LIST", {myJid: "test"}).then(() => {
+      this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
       });
+    },
+    personDetail:function (jid) {
+      jumpPersonDetail(jid)
     }
   }
 };

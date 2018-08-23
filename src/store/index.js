@@ -50,6 +50,7 @@ const store = new Vuex.Store({
         // }
         mySelf:state => {
           if (state.hasOwnProperty("profile")){
+            console.log(state.rankingList["profile"])
             return state.rankingList["profile"];
           } else {
             return undefined
@@ -60,7 +61,8 @@ const store = new Vuex.Store({
         FETCH_RANKING_LIST(context, options){
             //发布的时候换成服务端的域名
             console.log("request get options: ", options)
-            return Vue.axios.post('http://localhost:8445/ranking-list',qs.stringify({"jid":"xxx@xxx","role":"user"})).then((response) => {
+            console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat);
+            return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":"user_1007409@bj2.1-1.io"})).then((response) => {
                 console.log("response", response.data)
                 context.commit("loadRankingList", {rankingList: response.data})
             })

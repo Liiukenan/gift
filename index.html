@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>zakzak-web</title>
-    <meta charset="utf-8">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <meta name="theme-color" content="#f60">
-    <style>
-      #skip a {  position:absolute;  left:-10000px;  top:auto;  width:1px;  height:1px;  overflow:hidden;  }
-      #skip a:focus {  position:static;  width:auto;  height:auto;  }
-    </style>
+<head>
+  <title>zakzak-web</title>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+  <meta name="theme-color" content="#f60">
+  <style>
+    #skip a {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
 
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    #skip a:focus {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+  </style>
+
+</head>
+<script>
+  window.plat = "web";
+  window.jid = "";
+  window.lang = "en";
+  /*
+   *页面加载完成，获取url里面的参数
+   * url形式：http://xxxxxxxxx?plat=ios&jid=xxx@123&lang=en
+   */
+  window.onload = function () {
+    //获取url中?后的字符串
+    var searchStr = location.search;
+    //将searchStr字符串分割成数组，数组中的每一个元素为一个参数和参数值
+    var searchs = searchStr.split("&");
+    //获得第一个参数和值,plat
+    if (searchs.length >= 1 && searchs[0] != null) {
+      var platTmp = searchs[0].split("=");
+      plat = platTmp[1];
+    }
+    if (searchs.length >= 2 && searchs[1] != null) {
+      var jidTmp = searchs[1].split("=");
+      jid = jidTmp[1];
+    }
+    if (searchs.length >= 3 && searchs[2] != null){
+      var langTmp = searchs[1].split("=");
+      lang = langTmp[1];
+    }
+  }
+</script>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
 </html>

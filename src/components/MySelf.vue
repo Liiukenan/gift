@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mine_root" >
+  <v-container class="mine_root" v-on:click="jumpOther('user')">
     <v-layout fill-height row justify-start  align-center>
       <v-flex xs3>
         <div class="mine_ranking">99+</div>
@@ -25,6 +25,7 @@
 
 <script>
   import {mapGetters} from "vuex";
+  import {jumpOnlineUser,jumpMain} from "../common/jsInteractive"
 
   export default {
         name: "MySelf",
@@ -33,6 +34,15 @@
            count:0
          }
       },
+    methods:{
+      jumpOther:function (role) {
+        if (role === "user"){
+          jumpMain();
+        } else {
+          jumpOnlineUser();
+        }
+      }
+    },
     computed:{
       ...mapGetters({
         mySelf: "mySelf"
