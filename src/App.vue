@@ -1,25 +1,27 @@
 <template>
   <div  id="app" class="scroll-y" >
     <banner />
-    <v-tabs centered>
-        <v-tab class="tab_item">
-          <div>
-            Receiving gifts
-          </div>
-        </v-tab>
-        <v-tab >
-          <v-btn round depressed disabled class="tab_item" color="white">
-            Sending gifts
-          </v-btn>
-        </v-tab>
+    <v-tabs centered hide-slider="true"  @input="changeTab">
+      <div class="tab_title">
+          <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+            <div>
+              Receiving gifts
+            </div>
+          </v-tab>
+          <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+            <div>
+              Sending gifts
+            </div>
+          </v-tab>
+        </div>
         <v-tab-item>
-          <v-card color="white">
+          <v-card color="white" class="tab_card">
             <top-rank/>
             <ranking-list class="rank_item_list"/>
           </v-card>
         </v-tab-item>
         <v-tab-item>
-          <v-card color="white">
+          <v-card color="white" class="tab_card">
             <top-rank/>
             <ranking-list class="rank_item_list"/>
           </v-card>
@@ -29,7 +31,6 @@
   </div>
 </template>
 
-<script src="./common/jsInteractive.js"></script>
 <script>
 import RankingList from './components/RankingList'
 import TopRank from './components/TopRank'
@@ -43,6 +44,18 @@ export default {
     TopRank,
     Banner,
     MySelf
+  },
+  data:function(){
+    return{
+      isTabOne: true,
+      isTabTwo:false
+    }
+  },
+  methods:{
+    changeTab(val){
+       this.isTabOne = val === 0;
+       this.isTabTwo = val === 1;
+    }
   }
 }
 </script>
@@ -65,11 +78,41 @@ export default {
     height: 70px;
   }
   .rank_item_list{
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
-  .tab_item{
+  .tab_title{
+    height: 45px;
+    border-radius: 50px;
+    background: rgba(158,0,232, 1);
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .selected_tab_item{
+    border-radius: 50px;
+    background: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     text-transform: Capitalize;
     color: rgba(158,0,232, 1);
+  }
+  .unselected_tab_item{
+    font-size: 16px;
+    font-weight: bold;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: Capitalize;
+    color: white;
+  }
+  .tab_card{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
   }
 
 </style>
