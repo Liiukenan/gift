@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mine_root" v-on:click="jumpOther('user')">
+  <v-container class="mine_root" v-on:click="jumpOther(mySelf['role'])">
     <v-layout fill-height row justify-start  align-center>
       <v-flex xs3>
         <div class="mine_ranking">{{mySelf.ranking}}</div>
@@ -10,12 +10,15 @@
         </v-avatar>
       </v-flex>
       <v-flex offset-xs1>
-        <div class="mine_des text-xs-left">gifts are needed to move up one place </div>
+        <div class="mine_des text-xs-left">{{$t("Ranking.distance").replace("%s",mySelf.distance+1)}}</div>
       </v-flex>
 
       <v-flex>
         <div class="mine_to">
-          <v-btn round color="red" dark>To Be Top 1</v-btn>
+          <v-btn round color="red" dark>
+            <p v-if="mySelf['role'] == 'user'">{{$t("Ranking.helpPunching")}}</p>
+            <p v-if="mySelf['role'] == 'anchor'">{{$t("Ranking.punchingList")}}</p>
+          </v-btn>
         </div>
       </v-flex>
     </v-layout>
@@ -36,7 +39,7 @@
       },
     methods:{
       jumpOther:function (role) {
-        if (role === "user"){
+        if (role == "user"){
           jumpMain();
         } else {
           jumpOnlineUser();

@@ -14,7 +14,7 @@
               fab right class="banner_float"
               slot="activator"
               dark>
-              Details
+              {{$t("Ranking.ruleDesc")}}
             </v-btn>
 
             <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px">
@@ -42,7 +42,7 @@
       <v-spacer/>
       <v-flex xs1 class="banner_des">
         <v-btn outline round small color="activity_time_color" class="banner_des_btn" style="margin-left: auto;margin-right: auto">
-          Activity time:2018.3.3 - 20184.3
+          Activity time:2018.3.3 - 2018.4.3
         </v-btn>
       </v-flex>
       <v-spacer/>

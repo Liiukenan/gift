@@ -23,6 +23,7 @@ router.post('/ranking-list',koaBody(),(ctx, next) => {
   profile["gifts"] = 100;
   profile["distance"] = 0;
   profile["ranking"] = "100+";
+  profile["role"] = "user";
 
   let receiveObj = [];
   for (var i = 0; i < 100; i++) {

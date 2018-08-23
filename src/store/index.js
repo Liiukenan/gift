@@ -43,16 +43,12 @@ const store = new Vuex.Store({
             return undefined
           }
         },
-        // mySelf: (state, myJid) => {
-        //     return state.rankingList.filter(item => {
-        //         item.jid = myJid
-        //     })
-        // }
-        mySelf:state => {
-          if (state.hasOwnProperty("profile")){
-            console.log(state.rankingList["profile"])
+        mySelf: state => {
+          if (state.rankingList.hasOwnProperty("profile")){
+            console.log("myprofile" + state.rankingList["profile"])
             return state.rankingList["profile"];
           } else {
+            console.log("no profile")
             return undefined
           }
         }
