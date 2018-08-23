@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import 'vue-material/dist/theme/default.css'
+import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 
@@ -10,10 +12,12 @@ import store from './store'
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import VueOnsen from 'vue-onsenui';
+import Vuetify from 'vuetify';
 
 Vue.use(VueOnsen);
-Vue.use(Vuex)
-Vue.use(VueI18n)
+Vue.use(Vuex);
+Vue.use(VueI18n);
+Vue.use(Vuetify);
 
 const i18n = new VueI18n({
   locale: 'zh',    // 语言标识
@@ -23,7 +27,6 @@ const i18n = new VueI18n({
     'en': require('./common/lang/en')    // 英文语言包
   }
 })
-
 
 Vue.config.productionTip = false;
 

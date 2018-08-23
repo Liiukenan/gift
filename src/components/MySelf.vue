@@ -1,16 +1,26 @@
 <template>
-  <div id="my_self" class="mine_root">
-    <div class="left">
-      <span class="anchor_id">{{mySelf.jid}}</span>
-      <img class="list-item__thumbnail item_img" v-bind:src="`${mySelf.avatarUrl}`" />
-    </div>
-    <div class="item_name" >
-      <span class="list-item__title">{{mySelf.nickname}}</span>
-    </div>
-    <div class="right item_rank">{{mySelf.ranking}}</div>
+  <v-container class="mine_root" >
+    <v-layout fill-height row justify-start  align-center>
+      <v-flex xs3>
+        <div class="mine_ranking">99+</div>
+      </v-flex>
+      <v-flex xs2>
+        <v-avatar color="grey lighten-4">
+          <img >
+        </v-avatar>
+      </v-flex>
+      <v-flex offset-xs1>
+        <div class="mine_des text-xs-left">gifts are needed to move up one place </div>
+      </v-flex>
 
-  </div>
+      <v-flex>
+        <div class="mine_to">
+          <v-btn round color="red" dark>To Be Top 1</v-btn>
+        </div>
+      </v-flex>
+    </v-layout>
 
+  </v-container>
 </template>
 
 <script>
@@ -35,7 +45,20 @@
 
   .mine_root{
     width: 100%;
-    height: 7%;
+    box-shadow:-0px 5px 15px black;
+    background: white;
+  }
+
+  .mine_ranking{
+    color: rgba(0,0,0,0.20);;
+  }
+
+  .mine_des{
+    color: rgba(0,0,0,0.60);
+  }
+
+  .mine_to{
+    color: white;
   }
 
 </style>
