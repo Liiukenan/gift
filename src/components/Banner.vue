@@ -6,40 +6,32 @@
         <div class="text-xs-center">
           <v-dialog
             v-model="dialog"
-            width="600">
+            width="90%"
+            height="80%">
+
             <v-btn
-              fab color="pink" right class="banner_float"
+              fab right class="banner_float"
               slot="activator"
               dark>
               Details
             </v-btn>
 
-            <v-card color="white">
-              <v-card-title
-                class="headline grey lighten-2"
-                primary-title>
-                Privacy Policy
-              </v-card-title>
+            <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px">
+              <v-btn flat icon color="pink" style="position: absolute; right: 1%;">
+                <v-icon></v-icon>
+              </v-btn>
+              <div style="text-align: center;">
+                RULE DESCRIPTION
+              </div>
+              <spacer/>
+              <div>
+                Activity Time: 
+              </div>
+              <spacer/>
+              <div>
+                Activity Result: 
+              </div>
 
-              <v-card-text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-              </v-card-text>
-
-              <v-divider></v-divider>
-
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn
-                  color="primary"
-                  flat
-                  @click="dialog = false">
-                  I accept
-                </v-btn>
-              </v-card-actions>
             </v-card>
           </v-dialog>
         </div>
@@ -59,7 +51,7 @@
     name: "Banner",
      data () {
       return {
-        dialog: false
+        dialog: true
       }
     }
   }
@@ -89,10 +81,11 @@
 
   .banner_float {
     right: 0;
-    color: white;
     font-size: 10px;
-    margin-top: 15px;
+    margin-top: 8px;
     text-transform: Capitalize;
+    background-image:  linear-gradient(-180deg, #CA8EFF 0%, #007EE9 100%);
+    box-shadow: 0 3px 4px 0;
   }
 
   .banner_img {

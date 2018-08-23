@@ -1,8 +1,6 @@
 <template>
   <div id="app" class="scroll-y" >
-    <v-app
-    light
-    id="inspire">
+
     <banner />
     <v-tabs centered hide-slider="true"  @input="changeTab">
       <div class="tab_title">
@@ -31,7 +29,6 @@
         </v-tab-item>
     </v-tabs>
     <my-self class="mine_rank" />
-     </v-app>
   </div>
 </template>
 
