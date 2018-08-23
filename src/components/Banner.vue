@@ -25,11 +25,11 @@
               </div>
               <spacer/>
               <div>
-                Activity Time: 
+                Activity Time:
               </div>
               <spacer/>
               <div>
-                Activity Result: 
+                Activity Result:
               </div>
 
             </v-card>
@@ -38,7 +38,7 @@
 
       </v-flex>
       <v-flex xs8 offset-xs3 class="banner_des">
-        <v-btn outline round disabled small class="banner_des_btn">
+        <v-btn outline round small color="activity_time_color" class="banner_des_btn">
           Activity time:2018.3.3 - 20184.3
         </v-btn>
       </v-flex>
@@ -95,8 +95,7 @@
 
   .banner_des_btn {
     font-size: 5px;
-    color: rgba(248, 240, 250, 0.80);
-    color: white;
+    background-image:linear-gradient(90deg, #FFFFFF 0%,#FF6841 50%, #FFFFFF 100%) ;
     text-transform: Capitalize;
   }
 

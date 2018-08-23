@@ -2,11 +2,11 @@
   <v-container class="mine_root" v-on:click="jumpOther('user')">
     <v-layout fill-height row justify-start  align-center>
       <v-flex xs3>
-        <div class="mine_ranking">99+</div>
+        <div class="mine_ranking">{{mySelf.ranking}}</div>
       </v-flex>
       <v-flex xs2>
         <v-avatar color="grey lighten-4">
-          <img >
+          <img v-bind:src="`${mySelf.avatarUrl}`">
         </v-avatar>
       </v-flex>
       <v-flex offset-xs1>

@@ -18,7 +18,7 @@
         <span class="name">{{secondAnchor.nickname}}</span>
       </div>
       <div class="anchor_rank">
-        <span class="value">{{secondAnchor.ranking}}</span>
+        <span class="value">{{secondAnchor.gifts}}</span>
       </div>
     </div>
 
@@ -39,7 +39,7 @@
         <span class="name">{{firstAnchor.nickname}}</span>
       </div>
       <div class="anchor_rank">
-        <span class="value">{{firstAnchor.ranking}}</span>
+        <span class="value">{{firstAnchor.gifts}}</span>
       </div>
     </div>
 

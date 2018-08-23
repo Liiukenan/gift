@@ -17,7 +17,13 @@ import Vuetify from 'vuetify';
 Vue.use(VueOnsen);
 Vue.use(Vuex);
 Vue.use(VueI18n);
-Vue.use(Vuetify);
+Vue.use(Vuetify,{
+  theme:{
+    app_bg:'#E235A6',
+    tab_text_color:'#9E00E8',
+    activity_time_color:'#CCF8F0FA'
+  }
+});
 
 
 const i18n = new VueI18n({
@@ -27,7 +33,7 @@ const i18n = new VueI18n({
     'en': require('./common/lang/en'),    // 英文语言包
     'zh': require('./common/lang/zh')     // 中文语言包
   }
-})
+});
 
 Vue.config.productionTip = false;
 

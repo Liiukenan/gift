@@ -1,34 +1,34 @@
 <template>
-  <v-app id="app" class="scroll-y" >
-    <banner />
-    <v-tabs centered hide-slider="true"  @input="changeTab">
-      <div class="tab_title">
-          <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
-            <div>
-              Receiving gifts
-            </div>
-          </v-tab>
-          <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
-            <div>
-              Sending gifts
-            </div>
-          </v-tab>
-        </div>
-        <v-tab-item>
-          <v-card color="white" class="tab_card">
-            <top-rank/>
-            <ranking-list class="rank_item_list"/>
-          </v-card>
-        </v-tab-item>
-        <v-tab-item>
-          <v-card color="white" class="tab_card">
-            <top-rank/>
-            <ranking-list class="rank_item_list"/>
-          </v-card>
-        </v-tab-item>
-    </v-tabs>
-    <my-self class="mine_rank" />
-  </v-app>
+    <v-app id="app" light class="scroll-y">
+      <banner />
+      <v-tabs centered hide-slider="true" @input="changeTab" color="app_bg">
+        <div class="tab_title">
+            <v-tab v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+              <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
+                Receiving gifts
+              </div>
+            </v-tab>
+            <v-tab v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+              <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
+                Sending gifts
+              </div>
+            </v-tab>
+          </div>
+          <v-tab-item>
+            <v-card color="white" class="tab_card">
+              <top-rank/>
+              <ranking-list class="rank_item_list"/>
+            </v-card>
+          </v-tab-item>
+          <v-tab-item>
+            <v-card color="white" class="tab_card">
+              <top-rank/>
+              <ranking-list class="rank_item_list"/>
+            </v-card>
+          </v-tab-item>
+      </v-tabs>
+      <my-self class="mine_rank" />
+    </v-app>
 </template>
 
 <script>
@@ -48,7 +48,12 @@ export default {
   data:function(){
     return{
       isTabOne: true,
-      isTabTwo:false
+      isTabTwo:false,
+      color:0,
+      colors:[
+          'white',
+          'tab_text_color'
+      ]
     }
   },
   methods:{
@@ -98,7 +103,6 @@ export default {
     padding-left: 10px;
     padding-right: 10px;
     text-transform: Capitalize;
-    color: rgba(158,0,232, 1);
   }
   .unselected_tab_item{
     font-size: 16px;
@@ -107,6 +111,11 @@ export default {
     padding-left: 10px;
     padding-right: 10px;
     text-transform: Capitalize;
+  }
+  .selected_tab_text{
+    color: rgba(158,0,232, 1);
+  }
+  .unselected_tab_text{
     color: white;
   }
   .tab_card{
