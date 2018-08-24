@@ -16,22 +16,23 @@
           </div>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <top-rank tabIndex="0"/>
+              <TopRank tabIndex="0"/>
               <RankingList tab_index="0" class="rank_item_list"/>
             </v-card>
           </v-tab-item>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <top-rank tabIndex="1"/>
+              <TopRank tabIndex="1"/>
               <ranking-list tab_index ="1" class="rank_item_list"/>
             </v-card>
           </v-tab-item>
       </v-tabs>
-      <my-self class="mine_rank" />
+      <my-self v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" />
     </v-app>
 </template>
 
 <script>
+  import {mapGetters} from "vuex";
   import RankingList from './components/RankingList'
   import TopRank from './components/TopRank'
   import MySelf from './components/MySelf'
@@ -54,12 +55,19 @@ export default {
           'white',
           'tab_text_color'
       ],
+      tabIndex:0
     }
+  },
+  computed:{
+    ...mapGetters({
+      mySelf: "mySelf"
+    })
   },
   methods:{
     changeTab(val){
        this.isTabOne = val === 0;
        this.isTabTwo = val === 1;
+       this.tabIndex = val;
     }
   }
 }

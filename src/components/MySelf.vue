@@ -1,24 +1,22 @@
 <template>
   <v-container class="mine_root" v-on:click="jumpOther(mySelf['role'])">
     <v-layout fill-height row justify-start  align-center>
-      <v-flex xs3>
-        <div class="mine_ranking">{{mySelf.ranking}}</div>
+      <v-flex xs1>
+        <div class="mine_ranking" style="font-size: 10px">{{mySelf.ranking}}</div>
       </v-flex>
-      <v-flex xs2>
+      <v-flex xs3>
         <v-avatar color="grey lighten-4">
           <img v-bind:src="`${mySelf.avatarUrl}`">
         </v-avatar>
       </v-flex>
-      <v-flex offset-xs1>
-        <div class="mine_des text-xs-left">{{$t("ActivityPerson.distance_100").replace("@@@",1)}}</div>
+      <v-flex xs7>
+        <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
 
-      <v-flex>
-        <div class="mine_to">
+      <v-flex xs4>
           <v-btn round color="red" dark>
            {{$t("ActivityPage.bt_help_punching")}}
           </v-btn>
-        </div>
       </v-flex>
     </v-layout>
 
@@ -26,14 +24,14 @@
 </template>
 
 <script>
-  import {mapGetters} from "vuex";
   import {jumpOnlineUser,jumpMain} from "../common/jsInteractive"
 
   export default {
         name: "MySelf",
       data:function () {
          return{
-           count:0
+           count:0,
+           rankDes:''
          }
       },
     methods:{
@@ -46,9 +44,22 @@
       }
     },
     computed:{
-      ...mapGetters({
-        mySelf: "mySelf"
-      })
+      mySelf:function () {
+        var data = this.$store.getters.mySelf;
+        var rank = data.ranking;
+        var des = "";
+        if (rank == '99+'){
+          des = this.$t('ActivityPerson.distance_150').replace("%s",mySelf.distance+1);
+        }else if(rank <= 100){
+          des = this.$t("ActivityPerson.distance_100").replace("%s",mySelf.distance+1);
+        }else if (rank == '--'){
+          des = this.$t("ActivityPerson.distance_else");
+        }else if(rank == 1){
+          des = this.$t("ActivityPerson.frist");
+        }
+        this.rankDes = des;
+        return data;
+      }
     }
     }
 </script>
@@ -67,10 +78,6 @@
 
   .mine_des{
     color: rgba(0,0,0,0.60);
-  }
-
-  .mine_to{
-    color: white;
   }
 
 </style>

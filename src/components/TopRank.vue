@@ -4,7 +4,7 @@
         <v-flex xs10>
           <v-layout column align-center justify-end>
             <img style="width: 35px;z-index: 1" src="../resource/top_second.png"/>
-            <img class="second_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?receiverTop[1].avatarUrl : sendTop[1].avatarUrl}`"/>
+            <img class="second_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ? receiverTop[1].avatarUrl : sendTop[1].avatarUrl}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
         </v-flex>
@@ -89,10 +89,6 @@
   .top_anchor {
     flex: 1;
     padding-top: 5%;
-  }
-
-  .top_crown{
-    top: 0;
   }
 
   .first_img {
