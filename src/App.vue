@@ -3,12 +3,12 @@
       <banner />
       <v-tabs centered hide-slider @input="changeTab" color="app_bg">
         <div class="tab_title">
-            <v-tab v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+            <v-tab style="min-width: 120px" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
               <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
                 {{$t("ActivityPage.tab_receive")}}
               </div>
             </v-tab>
-            <v-tab v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+            <v-tab style="min-width: 120px" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
               <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
                 {{$t("ActivityPage.tab_send")}}
               </div>
@@ -27,7 +27,10 @@
             </v-card>
           </v-tab-item>
       </v-tabs>
-      <my-self v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" />
+      <transition name="slide-fade">
+        <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" />
+        <!--<p v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" >dasdas</p>-->
+      </transition>
     </v-app>
 </template>
 
@@ -139,6 +142,16 @@ export default {
     padding: 5px;
     margin: 10px;
     border-radius: 15px;
+  }
+  .slide-fade-enter-active {
+    transition: all 0.3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateY(70px);
+    opacity: 0;
   }
 
 </style>

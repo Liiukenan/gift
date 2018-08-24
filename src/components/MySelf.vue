@@ -12,9 +12,8 @@
       <v-flex xs7>
         <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
-
       <v-flex xs4>
-          <v-btn round color="red" dark style="textTransform:none">
+          <v-btn class="mine_btn" round color="red" dark style="textTransform:none">
             <span v-show="mySelf['role']=='user'">{{$t("ActivityPage.bt_help_punching")}}</span>
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
@@ -79,6 +78,9 @@
 
   .mine_des{
     color: rgba(0,0,0,0.60);
+  }
+  .mine_btn{
+    text-transform: capitalize;
   }
 
 </style>

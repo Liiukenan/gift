@@ -1,10 +1,12 @@
 <template>
   <v-container text-xs-center class="top_rank">
-    <v-layout column justify-end align-center class="top_anchor">
+    <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
         <v-flex xs10>
           <v-layout column align-center justify-end>
             <img style="width: 35px;z-index: 1" src="../resource/top_second.png"/>
-            <img class="second_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
+            <img class="second_img" style="margin-top: -10px"
+                 onerror="this.src='../resource/default_head'"
+                 v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
         </v-flex>
@@ -16,11 +18,14 @@
         </v-flex>
     </v-layout>
 
-    <v-layout column justify-end align-center class="top_anchor">
+    <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
       <v-flex xs10>
         <v-layout column align-center>
           <img style="width: 40px;z-index: 1" src="../resource/top_first.png"/>
-          <img class="first_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
+          <img class="first_img"
+               style="margin-top: -10px"
+               onerror="src='../resource/default_head'"
+               v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
       </v-flex>
@@ -32,7 +37,7 @@
       </v-flex>
     </v-layout>
 
-    <v-layout column justify-end align-center class="top_anchor">
+    <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
       <v-flex xs10 column>
         <v-layout column align-center>
           <img style="width: 30px;z-index: 1" src="../resource/top_third.png"/>
@@ -66,6 +71,7 @@
     props:['tabIndex'],
     methods: {
       personDetail:function (jid) {
+        console.log("jid = " + jid);
         jumpPersonDetail(jid)
       }
     },
@@ -98,7 +104,7 @@
     width: 88px;
     height: 88px;
     border-radius: 50%;
-    border-color: rgba(248, 231, 28, 1);
+    border-color: rgba(248, 231, 28, 1) ;
     border-style: outset;
     border-width: 2px;
   }
