@@ -7,6 +7,14 @@ module.exports = {
     assignGift:'指定礼物',
     distance:'距离前一名还差%s个礼物',
     helpPunching:'帮她冲榜',
-    ruleDetail:'xxxxxxxxxxx'
+    ruleDetail:'xxxxxxxxxxx',
+
+    dialog: {
+      title: "RULE DESCRIPTION",
+      content1: "</p>Activity Time: 2018.3.3 - 2018.4.3</p>",
+      content2: "Activity Rules: rank the highest number of designed gifts from anchor during the event",
+      content3: "Reward: Anchor awards: first XXX, second XXX",
+      content4: "User Reward: XXX"
+    }
   }
 }

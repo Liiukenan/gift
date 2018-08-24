@@ -18,20 +18,35 @@
             </v-btn>
 
             <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px">
-              <v-btn flat icon color="pink" style="position: absolute; right: 1%;">
-                <v-icon></v-icon>
-              </v-btn>
-              <div style="text-align: center;">
-                RULE DESCRIPTION
+              <button v-on:click="onCloseBtn" style="width: 20px; height: 20px; position: absolute; right: 10px; top: 10px">
+                <img src="../assets/ic_closed.png" style="width: 20px; height: 20px">
+              </button>
+              <!-- Title -->
+              <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;">
+                {{$t("Ranking.dialog.title")}}
               </div>
-              <spacer/>
-              <div>
-                Activity Time:
+              <v-spacer/>
+
+              <!-- first desc -->
+              <div style="text-align: left; width: 100%; margin-top: 10px;">
+                <p v-html="$t('Ranking.dialog.content1')"></p>
               </div>
-              <spacer/>
-              <div>
-                Activity Result:
+              <v-spacer/>
+
+              <div style="text-align: left; width: 100%, margin-top: 10px;">
+                <p v-html="$t('Ranking.dialog.content2')"></p>
               </div>
+              <v-spacer/>
+
+              <div style="text-align: left; width: 100%; margin-top: 10px;">
+                <p v-html="$t('Ranking.dialog.content3')"></p>
+              </div>
+              <v-spacer/>
+
+              <div style="text-align: left; width: 100%; margin-top: 10px;">
+                <p v-html="$t('Ranking.dialog.content4')"></p>
+              </div>
+              <v-spacer/>
 
             </v-card>
           </v-dialog>
@@ -55,7 +70,13 @@
     name: "Banner",
      data () {
       return {
-        dialog: true
+        dialog: false
+      }
+    },
+    methods: {
+      onCloseBtn(event){
+        console.log("close btn clicked")
+        this.dialog = false
       }
     }
   }
@@ -84,9 +105,9 @@
 
   .banner_float {
     right: 0;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
-    margin-top: 8px;
+    margin-top: 0px;
     text-transform: Capitalize;
     background-image:  linear-gradient(-180deg, #CA8EFF 0%, #007EE9 100%);
     box-shadow: 0 3px 4px 0;
