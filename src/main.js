@@ -29,8 +29,15 @@ const i18n = new VueI18n({
   locale: lang,    // 语言标识
   // this.$i18n.locale, // 通过切换locale的值来实现语言切换
   messages: {
-    'en': require('./common/lang/en'),    // 英文语言包
-    'zh': require('./common/lang/zh')     // 中文语言包
+    'en': require('./common/lang/en'),
+    'ar': require('./common/lang/ar'),
+    'de': require('./common/lang/de'),
+    'es': require('./common/lang/es'),
+    'fr': require('./common/lang/fr'),
+    'hi': require('./common/lang/hi'),
+    'in': require('./common/lang/in'),
+    'tr': require('./common/lang/tr'),
+    'zh': require('./common/lang/zh')
   }
 });
 

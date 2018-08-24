@@ -1,20 +1,32 @@
 module.exports = {
-  Ranking: {
-    giftStar: '礼物之星',
-    activityFinsh:'活动已经结束，谢谢参与',
-    punchingList:'我要冲榜',
-    ruleDesc:'规则说明',
-    assignGift:'指定礼物',
-    distance:'距离前一名还差%s个礼物',
-    helpPunching:'帮她冲榜',
-    ruleDetail:'xxxxxxxxxxx',
-    
+  Ranking:{
     dialog: {
       title: "RULE DESCRIPTION",
-      content1: "<p><b>Activity Time:</b> 2018.3.3 - 2018.4.3</p>",
-      content2: "<p><b>Activity Rules: </b>rank the highest number of designed gifts from anchor during the event</p>",
-      content3: "<p><b>Reward:</b> Anchor awards: first XXX, second XXX</p>",
-      content4: "<p><b>User Reward:</b> XXX</p>"
+      content1: "</p>Activity Time: 2018.3.3 - 2018.4.3</p>",
+      content2: "Activity Rules: rank the highest number of designed gifts from anchor during the event",
+      content3: "Reward: Anchor awards: first XXX, second XXX",
+      content4: "User Reward: XXX"
     }
+  },
+  HomePage: {
+    title:"Gift Star Competition",
+    bt_enter:"Enter",
+    result_title:"Ranking list",
+    design_gift:"Designated gift"
+  },
+  ActivityPage: {
+    tab_receive:"Receive",
+    tab_send:"Send",
+    time:"Time:@@@",
+    activity_finish:"Activity ends. Thanks for attention!",
+    bt_me_punching:"Hit the top",
+    bt_help_punching:"Help my girl",
+    bt_regular:"Rules"
+  },
+  ActivityPerson:{
+    distance_100:"@@@ gifts are needed to move up 1 place",
+    distance_150:"@@@ gifts are needed to rank on the list",
+    distance_else:"Sorry, you're not on the list",
+    frist:"Congrats! You're top 1!"
   }
 }

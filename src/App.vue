@@ -5,12 +5,12 @@
         <div class="tab_title">
             <v-tab v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
               <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
-                Receiving gifts
+                {{$t("ActivityPage.tab_receive")}}
               </div>
             </v-tab>
             <v-tab v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
               <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
-                Sending gifts
+                {{$t("ActivityPage.tab_send")}}
               </div>
             </v-tab>
           </div>

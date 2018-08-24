@@ -10,14 +10,13 @@
         </v-avatar>
       </v-flex>
       <v-flex offset-xs1>
-        <div class="mine_des text-xs-left">{{$t("Ranking.distance").replace("%s",mySelf.distance+1)}}</div>
+        <div class="mine_des text-xs-left">{{$t("ActivityPerson.distance_100").replace("@@@",1)}}</div>
       </v-flex>
 
       <v-flex>
         <div class="mine_to">
           <v-btn round color="red" dark>
-            <p v-if="mySelf['role'] == 'user'">{{$t("Ranking.helpPunching")}}</p>
-            <p v-if="mySelf['role'] == 'anchor'">{{$t("Ranking.punchingList")}}</p>
+           {{$t("ActivityPage.bt_help_punching")}}
           </v-btn>
         </div>
       </v-flex>
