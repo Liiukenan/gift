@@ -1,8 +1,9 @@
 <template>
   <div class="banner_root">
     <img class="banner_img" src="../resource/banner_bg.png"/>
-    <v-layout class="banner_content">
-      <v-flex xs3 offset-xs9>
+    <v-layout column class="banner_content">
+      <v-spacer/>
+      <v-flex offset-xs9>
         <div class="text-xs-center">
           <v-dialog
             v-model="dialog"
@@ -37,11 +38,14 @@
         </div>
 
       </v-flex>
-      <v-flex xs8 offset-xs3 class="banner_des">
-        <v-btn outline round small color="activity_time_color" class="banner_des_btn">
+      <v-spacer/>
+      <v-spacer/>
+      <v-flex xs1 class="banner_des">
+        <v-btn outline round small color="activity_time_color" class="banner_des_btn" style="margin-left: auto;margin-right: auto">
           Activity time:2018.3.3 - 20184.3
         </v-btn>
       </v-flex>
+      <v-spacer/>
     </v-layout>
   </div>
 </template>
@@ -75,7 +79,6 @@
   }
 
   .banner_des {
-    position: absolute;
     bottom: 14%;
   }
 

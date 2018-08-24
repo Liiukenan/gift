@@ -9,19 +9,18 @@ import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 
 import store from './store'
-import 'onsenui/css/onsenui.css';
-import 'onsenui/css/onsen-css-components.css';
-import VueOnsen from 'vue-onsenui';
 import Vuetify from 'vuetify';
 
-Vue.use(VueOnsen);
 Vue.use(Vuex);
 Vue.use(VueI18n);
 Vue.use(Vuetify,{
   theme:{
     app_bg:'#E235A6',
     tab_text_color:'#9E00E8',
-    activity_time_color:'#CCF8F0FA'
+    activity_time_color:'#CCF8F0FA',
+    top_anchor_name_color:'#CC000000',
+    top_anchor_gift_color:'#66000000',
+    divider_color:'#0D342323',
   }
 });
 

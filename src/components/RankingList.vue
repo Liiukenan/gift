@@ -1,21 +1,25 @@
 <template>
     <v-layout class="ranking-list">
           <v-list style="width: 100%">
-            <v-list-tile avatar class="item" v-for="x of others" :key="x.ranking" @click="listItemClick(x)" >
-              <v-flex xs3 class="anchor_id" >
-                <span >{{x.ranking}}</span>
-              </v-flex>
-              <v-flex xs5 >
-                <v-list-tile-avatar size="56">
-                  <img v-bind:src="`${x.avatarUrl}`" />
-                </v-list-tile-avatar>
-              </v-flex>
-              <v-flex xs12 text-xs-left class="item_name" >
-                <span class="list-item__title">{{x.nickname}}</span>
-              </v-flex>
-              <v-flex xs4 class="right item_rank">{{x.gifts}}
-              </v-flex>
-            </v-list-tile>
+            <template v-for="(x, index) in others">
+              <v-divider inset></v-divider>
+              <v-list-tile ripple avatar class="item" @click="listItemClick(x)" >
+                <v-flex xs3 class="anchor_id" >
+                  <span >{{x.ranking}}</span>
+                </v-flex>
+                <v-flex xs5 >
+                  <v-list-tile-avatar size="56" style="padding-top: 10px;padding-bottom: 10px">
+                    <img v-bind:src="`${x.avatarUrl}`" />
+                  </v-list-tile-avatar>
+                </v-flex>
+                <v-flex xs12 text-xs-left >
+                  <span class="list-item__title">{{x.nickname}}</span>
+                </v-flex>
+                <v-flex xs4 class="right item_rank">{{x.gifts}}
+                </v-flex>
+              </v-list-tile>
+              <v-divider inset v-if="index + 1 === others.length" :key="`divider-${index}`"></v-divider>
+            </template>
           </v-list>
     </v-layout>
 
@@ -65,16 +69,12 @@ export default {
   .item{
     width: 100%;
     height: 90px;
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 
   .anchor_id{
     color: rgba(0,0,0,0.40);;
   }
 
-  .item_name{
-  }
   .item_rank{
     color: rgba(0,0,0,0.40);;
   }

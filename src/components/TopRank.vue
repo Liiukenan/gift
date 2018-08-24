@@ -1,70 +1,54 @@
 <template>
-  <div class="top_rank">
+  <v-container text-xs-center class="top_rank">
+    <v-layout column justify-end align-center class="top_anchor">
+        <v-flex xs10>
+          <v-layout column align-center justify-end>
+            <img style="width: 35px;z-index: 1" src="../resource/top_second.png"/>
+            <img class="second_img" style="margin-top: -10px" v-bind:src="`${secondAnchor.avatarUrl}`"/>
+            <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
+          </v-layout>
+        </v-flex>
+        <v-flex>
+          <span class="anchor_name">{{secondAnchor.nickname}}</span>
+        </v-flex>
+        <v-flex color="top_anchor_gift_color">
+          <span class="rank_gift">{{secondAnchor.gifts}}</span>
+        </v-flex>
+    </v-layout>
 
-    <div class="top_anchor">
-      <div class="head_root">
-        <div class="head_border">
-          <div class="anchor_head" v-on:click="personDetail(secondAnchor.jid)">
-            <img style="width: 35%" src="../resource/top_second.png"/>
-            <div class="second_img_wrap" style="margin-top: -10%">
-              <div class="img_box">
-                <img class="list-item__thumbnail img_content" v-bind:src="`${secondAnchor.avatarUrl}`"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="anchor_name second_anchor">
-        <span class="name">{{secondAnchor.nickname}}</span>
-      </div>
-      <div class="anchor_rank">
-        <span class="value">{{secondAnchor.gifts}}</span>
-      </div>
-    </div>
+    <v-layout column justify-end align-center class="top_anchor">
+      <v-flex xs10>
+        <v-layout column align-center>
+          <img style="width: 40px;z-index: 1" src="../resource/top_first.png"/>
+          <img class="first_img" style="margin-top: -10px" v-bind:src="`${firstAnchor.avatarUrl}`"/>
+          <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
+        </v-layout>
+      </v-flex>
+      <v-flex >
+        <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{firstAnchor.nickname}}</div>
+      </v-flex>
+      <v-flex>
+        <span class="rank_gift">{{firstAnchor.gifts}}</span>
+      </v-flex>
+    </v-layout>
 
-    <div class="top_anchor">
-      <div class="head_root">
-        <div class="head_border">
-          <div class="anchor_head" v-on:click="personDetail(firstAnchor.jid)">
-            <img style="width: 40%" src="../resource/top_first.png"/>
-            <div class="first_img_wrap" style="margin-top: -10%">
-              <div class="img_box">
-                <img class="list-item__thumbnail img_content" v-bind:src="`${firstAnchor.avatarUrl}`"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="anchor_name first_name">
-        <span class="name">{{firstAnchor.nickname}}</span>
-      </div>
-      <div class="anchor_rank">
-        <span class="value">{{firstAnchor.gifts}}</span>
-      </div>
-    </div>
+    <v-layout column justify-end align-center class="top_anchor">
+      <v-flex xs10 column>
+        <v-layout column align-center>
+          <img style="width: 30px;z-index: 1" src="../resource/top_third.png"/>
+          <img class="third_img" style="margin-top: -10px" v-bind:src="`${thirdAnchor.avatarUrl}`"/>
+          <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
+        </v-layout>
+      </v-flex>
+      <v-flex>
+        <span class="anchor_name">{{thirdAnchor.nickname}}</span>
+      </v-flex>
+      <v-flex>
+        <span class="rank_gift">{{thirdAnchor.gifts}}</span>
+      </v-flex>
+    </v-layout>
 
-    <div class="top_anchor">
-      <div class="head_root">
-        <div class="head_borde">
-          <div class="anchor_head" v-on:click="personDetail(thirdAnchor.jid)">
-            <img style="width: 30%" src="../resource/top_third.png"/>
-            <div class="third_img_wrap" style="margin-top: -10%">
-              <div class="img_box">
-                <img class="list-item__thumbnail img_content" v-bind:src="`${thirdAnchor.avatarUrl}`"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="anchor_name">
-        <span class="name">{{thirdAnchor.nickname}}</span>
-      </div>
-      <div class="anchor_rank">
-        <span class="value">{{thirdAnchor.ranking}}</span>
-      </div>
-    </div>
-
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -105,82 +89,45 @@
   .top_anchor {
     flex: 1;
     padding-top: 5%;
-    padding-bottom: 5%;
   }
 
-  .head_root {
-    width: 80%;
-    height: 75%;
-    position: relative;
-    margin: 0 auto;
+  .top_crown{
+    top: 0;
   }
 
-  .head_border {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .anchor_head {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .first_img_wrap {
-    width: 90%;
+  .first_img {
+    width: 88px;
+    height: 88px;
     border-radius: 50%;
-    margin: 0 auto;
     border-color: rgba(248, 231, 28, 1);
     border-style: outset;
     border-width: 2px;
   }
 
-  .second_img_wrap {
-    width: 80%;
-    margin: 0 auto;
+  .second_img {
+    width: 77px;
+    height: 77px;
     border-radius: 50%;
     border-color: rgba(198, 198, 198, 1);
     border-style: outset;
     border-width: 2px;
   }
 
-  .third_img_wrap {
-    width: 70%;
-    margin: 0 auto;
+  .third_img {
+    width: 66px;
+    height: 66px;
     border-radius: 50%;
     border-color: rgba(177, 106, 10, 1);
     border-style: outset;
     border-width: 2px;
   }
 
-  .img_box {
-    width: 100%;
-    height: 0px;
-    margin: 0;
-    overflow: hidden;
-    padding-bottom: 100%;
-    position: relative;
-  }
-
-  .img_content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  .list-item__thumbnail {
-    border-radius: 50%;
-    margin: auto;
-  }
-
-  .anchor_name {
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  .anchor_rank {
-    margin-top: 5px;
+  .rank_gift{
     color: rgba(0, 0, 0, 0.4);
+  }
+
+  .anchor_name{
+    color: rgba(0, 0, 0, 0.8);
   }
 
 </style>
