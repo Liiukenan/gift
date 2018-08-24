@@ -6,7 +6,7 @@ import qs from 'qs';
 
 
 Vue.use(Vuex);
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
 
 
 const store = new Vuex.Store({
@@ -14,30 +14,23 @@ const store = new Vuex.Store({
         rankingList: {}
     },
     getters: {
-        first: state => {
-            if (state.rankingList.hasOwnProperty("receiveGifts")) {
-              return state.rankingList["receiveGifts"][0] == undefined? {} : state.rankingList["receiveGifts"][0]
-            } else {
-              return undefined
-            }
+        receiverTop:state=>{
+          return [state.rankingList["receiveGifts"][0],state.rankingList["receiveGifts"][1],state.rankingList["receiveGifts"][2]];
         },
-        second: state => {
-          if (state.rankingList.hasOwnProperty("receiveGifts")) {
-            return state.rankingList["receiveGifts"][1] == undefined? {} : state.rankingList["receiveGifts"][1]
-          } else {
-            return undefined
-          }
+        sendTop:state=>{
+          return [state.rankingList["sendGifts"][0],state.rankingList["sendGifts"][1],state.rankingList["sendGifts"][2]];
         },
-        third: state => {
-          if (state.rankingList.hasOwnProperty("receiveGifts")) {
-            return state.rankingList["receiveGifts"][2] == undefined? {} : state.rankingList["receiveGifts"][2]
-          } else {
-            return undefined
-          }
-        },
-        others: state => {
+        receiverData: state => {
           if (state.rankingList.hasOwnProperty("receiveGifts")) {
             var others = state.rankingList["receiveGifts"];
+            return  others.slice(3)
+          } else {
+            return undefined
+          }
+        },
+        sendData: state => {
+          if (state.rankingList.hasOwnProperty("sendGifts")) {
+            var others = state.rankingList["sendGifts"];
             return  others.slice(3)
           } else {
             return undefined

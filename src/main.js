@@ -17,10 +17,10 @@ Vue.use(Vuetify,{
   theme:{
     app_bg:'#E235A6',
     tab_text_color:'#9E00E8',
-    activity_time_color:'#CCF8F0FA',
-    top_anchor_name_color:'#CC000000',
-    top_anchor_gift_color:'#66000000',
-    divider_color:'#0D342323',
+    activity_time_color:'#F8D5D5',
+    top_anchor_name_color:'#333333',
+    top_anchor_gift_color:'#999999',
+    divider_color:'#F2F2F2',
   }
 });
 
