@@ -4,15 +4,15 @@
         <v-flex xs10>
           <v-layout column align-center justify-end>
             <img style="width: 35px;z-index: 1" src="../resource/top_second.png"/>
-            <img class="second_img" style="margin-top: -10px" v-bind:src="`${secondAnchor.avatarUrl}`"/>
+            <img class="second_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?receiverTop[1].avatarUrl : sendTop[1].avatarUrl}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
         </v-flex>
         <v-flex>
-          <span class="anchor_name">{{secondAnchor.nickname}}</span>
+          <span class="anchor_name">{{tabIndex == 0 ?receiverTop[1].nickname : sendTop[1].nickname}}</span>
         </v-flex>
         <v-flex color="top_anchor_gift_color">
-          <span class="rank_gift">{{secondAnchor.gifts}}</span>
+          <span class="rank_gift">{{tabIndex == 0 ?receiverTop[1].gifts : sendTop[1].gifts}}</span>
         </v-flex>
     </v-layout>
 
@@ -20,15 +20,15 @@
       <v-flex xs10>
         <v-layout column align-center>
           <img style="width: 40px;z-index: 1" src="../resource/top_first.png"/>
-          <img class="first_img" style="margin-top: -10px" v-bind:src="`${firstAnchor.avatarUrl}`"/>
+          <img class="first_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?receiverTop[0].avatarUrl : sendTop[0].avatarUrl}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
       </v-flex>
       <v-flex >
-        <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{firstAnchor.nickname}}</div>
+        <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{tabIndex == 0 ?receiverTop[0].nickname : sendTop[0].nickname}}</div>
       </v-flex>
       <v-flex>
-        <span class="rank_gift">{{firstAnchor.gifts}}</span>
+        <span class="rank_gift">{{tabIndex == 0 ?receiverTop[0].gifts : sendTop[0].gifts}}</span>
       </v-flex>
     </v-layout>
 
@@ -36,15 +36,15 @@
       <v-flex xs10 column>
         <v-layout column align-center>
           <img style="width: 30px;z-index: 1" src="../resource/top_third.png"/>
-          <img class="third_img" style="margin-top: -10px" v-bind:src="`${thirdAnchor.avatarUrl}`"/>
+          <img class="third_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?receiverTop[2].avatarUrl : sendTop[2].avatarUrl}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>
       </v-flex>
       <v-flex>
-        <span class="anchor_name">{{thirdAnchor.nickname}}</span>
+        <span class="anchor_name">{{tabIndex == 0 ?receiverTop[2].nickname : sendTop[2].nickname}}</span>
       </v-flex>
       <v-flex>
-        <span class="rank_gift">{{thirdAnchor.gifts}}</span>
+        <span class="rank_gift">{{tabIndex == 0 ?receiverTop[2].gifts : sendTop[2].gifts}}</span>
       </v-flex>
     </v-layout>
 
@@ -63,6 +63,7 @@
         test: 0
       }
     },
+    props:['tabIndex'],
     methods: {
       personDetail:function (jid) {
         jumpPersonDetail(jid)
@@ -70,9 +71,8 @@
     },
     computed: {
       ...mapGetters({
-        firstAnchor: "first",
-        secondAnchor: "second",
-        thirdAnchor: "third"
+        receiverTop: "receiverTop",
+        sendTop: "sendTop"
       })
     }
   }

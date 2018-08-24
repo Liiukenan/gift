@@ -1,7 +1,7 @@
 <template>
     <v-app id="app" light class="scroll-y">
       <banner />
-      <v-tabs centered hide-slider="true" @input="changeTab" color="app_bg">
+      <v-tabs centered hide-slider @input="changeTab" color="app_bg">
         <div class="tab_title">
             <v-tab v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
               <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
@@ -16,14 +16,14 @@
           </div>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <top-rank/>
-              <ranking-list class="rank_item_list"/>
+              <top-rank tabIndex="0"/>
+              <RankingList tab_index="0" class="rank_item_list"/>
             </v-card>
           </v-tab-item>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <top-rank/>
-              <ranking-list class="rank_item_list"/>
+              <top-rank tabIndex="1"/>
+              <ranking-list tab_index ="1" class="rank_item_list"/>
             </v-card>
           </v-tab-item>
       </v-tabs>
@@ -32,10 +32,10 @@
 </template>
 
 <script>
-import RankingList from './components/RankingList'
-import TopRank from './components/TopRank'
-import MySelf from './components/MySelf'
-import Banner from './components/Banner'
+  import RankingList from './components/RankingList'
+  import TopRank from './components/TopRank'
+  import MySelf from './components/MySelf'
+  import Banner from './components/Banner'
 
 export default {
   name: 'App',
@@ -53,7 +53,7 @@ export default {
       colors:[
           'white',
           'tab_text_color'
-      ]
+      ],
     }
   },
   methods:{
