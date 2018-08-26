@@ -14,8 +14,9 @@
       </v-flex>
 
       <v-flex xs4>
-          <v-btn round color="red" dark>
-           {{$t("ActivityPage.bt_help_punching")}}
+          <v-btn round color="red" dark style="textTransform:none">
+            <span v-show="mySelf['role']=='user'">{{$t("ActivityPage.bt_help_punching")}}</span>
+            <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
       </v-flex>
     </v-layout>
@@ -48,13 +49,13 @@
         var data = this.$store.getters.mySelf;
         var rank = data.ranking;
         var des = "";
-        if (rank == '99+'){
-          des = this.$t('ActivityPerson.distance_150').replace("%s",mySelf.distance+1);
-        }else if(rank <= 100){
-          des = this.$t("ActivityPerson.distance_100").replace("%s",mySelf.distance+1);
-        }else if (rank == '--'){
+        if (rank == '99+') {
+          des = this.$t('ActivityPerson.distance_150').replace("@@@", data.distance + 1);
+        } else if (rank <= 100) {
+          des = this.$t("ActivityPerson.distance_100").replace("@@@", data.distance + 1);
+        } else if (rank == '--') {
           des = this.$t("ActivityPerson.distance_else");
-        }else if(rank == 1){
+        } else if (rank == 1) {
           des = this.$t("ActivityPerson.frist");
         }
         this.rankDes = des;

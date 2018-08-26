@@ -33,7 +33,7 @@
               </div>
               <v-spacer/>
 
-              <div style="text-align: left; width: 100%, margin-top: 10px;">
+              <div style="text-align: left; width: 100%;margin-top: 10px;">
                 <p v-html="$t('Ranking.dialog.content2')"></p>
               </div>
               <v-spacer/>
@@ -57,7 +57,7 @@
       <v-spacer/>
       <v-flex xs1 class="banner_des">
         <v-btn outline round small color="activity_time_color" class="banner_des_btn" style="margin-left: auto;margin-right: auto">
-          {{$t("ActivityPage.time").replace("@@@","2018.03.04-2018.04.04")}}
+          {{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}
         </v-btn>
       </v-flex>
       <v-spacer/>
@@ -66,6 +66,7 @@
 </template>
 
 <script>
+  import {mapGetters} from "vuex";
   export default {
     name: "Banner",
      data () {
@@ -74,10 +75,26 @@
       }
     },
     methods: {
+      getActivityDesc:function(status){
+        var des = "";
+        if (status === 0){
+          des = this.$t("ActivityPage.time").replace("@@@",time);
+        } else if (status === 1){
+          des = this.$t("ActivityPage.activity_finish")
+        } else if (status === 2){
+          des = ""
+        }
+        return des
+      },
       onCloseBtn(event){
         console.log("close btn clicked")
         this.dialog = false
       }
+    },
+    computed:{
+      ...mapGetters({
+        myActivity: "activity"
+      })
     }
   }
 </script>

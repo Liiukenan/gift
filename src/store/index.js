@@ -14,11 +14,19 @@ const store = new Vuex.Store({
         rankingList: {}
     },
     getters: {
-        receiverTop:state=>{
-          return [state.rankingList["receiveGifts"][0],state.rankingList["receiveGifts"][1],state.rankingList["receiveGifts"][2]];
+        receiverTop:state => {
+          if (state.rankingList.hasOwnProperty("receiveGifts") && state.rankingList["receiveGifts"].length >=3) {
+            return [state.rankingList["receiveGifts"][0],state.rankingList["receiveGifts"][1],state.rankingList["receiveGifts"][2]];
+          } else {
+            return undefined
+          }
         },
-        sendTop:state=>{
-          return [state.rankingList["sendGifts"][0],state.rankingList["sendGifts"][1],state.rankingList["sendGifts"][2]];
+        sendTop:state => {
+          if (state.rankingList.hasOwnProperty("sendGifts") && state.rankingList["sendGifts"].length >=3) {
+            return [state.rankingList["sendGifts"][0],state.rankingList["sendGifts"][1],state.rankingList["sendGifts"][2]];
+          } else {
+            return undefined
+          }
         },
         receiverData: state => {
           if (state.rankingList.hasOwnProperty("receiveGifts")) {
@@ -42,6 +50,13 @@ const store = new Vuex.Store({
             return state.rankingList["profile"];
           } else {
             console.log("no profile")
+            return undefined
+          }
+        },
+        activity: state => {
+          if (state.rankingList.hasOwnProperty("activity")){
+            return state.rankingList['activity'];
+          } else {
             return undefined
           }
         }

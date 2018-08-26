@@ -58,12 +58,21 @@ export default {
       tabIndex:0
     }
   },
+  created() {
+    this.fetchData()
+  },
   computed:{
     ...mapGetters({
       mySelf: "mySelf"
     })
   },
   methods:{
+    fetchData() {
+      // this.$i18n.locale = "en"; // 切换语言
+      console.log("fetchData");
+      this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
+      });
+    },
     changeTab(val){
        this.isTabOne = val === 0;
        this.isTabTwo = val === 1;
