@@ -17,7 +17,7 @@
               {{$t("ActivityPage.bt_regular")}}
             </v-btn>
 
-            <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px">
+            <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px" v-if="showDialog">
               <button v-on:click="onCloseBtn" style="width: 20px; height: 20px; position: absolute; right: 10px; top: 10px">
                 <img src="../assets/ic_closed.png" style="width: 20px; height: 20px">
               </button>
@@ -25,7 +25,7 @@
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;">
                 {{$t("Ranking.dialog.title")}}
               </div>
-              <v-spacer/>
+              <v-spacer/>q
 
               <!-- first desc -->
               <div style="text-align: left; width: 100%; margin-top: 10px;">
@@ -71,14 +71,15 @@
     name: "Banner",
      data () {
       return {
-        dialog: false
+        dialog: false,
+        showDialog: false
       }
     },
     methods: {
       getActivityDesc:function(status){
         var des = "";
         if (status === 0){
-          des = this.$t("ActivityPage.time").replace("@@@",time);
+          des = this.$t("ActivityPage.time").replace("@@@",this.myActivity["time"]);
         } else if (status === 1){
           des = this.$t("ActivityPage.activity_finish")
         } else if (status === 2){
@@ -90,6 +91,11 @@
         console.log("close btn clicked")
         this.dialog = false
       }
+    },
+    created(){
+      setTimeout(()=>{
+        this.showDialog = true
+      },0)
     },
     computed:{
       ...mapGetters({

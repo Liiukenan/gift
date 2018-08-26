@@ -9,7 +9,7 @@
                   </v-flex>
                   <v-flex xs5 >
                     <v-list-tile-avatar size="56" style="padding-top: 10px;padding-bottom: 10px">
-                    <img v-bind:src="`${x.avatarUrl}`" />
+                    <img v-lazy="`${x.avatarUrl}`" />
                     </v-list-tile-avatar>
                   </v-flex>
                   <v-flex xs12 text-xs-left >

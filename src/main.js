@@ -10,6 +10,8 @@ import VueI18n from 'vue-i18n'
 
 import store from './store'
 import Vuetify from 'vuetify';
+import VueLazyload from 'vue-lazyload'
+
 
 Vue.use(Vuex);
 Vue.use(VueI18n);
@@ -23,6 +25,8 @@ Vue.use(Vuetify,{
     divider_color:'#F2F2F2',
   }
 });
+Vue.use(VueLazyload);
+
 
 
 const i18n = new VueI18n({
