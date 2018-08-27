@@ -1,7 +1,10 @@
 <template>
     <v-layout class="ranking-list">
           <v-list style="width: 100%">
-            <template v-for="(x, index) in  tab_index == 0 ? receiverData:sendData">
+            <div v-for="(x, index) in  tab_index == 0 ? receiverData:sendData"
+              v-bind:item="x"
+              v-bind:index="index"
+              v-bind:key="x.id">
               <v-divider inset></v-divider>
               <v-layout v-ripple fill-height align-center class="item" @click="listItemClick(x)">
                   <v-flex xs3 class="anchor_id" >
@@ -18,7 +21,7 @@
                   <v-flex xs4 class="right item_rank">{{x.gifts}}</v-flex>
               </v-layout>
               <v-divider inset v-if="index + 1 === receiverData.length" :key="`divider-${index}`"></v-divider>
-            </template>
+            </div>
           </v-list>
     </v-layout>
 
