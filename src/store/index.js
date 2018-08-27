@@ -67,9 +67,42 @@ const store = new Vuex.Store({
             //发布的时候换成服务端的域名
             console.log("request get options: ", options)
             console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat);
-            return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":"user_1007409@bj2.1-1.io"})).then((response) => {
+            var list = {};
+            if (window.localStorage){
+               var localRankingList = window.localStorage.getItem("rankingList");
+               if (localRankingList != null){
+                list = JSON.parse(localRankingList);
+               }
+            }
+          return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":"user_1007409@bj2.1-1.io"})).then((response) => {
                 console.log("response", response.data)
+                if (response.data != null && window.localStorage){
+                  var status = response.data["activity"]["status"];
+                  // 公布结果期间
+                  if (status == 1){
+                    // 本地缓存结果
+                    window.localStorage.setItem("rankingList",JSON.stringify(response.data));
+                    // 活动期间
+                  } else if (status == 0){
+                    // 下架期间
+                  } else if (status == 2){
+                    // 上一次显示结果
+                     if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
+                       console.log("show last:", list)
+                       context.commit("loadRankingList", {rankingList: list})
+                       return
+                     }
+                  }
+                }
                 context.commit("loadRankingList", {rankingList: response.data})
+            }).catch(reason => {
+              console.log("reason:",reason);
+              // 请求异常，显示公布结果期间内容
+              if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
+                console.log("show last:", list)
+                context.commit("loadRankingList", {rankingList: list})
+                return
+              }
             })
         }
     },
