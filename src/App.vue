@@ -96,7 +96,6 @@ export default {
   height: 100%;
 }
   .mine_rank{
-    background: royalblue;
     width: 100%;
     position: fixed;
     bottom: 0px;

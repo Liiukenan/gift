@@ -3,7 +3,7 @@
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
         <v-flex xs10>
           <v-layout column align-center justify-end>
-            <img style="width: 35px;z-index: 1" src="../resource/top_second.png"/>
+            <img style="width: 35px;z-index: 0" src="../resource/top_second.png"/>
             <img class="second_img" style="margin-top: -10px"
                  onerror="this.src='../resource/default_head'"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
@@ -21,7 +21,7 @@
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
       <v-flex xs10>
         <v-layout column align-center>
-          <img style="width: 40px;z-index: 1" src="../resource/top_first.png"/>
+          <img style="width: 40px;z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
                style="margin-top: -10px"
                onerror="src='../resource/default_head'"
@@ -40,7 +40,7 @@
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
       <v-flex xs10 column>
         <v-layout column align-center>
-          <img style="width: 30px;z-index: 1" src="../resource/top_third.png"/>
+          <img style="width: 30px;z-index: 0" src="../resource/top_third.png"/>
           <img class="third_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>

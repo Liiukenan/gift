@@ -1,6 +1,5 @@
 <template>
-  <v-container class="mine_root" v-on:click="jumpOther(mySelf['role'])">
-    <v-layout fill-height row justify-start  align-center>
+    <v-layout fill-height row justify-start  align-center class="mine_root" v-on:click="jumpOther(mySelf['role'])">
       <v-flex xs1>
         <div class="mine_ranking" style="font-size: 10px">{{mySelf.ranking}}</div>
       </v-flex>
@@ -19,8 +18,6 @@
           </v-btn>
       </v-flex>
     </v-layout>
-
-  </v-container>
 </template>
 
 <script>
