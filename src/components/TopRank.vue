@@ -4,8 +4,7 @@
         <v-flex xs10>
           <v-layout column align-center justify-end>
             <img style="width: 35px;z-index: 0" src="../resource/top_second.png"/>
-            <img class="second_img" style="margin-top: -10px"
-                 onerror="this.src='../resource/default_head'"
+            <img class="second_img" style="margin-top: -10px;"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
@@ -23,8 +22,7 @@
         <v-layout column align-center>
           <img style="width: 40px;z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
-               style="margin-top: -10px"
-               onerror="src='../resource/default_head'"
+               style="margin-top: -10px;"
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
@@ -41,7 +39,8 @@
       <v-flex xs10 column>
         <v-layout column align-center>
           <img style="width: 30px;z-index: 0" src="../resource/top_third.png"/>
-          <img class="third_img" style="margin-top: -10px" v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
+          <img class="third_img" style="margin-top: -10px" 
+            v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>
       </v-flex>
@@ -72,7 +71,7 @@
     methods: {
       personDetail:function (jid) {
         console.log("jid = " + jid);
-        jumpPersonDetail(jid)
+        jumpPersonDetail(jid);
       }
     },
     computed: {
