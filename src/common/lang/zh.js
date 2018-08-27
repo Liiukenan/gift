@@ -1,12 +1,22 @@
 module.exports = {
   Ranking:{
-    dialog: {
-      title: "RULE DESCRIPTION",
-      content1: "</p>Activity Time: 2018.3.3 - 2018.4.3</p>",
-      content2: "Activity Rules: rank the highest number of designed gifts from anchor during the event",
-      content3: "Reward: Anchor awards: first XXX, second XXX",
-      content4: "User Reward: XXX"
-    },
+    incentiveDetails:{
+      title:"规则说明",
+      activity_rules:"活动规则",
+      rules_content:"1.活动期间，由官方指定1个礼物<br>\n" +
+        "2.收礼榜根据收到的指定礼物数量由高到低进行排名<br>\n" +
+        "3.送出榜根据送出的指定礼物数量由高到低进行排名<br>\n" +
+        "4.活动榜单数据可能因为网络原因延迟，请耐心等待",
+      activity_incentives:"活动奖励:",
+      receive_Top3:"收礼榜Top3",
+      receive_Top3_content:"第1名：10000金币的奖励+视频邀约特权（100次/天）*3天<br>\n" +
+        "第2名：10000金币的奖励+视频邀约特权（100次/天）*2天<br>\n" +
+        "第3名：10000金币的奖励+视频邀约特权（100次/天）*1天",
+      send_Top3:"送礼榜Top3",
+      send_Top3_content:"第1名：免费视频聊天特权（1小时/天）*3天<br>\n" +
+        "第2名：免费视频聊天特权（1小时/天）*2天<br>\n" +
+        "第3名：免费视频聊天特权（1小时/天）*1天"
+    }
   },
   HomePage: {
     title:"礼物之星争霸赛",

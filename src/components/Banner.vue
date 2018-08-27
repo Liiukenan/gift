@@ -23,29 +23,42 @@
               </button>
               <!-- Title -->
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;">
-                {{$t("Ranking.dialog.title")}}
-              </div>
-              <v-spacer/>q
-
-              <!-- first desc -->
-              <div style="text-align: left; width: 100%; margin-top: 10px;">
-                <p v-html="$t('Ranking.dialog.content1')"></p>
+                {{$t("Ranking.incentiveDetails.title")}}
               </div>
               <v-spacer/>
+              <!-- Time -->
+              <div style="text-align: center; width: 100%; margin-top: 10px;">
+                <p >{{$t("ActivityPage.time").replace("@@@","20180820-20180920")}}</p>
+              </div>
+              <!-- rules -->
+              <div style="text-align: center; width: 100%; margin-top: 10px;">
+                <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
+              </div>
+              <!-- rules detail -->
+              <div style="text-align: left; width: 100%;">
+                <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
+              </div>
 
-              <div style="text-align: left; width: 100%;margin-top: 10px;">
-                <p v-html="$t('Ranking.dialog.content2')"></p>
+              <!-- activity incentives -->
+              <div style="text-align: center; width: 100%; margin-top: 10px;">
+                <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
               </div>
               <v-spacer/>
-
-              <div style="text-align: left; width: 100%; margin-top: 10px;">
-                <p v-html="$t('Ranking.dialog.content3')"></p>
+              <!-- top3 -->
+              <div style="text-align: center; width: 100%;">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top3')"></p>
               </div>
-              <v-spacer/>
-
-              <div style="text-align: left; width: 100%; margin-top: 10px;">
-                <p v-html="$t('Ranking.dialog.content4')"></p>
+              <div style="text-align: left; width: 100%;">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top3_content')"></p>
               </div>
+
+              <div style="text-align: center; width: 100%;">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top3')"></p>
+              </div>
+              <div style="text-align: left; width: 100%;">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top3_content')"></p>
+              </div>
+
               <v-spacer/>
 
             </v-card>

@@ -33,29 +33,25 @@
   window.plat = "web";
   window.jid = "";
   window.lang = "en";
-  /*
-   *页面加载完成，获取url里面的参数
-   * url形式：http://xxxxxxxxx?plat=ios&jid=xxx@123&lang=en
-   */
-  window.onload = function () {
-    //获取url中?后的字符串
-    var searchStr = location.search;
-    //将searchStr字符串分割成数组，数组中的每一个元素为一个参数和参数值
-    var searchs = searchStr.split("&");
-    //获得第一个参数和值,plat
-    if (searchs.length >= 1 && searchs[0] != null) {
-      var platTmp = searchs[0].split("=");
-      plat = platTmp[1];
-    }
-    if (searchs.length >= 2 && searchs[1] != null) {
-      var jidTmp = searchs[1].split("=");
-      jid = jidTmp[1];
-    }
-    if (searchs.length >= 3 && searchs[2] != null){
-      var langTmp = searchs[1].split("=");
-      lang = langTmp[1];
-    }
+  const hrefUrl = window.location.href;
+  let index = hrefUrl.indexOf('?')
+  let searchStr = hrefUrl.substring(index + 1);
+  //将searchStr字符串分割成数组，数组中的每一个元素为一个参数和参数值
+  var searchs = searchStr.split("&");
+  //获得第一个参数和值,plat
+  if (searchs.length >= 1 && searchs[0] != null) {
+    var platTmp = searchs[0].split("=");
+    window.plat = platTmp[1];
   }
+  if (searchs.length >= 2 && searchs[1] != null) {
+    var jidTmp = searchs[1].split("=");
+    window.jid = jidTmp[1];
+  }
+  if (searchs.length >= 3 && searchs[2] != null) {
+    var langTmp = searchs[2].split("=");
+    window.lang = langTmp[1];
+  }
+  console.log("plat:" + plat + " jid:" + jid + " lang:" + lang)
 </script>
 <body>
 <div id="app"></div>
