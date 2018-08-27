@@ -74,7 +74,11 @@ const store = new Vuex.Store({
                 list = JSON.parse(localRankingList);
                }
             }
-          return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":"user_1007409@bj2.1-1.io"})).then((response) => {
+            var currentJid = "user_1007409@bj2.1-1.io";
+            if (window.plat == "android" || window.plat == "ios"){
+              currentJid = window.jid;
+            }
+          return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
