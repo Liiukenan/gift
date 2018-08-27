@@ -53,6 +53,7 @@ const store = new Vuex.Store({
             return undefined
           }
         },
+        // activity:status 0：活动统计期（开启）; 1:活动结算; 2: 已下架
         activity: state => {
           if (state.rankingList.hasOwnProperty("activity")){
             return state.rankingList['activity'];

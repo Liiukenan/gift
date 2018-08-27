@@ -8,20 +8,26 @@
           <img v-bind:src="`${mySelf.avatarUrl}`">
         </v-avatar>
       </v-flex>
-      <v-flex xs7>
+
+      <v-flex xs7 v-if="myActivity != undefined && myActivity['status'] == 0">
         <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
-      <v-flex xs4>
+      <v-flex xs4 v-if="myActivity != undefined && myActivity['status'] == 0">
           <v-btn class="mine_btn" round color="red" dark style="textTransform:none">
             <span v-show="mySelf['role']=='user'">{{$t("ActivityPage.bt_help_punching")}}</span>
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
       </v-flex>
+      <v-flex xs12 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
+        <span class="list-item__title">{{mySelf['nickname']}}</span>
+      </v-flex>
+      <v-flex xs4 class="right item_rank" v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
     </v-layout>
 </template>
 
 <script>
   import {jumpOnlineUser,jumpMain} from "../common/jsInteractive"
+  import {mapGetters} from "vuex";
 
   export default {
         name: "MySelf",
@@ -41,6 +47,9 @@
       }
     },
     computed:{
+      ...mapGetters({
+        myActivity: "activity"
+      }),
       mySelf:function () {
         var data = this.$store.getters.mySelf;
         var rank = data.ranking;

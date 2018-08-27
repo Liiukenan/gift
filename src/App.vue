@@ -28,8 +28,9 @@
           </v-tab-item>
       </v-tabs>
       <transition name="slide-fade">
-        <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" />
-        <!--<p v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" >dasdas</p>-->
+        <my-self
+          v-if="(myActivity != undefined && (myActivity['status'] == 0 || myActivity['status'] == 1))&&(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0)"
+          class="mine_rank"/>
       </transition>
     </v-app>
 </template>
@@ -66,7 +67,8 @@ export default {
   },
   computed:{
     ...mapGetters({
-      mySelf: "mySelf"
+      mySelf: "mySelf",
+      myActivity: "activity"
     })
   },
   methods:{
