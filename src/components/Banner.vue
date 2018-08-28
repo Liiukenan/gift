@@ -20,11 +20,11 @@
 
             <v-card color="white" style="border-radius: 6px;padding: 15px 10px 15px 15px" v-if="showDialog">
 
-              <v-button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
+              <button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
                 <img src="../assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
-              </v-button>
+              </button>
 
-              <v-card-text style="height: 400px; margin-top: 10px;">            
+              <v-card-text style="height: 500px; margin-top: 10px;">            
               <!-- Title -->
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
                 {{$t("Ranking.incentiveDetails.title")}}
