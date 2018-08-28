@@ -1,7 +1,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import 'vue-material/dist/theme/default.css'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
@@ -11,6 +10,7 @@ import VueI18n from 'vue-i18n'
 import store from './store'
 import Vuetify from 'vuetify';
 import VueLazyload from 'vue-lazyload'
+import routes from './routes'
 
 
 Vue.use(Vuex);
@@ -26,8 +26,6 @@ Vue.use(Vuetify,{
   }
 });
 Vue.use(VueLazyload);
-
-
 
 const i18n = new VueI18n({
   locale: lang,    // 语言标识
@@ -48,10 +46,22 @@ const i18n = new VueI18n({
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
+const app = new Vue({
+  el: '#app_content',
+  data: {
+    currentRoute: window.location.pathname
+  },
   i18n,
-  components: { App },
-  template: '<App/>',
-  store
+  store,
+  computed: {
+    ViewComponent () {
+      const matchingView = routes[this.currentRoute];
+      return matchingView
+        ? require('./' + matchingView + '.vue').default
+        : require('./App.vue').default
+    }
+  },
+  render (h) {
+    return h(this.ViewComponent)
+  }
 });

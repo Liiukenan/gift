@@ -65,7 +65,7 @@ export default {
 
   .item{
     width: 100%;
-    height: 90px;
+    height: 80px;
   }
 
   .anchor_id{

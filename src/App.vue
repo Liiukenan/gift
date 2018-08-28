@@ -3,12 +3,12 @@
       <banner />
       <v-tabs centered hide-slider @input="changeTab" color="app_bg">
         <div class="tab_title">
-            <v-tab style="min-width: 120px" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+            <v-tab style="min-width: 150px" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
               <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
                 {{$t("ActivityPage.tab_receive")}}
               </div>
             </v-tab>
-            <v-tab style="min-width: 120px" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+            <v-tab style="min-width: 150px" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
               <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
                 {{$t("ActivityPage.tab_send")}}
               </div>
@@ -39,6 +39,7 @@
   import TopRank from './components/TopRank'
   import MySelf from './components/MySelf'
   import Banner from './components/Banner'
+
 
 export default {
   name: 'App',
@@ -105,7 +106,7 @@ export default {
     margin-bottom: 80px;
   }
   .tab_title{
-    height: 45px;
+    height: 37px;
     border-radius: 50px;
     background: rgba(158,0,232, 1);
     white-space: nowrap;
