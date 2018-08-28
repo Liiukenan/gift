@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import {jumpOnlineUser,jumpMain} from "../common/jsInteractive"
+  import {jumpOnlineUser, jumpMain, logEvent} from "../common/jsInteractive"
   import {mapGetters} from "vuex";
 
   export default {
@@ -39,6 +39,7 @@
       },
     methods:{
       jumpOther:function (role) {
+        logEvent("event_activity_page_hittop_click","")
         if (role == "user"){
           jumpMain();
         } else {

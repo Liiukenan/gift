@@ -25,6 +25,7 @@ export function enterEventDetails(url) {
 // 跳转到个人详情页面
 export function jumpPersonDetail(jid) {
   console.log("jumpPersonDetail:" + jid);
+  logEvent("event_activity_page_profile_click","")
   if (plat == "android") {
     jsInteractive.jumpPersonDetail(jid)
   } else if (plat == "ios") {
@@ -52,6 +53,40 @@ export function jumpOnlineUser() {
     jsInteractive.jumpOnlineUser()
   } else if (plat == "ios") {
     var message = {methodName: 'jumpOnlineUser'};
+    window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
+  }
+
+}
+
+// 打点接口
+// example:     key:value;key:value
+// 分号分割键值对，冒号分割key value
+export function logEvent(event,map) {
+  console.log("logEvent:" + event);
+  if (plat == "android") {
+    jsInteractive.logEvent(event,map)
+  } else if (plat == "ios") {
+    var json_info = {}
+    var strArray = map.split(";");
+    for (var i = 0; i < strArray.length; i++){
+      var temp = strArray[i].split(":");
+      json_info[temp[0]] = temp[1];
+    }
+    var message = {methodName: 'logEvent','event':event,jsonParams:JSON.stringify(json_info)};
+    window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
+  }
+}
+
+
+/**
+ * 加载失败
+ */
+export function loadError() {
+  console.log("loadError");
+  if (plat == "android") {
+    jsInteractive.loadError()
+  } else if (plat == "ios") {
+    var message = {methodName: 'loadError'};
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
 

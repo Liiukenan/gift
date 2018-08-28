@@ -33,7 +33,7 @@
 
 <script>
 import { mapGetters, mapState } from "vuex";
-import {jumpPersonDetail} from "../common/jsInteractive"
+import {jumpPersonDetail, logEvent} from "../common/jsInteractive"
 
 export default {
   name: "RankingList",
@@ -45,7 +45,6 @@ export default {
   props:[
     "tab_index"
   ],
-
   computed:{
     ...mapState({
         rankingList: "rankingList"

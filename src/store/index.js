@@ -101,6 +101,7 @@ const store = new Vuex.Store({
                 context.commit("loadRankingList", {rankingList: response.data})
             }).catch(reason => {
               console.log("reason:",reason);
+              loadError()
               // 请求异常，显示公布结果期间内容
               if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
                 console.log("show last:", list)
