@@ -8,8 +8,7 @@
             v-model="dialog"
             width="90%"
             height="80%"
-            scrollable
-            persistent>
+            scrollable>
 
             <v-btn
               fab right class="banner_float"
@@ -18,12 +17,14 @@
               {{$t("ActivityPage.bt_regular")}}
             </v-btn>
 
-            <v-card color="white" style="border-radius: 6px;padding: 30px 15px 40px 15px" v-if="showDialog">
-              <button v-on:click="onCloseBtn" style="width: 20px; height: 20px; position: absolute; right: 10px; top: 10px">
-                <img src="../assets/ic_closed.png" style="width: 20px; height: 20px">
-              </button>
-              
-              <v-card-text style="height: 400px;" overflow-y>
+
+            <v-card color="white" style="border-radius: 6px;padding: 15px 10px 15px 15px" v-if="showDialog">
+
+              <v-button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
+                <img src="../assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
+              </v-button>
+
+              <v-card-text style="height: 400px; margin-top: 10px;">            
               <!-- Title -->
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
                 {{$t("Ranking.incentiveDetails.title")}}
@@ -63,7 +64,7 @@
               </div>
 
               <v-spacer/>
-              </v-card-text>
+            </v-card-text>
             </v-card>
           </v-dialog>
         </v-layout>
@@ -178,8 +179,8 @@
   .banner_float {
     margin-top: 10px;
     margin-right: 10px;
-    width: 42px;
-    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
     right: 0;
     font-size: 10px;
     color: white;
