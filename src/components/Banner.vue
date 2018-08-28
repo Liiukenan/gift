@@ -7,7 +7,10 @@
           <v-dialog
             v-model="dialog"
             width="90%"
-            height="80%">
+            height="80%"
+            scrollable
+            persistent>
+
             <v-btn
               fab right class="banner_float"
               slot="activator"
@@ -19,6 +22,8 @@
               <button v-on:click="onCloseBtn" style="width: 20px; height: 20px; position: absolute; right: 10px; top: 10px">
                 <img src="../assets/ic_closed.png" style="width: 20px; height: 20px">
               </button>
+              
+              <v-card-text style="height: 400px;" overflow-y>
               <!-- Title -->
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
                 {{$t("Ranking.incentiveDetails.title")}}
@@ -58,7 +63,7 @@
               </div>
 
               <v-spacer/>
-
+              </v-card-text>
             </v-card>
           </v-dialog>
         </v-layout>
