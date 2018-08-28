@@ -28,7 +28,7 @@
         </v-card>
 
         <div class="result_top">
-            <img src="./resource/pop_bg.png" style="width:100%"/>
+            <img :src="getPopBg()" style="width:100%"/>
         </div>
 
     </v-layout>
@@ -40,6 +40,20 @@
     import TopRank from './components/TopRank';
     export default {
       name:'Result',
+      data: function () {
+        return {
+          popBgs:[
+            require("../static/img/pop_bg_ar.png"),
+            require("../static/img/pop_bg_de.png"),
+            require("../static/img/pop_bg_en.png"),
+            require("../static/img/pop_bg_es.png"),
+            require("../static/img/pop_bg_fr.png"),
+            require("../static/img/pop_bg_hi.png"),
+            require("../static/img/pop_bg_in.png"),
+            require("../static/img/pop_bg_tr.png")
+          ]
+        }
+      },
       components: {
         TopRank
       },
@@ -52,7 +66,31 @@
           console.log("fetchData");
           this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
           });
+        },
+        getPopBg:function(){
+          var path;
+          if (window.lang == "ar"){
+            path = this.popBgs[0];
+          } else if (window.lang == "de") {
+            path = this.popBgs[1];
+          } else if (window.lang == "en") {
+            path = this.popBgs[2];
+          } else if (window.lang == "es") {
+            path = this.popBgs[3];
+          } else if (window.lang == "fr") {
+            path = this.popBgs[4];
+          } else if (window.lang == "hi") {
+            path = this.popBgs[5];
+          } else if (window.lang == "in") {
+            path = this.popBgs[6];
+          } else if (window.lang == "tr") {
+            path = this.popBgs[7];
+          } else {
+            path = this.popBgs[2];
+          }
+          return path;
         }
+
       }
     }
 </script>

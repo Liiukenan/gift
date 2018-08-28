@@ -1,6 +1,6 @@
 <template>
   <div class="banner_root">
-    <img class="banner_img" src="../resource/banner_bg.png"/>
+    <img class="banner_img" :src="getBannerBg()"/>
     <v-layout column class="banner_content">
       <v-spacer/>
       <v-flex offset-xs9>
@@ -85,7 +85,17 @@
      data () {
       return {
         dialog: false,
-        showDialog: false
+        showDialog: false,
+        banner_bg: [
+          require("../../static/img/ranking_list_bg_ar.png"),
+          require("../../static/img/ranking_list_bg_de.png"),
+          require("../../static/img/ranking_list_bg_en.png"),
+          require("../../static/img/ranking_list_bg_es.png"),
+          require("../../static/img/ranking_list_bg_fr.png"),
+          require("../../static/img/ranking_list_bg_hi.png"),
+          require("../../static/img/ranking_list_bg_in.png"),
+          require("../../static/img/ranking_list_bg_tr.png"),
+        ]
       }
     },
     methods: {
@@ -103,6 +113,29 @@
       onCloseBtn(event){
         console.log("close btn clicked")
         this.dialog = false
+      },
+      getBannerBg:function () {
+        var path;
+        if (window.lang == "ar"){
+          path = this.banner_bg[0];
+        } else if (window.lang == "de") {
+          path = this.banner_bg[1];
+        } else if (window.lang == "en") {
+          path = this.banner_bg[2];
+        } else if (window.lang == "es") {
+          path = this.banner_bg[3];
+        } else if (window.lang == "fr") {
+          path = this.banner_bg[4];
+        } else if (window.lang == "hi") {
+          path = this.banner_bg[5];
+        } else if (window.lang == "in") {
+          path = this.banner_bg[6];
+        } else if (window.lang == "tr") {
+          path = this.banner_bg[7];
+        } else {
+          path = this.banner_bg[2];
+        }
+        return path;
       }
     },
     created(){
