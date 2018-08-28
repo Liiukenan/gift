@@ -8,7 +8,7 @@
             <div class="title">
                 <img class="title_bg" src="./resource/receiver_bg.png">
                 <span class="receiver_title">
-                    Receiving Gifts
+                {{$t("ActivityPage.tab_receive")}}
                 </span>
             </div>
 
@@ -17,13 +17,13 @@
             <div class="title">
                 <img class="title_bg" src="./resource/send_bg.png">
                 <span class="send_title">
-                    Send Gifts
+                {{$t("ActivityPage.tab_send")}}
                 </span>
             </div>
 
             <top-rank tabIndex="1"/>
 
-            <v-btn align-center round dark class="result_btn">Enter</v-btn>
+            <v-btn align-center round dark class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
 
         </v-card>
 
@@ -38,6 +38,7 @@
 
 <script>
     import TopRank from './components/TopRank';
+    import {enterEventDetails} from "./common/jsInteractive"
     export default {
       name:'Result',
       data: function () {
@@ -89,8 +90,11 @@
             path = this.popBgs[2];
           }
           return path;
+        },
+        jumpActivityDetail:function () {
+          console.log("jumpActivityDetail");
+          enterEventDetails("")
         }
-
       }
     }
 </script>
