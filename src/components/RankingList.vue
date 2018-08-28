@@ -7,18 +7,22 @@
               v-bind:key="x.id">
               <v-divider inset></v-divider>
               <v-layout v-ripple fill-height align-center class="item" @click="listItemClick(x)">
-                  <v-flex xs3 class="anchor_id" >
-                    <span >{{x.ranking}}</span>
-                  </v-flex>
-                  <v-flex xs5 >
-                    <v-list-tile-avatar size="56" style="padding-top: 10px;padding-bottom: 10px">
+                  <div class="anchor_id">
+                    {{x.ranking}}
+                  </div>
+                  <div class="anchor_head" >
+                    <v-list-tile-avatar size="48px" >
                     <img v-lazy="`${x.avatarUrl}`" />
                     </v-list-tile-avatar>
-                  </v-flex>
-                  <v-flex xs12 text-xs-left >
-                    <span class="list-item__title">{{x.nickname}}</span>
-                  </v-flex>
-                  <v-flex xs4 class="right item_rank">{{x.gifts}}</v-flex>
+                  </div>
+                  <div class="item_name">
+                    {{x.nickname}}
+                  </div>
+                  <v-card-text class="item_rank">
+                    <span class="right">
+                      {{x.gifts}}
+                    </span>
+                  </v-card-text>
               </v-layout>
               <v-divider inset v-if="index + 1 === receiverData.length" :key="`divider-${index}`"></v-divider>
             </div>
@@ -65,15 +69,33 @@ export default {
 
   .item{
     width: 100%;
-    height: 80px;
+    height: 56px;
   }
 
   .anchor_id{
+    margin-left: 12px;
+    min-width: 25px;
+    font-size: 14px;
     color: rgba(0,0,0,0.40);;
+  }
+  .anchor_head{
+    margin-left: 15px;
   }
 
   .item_rank{
+    margin-right: 10px;
+    font-size: 10px;
     color: rgba(0,0,0,0.40);;
+  }
+  .item_name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    float: left;
+    min-width: 160px;
+    margin-left: 15px;
+    font-size: 14px;
   }
 
 </style>

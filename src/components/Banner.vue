@@ -2,14 +2,12 @@
   <div class="banner_root">
     <img class="banner_img" :src="getBannerBg()"/>
     <v-layout column class="banner_content">
-      <v-spacer/>
-      <v-flex offset-xs9>
-        <div class="text-xs-center">
+      <v-flex>
+        <v-layout right class="text-xs-center">
           <v-dialog
             v-model="dialog"
             width="90%"
             height="80%">
-
             <v-btn
               fab right class="banner_float"
               slot="activator"
@@ -22,40 +20,40 @@
                 <img src="../assets/ic_closed.png" style="width: 20px; height: 20px">
               </button>
               <!-- Title -->
-              <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;">
+              <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
                 {{$t("Ranking.incentiveDetails.title")}}
               </div>
               <v-spacer/>
               <!-- Time -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;">
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{$t("ActivityPage.time").replace("@@@","20180820-20180920")}}</p>
               </div>
               <!-- rules -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;">
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
               </div>
               <!-- rules detail -->
-              <div style="text-align: left; width: 100%;">
+              <div style="text-align: left; width: 100%;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
               </div>
 
               <!-- activity incentives -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;">
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
               </div>
               <v-spacer/>
               <!-- top3 -->
-              <div style="text-align: center; width: 100%;">
+              <div style="text-align: center; width: 100%;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.receive_Top3')"></p>
               </div>
-              <div style="text-align: left; width: 100%;">
+              <div style="text-align: left; width: 100%;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.receive_Top3_content')"></p>
               </div>
 
-              <div style="text-align: center; width: 100%;">
+              <div style="text-align: center; width: 100%;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.send_Top3')"></p>
               </div>
-              <div style="text-align: left; width: 100%;">
+              <div style="text-align: left; width: 100%;font-size: 14px">
                 <p v-html="$t('Ranking.incentiveDetails.send_Top3_content')"></p>
               </div>
 
@@ -63,8 +61,7 @@
 
             </v-card>
           </v-dialog>
-        </div>
-
+        </v-layout>
       </v-flex>
       <v-spacer/>
       <v-spacer/>
@@ -73,6 +70,7 @@
           {{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}
         </v-btn>
       </v-flex>
+      <v-spacer/>
       <v-spacer/>
     </v-layout>
   </div>
@@ -173,10 +171,13 @@
   }
 
   .banner_float {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 42px;
+    height: 42px;
     right: 0;
     font-size: 10px;
     color: white;
-    margin-top: 0px;
     text-transform: Capitalize;
     background-image:  linear-gradient(-180deg, #CA8EFF 0%, #007EE9 100%);
     box-shadow: 0 3px 4px 0;
@@ -187,7 +188,11 @@
   }
 
   .banner_des_btn {
-    font-size: 5px;
+    min-width: 120px;
+    max-height: 16px;
+    font-size: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     background-image:linear-gradient(90deg, #FFFFFF 0%,#FF6841 50%, #FFFFFF 100%) ;
     text-transform: Capitalize;
   }

@@ -1,18 +1,20 @@
 <template>
     <v-app id="app" light class="scroll-y">
       <banner />
-      <v-tabs centered hide-slider @input="changeTab" color="app_bg">
-        <div class="tab_title">
-            <v-tab style="min-width: 150px" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
-              <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
-                {{$t("ActivityPage.tab_receive")}}
-              </div>
-            </v-tab>
-            <v-tab style="min-width: 150px" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
-              <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
-                {{$t("ActivityPage.tab_send")}}
-              </div>
-            </v-tab>
+      <v-tabs centered hide-slider @input="changeTab" class="tabs" color="transparent">
+          <div class="tab_title">
+            <v-layout>
+              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+                <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
+                  {{$t("ActivityPage.tab_receive")}}
+                </div>
+              </v-tab>
+              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+                <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
+                  {{$t("ActivityPage.tab_send")}}
+                </div>
+              </v-tab>
+            </v-layout>
           </div>
           <v-tab-item>
             <v-card color="white" class="tab_card">
@@ -100,13 +102,13 @@ export default {
     width: 100%;
     position: fixed;
     bottom: 0px;
-    height: 70px;
+    height: 56px;
   }
   .rank_item_list{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
   .tab_title{
-    height: 37px;
+    height: 32px;
     border-radius: 50px;
     background: rgba(158,0,232, 1);
     white-space: nowrap;
@@ -117,7 +119,7 @@ export default {
   .selected_tab_item{
     border-radius: 50px;
     background: white;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     height: 100%;
     padding-left: 10px;
@@ -125,7 +127,7 @@ export default {
     text-transform: Capitalize;
   }
   .unselected_tab_item{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     height: 100%;
     padding-left: 10px;
@@ -140,7 +142,8 @@ export default {
   }
   .tab_card{
     padding: 5px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 15px;
   }
   .slide-fade-enter-active {
@@ -152,6 +155,13 @@ export default {
   .slide-fade-enter, .slide-fade-leave-to {
     transform: translateY(70px);
     opacity: 0;
+  }
+  .tab_item{
+    width: 120px;
+    height: 32px;
+  }
+  .tabs{
+    margin-top: -50px;
   }
 
 </style>

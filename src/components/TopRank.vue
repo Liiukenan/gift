@@ -1,18 +1,18 @@
 <template>
-  <v-container text-xs-center class="top_rank">
+  <v-layout >
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
-          <v-layout column align-center justify-end>
+          <v-layout column align-center justify-end class="second_layout">
             <img style="width: 35px;z-index: 0" src="../resource/top_second.png"/>
             <img class="second_img" style="margin-top: -10px;"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
-        <v-flex>
+        <v-layout>
           <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].nickname:''): (sendTop != undefined?sendTop[1].nickname:'')}}</span>
-        </v-flex>
-        <v-flex color="top_anchor_gift_color">
+        </v-layout>
+        <v-layout color="top_anchor_gift_color">
           <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].gifts:'') : (sendTop != undefined?sendTop[1].gifts:'')}}</span>
-        </v-flex>
+        </v-layout>
     </v-layout>
 
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
@@ -23,30 +23,30 @@
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
-      <v-flex >
+      <v-layout >
         <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
-      </v-flex>
-      <v-flex>
+      </v-layout>
+      <v-layout>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].gifts:'') : (sendTop != undefined?sendTop[0].gifts:'')}}</span>
-      </v-flex>
+      </v-layout>
     </v-layout>
 
-    <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
-        <v-layout column align-center>
+    <v-layout  v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
+        <v-layout column align-center class="third_layout">
           <img style="width: 30px;z-index: 0" src="../resource/top_third.png"/>
           <img class="third_img" style="margin-top: -10px"
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>
-      <v-flex>
+      <v-layout>
         <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].nickname:''): (sendTop != undefined?sendTop[2].nickname:'')}}</span>
-      </v-flex>
-      <v-flex>
+      </v-layout>
+      <v-layout>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].gifts:'') : (sendTop != undefined?sendTop[2].gifts:'')}}</span>
-      </v-flex>
+      </v-layout>
     </v-layout>
 
-  </v-container>
+  </v-layout>
 </template>
 
 <script>
@@ -83,19 +83,13 @@
 
 <style>
 
-  .top_rank {
-    position: relative;
-    display: flex;
-  }
-
   .top_anchor {
-    flex: 1;
     padding-top: 5%;
   }
 
   .first_img {
-    width: 88px;
-    height: 88px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     border-color: rgba(248, 231, 28, 1) ;
     border-style: outset;
@@ -103,8 +97,8 @@
   }
 
   .second_img {
-    width: 77px;
-    height: 77px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border-color: rgba(198, 198, 198, 1);
     border-style: outset;
@@ -112,19 +106,28 @@
   }
 
   .third_img {
-    width: 66px;
-    height: 66px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border-color: rgba(177, 106, 10, 1);
     border-style: outset;
     border-width: 2px;
   }
 
+  .second_layout{
+    margin-top: 12px;
+  }
+  .third_layout{
+    margin-top: 12px;
+  }
+
   .rank_gift{
+    font-size: 10px;
     color: rgba(0, 0, 0, 0.4);
   }
 
   .anchor_name{
+    font-size: 14px;
     color: rgba(0, 0, 0, 0.8);
   }
 

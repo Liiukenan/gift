@@ -1,5 +1,5 @@
 <template>
-<v-app light class="scroll-y result_root">
+<v-layout light class="result_root">
 
     <v-layout class="result_content" column>
 
@@ -33,7 +33,7 @@
 
     </v-layout>
 
-</v-app>
+</v-layout>
 </template>
 
 <script>
@@ -101,12 +101,9 @@
 
 <style>
 .result_root{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
 }
 .result_content{
     position:relative;
@@ -118,7 +115,7 @@
 .title_bg{
     margin-left:20px;
     margin-right:20px;
-    width : 280px;
+    width : 250px;
 }
 .receiver_title{
     position:absolute;
@@ -150,12 +147,13 @@
     min-width:250px;
 }
 .result_card{
+    background: white;
     margin:auto;
     position:absolute;
     left:0;
     right:0;
-    padding-top:20px;
-    top:100px;
+    padding-top:30px;
+    top:70px;
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
 }

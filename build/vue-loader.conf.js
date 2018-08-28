@@ -6,6 +6,8 @@ const sourceMapEnabled = isProduction
   ? config.build.productionSourceMap
   : config.dev.cssSourceMap
 
+var px2rem = require('postcss-px2rem');
+
 module.exports = {
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
@@ -18,5 +20,9 @@ module.exports = {
     source: 'src',
     img: 'src',
     image: 'xlink:href'
+  },
+  /*配置remUnit*/
+  postcss: function() {
+    return [px2rem({remUnit: 36})];
   }
 }

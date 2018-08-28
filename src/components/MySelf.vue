@@ -1,10 +1,10 @@
 <template>
     <v-layout fill-height row justify-start  align-center class="mine_root" v-on:click="jumpOther(mySelf['role'])">
       <v-flex xs1>
-        <div class="mine_ranking" style="font-size: 10px">{{mySelf.ranking}}</div>
+        <div class="mine_ranking">{{mySelf.ranking}}</div>
       </v-flex>
       <v-flex xs3>
-        <v-avatar color="grey lighten-4">
+        <v-avatar size="36px" color="grey lighten-4">
           <img v-bind:src="`${mySelf.avatarUrl}`">
         </v-avatar>
       </v-flex>
@@ -79,13 +79,16 @@
   }
 
   .mine_ranking{
+    font-size: 14px;
     color: rgba(0,0,0,0.20);;
   }
 
   .mine_des{
+    font-size: 10px;
     color: rgba(0,0,0,0.60);
   }
   .mine_btn{
+    font-size: 12px;
     text-transform: capitalize;
   }
 
