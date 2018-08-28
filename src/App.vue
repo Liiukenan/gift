@@ -39,6 +39,7 @@
   import TopRank from './components/TopRank'
   import MySelf from './components/MySelf'
   import Banner from './components/Banner'
+  import {logEvent} from "./common/jsInteractive"
 
 
 export default {
@@ -62,7 +63,9 @@ export default {
     }
   },
   created() {
-    this.fetchData()
+    this.fetchData();
+    // 活动页面展示
+    logEvent("event_activity_page_show", "")
   },
   computed:{
     ...mapGetters({
@@ -81,6 +84,12 @@ export default {
        this.isTabOne = val === 0;
        this.isTabTwo = val === 1;
        this.tabIndex = val;
+       if (this.isTabOne) {
+         logEvent("event_activity_ranking_receive_show","")
+       }
+       if (this.isTabTwo){
+         logEvent("event_activity_ranking_send_show","")
+       }
     }
   }
 }
