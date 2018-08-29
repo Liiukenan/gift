@@ -30,7 +30,7 @@
           </v-tab-item>
       </v-tabs>
       <transition name="slide-fade">
-        <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 1 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 0 )" class="mine_rank" />
+        <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
       </transition>
     </v-app>
 </template>

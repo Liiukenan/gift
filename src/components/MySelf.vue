@@ -61,7 +61,7 @@
           des = this.$t("ActivityPerson.distance_100").replace("@@@", data.distance + 1);
         } else if (rank == '--') {
           des = this.$t("ActivityPerson.distance_else");
-        } else if (rank == 1) {
+        } else if (rank == '1') {
           des = this.$t("ActivityPerson.frist");
         }
         this.rankDes = des;
