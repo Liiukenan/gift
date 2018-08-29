@@ -170,7 +170,7 @@ export default {
     height: 32px;
   }
   .tabs{
-    margin-top: -50px;
+    margin-top: -45px;
   }
 
 </style>

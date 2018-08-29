@@ -9,8 +9,8 @@ import VueI18n from 'vue-i18n'
 
 import store from './store'
 import Vuetify from 'vuetify';
-import VueLazyload from 'vue-lazyload'
-import routes from './routes'
+import VueLazyload from 'vue-lazyload';
+import routes from './routes';
 
 
 Vue.use(Vuex);
@@ -55,10 +55,16 @@ const app = new Vue({
   store,
   computed: {
     ViewComponent () {
-      const matchingView = routes[this.currentRoute];
-      return matchingView
-        ? require('./' + matchingView + '.vue').default
-        : require('./App.vue').default
+      if (this.currentRoute.indexOf("result") != -1){
+        return require('./Result.vue').default;
+      }else {
+        return require('./App.vue').default;
+      }
+      // const matchingView = routes[this.currentRoute];
+      // console.log("match view:" + matchingView);
+      // return matchingView
+      //   ? require('./' + matchingView + '.vue').default
+      //   : require('./App.vue').default
     }
   },
   render (h) {

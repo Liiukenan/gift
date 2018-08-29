@@ -13,7 +13,7 @@
         <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
       <v-flex xs4 v-if="myActivity != undefined && myActivity['status'] == 0">
-          <v-btn class="mine_btn" round color="red" dark style="textTransform:none">
+          <v-btn class="mine_btn" round dark style="textTransform:none">
             <span v-show="mySelf['role']=='user'">{{$t("ActivityPage.bt_help_punching")}}</span>
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
@@ -89,6 +89,7 @@
     color: rgba(0,0,0,0.60);
   }
   .mine_btn{
+    background-image:  linear-gradient(-180deg, #FC673F 0%,#EF3276 50%, #C826A8 100%);
     font-size: 12px;
     text-transform: capitalize;
   }

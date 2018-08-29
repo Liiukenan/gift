@@ -4,17 +4,15 @@
     <v-layout class="result_content" column>
 
         <v-card class="result_card">
-
             <div class="title">
                 <img class="title_bg" src="./resource/receiver_bg.png">
                 <span class="receiver_title">
                 {{$t("ActivityPage.tab_receive")}}
                 </span>
             </div>
-
             <top-rank tabIndex="0"/>
 
-            <div class="title">
+            <div class="title" style="margin-top: 10px;white-space: nowrap">
                 <img class="title_bg" src="./resource/send_bg.png">
                 <span class="send_title">
                 {{$t("ActivityPage.tab_send")}}
@@ -23,7 +21,7 @@
 
             <top-rank tabIndex="1"/>
 
-            <v-btn align-center round dark class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
+            <v-btn align-center round dark style="color: white" class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
 
         </v-card>
 
@@ -115,12 +113,12 @@
 .title_bg{
     margin-left:20px;
     margin-right:20px;
-    width : 250px;
+    width : 200px;
 }
 .receiver_title{
     position:absolute;
     margin:0 auto;
-    top:10px;
+    top:5px;
     left:0;
     right:0;
     text-align:center;
@@ -128,19 +126,17 @@
 }
 .send_title{
     position:absolute;
-    margin:0 auto;
-    top:10px;
     left:0;
+    margin-top: 5px;
     right:0;
+    top: 0;
     text-align:center;
     font-size:15px;
-    display:block;
 }
 .title{
     position:relative;
     color: white;
     width: 100%;
-    height:40px;
 }
 .result_btn{
     background-image:  linear-gradient(-180deg, #FC673F 0%,#EF3276 50%, #C826A8 100%);
