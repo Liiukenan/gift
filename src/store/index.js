@@ -80,7 +80,7 @@ const store = new Vuex.Store({
               currentJid = window.jid;
             }
             //http://54.222.148.146:46000/
-          
+
           var api = 'ranking_activity/rank'
           /*
           部署在nginx后面的话，用proxy解决跨域问题。nginx配置如下：
@@ -93,10 +93,10 @@ const store = new Vuex.Store({
             # proxy_set_header Host $http_host;
             # proxy_redirect off;
           }*/
-          if(isDev){
+          if(!isDev){
             //如果部署在CDN，也要用这个地址，服务端处理跨域问题
             api = 'http://54.222.148.146:46000/ranking_activity/rank'
-          }  
+          }
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){

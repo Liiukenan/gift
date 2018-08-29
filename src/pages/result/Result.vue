@@ -5,7 +5,7 @@
 
         <v-card class="result_card">
             <div class="title">
-                <img class="title_bg" src="./resource/receiver_bg.png">
+                <img class="title_bg" src="../../resource/receiver_bg.png">
                 <span class="receiver_title">
                 {{$t("ActivityPage.tab_receive")}}
                 </span>
@@ -13,7 +13,7 @@
             <top-rank tabIndex="0"/>
 
             <div class="title" style="margin-top: 10px;white-space: nowrap">
-                <img class="title_bg" src="./resource/send_bg.png">
+                <img class="title_bg" src="../../resource/send_bg.png">
                 <span class="send_title">
                 {{$t("ActivityPage.tab_send")}}
                 </span>
@@ -28,7 +28,7 @@
         <div class="result_top">
             <img :src="getPopBg()" style="width:100%"/>
         </div>
-        
+
 
     </v-layout>
 
@@ -36,21 +36,21 @@
 </template>
 
 <script>
-    import TopRank from './components/TopRank';
-    import {enterEventDetails} from "./common/jsInteractive"
+    import TopRank from '../../components/TopRank';
+    import {enterEventDetails} from "../../common/jsInteractive"
     export default {
       name:'Result',
       data: function () {
         return {
           popBgs:[
-            require("../static/img/pop_bg_ar.png"),
-            require("../static/img/pop_bg_de.png"),
-            require("../static/img/pop_bg_en.png"),
-            require("../static/img/pop_bg_es.png"),
-            require("../static/img/pop_bg_fr.png"),
-            require("../static/img/pop_bg_hi.png"),
-            require("../static/img/pop_bg_in.png"),
-            require("../static/img/pop_bg_tr.png")
+            require("../../../static/img/pop_bg_ar.png"),
+            require("../../../static/img/pop_bg_de.png"),
+            require("../../../static/img/pop_bg_en.png"),
+            require("../../../static/img/pop_bg_es.png"),
+            require("../../../static/img/pop_bg_fr.png"),
+            require("../../../static/img/pop_bg_hi.png"),
+            require("../../../static/img/pop_bg_in.png"),
+            require("../../../static/img/pop_bg_tr.png")
           ]
         }
       },

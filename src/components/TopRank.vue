@@ -1,7 +1,7 @@
 <template>
   <v-layout >
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
-          <v-layout column align-center justify-end class="second_layout">
+          <v-layout column align-center class="second_layout">
             <img style="width: 35px;z-index: 0" src="../resource/top_second.png"/>
             <img class="second_img" style="margin-top: -10px;"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
@@ -15,7 +15,7 @@
         </v-layout>
     </v-layout>
 
-    <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
+    <v-layout v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
           <img style="width: 40px;z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
@@ -115,10 +115,10 @@
   }
 
   .second_layout{
-    margin-top: 12px;
+    margin-top: 14px;
   }
   .third_layout{
-    margin-top: 12px;
+    margin-top: 14px;
   }
 
   .rank_gift{

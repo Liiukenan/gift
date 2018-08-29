@@ -37,11 +37,11 @@
 
 <script>
   import {mapGetters} from "vuex";
-  import RankingList from './components/RankingList'
-  import TopRank from './components/TopRank'
-  import MySelf from './components/MySelf'
-  import Banner from './components/Banner'
-  import {logEvent} from "./common/jsInteractive"
+  import RankingList from '../../components/RankingList'
+  import TopRank from '../../components/TopRank'
+  import MySelf from '../../components/MySelf'
+  import Banner from '../../components/Banner'
+  import {logEvent} from "../../common/jsInteractive"
 
 
 export default {

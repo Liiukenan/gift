@@ -7,10 +7,10 @@ import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 
-import store from './store'
+import store from '../../store/index'
 import Vuetify from 'vuetify';
 import VueLazyload from 'vue-lazyload';
-import routes from './routes';
+import App from './App'
 
 
 Vue.use(Vuex);
@@ -31,15 +31,15 @@ const i18n = new VueI18n({
   locale: lang,    // 语言标识
   // this.$i18n.locale, // 通过切换locale的值来实现语言切换
   messages: {
-    'en': require('./common/lang/en'),
-    'ar': require('./common/lang/ar'),
-    'de': require('./common/lang/de'),
-    'es': require('./common/lang/es'),
-    'fr': require('./common/lang/fr'),
-    'hi': require('./common/lang/hi'),
-    'in': require('./common/lang/in'),
-    'tr': require('./common/lang/tr'),
-    'zh': require('./common/lang/zh')
+    'en': require('../../common/lang/en'),
+    'ar': require('../../common/lang/ar'),
+    'de': require('../../common/lang/de'),
+    'es': require('../../common/lang/es'),
+    'fr': require('../../common/lang/fr'),
+    'hi': require('../../common/lang/hi'),
+    'in': require('../../common/lang/in'),
+    'tr': require('../../common/lang/tr'),
+    'zh': require('../../common/lang/zh')
   }
 });
 
@@ -48,26 +48,8 @@ Vue.config.productionTip = false;
 /* eslint-disable no-new */
 const app = new Vue({
   el: '#app_content',
-  data: {
-    currentRoute: window.location.pathname
-  },
   i18n,
+  components: { App },
+  template: '<App/>',
   store,
-  computed: {
-    ViewComponent () {
-      if (this.currentRoute.indexOf("result") != -1){
-        return require('./Result.vue').default;
-      }else {
-        return require('./App.vue').default;
-      }
-      // const matchingView = routes[this.currentRoute];
-      // console.log("match view:" + matchingView);
-      // return matchingView
-      //   ? require('./' + matchingView + '.vue').default
-      //   : require('./App.vue').default
-    }
-  },
-  render (h) {
-    return h(this.ViewComponent)
-  }
 });

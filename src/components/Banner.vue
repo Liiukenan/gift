@@ -21,7 +21,7 @@
             <v-card color="white" style="border-radius: 6px;padding: 15px 10px 15px 15px" v-if="showDialog">
 
               <button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
-                <img src="../assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
+                <img src="../pages/index/assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
               </button>
 
               <v-card-text style="height: 500px; margin-top: 10px;">
