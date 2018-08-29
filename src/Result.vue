@@ -28,6 +28,7 @@
         <div class="result_top">
             <img :src="getPopBg()" style="width:100%"/>
         </div>
+        
 
     </v-layout>
 

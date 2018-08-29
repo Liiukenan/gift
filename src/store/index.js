@@ -8,6 +8,7 @@ import qs from 'qs';
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
+const isDev = process.env.NODE_ENV !== 'production'
 
 const store = new Vuex.Store({
     state: {
@@ -78,7 +79,25 @@ const store = new Vuex.Store({
             if (window.plat == "android" || window.plat == "ios"){
               currentJid = window.jid;
             }
-          return Vue.axios.post('http://54.222.148.146:46000/ranking_activity/rank',qs.stringify({"jid":currentJid})).then((response) => {
+            //http://54.222.148.146:46000/
+          
+          var api = 'ranking_activity/rank'
+          /*
+          部署在nginx后面的话，用proxy解决跨域问题。nginx配置如下：
+          location /ranking_activity/ {
+            # proxy_set_header X-Real-IP $remote_addr;
+            # proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            # proxy_set_header X-NginX-Proxy true;
+            proxy_pass http://54.222.148.146:46000/ranking_activity/;
+            # proxy_ssl_session_reuse off;
+            # proxy_set_header Host $http_host;
+            # proxy_redirect off;
+          }*/
+          if(isDev){
+            //如果部署在CDN，也要用这个地址，服务端处理跨域问题
+            api = 'http://54.222.148.146:46000/ranking_activity/rank'
+          }  
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
