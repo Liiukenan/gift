@@ -10,7 +10,7 @@ import VueI18n from 'vue-i18n'
 import store from '../../store/index'
 import Vuetify from 'vuetify';
 import VueLazyload from 'vue-lazyload';
-import Result from './Result'
+import Result from './AppResult'
 
 
 Vue.use(Vuex);
