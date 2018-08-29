@@ -24,7 +24,7 @@
                 <img src="../assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
               </button>
 
-              <v-card-text style="height: 500px; margin-top: 10px;">            
+              <v-card-text style="height: 500px; margin-top: 10px;">
               <!-- Title -->
               <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
                 {{$t("Ranking.incentiveDetails.title")}}
@@ -72,7 +72,7 @@
       <v-spacer/>
       <v-spacer/>
       <v-flex xs1 class="banner_des">
-        <v-btn outline round small color="activity_time_color" class="banner_des_btn" style="margin-left: auto;margin-right: auto">
+        <v-btn outline round small color="activity_time_color" class="banner_des_btn">
           {{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}
         </v-btn>
       </v-flex>
@@ -194,8 +194,9 @@
   }
 
   .banner_des_btn {
-    min-width: 120px;
-    max-height: 16px;
+    height: 19px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 10px;
     padding-right: 15px;
     padding-left: 15px;
