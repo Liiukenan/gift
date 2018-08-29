@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import qs from 'qs';
+import {loadError} from "../common/jsInteractive";
 
 
 Vue.use(Vuex);
@@ -109,6 +110,7 @@ const store = new Vuex.Store({
                   } else if (status == 0){
                     // 下架期间
                   } else if (status == 2){
+                    loadError()
                     // 上一次显示结果
                      if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
                        console.log("show last:", list)
