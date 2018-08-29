@@ -19,13 +19,13 @@
           <v-tab-item>
             <v-card color="white" class="tab_card">
               <TopRank tabIndex="0"/>
-              <RankingList tab_index="0" class="rank_item_list"/>
+              <RankingList tab_index="0"/>
             </v-card>
           </v-tab-item>
           <v-tab-item>
             <v-card color="white" class="tab_card">
               <TopRank tabIndex="1"/>
-              <ranking-list tab_index ="1" class="rank_item_list"/>
+              <ranking-list tab_index ="1"/>
             </v-card>
           </v-tab-item>
       </v-tabs>
@@ -113,9 +113,7 @@ export default {
     bottom: 0px;
     height: 56px;
   }
-  .rank_item_list{
-    margin-bottom: 60px;
-  }
+
   .tab_title{
     height: 32px;
     border-radius: 50px;
@@ -154,6 +152,7 @@ export default {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 15px;
+    margin-bottom: 60px;
   }
   .slide-fade-enter-active {
     transition: all 0.3s ease;

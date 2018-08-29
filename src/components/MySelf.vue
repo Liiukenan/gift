@@ -4,9 +4,9 @@
         <div class="mine_ranking">{{mySelf.ranking}}</div>
       </v-flex>
       <v-flex xs3>
-        <v-avatar size="36px" color="grey lighten-4">
-          <img v-bind:src="`${mySelf.avatarUrl}`">
-        </v-avatar>
+        <v-layout>
+         <img class="mine_head" v-bind:src="`${mySelf.avatarUrl}`"/>
+        </v-layout>
       </v-flex>
 
       <v-flex xs7 v-if="myActivity != undefined && myActivity['status'] == 0">
@@ -89,9 +89,15 @@
     color: rgba(0,0,0,0.60);
   }
   .mine_btn{
+    height: 32px;
     background-image:  linear-gradient(-180deg, #FC673F 0%,#EF3276 50%, #C826A8 100%);
     font-size: 12px;
     text-transform: capitalize;
+  }
+  .mine_head{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
   }
 
 </style>
