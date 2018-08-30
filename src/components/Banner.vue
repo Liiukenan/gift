@@ -102,6 +102,17 @@
         ]
       }
     },
+    watch: {
+      dialog: function(val){
+        if(val){
+          console.log("dialog show")
+          this.setBodyScroll(false)
+        } else {
+          console.log("dialog hide")
+          this.setBodyScroll(true)
+        }
+      },
+    },
     methods: {
       getActivityTime:function(){
         var time = "";
@@ -147,7 +158,20 @@
           path = this.banner_bg[2];
         }
         return path;
-      }
+      },
+      setBodyScroll:function(scroll){
+        if(!scroll){
+            document.documentElement.style.overflow = 'hidden';
+            document.body.scroll = "no";
+            document.body.style.position = "fixed";
+            document.body.style.width = "100%";
+        } else{
+            document.documentElement.style.overflow = 'scroll';
+            document.body.scroll = "yes";
+            document.body.style.position = "relative";
+            document.body.style.width = "100%";
+        }
+      },
     },
     created(){
       setTimeout(()=>{

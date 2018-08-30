@@ -98,6 +98,7 @@ const store = new Vuex.Store({
             //如果部署在CDN，也要用这个地址，服务端处理跨域问题
             api = 'http://54.222.148.146:46000/ranking_activity/rank'
           }
+          api = 'http://54.222.148.146:46000/ranking_activity/rank'
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
