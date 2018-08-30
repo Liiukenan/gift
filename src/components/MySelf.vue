@@ -58,12 +58,12 @@
         var des = "";
         if (rank == '99+') {
           des = this.$t('ActivityPerson.distance_150').replace("@@@", data.distance + 1);
+        } else if (rank == '1') {
+          des = this.$t("ActivityPerson.frist");
         } else if (rank <= 100) {
           des = this.$t("ActivityPerson.distance_100").replace("@@@", data.distance + 1);
         } else if (rank == '--') {
           des = this.$t("ActivityPerson.distance_else");
-        } else if (rank == '1') {
-          des = this.$t("ActivityPerson.frist");
         }
         this.rankDes = des;
         return data;
