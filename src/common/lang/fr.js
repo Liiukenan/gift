@@ -37,7 +37,7 @@ module.exports = {
   ActivityPage: {
     tab_receive: "Recevoir",
     tab_send: "Envoyer",
-    time: "Date: @@@",
+    time: "Heure: @@@",
     activity_finish: "Fin de l'activité. Merci de votre attention !",
     bt_me_punching: "Atteignez la première place",
     bt_help_punching: "Aidez ma petite amie",
