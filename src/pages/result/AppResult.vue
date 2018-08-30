@@ -6,7 +6,7 @@
         <div class="result_title">
           <img :src="getPopBg()" style="width:100%"/>
         </div>
-        <v-card class="result_card">
+        <v-card flat class="result_card">
             <div class="title">
                 <img class="title_bg" src="../../resource/receiver_bg.png">
                 <span class="receiver_title">
@@ -153,7 +153,7 @@
     padding-bottom: 5px;
 }
 .result_title{
-  background-image: linear-gradient(180deg,#00000000 0%,#00000000 30%,#ffffffff 35%, #ffffffff 100%);
+  background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
 }
 </style>
 
