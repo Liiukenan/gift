@@ -3,7 +3,7 @@
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
           <v-layout column align-center class="second_layout">
             <img class="anchor_crown" style="z-index: 0" src="../resource/top_second.png"/>
-            <img class="second_img"
+            <img v-bind:class="{second_img:isLarge,small_second_img:!isLarge}"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
@@ -18,7 +18,7 @@
     <v-layout v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
           <img class="anchor_crown" style="z-index: 0" src="../resource/top_first.png"/>
-          <img class="first_img"
+          <img v-bind:class="{first_img:isLarge,small_first_img:!isLarge}"
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}`"/>
                <!--src="../resource/default_head.png"/>-->
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
@@ -34,7 +34,7 @@
     <v-layout  v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
         <v-layout column align-center class="third_layout">
           <img class="anchor_crown" style="z-index: 0" src="../resource/top_third.png"/>
-          <img class="third_img"
+          <img v-bind:class="{third_img:isLarge,small_third_img:!isLarge}"
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>
@@ -57,11 +57,9 @@
   export default {
     name: "TopRank",
     data: function () {
-      return {
-        test: 0
-      }
+      return {}
     },
-    props:['tabIndex'],
+    props:['tabIndex','isLarge'],
     methods: {
       personDetail:function (jid) {
         console.log("jid = " + jid);
@@ -103,10 +101,27 @@
     border-width: 2px;
   }
 
+  .small_first_img {
+    margin-top: -10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: thick solid rgba(248, 231, 28, 1);
+    border-width: 2px;
+  }
+
   .second_img {
     margin-top: -10px;
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    border: thick solid rgba(198, 198, 198, 1);
+    border-width: 2px;
+  }
+  .small_second_img{
+    margin-top: -10px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: thick solid rgba(198, 198, 198, 1);
     border-width: 2px;
@@ -116,6 +131,15 @@
     margin-top: -10px;
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    border: thick solid rgba(177, 106, 10, 1);
+    border-width: 2px;
+  }
+
+  .small_third_img {
+    margin-top: -10px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: thick solid rgba(177, 106, 10, 1);
     border-width: 2px;

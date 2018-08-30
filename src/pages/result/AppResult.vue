@@ -10,7 +10,8 @@
                 {{$t("ActivityPage.tab_receive")}}
                 </span>
             </div>
-            <top-rank tabIndex="0"/>
+
+            <top-rank tabIndex="0" isLarge="" />
 
             <div class="title" style="margin-top: 10px;white-space: nowrap">
                 <img class="title_bg" src="../../resource/send_bg.png">
@@ -19,7 +20,7 @@
                 </span>
             </div>
 
-            <top-rank tabIndex="1"/>
+            <top-rank tabIndex="1" isLarge=""/>
 
             <v-btn align-center round dark style="color: white" class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
 
@@ -102,37 +103,37 @@
 .result_root{
   text-align: center;
   height: 100%;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.4);
 }
 .result_content{
     position:relative;
     margin-top: 20px;
     margin-bottom: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 .title_bg{
     margin-left:20px;
     margin-right:20px;
-    width : 200px;
+    width : 170px;
 }
 .receiver_title{
     position:absolute;
     margin:0 auto;
-    top:5px;
+    top:3px;
     left:0;
     right:0;
     text-align:center;
-    font-size:15px;
+    font-size:14px;
 }
 .send_title{
     position:absolute;
     left:0;
-    margin-top: 5px;
+    margin-top: 3px;
     right:0;
     top: 0;
     text-align:center;
-    font-size:15px;
+    font-size:14px;
 }
 .title{
     position:relative;
@@ -142,6 +143,8 @@
 .result_btn{
     background-image:  linear-gradient(-180deg, #FC673F 0%,#EF3276 50%, #C826A8 100%);
     min-width:250px;
+    font-size: 16px;
+    height: 32px;
 }
 .result_card{
     background: white;
@@ -149,10 +152,11 @@
     position:absolute;
     left:0;
     right:0;
-    padding-top:30px;
-    top:70px;
+    padding-top:26px;
+    top:66px;
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
+    padding-bottom: 5px;
 }
 .result_top{
     z-index:1;

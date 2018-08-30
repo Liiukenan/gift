@@ -18,13 +18,13 @@
           </div>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <TopRank tabIndex="0"/>
+              <TopRank tabIndex="0" isLarge="true"/>
               <RankingList tab_index="0"/>
             </v-card>
           </v-tab-item>
           <v-tab-item>
             <v-card color="white" class="tab_card">
-              <TopRank tabIndex="1"/>
+              <TopRank tabIndex="1" isLarge="true"/>
               <ranking-list tab_index ="1"/>
             </v-card>
           </v-tab-item>
