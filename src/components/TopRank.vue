@@ -19,7 +19,7 @@
         <v-layout column align-center>
           <img style="height: 25px;z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
-               v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
+               v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}`"/>
                <!--src="../resource/default_head.png"/>-->
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
