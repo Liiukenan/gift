@@ -19,9 +19,10 @@
           </v-btn>
       </v-flex>
       <v-flex xs7 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
-        <div class="list-item__title" style="font-size: 12px">{{mySelf['nickname']}}</div>
+        <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>
-      <v-flex xs4 class="right item_rank"  style="font-size: 12px" v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
+      <v-flex xs4 class="right item_rank"  v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
+      <v-spacer/>
     </v-layout>
 </template>
 
@@ -98,6 +99,12 @@
     border-radius: 50%;
     width: 36px;
     height: 36px;
+  }
+  .item_rank{
+    font-size: 12px;
+  }
+  .mine_nickname{
+    font-size: 12px;
   }
 
 </style>

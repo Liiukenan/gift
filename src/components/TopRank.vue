@@ -2,7 +2,7 @@
   <v-layout >
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
           <v-layout column align-center class="second_layout">
-            <img style="height: 25px;z-index: 0" src="../resource/top_second.png"/>
+            <img class="anchor_crown" style="z-index: 0" src="../resource/top_second.png"/>
             <img class="second_img"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
@@ -17,7 +17,7 @@
 
     <v-layout v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
-          <img style="height: 25px;z-index: 0" src="../resource/top_first.png"/>
+          <img class="anchor_crown" style="z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}`"/>
                <!--src="../resource/default_head.png"/>-->
@@ -33,7 +33,7 @@
 
     <v-layout  v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
         <v-layout column align-center class="third_layout">
-          <img style="height: 25px;z-index: 0" src="../resource/top_third.png"/>
+          <img class="anchor_crown" style="z-index: 0" src="../resource/top_third.png"/>
           <img class="third_img"
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
@@ -136,6 +136,10 @@
   .anchor_name{
     font-size: 14px;
     color: rgba(0, 0, 0, 0.8);
+  }
+
+  .anchor_crown{
+      height: 25px;
   }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <v-app id="app" light class="scroll-y">
       <banner />
-      <v-tabs centered hide-slider @input="changeTab" class="tabs" color="transparent">
+      <v-tabs centered hide-slider @input="changeTab" class="tabs" color="transparent" :height="tabHeight">
           <div class="tab_title">
             <v-layout>
               <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
@@ -61,10 +61,15 @@ export default {
           'white',
           'tab_text_color'
       ],
-      tabIndex:0
+      tabIndex:0,
+      tabHeight:'48px'
     }
   },
   created() {
+    var screenWidth = window.screen.width;
+    if (screenWidth>=500){
+      this.tabHeight = '90px';
+    }
     this.fetchData();
     // 活动页面展示
     logEvent("event_activity_page_show", "")
@@ -92,6 +97,10 @@ export default {
        if (this.isTabTwo){
          logEvent("event_activity_ranking_send_show","")
        }
+    },
+    loadTabHeight(val){
+      console.log("height " + val);
+      val.height = 90;
     }
   }
 }
@@ -147,7 +156,7 @@ export default {
   .unselected_tab_text{
     color: white;
   }
-  .tab_card{
+  .tab_card {
     padding: 5px;
     margin-left: 10px;
     margin-right: 10px;
@@ -169,7 +178,7 @@ export default {
     height: 32px;
   }
   .tabs{
-    margin-top: -45px;
+    margin-top: -40px;
   }
 
 </style>
