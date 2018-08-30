@@ -72,7 +72,7 @@
       <v-spacer/>
       <v-spacer/>
       <v-flex xs1 class="banner_des">
-        <v-btn outline round small color="activity_time_color" class="banner_des_btn">
+        <v-btn outline round small class="banner_des_btn">
           {{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}
         </v-btn>
       </v-flex>
@@ -207,7 +207,9 @@
     font-size: 10px;
     padding-right: 15px;
     padding-left: 15px;
-    background-image:linear-gradient(90deg, #FFFFFF 0%,#FF6841 50%, #FFFFFF 100%) ;
+    color: rgba(111,11,33,1) !important;
+    border-color: rgba(255,255,255,1) !important;
+    background: rgba(255,253,216,0.7) !important;
     text-transform: Capitalize;
   }
 

@@ -157,7 +157,7 @@ export default {
     color: white;
   }
   .tab_card {
-    padding: 5px;
+    padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 15px;
