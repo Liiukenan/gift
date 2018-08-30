@@ -5,7 +5,7 @@
               v-bind:item="x"
               v-bind:index="index"
               v-bind:key="x.id">
-              <v-divider inset></v-divider>
+              <hr class="item_divider" v-bind:class="{full_divider: index===0 , head_divider:index !== 0}"/>
               <v-layout v-ripple fill-height align-center class="item" @click="listItemClick(x)">
                   <div class="anchor_id">
                     {{x.ranking}}
@@ -24,7 +24,6 @@
                     </span>
                   </v-card-text>
               </v-layout>
-              <v-divider inset v-if="index + 1 === receiverData.length" :key="`divider-${index}`"></v-divider>
             </div>
           </v-list>
     </v-layout>
@@ -95,6 +94,20 @@ export default {
     min-width: 160px;
     margin-left: 15px;
     font-size: 14px;
+  }
+
+  .item_divider{
+    height:1px;
+    border:none;
+    border-top:1px solid #f1f1f1;
+    margin-right: 10px
+  }
+
+  .full_divider{
+    margin-left: 10px;
+  }
+  .head_divider{
+    margin-left: 60px;
   }
 
 </style>

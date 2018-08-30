@@ -69,7 +69,7 @@
       },
       loadError:function (source) {
         // alert(source.src);
-        source.target.src = "../resource/rank_first.png";
+        source.target.src = "../resource/default_head.png";
         source.target.onerror = "";
         console.log('img load error ' );
         return true;
