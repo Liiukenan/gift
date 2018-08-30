@@ -18,10 +18,10 @@
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
       </v-flex>
-      <v-flex xs12 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
-        <span class="list-item__title">{{mySelf['nickname']}}</span>
+      <v-flex xs7 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
+        <div class="list-item__title" style="font-size: 12px">{{mySelf['nickname']}}</div>
       </v-flex>
-      <v-flex xs4 class="right item_rank" v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
+      <v-flex xs4 class="right item_rank"  style="font-size: 12px" v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
     </v-layout>
 </template>
 

@@ -2,8 +2,8 @@
   <v-layout >
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
           <v-layout column align-center class="second_layout">
-            <img style="width: 35px;z-index: 0" src="../resource/top_second.png"/>
-            <img class="second_img" style="margin-top: -10px;"
+            <img style="height: 25px;z-index: 0" src="../resource/top_second.png"/>
+            <img class="second_img"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
             <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
           </v-layout>
@@ -17,13 +17,13 @@
 
     <v-layout v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
-          <img style="width: 40px;z-index: 0" src="../resource/top_first.png"/>
+          <img style="height: 25px;z-index: 0" src="../resource/top_first.png"/>
           <img class="first_img"
-               style="margin-top: -10px;"
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}}`"/>
+               <!--src="../resource/default_head.png"/>-->
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
         </v-layout>
-      <v-layout >
+      <v-layout>
         <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
       </v-layout>
       <v-layout>
@@ -33,8 +33,8 @@
 
     <v-layout  v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
         <v-layout column align-center class="third_layout">
-          <img style="width: 30px;z-index: 0" src="../resource/top_third.png"/>
-          <img class="third_img" style="margin-top: -10px"
+          <img style="height: 25px;z-index: 0" src="../resource/top_third.png"/>
+          <img class="third_img"
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
         </v-layout>
@@ -66,6 +66,13 @@
       personDetail:function (jid) {
         console.log("jid = " + jid);
         jumpPersonDetail(jid);
+      },
+      loadError:function (source) {
+        // alert(source.src);
+        source.target.src = "../resource/rank_first.png";
+        source.target.onerror = "";
+        console.log('img load error ' );
+        return true;
       }
     },
     computed: {
@@ -88,29 +95,29 @@
   }
 
   .first_img {
+    margin-top: -10px;
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    border-color: rgba(248, 231, 28, 1) ;
-    border-style: outset;
+    border: thick solid rgba(248, 231, 28, 1);
     border-width: 2px;
   }
 
   .second_img {
+    margin-top: -10px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border-color: rgba(198, 198, 198, 1);
-    border-style: outset;
+    border: thick solid rgba(198, 198, 198, 1);
     border-width: 2px;
   }
 
   .third_img {
+    margin-top: -10px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border-color: rgba(177, 106, 10, 1);
-    border-style: outset;
+    border: thick solid rgba(177, 106, 10, 1);
     border-width: 2px;
   }
 
