@@ -26,7 +26,7 @@ module.exports = {
     design_gift: "नामित उपहार"
   },
   ActivityPage: {
-    tab_receive: "प्राप् त करें",
+    tab_receive: "प्राप्‍त करें",
     tab_send: "भेजें",
     time: "समय:@@@",
     activity_finish: "गतिविधि समाप्त होती है. ध्यान देने के लिए धन्यवाद!",

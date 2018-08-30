@@ -31,7 +31,7 @@ module.exports = {
     activity_finish: "Etkinlik bitti. Dikkatiniz için teşekkürler!",
     bt_me_punching: "Sıralamaya gir",
     bt_help_punching: "Hemen yardım et",
-    bt_regular: "Kural açıklaması"
+    bt_regular: "Kurallar"
   },
   ActivityPerson: {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",
