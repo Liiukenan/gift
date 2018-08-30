@@ -1,7 +1,11 @@
 <template>
 <v-app class="result_root">
-  <v-container>
-    <v-layout class="result_content" column align-center>
+    <v-layout align-center justify-center class="result_content" column>
+
+      <div>
+        <div class="result_title">
+          <img :src="getPopBg()" style="width:100%"/>
+        </div>
         <v-card class="result_card">
             <div class="title">
                 <img class="title_bg" src="../../resource/receiver_bg.png">
@@ -25,12 +29,8 @@
 
         </v-card>
 
-        <div class="result_top">
-            <img :src="getPopBg()" style="width:100%"/>
         </div>
-
     </v-layout>
-  </v-container>
 </v-app>
 </template>
 
@@ -146,19 +146,14 @@
     height: 36px;
 }
 .result_card{
+    margin-top: -10px;
     background: white;
-    margin:auto;
-    position:absolute;
-    left:0;
-    right:0;
-    padding-top:26px;
-    top:66px;
     border-bottom-left-radius:15px;
     border-bottom-right-radius:15px;
     padding-bottom: 5px;
 }
-.result_top{
-    z-index:1;
+.result_title{
+  background-image: linear-gradient(180deg,#00000000 0%,#00000000 30%,#ffffffff 35%, #ffffffff 100%);
 }
 </style>
 

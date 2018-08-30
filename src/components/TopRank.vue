@@ -1,6 +1,6 @@
 <template>
   <v-layout style="display:flex">
-      <v-layout style="flex:1" v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
+      <v-layout style="flex:1" v-ripple column justify-end align-center @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
             <v-layout column align-center class="second_layout">
               <img class="anchor_crown" src="../resource/top_second.png"/>
               <img v-bind:class="{second_img:isLarge,small_second_img:!isLarge}"
@@ -15,7 +15,7 @@
           </v-layout>
       </v-layout>
 
-    <v-layout style="flex:1" v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
+    <v-layout style="flex:1;" v-ripple column align-center @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
           <img class="anchor_crown" src="../resource/top_first.png"/>
           <img v-bind:class="{first_img:isLarge,small_first_img:!isLarge}"
@@ -30,7 +30,7 @@
       </v-layout>
     </v-layout>
 
-    <v-layout  style="flex:1" v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
+    <v-layout  style="flex:1" v-ripple column justify-end align-center @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
         <v-layout column align-center class="third_layout">
           <img class="anchor_crown" src="../resource/top_third.png"/>
           <img v-bind:class="{third_img:isLarge,small_third_img:!isLarge}"
@@ -86,10 +86,6 @@
 </script>
 
 <style>
-
-  .top_anchor {
-    padding-top: 5%;
-  }
 
   .first_img {
     margin-top: -10px;
