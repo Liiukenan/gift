@@ -1,8 +1,7 @@
 <template>
-<v-layout light class="result_root">
-
-    <v-layout class="result_content" column>
-
+<v-app class="result_root">
+  <v-container>
+    <v-layout class="result_content" column align-center>
         <v-card class="result_card">
             <div class="title">
                 <img class="title_bg" src="../../resource/receiver_bg.png">
@@ -22,7 +21,7 @@
 
             <top-rank tabIndex="1" isLarge=""/>
 
-            <v-btn align-center round dark style="color: white" class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
+            <v-btn dark style="color: white" class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
 
         </v-card>
 
@@ -30,10 +29,9 @@
             <img :src="getPopBg()" style="width:100%"/>
         </div>
 
-
     </v-layout>
-
-</v-layout>
+  </v-container>
+</v-app>
 </template>
 
 <script>
@@ -52,14 +50,17 @@
             require("../../../static/img/pop_bg_hi.png"),
             require("../../../static/img/pop_bg_in.png"),
             require("../../../static/img/pop_bg_tr.png")
-          ]
+          ],
+          rootHeight:0
         }
       },
       components: {
         TopRank
       },
       created() {
-        this.fetchData()
+        var screenHeight = window.screen.height;
+        this.rootHeight = screenHeight;
+        this.fetchData();
       },
       methods:{
         fetchData() {
@@ -102,20 +103,17 @@
 <style>
 .result_root{
   text-align: center;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0,0.4) !important;
 }
 .result_content{
-    position:relative;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 12%;
-    margin-right: 12%;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .title_bg{
     margin-left:20px;
     margin-right:20px;
-    width : 170px;
+    width : 150px;
 }
 .receiver_title{
     position:absolute;
@@ -141,10 +139,11 @@
     width: 100%;
 }
 .result_btn{
+    border-radius: 18px;
     background-image:  linear-gradient(-180deg, #FC673F 0%,#EF3276 50%, #C826A8 100%);
-    min-width:250px;
+    min-width:200px;
     font-size: 16px;
-    height: 32px;
+    height: 36px;
 }
 .result_card{
     background: white;

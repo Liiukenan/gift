@@ -2,10 +2,10 @@
   <v-layout >
     <v-layout v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
           <v-layout column align-center class="second_layout">
-            <img class="anchor_crown" style="z-index: 0" src="../resource/top_second.png"/>
+            <img class="anchor_crown" src="../resource/top_second.png"/>
             <img v-bind:class="{second_img:isLarge,small_second_img:!isLarge}"
                  v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
-            <img style="width: 35px;margin-top: -20px" src="../resource/rank_second.png"/>
+            <img  class="anchor_rank_img" src="../resource/rank_second.png"/>
           </v-layout>
         <v-layout>
           <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].nickname:''): (sendTop != undefined?sendTop[1].nickname:'')}}</span>
@@ -17,11 +17,10 @@
 
     <v-layout v-ripple column align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
         <v-layout column align-center>
-          <img class="anchor_crown" style="z-index: 0" src="../resource/top_first.png"/>
+          <img class="anchor_crown" src="../resource/top_first.png"/>
           <img v-bind:class="{first_img:isLarge,small_first_img:!isLarge}"
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}`"/>
-               <!--src="../resource/default_head.png"/>-->
-          <img style="width: 35px;margin-top: -20px" src="../resource/rank_first.png"/>
+          <img  class="anchor_rank_img" src="../resource/rank_first.png"/>
         </v-layout>
       <v-layout>
         <div class="anchor_name" style="display: block;white-space: nowrap;text-overflow: ellipsis;overflow: hidden">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
@@ -33,10 +32,10 @@
 
     <v-layout  v-ripple column justify-end align-center class="top_anchor" @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
         <v-layout column align-center class="third_layout">
-          <img class="anchor_crown" style="z-index: 0" src="../resource/top_third.png"/>
+          <img class="anchor_crown" src="../resource/top_third.png"/>
           <img v-bind:class="{third_img:isLarge,small_third_img:!isLarge}"
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
-          <img style="width: 35px;margin-top: -20px" src="../resource/rank_third.png"/>
+          <img class="anchor_rank_img" src="../resource/rank_third.png"/>
         </v-layout>
       <v-layout>
         <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].nickname:''): (sendTop != undefined?sendTop[2].nickname:'')}}</span>
@@ -163,7 +162,13 @@
   }
 
   .anchor_crown{
-      height: 25px;
+      height: 20px;
+      z-index: 0
+  }
+
+  .anchor_rank_img{
+    width: 20px;
+    margin-top: -12px;
   }
 
 </style>
