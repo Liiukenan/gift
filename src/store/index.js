@@ -76,10 +76,6 @@ const store = new Vuex.Store({
                 list = JSON.parse(localRankingList);
                }
             }
-            var currentJid = "user_1007409@bj2.1-1.io";
-            if (window.plat == "android" || window.plat == "ios"){
-              currentJid = window.jid;
-            }
             //http://54.222.148.146:46000/
 
           var api = 'ranking_activity/rank'
@@ -98,7 +94,24 @@ const store = new Vuex.Store({
             //如果部署在CDN，也要用这个地址，服务端处理跨域问题
             api = 'http://54.222.148.146:46000/ranking_activity/rank'
           }
-          api = 'http://54.222.148.146:46000/ranking_activity/rank'
+
+          let HOST = process.env.HOST;
+          if (HOST === 'dev' || HOST === 'prod'){
+            api = 'http://54.222.148.146:46000/ranking_activity/rank'
+          }
+          if (HOST === 'B0'){
+            api = 'http://54.222.148.146:46000/ranking_activity/rank'
+          } else if (HOST === 'B1'){
+            api = 'http://vshow-api-ra.1-1.io/ranking_activity/rank'
+          }
+          var currentJid = "user_1007409@bj2.1-1.io";
+          if (HOST === 'B1'){
+            currentJid = "user_5653054@vshow-euc1.1-1.io"
+          }
+          if (window.plat == "android" || window.plat == "ios"){
+            currentJid = window.jid;
+          }
+          console.log("HOST:"+HOST+" api:"+api);
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
