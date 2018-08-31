@@ -8,7 +8,7 @@
               <img  class="anchor_rank_img" src="../resource/rank_second.png"/>
             </v-layout>
           <v-layout>
-            <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].nickname:''): (sendTop != undefined?sendTop[1].nickname:'')}}</span>
+            <span class="anchor_name" v-bind:style="{width:nameSize+'px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].nickname:''): (sendTop != undefined?sendTop[1].nickname:'')}}</span>
           </v-layout>
           <v-layout color="top_anchor_gift_color">
             <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].gifts:'') : (sendTop != undefined?sendTop[1].gifts:'')}}</span>
@@ -23,7 +23,7 @@
           <img  class="anchor_rank_img" src="../resource/rank_first.png"/>
         </v-layout>
       <v-layout>
-        <div class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
+        <div class="anchor_name" v-bind:style="{width:nameSize+'px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
       </v-layout>
       <v-layout>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].gifts:'') : (sendTop != undefined?sendTop[0].gifts:'')}}</span>
@@ -38,7 +38,7 @@
           <img class="anchor_rank_img" src="../resource/rank_third.png"/>
         </v-layout>
       <v-layout>
-        <span class="anchor_name">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].nickname:''): (sendTop != undefined?sendTop[2].nickname:'')}}</span>
+        <span class="anchor_name" v-bind:style="{width:nameSize+'px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].nickname:''): (sendTop != undefined?sendTop[2].nickname:'')}}</span>
       </v-layout>
       <v-layout>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].gifts:'') : (sendTop != undefined?sendTop[2].gifts:'')}}</span>
@@ -56,7 +56,9 @@
   export default {
     name: "TopRank",
     data: function () {
-      return {}
+      return {
+        nameSize:0
+      }
     },
     props:['tabIndex','isLarge'],
     methods: {
@@ -71,6 +73,10 @@
         console.log('img load error ' );
         return true;
       }
+    },
+    created(){
+      var screenWidth = window.screen.width;
+      this.nameSize = (screenWidth * 0.75) / 3;
     },
     computed: {
       ...mapState({
@@ -158,6 +164,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     display: block;
   }
 
