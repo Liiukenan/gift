@@ -66,6 +66,11 @@ export default {
     }
   },
   created() {
+    // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
+    if(this.$i18n.locale === 'ar'){
+      document.documentElement.style.direction = 'rtl'
+      document.documentElement.style.unicodeBidi = 'bidi-override'
+    }
     var screenWidth = window.screen.width;
     if (screenWidth>=500){
       this.tabHeight = '90px';

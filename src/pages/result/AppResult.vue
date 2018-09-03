@@ -58,6 +58,11 @@
         TopRank
       },
       created() {
+        // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
+        if(this.$i18n.locale === 'ar'){
+          document.documentElement.style.direction = 'rtl'
+          document.documentElement.style.unicodeBidi = 'bidi-override'
+        }
         var screenHeight = window.screen.height;
         this.rootHeight = screenHeight;
         this.fetchData();
@@ -156,4 +161,3 @@
   background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 30%,rgba(255,255,255,1) 35%, rgba(255,255,255,1) 100%);
 }
 </style>
-
