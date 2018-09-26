@@ -43,25 +43,25 @@
                 <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
               </div>
 
-              <!-- activity incentives -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
-              </div>
-              <v-spacer/>
-              <!-- top3 -->
-              <div style="text-align: center; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.receive_Top3')"></p>
-              </div>
-              <div style="text-align: left; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.receive_Top3_content')"></p>
-              </div>
+              <!--&lt;!&ndash; activity incentives &ndash;&gt;-->
+              <!--<div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">-->
+                <!--<p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>-->
+              <!--</div>-->
+              <!--<v-spacer/>-->
+              <!--&lt;!&ndash; top3 &ndash;&gt;-->
+              <!--<div style="text-align: center; width: 100%;font-size: 14px">-->
+                <!--<p v-html="$t('Ranking.incentiveDetails.receive_Top3')"></p>-->
+              <!--</div>-->
+              <!--<div style="text-align: left; width: 100%;font-size: 14px">-->
+                <!--<p v-html="$t('Ranking.incentiveDetails.receive_Top3_content')"></p>-->
+              <!--</div>-->
 
-              <div style="text-align: center; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.send_Top3')"></p>
-              </div>
-              <div style="text-align: left; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.send_Top3_content')"></p>
-              </div>
+              <!--<div style="text-align: center; width: 100%;font-size: 14px">-->
+                <!--<p v-html="$t('Ranking.incentiveDetails.send_Top3')"></p>-->
+              <!--</div>-->
+              <!--<div style="text-align: left; width: 100%;font-size: 14px">-->
+                <!--<p v-html="$t('Ranking.incentiveDetails.send_Top3_content')"></p>-->
+              <!--</div>-->
 
               <v-spacer/>
             </v-card-text>
