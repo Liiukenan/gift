@@ -25,8 +25,8 @@ module.exports = {
     design_gift:"Designated gift"
   },
   ActivityPage: {
-    tab_receive:"Receive",
-    tab_send:"Send",
+    tab_receive:"Received",
+    tab_send:"Sent",
     time:"Time:@@@",
     activity_finish:"Activity ends. Thanks for attention!",
     bt_me_punching:"Hit the top",
@@ -34,8 +34,10 @@ module.exports = {
     bt_regular:"Rules"
   },
   ActivityPerson:{
-    distance_100:"@@@ gifts are needed to move up 1 place",
-    distance_150:"@@@ gifts are needed to rank on the list",
+    distance_100_1:"@@@ gift will promote your ranking up",
+    distance_150_1:"@@@ gift will help you hit the list",
+    distance_100:"@@@ gifts will promote your ranking up",
+    distance_150:"@@@ gifts will help you hit the list",
     distance_else:"Sorry, you're not on the list",
     frist:"Congrats! You're top 1!"
   }

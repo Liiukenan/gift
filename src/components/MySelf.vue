@@ -55,13 +55,20 @@
       mySelf:function () {
         var data = this.$store.getters.mySelf;
         var rank = data.ranking;
+        var dist = data.distance;
         var des = "";
         if (rank == '99+') {
           des = this.$t('ActivityPerson.distance_150').replace("@@@", data.distance + 1);
+          if (dist == 0){
+            des = this.$t('ActivityPerson.distance_150_1').replace("@@@", data.distance + 1);
+          }
         } else if (rank == '1') {
           des = this.$t("ActivityPerson.frist");
         } else if (rank <= 100) {
           des = this.$t("ActivityPerson.distance_100").replace("@@@", data.distance + 1);
+          if (dist == 0){
+            des = this.$t('ActivityPerson.distance_100_1').replace("@@@", data.distance + 1);
+          }
         } else if (rank == '--') {
           des = this.$t("ActivityPerson.distance_else");
         }

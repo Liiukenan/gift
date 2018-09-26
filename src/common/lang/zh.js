@@ -34,6 +34,8 @@ module.exports = {
     bt_regular:"规则说明"
   },
   ActivityPerson:{
+    distance_100_1:"距离前1名还差@@@个礼物",
+    distance_150_1:"距离上榜还差@@@个礼物",
     distance_100:"距离前1名还差@@@个礼物",
     distance_150:"距离上榜还差@@@个礼物",
     distance_else:"当前排名未上榜",
