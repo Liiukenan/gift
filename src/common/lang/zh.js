@@ -28,6 +28,7 @@ module.exports = {
     tab_receive:"收礼榜",
     tab_send:"送出榜",
     time:"活动时间：@@@",
+    time_1: "活动时间",
     activity_finish:"活动已结束，感谢关注！",
     bt_me_punching:"我要冲榜",
     bt_help_punching:"帮她冲榜",

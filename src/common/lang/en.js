@@ -4,8 +4,8 @@ module.exports = {
       title:"Incentive Details",
       activity_rules:"Rules:",
       rules_content:"1. During activity, the one gift is offically designated as \"activity gift\".<br>\n" +
-        "2. Receiving list is ranked from high to low according to the number of activity gift that stars receive.<br>\n" +
-        "3. Sending list is ranked from high to low according to the number of activity gift that users receive.<br>\n" +
+        "2. Received list is ranked from high to low according to the number of activity gift that stars have received.<br>\n" +
+        "3. Sent list is ranked from high to low according to the number of activity gift that users have sent.<br>\n" +
         "4. Ranking list data may be delayed when network's busy. Please be patient.",
       activity_incentives:"Incentives:",
       receive_Top3:"Top 3 of Receiving List",
@@ -28,6 +28,7 @@ module.exports = {
     tab_receive:"Received",
     tab_send:"Sent",
     time:"Time:@@@",
+    time_1: "Time",
     activity_finish:"Activity ends. Thanks for attention!",
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",

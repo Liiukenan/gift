@@ -32,6 +32,10 @@
               <v-spacer/>
               <!-- Time -->
               <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p >{{$t("ActivityPage.time_1")}}</p>
+              </div>
+
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{getActivityTime()}}</p>
               </div>
               <!-- rules -->
@@ -117,7 +121,8 @@
       getActivityTime:function(){
         var time = "";
         if (this.myActivity != null && this.myActivity.hasOwnProperty("time")){
-          time = this.$t("ActivityPage.time").replace("@@@",this.myActivity["time"]);
+          // time = this.$t("ActivityPage.time").replace("@@@",this.myActivity["time"]);
+          time = this.myActivity["time"];
         }
         return time;
       },
