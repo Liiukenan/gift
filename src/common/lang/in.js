@@ -54,6 +54,7 @@ module.exports = {
     tab_receive: "Terima",
     tab_send: "Kirim",
     time: "Waktu: @@@",
+    time_1: "Waktu",
     activity_finish: "Kegiatan selesai. Terima kasih atas perhatiannya!",
     bt_me_punching: "Mencapai puncak",
     bt_help_punching: "Membantu gadisku",
