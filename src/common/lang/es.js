@@ -18,7 +18,30 @@ module.exports = {
       send_Top3_content:
         "Top 1: video chat gratis durante 1 hora / día * 3 días<br>\n" +
         "Top 2: video chat gratis durante 1 hora / día * 2 días<br>\n" +
-        "Top 3: video chat gratis durante 1 hora / día * 1 día"
+        "Top 3: video chat gratis durante 1 hora / día * 1 día",
+      receive_Top10:"Top 10 de la lista de recepción",
+      receive_Top10_content:"Top 1: Regalo （vale la pena 9999 monedas）+ 100 invitaciones de videollamadas / día * 10 días<br>\n" +
+        "Top 2: Regalo （vale la pena 9999 monedas） + 100 invitaciones de videollamadas / día * 9 días<br>\n" +
+        "Top 3: Regalo （vale la pena 9999 monedas） + 100 invitaciones de videollamadas / día * 8 días<br>\n" +
+        "Top 4: Regalo （vale la pena 7999 monedas） + 100 invitaciones de videollamadas / día * 7 días<br>\n" +
+        "Top 5: Regalo （vale la pena 7999 monedas） + 100 invitaciones de videollamadas / día * 6 días<br>\n" +
+        "Top 6: Regalo （vale la pena 7999 monedas） + 100 invitaciones de videollamadas / día * 5 días<br>\n" +
+        "Top 7: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 4 días<br>\n" +
+        "Top 8: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 3 días<br>\n" +
+        "Top 9: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 2 días<br>\n" +
+        "Top 10: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 1 día",
+      send_Top10:"Top 10 de la lista de envío",
+      send_Top10_content:"Top 1: video chat gratis durante 1 hora / día * 7 días<br>\n" +
+        "Top 2: video chat gratis durante 1 hora / día * 6 días<br>\n" +
+        "Top 3: video chat gratis durante 1 hora / día * 5 días<br>\n" +
+        "Top 4: video chat gratis durante 1 hora / día * 4 días<br>\n" +
+        "Top 5: video chat gratis durante 1 hora / día * 3 días<br>\n" +
+        "Top 6: video chat gratis durante 1 hora / día * 2 días<br>\n" +
+        "Top 7: video chat gratis durante 1 hora / día * 1 día<br>\n" +
+        "Top 8: video chat gratis durante 1 hora / día * 1 día<br>\n" +
+        "Top 9: video chat gratis durante 1 hora / día * 1 día<br>\n" +
+        "Top 10: video chat gratis durante 1 hora / día * 1 día"
+
     }
   },
   HomePage: {

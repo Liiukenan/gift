@@ -15,7 +15,11 @@ module.exports = {
       send_Top3:"送礼榜Top3",
       send_Top3_content:"第1名：免费视频聊天特权（1小时/天）*3天<br>\n" +
         "第2名：免费视频聊天特权（1小时/天）*2天<br>\n" +
-        "第3名：免费视频聊天特权（1小时/天）*1天"
+        "第3名：免费视频聊天特权（1小时/天）*1天",
+      receive_Top10:"",
+      receive_Top10_content:"",
+      send_Top10:"",
+      send_Top10_content:""
     }
   },
   HomePage: {

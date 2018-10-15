@@ -38,6 +38,27 @@
               <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{getActivityTime()}}</p>
               </div>
+
+                <!-- activity incentives -->
+                <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
+                </div>
+                <v-spacer/>
+                <!-- top10 -->
+                <div style="text-align: center; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
+                </div>
+                <div style="text-align: left; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top10_content')"></p>
+                </div>
+
+                <div style="text-align: center; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
+                </div>
+                <div style="text-align: left; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top10_content')"></p>
+                </div>
+
               <!-- rules -->
               <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>

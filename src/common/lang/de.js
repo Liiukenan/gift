@@ -18,7 +18,30 @@ module.exports = {
       send_Top3_content:
         "Top 1: Kostenloser Videochat für 1 Stunde / Tag * 3 Tage<br>\n" +
         "Top 2: Kostenloser Videochat für 1 Stunde / Tag * 2 Tage<br>\n" +
-        "Top 3: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage"
+        "Top 3: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage",
+      receive_Top10:"Top 10 der Empfängerliste:",
+      receive_Top10_content:"Top 1: Geschenk (Wert 9999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 10 Tage<br>\n" +
+        "Top 2: Geschenk (Wert 9999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 9 Tage<br>\n" +
+        "Top 3: Geschenk (Wert 9999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 8 Tag<br>\n" +
+        "Top 4: Geschenk (Wert 7999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 7 Tage<br>\n" +
+        "Top 5: Geschenk (Wert 7999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 6 Tage<br>\n" +
+        "Top 6: Geschenk (Wert 7999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 5 Tage<br>\n" +
+        "Top 7: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 4 Tage<br>\n" +
+        "Top 8: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 3 Tage<br>\n" +
+        "Top 9: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 2 Tage<br>\n" +
+        "Top 10: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 1 Tage",
+      send_Top10:"Top 10 der Senderliste:",
+      send_Top10_content:"Top 1: Kostenloser Videochat für 1 Stunde / Tag * 7 Tage<br>\n" +
+        "Top 2: Kostenloser Videochat für 1 Stunde / Tag * 6 Tage<br>\n" +
+        "Top 3: Kostenloser Videochat für 1 Stunde / Tag * 5 Tage<br>\n" +
+        "Top 4: Kostenloser Videochat für 1 Stunde / Tag * 4 Tage<br>\n" +
+        "Top 5: Kostenloser Videochat für 1 Stunde / Tag * 3 Tage<br>\n" +
+        "Top 6: Kostenloser Videochat für 1 Stunde / Tag * 2 Tage<br>\n" +
+        "Top 7: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
+        "Top 8: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
+        "Top 9: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
+        "Top 10: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage"
+
     }
   },
   HomePage: {
