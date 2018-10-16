@@ -5,7 +5,6 @@ import VueAxios from 'vue-axios'
 import qs from 'qs';
 import {loadError} from "../common/jsInteractive";
 
-
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
@@ -13,7 +12,8 @@ const isDev = process.env.NODE_ENV !== 'production'
 
 const store = new Vuex.Store({
     state: {
-        rankingList: {}
+        rankingList: {},
+        hasRewardResult:{},
     },
     getters: {
         receiverTop:state => {
@@ -62,9 +62,66 @@ const store = new Vuex.Store({
           } else {
             return undefined
           }
-        }
+        },
     },
     actions: {
+        FETCH_HAS_REWARD(context,options){
+          console.log('request has reward options : ', options)
+          console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
+          var currentJid = window.jid
+
+          var api = '/ranking_activity/has_reward'
+          let HOST = process.env.HOST;
+          if (HOST === 'dev' || HOST === 'prod'){
+            api = 'http://54.222.148.146:46000/ranking_activity/has_reward'
+          }
+          if (HOST === 'B0'){
+            api = 'http://54.222.148.146:46000/ranking_activity/has_reward'
+          } else if (HOST === 'B1'){
+            api = 'http://vshow-api-ra.1-1.io/ranking_activity/has_reward'
+          }
+
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
+              console.log("has reward response", response)
+              var testResult = {}
+              testResult.status = 1
+              testResult.user_type = 'user'
+              testResult.reward_type = 1000
+              testResult.reward_num = 1000
+              context.commit("loadHasRewardResult", {result: testResult})
+            }).catch(reason => {
+              console.log("has reward error :",reason);
+              var testResult = {}
+              testResult.status = 1
+              testResult.userType = 'anchor'
+              testResult.reward_type = 1000
+              testResult.reward_num = 1000
+              context.commit("loadHasRewardResult", {result: testResult})
+            })
+        },
+        FETCH_REWARD(context,options){
+            console.log('request reward options : ', options)
+            console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
+            var currentJid = window.jid
+            var api = '/ranking_activity/get_reward'
+            let HOST = process.env.HOST;
+            if (HOST === 'dev' || HOST === 'prod'){
+              api = 'http://54.222.148.146:46000/ranking_activity/get_reward'
+            }
+            if (HOST === 'B0'){
+              api = 'http://54.222.148.146:46000/ranking_activity/get_reward'
+            } else if (HOST === 'B1'){
+              api = 'http://vshow-api-ra.1-1.io/ranking_activity/get_reward'
+            }
+
+            return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
+                console.log("response", response)
+                return response.status == 1
+              }).catch(reason => {
+                console.log("reward error :",reason);
+                return false
+              })
+        },
         FETCH_RANKING_LIST(context, options){
             //发布的时候换成服务端的域名
             console.log("request get options: ", options)
@@ -149,6 +206,9 @@ const store = new Vuex.Store({
     mutations: {
         loadRankingList(state, payload){
             state.rankingList = payload.rankingList
+        },
+        loadHasRewardResult(state, data){
+          state.hasRewardResult = data.result
         }
     }
 });
