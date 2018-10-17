@@ -70,5 +70,14 @@ module.exports = {
     distance_150: "@@@ cadeaux sont nécessaires pour être classé dans la liste",
     distance_else: "Désolé, vous n'êtes pas dans la liste",
     frist: "Félicitations ! Vous êtes en tête du classement !"
+  },
+  Reward:{
+    get_reward:'Obtenir une récompense',
+    go_chat:'Allez discuter maintenant',
+    go_rank:'Mon classement',
+    anchor_reward_des:'Félicitations au Top @ de la liste "Reçu". Vous obtiendrez une récompense :',
+    user_reward_des:'Félicitations au Top @ de la liste "Envoyés". Vous obtiendrez une récompense :',
+    anchor_get_reward_des:'Félicitations! Vous avez un cadeau et un privilège ! Vous pouvez obtenir un cadeau maintenant. Le privilège d\'invitation prendra automatiquement effet pendant une période de validité. ',
+    user_get_reward_des:'Félicitations ! Vous avez remporté un chat vidéo gratuit ! Les pièces pour le chat vidéo gratuit seront mises sur votre compte journalier. Veuillez sil vous plait le vérifier dans le solde de pièces.',
   }
 };

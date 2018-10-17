@@ -7,7 +7,7 @@
             </div>
             <v-card flat class="reward_card">
                 <div class="reward_des">
-                    Congratulations on your first prize in the "gift competition" and won the championship award.
+                    {{this.rewardDes}}
                 </div>
                 <div class="reward_layout">
                     <img src="/static/img/reward_coin_bg.png" class="reward_coin_bg"/>
@@ -16,7 +16,7 @@
                 <div class="reward_coin_des">
                     Free calls are x3 hours long.
                 </div>
-                <v-btn dark style="color: white" class="reward_btn" @click="receiveReward">Get</v-btn>
+                <v-btn dark style="color: white" class="reward_btn" @click="receiveReward">{{$t("Reward.get_reward")}}</v-btn>
             </v-card>
         </div>
   </v-layout>
@@ -72,6 +72,16 @@ export default {
     rewardPictureUrl:function(){
         var response = this.$store.state.hasRewardResult;
         return this.isAnchor ? response.giftUrl : '/static/img/reward_coin.png'
+    },
+    rewardDes:function(){
+        var str = ''
+        if(this.isAnchor){
+            str = this.$t("Reward.anchor_reward_des")
+        }else{
+            str = this.$t("Reward.user_reward_des")
+        }
+        var response = this.$store.state.hasRewardResult;
+        return str.replace('@',response.rank)
     }
   },
   methods: {
@@ -292,6 +302,7 @@ export default {
   color: red;
 }
 .reward_btn {
+  text-transform: capitalize;
   border-radius: 18px;
   background-image: linear-gradient(
     -180deg,

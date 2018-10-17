@@ -67,5 +67,14 @@ module.exports = {
       "@@@ Geschenke sind nötig, um in der Liste aufgeführt zu werden",
     distance_else: "Entschuldigung, du bist nicht in der Liste",
     frist: "Herzlichen Glückwunsch! Du bist auf Platz 1!"
+  },
+  Reward:{
+    get_reward:'Belohnung Bekommen',
+    go_chat:'Jetzt chatten',
+    go_rank:'Meine Platzierung',
+    anchor_reward_des:'Glückwunsch zu Top @ der "Erhalten"-Liste. Sie bekommen eine Belohnung:',
+    user_reward_des:'Glückwunsch zu Top @ der "Verschicken"-Liste. Sie bekommen eine Belohnung:',
+    anchor_get_reward_des:'Glückwunsch! Sie haben ein Belohnungsgeschenk und ein Privileg! Sie können jetzt das Geschenk bekommen. Das Einladungsprivileg wird automatisch im Gültigkeitszeitraum wirksam. ',
+    user_get_reward_des:'Glückwunsch! Sie bekommen einen kostenlosen Video-Chat als Belohnung! Die Münzen für den kostenlosen Video-Chat werden Ihrem Konto pro Tag gutgeschrieben. Bitte überprüfen Sie diese im Kontostand.',
   }
 };

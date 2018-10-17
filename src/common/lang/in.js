@@ -65,5 +65,14 @@ module.exports = {
     distance_150: "@@@ hadiah diperlukan untuk bisa masuk daftar",
     distance_else: "Maaf, Anda tidak masuk daftar",
     frist: "Selamat! Anda nomor 1!"
+  },
+  Reward:{
+    get_reward:'Dapatkan Hadiah',
+    go_chat:'Ngobrol sekarang',
+    go_rank:'Peringkat Saya',
+    anchor_reward_des:'Selamat kepada @ Teratas dari daftar "Terima". Anda akan mendapat hadiah:',
+    user_reward_des:'Selamat kepada @ Teratas dari daftar "Kirim". Anda akan mendapat hadiah:',
+    anchor_get_reward_des:'Selamat! Anda mendapat hadiah dan hak istimewa! Hadiah bisa Anda dapatkan sekarang. Hak istimewa undangan akan otomatis berlaku di periode yang berlaku. ',
+    user_get_reward_des:'Selamat! Anda mendapat hadiah ngobrol video gratis! Koin untuk ngobrol video gratis akan diberikan ke akun Anda setiap hari. Silakan lihat di saldo koin.',
   }
 };

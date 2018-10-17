@@ -69,7 +69,7 @@ const store = new Vuex.Store({
           console.log('request has reward options : ', options)
           console.log("has reward jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
           // var currentJid = "user_1007409@bj2.1-1.io";
-          var currentJid = "anchor_1011744@bj2.1-1.io";
+          var currentJid = "anchor_1015864@bj2.1-1.io";
 
           if (window.plat == "android" || window.plat == "ios"){
             currentJid = window.jid;
@@ -87,9 +87,22 @@ const store = new Vuex.Store({
 
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
               console.log("has reward response", response.data)
-              var data = response.data
-              if(data == undefined || data == ""){
+              var data = {}
+              if(response.data == undefined || response.data == ""){
                 data = {status:0}
+              }else{
+                data.status = response.data.status
+                data.giftUrl = response.data.gift_url
+                data.userType = response.data.user_type
+                data.giftId = response.data.gift_id
+                data.giftNum = response.data.gift_num
+                data.jid = response.data.jid
+                data.rank = response.data.rank
+                data.rewardNum = response.data.reward_num
+                data.rewardType = response.data.reward_type
+                data.inviteTimes = response.data.invite_times
+                data.inviteDays = response.data.invite_days
+                data.activityId = response.data.activity_id
               }
               context.commit("loadHasRewardResult", {result: data})
             }).catch(reason => {
@@ -100,7 +113,7 @@ const store = new Vuex.Store({
         FETCH_REWARD(context,options){
             console.log('request reward options : ', options)
             console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-            var currentJid = "anchor_1011744@bj2.1-1.io";
+            var currentJid = "anchor_1015864@bj2.1-1.io";
 
             if (window.plat == "android" || window.plat == "ios"){
               currentJid = window.jid;

@@ -9,11 +9,11 @@
                     Chompion Award Successful   
                 </div>
                 <div class="obtain_des">
-                    Congratulations on receiving the 3-hour free call length award, which will be distributed in the form of gold coins to your account. You can check it out in the gold coin balance.
+                    {{isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
                 </div>
                 <div class="btn_layout">
-                    <v-btn outline class="obtain_btn"  color="indigo" @click="goChat">Go to chat</v-btn>
-                    <v-btn outline class="obtain_btn"  color="indigo" @click="checkScores">Check scores</v-btn>
+                    <v-btn outline class="obtain_btn"  color="indigo" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
+                    <v-btn outline class="obtain_btn"  color="indigo" @click="checkScores">{{$t("Reward.go_rank")}}</v-btn>
                 </div>
                 
             </v-card>

@@ -65,5 +65,14 @@ module.exports = {
     distance_150: "Listede sıralanmak için @@@ hediyeleri gereklidir.",
     distance_else: "Özür dileriz listede bulunmuyorsunuz",
     frist: "Tebrikler! İlk sıra sende!"
+  },
+  Reward:{
+    get_reward:'Ödül al',
+    go_chat:'Şimdi sohbet etmeye git!',
+    go_rank:'Sıralamam',
+    anchor_reward_des:'"Kabul edilen" listesinden Top @ tebrikler. Alacağınız ödül miktarı:',
+    user_reward_des:'"Gönderilen" listesinden Top @ tebrikler. Alacağınız ödül miktarı:',
+    anchor_get_reward_des:'Tebrikler! Ödül hediyesi ve ayrıcalığınız var! Şimdi hediye alabilirsiniz. Davetiniz belirlenmiş süre içerisinde otomatik olarak geçerli olacaktır.',
+    user_get_reward_des:'Tebrikler! Ödül olarak bedava görüntülü sohbetin var! Ücretsiz görüntülü sohbet için çipler ve dakilkalar hesabınıza günlük olarak eklenir. Lütfen bunları çip bakiyenizde kontrol edin.',
   }
 };

@@ -63,5 +63,14 @@ module.exports = {
     distance_150:"@@@ gifts will help you hit the list",
     distance_else:"Sorry, you're not on the list",
     frist:"Congrats! You're top 1!"
+  },
+  Reward:{
+    get_reward:'Get Reward',
+    go_chat:'Go chat now',
+    go_rank:'My Ranking',
+    anchor_reward_des:'Congrats to the Top @ from the "Received" list. You\'ll get reward:',
+    user_reward_des:'Congrats to the Top @ from the "Sent" list. You\'ll get reward:',
+    anchor_get_reward_des:'Congrats! You\'ve got reward gift and privilege! You can get gift now. The invitation privilege will automatically take effect in valid period. ',
+    user_get_reward_des:'Congrats! You\'ve got reward free video chat! The coins for free video chat will be put into your account per day. Please check them in coin balance.',
   }
 }

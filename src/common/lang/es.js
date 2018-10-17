@@ -65,5 +65,14 @@ module.exports = {
     distance_150: "@@@ regalos son necesarios para clasificar en la lista",
     distance_else: "Lo siento, no está en la lista",
     frist: "Felicidades! ¡Eres el top 1!"
+  },
+  Reward:{
+    get_reward:'Obtener recompensa',
+    go_chat:'Ve a chatear ahora',
+    go_rank:'Mi ranking',
+    anchor_reward_des:'Felicidades a Top @ de la lista "Recibir". Obtendrás recompensa:',
+    user_reward_des:'Felicitaciones a Top @ de la lista "Enviar". Obtendrás recompensa：',
+    anchor_get_reward_des:'¡Felicidades! ¡Tiene un regalo de recompensa y privilegio! Puede obtener un regalo ahora. El privilegio de invitación tendrá efecto automáticamente en el período válido.',
+    user_get_reward_des:'¡Felicidades！¡Tiene recompensa de videochat gratis! Las monedas para el videochat gratis se pondrán en su cuenta por día. Por favor compruebe en el balance de monedas.',
   }
 };
