@@ -45,5 +45,16 @@ module.exports = {
     distance_150:"距离上榜还差@@@个礼物",
     distance_else:"当前排名未上榜",
     frist:"恭喜你达到榜首"
+  },
+  Reward:{
+    get_reward:'领取奖励',
+    go_chat:'去聊天',
+    go_rank:'查看我的战绩',
+    anchor_reward_des:'恭喜您在本次活动成为收礼榜第@名，获得如下奖励:',
+    user_reward_des:'恭喜您在本次活动成为送出榜第@名，获得如下奖励:',
+    anchor_get_reward_des:'恭喜您领取了礼物和邀约奖励，礼物奖励已自动发放，邀约特权奖励将在有效期内自动下发',
+    user_get_reward_des:'恭喜您领取了免费通话时长奖励，该奖励将以金币形式每天发放到您的账户中，您可以在账户金币余额中查看发放奖励详情',
+    send_des:'Top @: Free video chat for 1 hour/day * @@ days',
+    receive_des:'Top @：Gift（worth @@ coins）+@@@ video call invitations/day * @@@@ day'
   }
 }

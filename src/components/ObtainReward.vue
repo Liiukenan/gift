@@ -6,7 +6,7 @@
             </div>
             <v-card flat class="reward_card">
                 <div class="obtain_des">
-                    {{isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
+                    {{this.isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
                 </div>
                 <div class="btn_layout">
                     <v-btn outline class="obtain_btn"  color="pink_color" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {closePager, jumpMain} from "../common/jsInteractive"
+import {closePager, jumpMain,enterEventDetails} from "../common/jsInteractive"
 export default {
   name: "ObtainReward",
   data: function() {
@@ -33,12 +33,17 @@ export default {
         require("../../static/img/pop_bg_congratulations_indonesia.png"),
         require("../../static/img/pop_bg_congratulations_turkey.png")
       ],
-      isAnchor:false,
       showAnimateLayout:false,
     };
   },
   created(){
       var currentJid = window.jid
+  }, 
+  computed:{
+    isAnchor:function(){
+        var response = this.$store.state.hasRewardResult;
+        return response.userType == 'anchor'
+    },
   },
   methods: {
     getPopBg: function() {
@@ -68,7 +73,7 @@ export default {
         closePager()
     },
     checkScores:function(){
-        enterEventDetails()
+        enterEventDetails("")
     }
   }
 };

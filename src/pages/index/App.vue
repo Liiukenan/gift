@@ -33,7 +33,7 @@
         <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
       </transition>
 
-      <div class='reward' v-if='resultData.status == 1'>
+      <div class='reward' v-if='this.hasReward == 1'>
           <reward />
       </div>
     </v-app>
@@ -94,7 +94,18 @@ export default {
     ...mapGetters({
       mySelf: "mySelf",
       myActivity: "activity"
-    })
+    }),
+    hasReward(){
+      if(this.resultData == undefined){
+        return 0
+      }
+      if(this.resultData.status == 1){
+          this.setBodyScroll(false)
+      }else{
+        this.setBodyScroll(true)
+      }
+      return this.resultData.status
+    }
   },
   methods:{
     fetchData() {
@@ -120,7 +131,20 @@ export default {
     loadTabHeight(val){
       console.log("height " + val);
       val.height = 90;
-    }
+    },
+    setBodyScroll:function(scroll){
+      if(!scroll){
+          document.documentElement.style.overflow = 'hidden';
+          document.body.scroll = "no";
+          document.body.style.position = "fixed";          
+          document.body.style.width = "100%";
+      } else{
+          document.documentElement.style.overflow = 'scroll';
+          document.body.scroll = "yes";
+          document.body.style.position = "relative";
+          document.body.style.width = "100%";
+      }
+    },
   }
 }
 </script>
