@@ -32,15 +32,21 @@
       <transition name="slide-fade">
         <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
       </transition>
+
+      <div class='reward' v-if='resultData.status == 1'>
+          <reward />
+      </div>
     </v-app>
 </template>
 
 <script>
-  import {mapGetters} from "vuex";
+  import {mapGetters,mapState} from "vuex";
   import RankingList from '../../components/RankingList'
   import TopRank from '../../components/TopRank'
   import MySelf from '../../components/MySelf'
   import Banner from '../../components/Banner'
+  import Reward from '../../components/Reward'
+  import ObtainReward from '../../components/ObtainReward'
   import {logEvent} from "../../common/jsInteractive"
 
 
@@ -50,7 +56,9 @@ export default {
     RankingList,
     TopRank,
     Banner,
-    MySelf
+    MySelf,
+    Reward,
+    ObtainReward
   },
   data:function(){
     return{
@@ -80,6 +88,9 @@ export default {
     logEvent("event_activity_page_show", "")
   },
   computed:{
+    ...mapState({
+        resultData: "hasRewardResult"
+      }),
     ...mapGetters({
       mySelf: "mySelf",
       myActivity: "activity"
@@ -89,6 +100,9 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       console.log("fetchData");
+      this.$store
+        .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+        .then((result) => {});
       this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
       });
     },
@@ -184,6 +198,11 @@ export default {
   }
   .tabs{
     margin-top: -40px;
+  }
+  .reward{
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 
 </style>

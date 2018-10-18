@@ -76,7 +76,7 @@ module.exports = {
     user_reward_des:'Glückwunsch zu Top @ der "Verschicken"-Liste. Sie bekommen eine Belohnung:',
     anchor_get_reward_des:'Glückwunsch! Sie haben ein Belohnungsgeschenk und ein Privileg! Sie können jetzt das Geschenk bekommen. Das Einladungsprivileg wird automatisch im Gültigkeitszeitraum wirksam. ',
     user_get_reward_des:'Glückwunsch! Sie bekommen einen kostenlosen Video-Chat als Belohnung! Die Münzen für den kostenlosen Video-Chat werden Ihrem Konto pro Tag gutgeschrieben. Bitte überprüfen Sie diese im Kontostand.',
-    send_des:'Top @@: Kostenloser Videochat für 1 Stunde / Tag * @ Tage',
-    receive_des:'Top @@@@: Geschenk (Wert @ Münzen)  + @@ Einladungen zum Videoanruf / Tag * @@@ Tag'
+    send_des:'Top @: Kostenloser Videochat für 1 Stunde / Tag * @@ Tage',
+    receive_des:'Top @: Geschenk (Wert @@ Münzen)  + @@@ Einladungen zum Videoanruf / Tag * @@@@ Tag'
   }
 };

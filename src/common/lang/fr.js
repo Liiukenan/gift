@@ -79,7 +79,7 @@ module.exports = {
     user_reward_des:'Félicitations au Top @ de la liste "Envoyés". Vous obtiendrez une récompense :',
     anchor_get_reward_des:'Félicitations! Vous avez un cadeau et un privilège ! Vous pouvez obtenir un cadeau maintenant. Le privilège d\'invitation prendra automatiquement effet pendant une période de validité. ',
     user_get_reward_des:'Félicitations ! Vous avez remporté un chat vidéo gratuit ! Les pièces pour le chat vidéo gratuit seront mises sur votre compte journalier. Veuillez sil vous plait le vérifier dans le solde de pièces.',
-    send_des:'Top @@ : Chat vidéo gratuit pendant 1 heure/jour * @ jours',
-    receive_des:'Top @@@@ : Cadeau （valeur @ pièces） + @@ invitations à des appels vidéo/jour * @@@ jours'
+    send_des:'Top @ : Chat vidéo gratuit pendant 1 heure/jour * @@ jours',
+    receive_des:'Top @ : Cadeau （valeur @@ pièces） + @@@ invitations à des appels vidéo/jour * @@@@ jours'
   }
 };

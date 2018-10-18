@@ -23,6 +23,7 @@ Vue.use(Vuetify,{
     top_anchor_name_color:'#333333',
     top_anchor_gift_color:'#999999',
     divider_color:'#F2F2F2',
+    pink_color:'#FF1A86'
   }
 });
 Vue.use(VueLazyload);

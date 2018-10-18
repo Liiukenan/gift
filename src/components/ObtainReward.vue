@@ -9,8 +9,8 @@
                     {{isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
                 </div>
                 <div class="btn_layout">
-                    <v-btn outline class="obtain_btn"  color="indigo" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
-                    <v-btn outline class="obtain_btn"  color="indigo" @click="checkScores">{{$t("Reward.go_rank")}}</v-btn>
+                    <v-btn outline class="obtain_btn"  color="pink_color" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
+                    <v-btn outline class="obtain_btn"  color="pink_color" @click="checkScores">{{$t("Reward.go_rank")}}</v-btn>
                 </div>
             </v-card>
         </div>
@@ -24,14 +24,14 @@ export default {
   data: function() {
     return {
       popBgs: [
-        require("../../static/img/pop_bg_ar.png"),
-        require("../../static/img/pop_bg_de.png"),
-        require("../../static/img/pop_bg_en.png"),
-        require("../../static/img/pop_bg_es.png"),
-        require("../../static/img/pop_bg_fr.png"),
-        require("../../static/img/pop_bg_hi.png"),
-        require("../../static/img/pop_bg_in.png"),
-        require("../../static/img/pop_bg_tr.png")
+        require("../../static/img/pop_bg_congratulations_arab.png"),
+        require("../../static/img/pop_bg_congratulations_german.png"),
+        require("../../static/img/pop_bg_congratulations_en.png"),
+        require("../../static/img/pop_bg_congratulations_spain.png"),
+        require("../../static/img/pop_bg_congratulations_french.png"),
+        require("../../static/img/pop_bg_congratulations_hindi.png"),
+        require("../../static/img/pop_bg_congratulations_indonesia.png"),
+        require("../../static/img/pop_bg_congratulations_turkey.png")
       ],
       isAnchor:false,
       showAnimateLayout:false,
@@ -97,7 +97,6 @@ export default {
   padding-bottom: 5px;
 }
 .obtain_des {
-  margin-top: 16px;
   margin-left: 10px;
   margin-right: 10px;
   color: rgba(0, 0, 0, 0.8);
@@ -129,7 +128,7 @@ export default {
   color: rgba(245,74,111,1);
 }
 .obtain_btn {
-    border-radius: 20px;
+  border-radius: 20px;
   text-transform: capitalize;
   width: 126px;
   font-size: 14px;

@@ -10,7 +10,7 @@
                     {{this.rewardDes}}
                 </div>
                 <div class="reward_layout">
-                    <img src="/static/img/reward_coin_bg.png" class="reward_coin_bg"/>
+                    <img v-bind:src="rewardCoinBg" class="reward_coin_bg"/>
                     <img v-bind:src="rewardPictureUrl" class="reward_coin"/>
                 </div>
                 <div class="reward_coin_des">
@@ -23,8 +23,8 @@
   <obtain-reward v-if="obtainReward"/>
   <v-layout v-show='showAnimateLayout' class="animate_layout" id="animate_layout">
       <div class="coins_layout" id="coins_layout">
-        <img src="/static/img/coins_left.png" class="coins_left" id="left_coins_ele"/>
-        <img src="/static/img/coins_right.png" class="coins_right" id="right_coins_ele"/>
+        <img v-bind:src="rewardLeftCoins" class="coins_left" id="left_coins_ele"/>
+        <img v-bind:src="rewardRightCoins" class="coins_right" id="right_coins_ele"/>
       </div>
   </v-layout>
 </v-app>
@@ -50,7 +50,10 @@ export default {
       ],
       showAnimateLayout:false,
       obtainReward:false,
-      coinAnimateCound:0
+      coinAnimateCound:0,
+      rewardCoinBg:'',
+      rewardLeftCoins:'',
+      rewardRightCoins:'',
     };
   },
   components: {
@@ -58,6 +61,9 @@ export default {
   },
   created(){
       var currentJid = window.jid
+      this.rewardCoinBg = require('../../static/img/reward_coin_bg.png')
+      this.rewardLeftCoins = require('../../static/img/coins_left.png')
+      this.rewardRightCoins = require('../../static/img/coins_right.png')
   },
   mounted(){
       this.$nextTick(() => {
@@ -71,7 +77,7 @@ export default {
     },
     rewardPictureUrl:function(){
         var response = this.$store.state.hasRewardResult;
-        return this.isAnchor ? response.giftUrl : '/static/img/reward_coin.png'
+        return this.isAnchor ? response.giftUrl : require('../../static/img/reward_coin.png')
     },
     rewardDes:function(){
         var str = ''
@@ -89,10 +95,10 @@ export default {
         var rank = response.rank
         if(this.isAnchor){
             str = this.$t("Reward.receive_des")
-            str = str.replace('@',response.rewardNum)
-            str = str.replace('@@',response.inviteTimes)
-            str = str.replace('@@@',response.inviteDays)
-            str = str.replace('@@@@',rank)
+            str = str.replace('@@',response.rewardNum)
+            str = str.replace('@@@',response.inviteTimes)
+            str = str.replace('@@@@',response.inviteDays)
+            str = str.replace('@',rank)
         }else{
             str = this.$t("Reward.send_des")
             var rewardNum = 1
@@ -102,8 +108,8 @@ export default {
             else if(rank == 4) rewardNum = 4
             else if(rank == 5) rewardNum = 3
             else if(rank == 6) rewardNum = 2
-            str = str.replace('@',rewardNum)
-            str = str.replace('@@',rank)
+            str = str.replace('@@',rewardNum)
+            str = str.replace('@',rank)
         }
         return str
     }
@@ -223,7 +229,7 @@ export default {
 
         var animateEle = document.getElementById('animate_layout')
         var coinEle = document.createElement('img')
-        coinEle.src = '/static/img/coin.png'
+        coinEle.src = require('../../static/img/coin.png')
         coinEle.style.width = '58px'
         coinEle.style.height = '58px'
         coinEle.style.position = 'absolute'
@@ -294,6 +300,8 @@ export default {
 .reward_des {
   color: rgba(0, 0, 0, 0.8);
   font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .reward_layout {
   position: relative;
@@ -324,6 +332,8 @@ export default {
 .reward_coin_des {
   font-size: 14px;
   color: red;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .reward_btn {
   text-transform: capitalize;
