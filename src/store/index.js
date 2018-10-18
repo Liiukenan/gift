@@ -68,8 +68,7 @@ const store = new Vuex.Store({
         FETCH_HAS_REWARD(context,options){
           console.log('request has reward options : ', options)
           console.log("has reward jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-          // var currentJid = "user_1007409@bj2.1-1.io";
-          var currentJid = "anchor_1015864@bj2.1-1.io";
+          var currentJid = "user_1018782@bj2.1-1.io";
 
           if (window.plat == "android" || window.plat == "ios"){
             currentJid = window.jid;
@@ -113,7 +112,7 @@ const store = new Vuex.Store({
         FETCH_REWARD(context,options){
             console.log('request reward options : ', options)
             console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-            var currentJid = "anchor_1015864@bj2.1-1.io";
+            var currentJid = "user_1018782@bj2.1-1.io";
 
             if (window.plat == "android" || window.plat == "ios"){
               currentJid = window.jid;
@@ -179,7 +178,7 @@ const store = new Vuex.Store({
           } else if (HOST === 'B1'){
             api = 'http://vshow-api-ra.1-1.io/ranking_activity/rank'
           }
-          var currentJid = "user_1007409@bj2.1-1.io";
+          var currentJid = "user_1018782@bj2.1-1.io";
           if (HOST === 'B1'){
             currentJid = "user_5653054@vshow-euc1.1-1.io"
           }

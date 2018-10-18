@@ -74,5 +74,7 @@ module.exports = {
     user_reward_des:'"Gönderilen" listesinden Top @ tebrikler. Alacağınız ödül miktarı:',
     anchor_get_reward_des:'Tebrikler! Ödül hediyesi ve ayrıcalığınız var! Şimdi hediye alabilirsiniz. Davetiniz belirlenmiş süre içerisinde otomatik olarak geçerli olacaktır.',
     user_get_reward_des:'Tebrikler! Ödül olarak bedava görüntülü sohbetin var! Ücretsiz görüntülü sohbet için çipler ve dakilkalar hesabınıza günlük olarak eklenir. Lütfen bunları çip bakiyenizde kontrol edin.',
+    send_des:'Top @@: ücretsiz video sohbet 1 saat/gün * @ gün',
+    receive_des:'Top @@@@: Hediye（Miktar: @ çip）+ @@ defa video çağrı davetiyeleri/gün * @@@ gün'
   }
 };

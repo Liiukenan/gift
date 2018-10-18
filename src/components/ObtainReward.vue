@@ -5,9 +5,6 @@
                 <img :src="getPopBg()" style="width:100%"/>
             </div>
             <v-card flat class="reward_card">
-                <div class="obtain_coin_des">
-                    Chompion Award Successful   
-                </div>
                 <div class="obtain_des">
                     {{isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
                 </div>
@@ -15,7 +12,6 @@
                     <v-btn outline class="obtain_btn"  color="indigo" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
                     <v-btn outline class="obtain_btn"  color="indigo" @click="checkScores">{{$t("Reward.go_rank")}}</v-btn>
                 </div>
-                
             </v-card>
         </div>
   </v-layout>

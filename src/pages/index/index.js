@@ -28,7 +28,7 @@ Vue.use(Vuetify,{
 Vue.use(VueLazyload);
 
 const i18n = new VueI18n({
-  locale: "de",    // 语言标识
+  locale: lang,    // 语言标识
   // this.$i18n.locale, // 通过切换locale的值来实现语言切换
   messages: {
     'en': require('../../common/lang/en'),

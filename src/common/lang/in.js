@@ -74,5 +74,7 @@ module.exports = {
     user_reward_des:'Selamat kepada @ Teratas dari daftar "Kirim". Anda akan mendapat hadiah:',
     anchor_get_reward_des:'Selamat! Anda mendapat hadiah dan hak istimewa! Hadiah bisa Anda dapatkan sekarang. Hak istimewa undangan akan otomatis berlaku di periode yang berlaku. ',
     user_get_reward_des:'Selamat! Anda mendapat hadiah ngobrol video gratis! Koin untuk ngobrol video gratis akan diberikan ke akun Anda setiap hari. Silakan lihat di saldo koin.',
+    send_des:'@@ Teratas: Chat video gratis selama 1 jam/hari * @ hari',
+    receive_des:'@@@@ Teratas: Hadiah（bernilai @ koin）+@@ undangan panggilan video/hari * @@@ hari'
   }
 };

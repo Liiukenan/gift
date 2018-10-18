@@ -72,5 +72,7 @@ module.exports = {
     user_reward_des:'Congrats to the Top @ from the "Sent" list. You\'ll get reward:',
     anchor_get_reward_des:'Congrats! You\'ve got reward gift and privilege! You can get gift now. The invitation privilege will automatically take effect in valid period. ',
     user_get_reward_des:'Congrats! You\'ve got reward free video chat! The coins for free video chat will be put into your account per day. Please check them in coin balance.',
+    send_des:'Top @@: Free video chat for 1 hour/day * @ days',
+    receive_des:'Top @@@@: Gift（worth @ coins）+@@ video call invitations/day * @@@ days'
   }
 }

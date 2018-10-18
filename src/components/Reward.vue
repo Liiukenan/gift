@@ -14,7 +14,7 @@
                     <img v-bind:src="rewardPictureUrl" class="reward_coin"/>
                 </div>
                 <div class="reward_coin_des">
-                    Free calls are x3 hours long.
+                    {{this.rewardCoinDes}}
                 </div>
                 <v-btn dark style="color: white" class="reward_btn" @click="receiveReward">{{$t("Reward.get_reward")}}</v-btn>
             </v-card>
@@ -82,6 +82,30 @@ export default {
         }
         var response = this.$store.state.hasRewardResult;
         return str.replace('@',response.rank)
+    },
+    rewardCoinDes:function(){
+        var str = ''
+        var response = this.$store.state.hasRewardResult
+        var rank = response.rank
+        if(this.isAnchor){
+            str = this.$t("Reward.receive_des")
+            str = str.replace('@',response.rewardNum)
+            str = str.replace('@@',response.inviteTimes)
+            str = str.replace('@@@',response.inviteDays)
+            str = str.replace('@@@@',rank)
+        }else{
+            str = this.$t("Reward.send_des")
+            var rewardNum = 1
+            if(rank == 1) rewardNum = 7
+            else if(rank == 2) rewardNum = 6
+            else if(rank == 3) rewardNum = 5
+            else if(rank == 4) rewardNum = 4
+            else if(rank == 5) rewardNum = 3
+            else if(rank == 6) rewardNum = 2
+            str = str.replace('@',rewardNum)
+            str = str.replace('@@',rank)
+        }
+        return str
     }
   },
   methods: {

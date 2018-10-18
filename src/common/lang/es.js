@@ -74,5 +74,7 @@ module.exports = {
     user_reward_des:'Felicitaciones a Top @ de la lista "Enviar". Obtendrás recompensa：',
     anchor_get_reward_des:'¡Felicidades! ¡Tiene un regalo de recompensa y privilegio! Puede obtener un regalo ahora. El privilegio de invitación tendrá efecto automáticamente en el período válido.',
     user_get_reward_des:'¡Felicidades！¡Tiene recompensa de videochat gratis! Las monedas para el videochat gratis se pondrán en su cuenta por día. Por favor compruebe en el balance de monedas.',
+    send_des:'Top @@: video chat gratis durante 1 hora / día * @ días',
+    receive_des:'Top @@@@: Regalo （vale la pena @ monedas）+ @@ invitaciones de videollamadas / día * @@@ días'
   }
 };
