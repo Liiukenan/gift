@@ -9,7 +9,7 @@
                     {{this.isAnchor ?$t("Reward.anchor_get_reward_des") :$t("Reward.user_get_reward_des")}}
                 </div>
                 <div class="btn_layout">
-                    <v-btn outline class="obtain_btn"  color="pink_color" @click="goChat">{{$t("Reward.go_chat")}}</v-btn>
+                    <!-- <v-btn outline class="obtain_btn"  color="pink_color" @click="goChat">{{$t("Reward.go_chat")}}</v-btn> -->
                     <v-btn outline class="obtain_btn"  color="pink_color" @click="checkScores">{{$t("Reward.go_rank")}}</v-btn>
                 </div>
             </v-card>
@@ -84,8 +84,8 @@ export default {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 30%,
-    rgba(255, 255, 255, 1) 35%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(255, 255, 255, 1) 45%,
     rgba(255, 255, 255, 1) 100%
   );
 }
@@ -95,7 +95,7 @@ export default {
   margin-right: 10%;
 }
 .reward_card {
-  margin-top: -10px;
+  margin-top: -8px;
   background: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -133,9 +133,11 @@ export default {
   color: rgba(245,74,111,1);
 }
 .obtain_btn {
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 20px;
   text-transform: capitalize;
-  width: 126px;
+  min-width: 126px;
   font-size: 14px;
   height: 36px;
 }
