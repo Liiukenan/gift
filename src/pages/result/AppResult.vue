@@ -1,14 +1,15 @@
 <template>
 <v-app class="result_root">
-    <reward v-if='resultData.status == 1'/>
+    <reward @closeDialog='closeDialog' v-if='resultData.status == 1'/>
     <result-list v-if='resultData.status == 0'/>
 </v-app>
 </template>
 
 <script>
+import {closePager, jumpMain,enterEventDetails} from "../../common/jsInteractive"
 import Reward from "../../components/Reward";
 import ResultList from "../../components/ResultList";
-  import {mapGetters,mapState} from "vuex";
+import {mapGetters,mapState} from "vuex";
 export default {
   name: "Result",
   data: function() {
@@ -30,6 +31,10 @@ export default {
       }),
   },
   methods: {
+    closeDialog(){
+      console.log('app result close dialog')
+      enterEventDetails('')
+    },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       console.log("fetchData");

@@ -73,7 +73,8 @@ export default {
         closePager()
     },
     checkScores:function(){
-        enterEventDetails("")
+        this.$emit('checkScores');
+        // enterEventDetails("")
     }
   }
 };

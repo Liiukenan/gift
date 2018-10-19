@@ -20,7 +20,7 @@
             </v-card>
         </div>
   </v-layout>
-  <obtain-reward v-if="obtainReward"/>
+  <obtain-reward v-if="obtainReward" @checkScores='checkScores'/>
   <v-layout v-show='showAnimateLayout' class="animate_layout" id="animate_layout">
       <div class="coins_layout" id="coins_layout">
         <img v-bind:src="rewardLeftCoins" class="coins_left" id="left_coins_ele"/>
@@ -115,6 +115,10 @@ export default {
     }
   },
   methods: {
+    checkScores(){
+         console.log('----check scores ')
+         this.$emit('closeDialog')
+    },
     getPopBg: function() {
       var path;
       if (window.lang == "ar") {

@@ -33,8 +33,8 @@
         <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
       </transition>
 
-      <div class='reward' v-if='this.hasReward == 1'>
-          <reward />
+      <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
+          <reward @closeDialog='closeDialog'/>
       </div>
     </v-app>
 </template>
@@ -70,7 +70,8 @@ export default {
           'tab_text_color'
       ],
       tabIndex:0,
-      tabHeight:'48px'
+      tabHeight:'48px',
+      closeStatus :false,
     }
   },
   created() {
@@ -108,6 +109,10 @@ export default {
     }
   },
   methods:{
+    closeDialog(){
+      this.closeStatus = true
+      console.log('app  close dialog')
+    },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       console.log("fetchData");
