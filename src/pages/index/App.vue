@@ -112,6 +112,7 @@ export default {
     closeDialog(){
       this.closeStatus = true
       console.log('app  close dialog')
+      this.setBodyScroll(true)
     },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
