@@ -4,6 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import qs from 'qs';
 import {loadError} from "../common/jsInteractive";
+import {requestApiUrl , getCurrentJid,buildUserGiftTestData,buildUserLuckDrawTestData,buildAnchorGiftTestData,buildAnchorLuckDrawTestData} from './ApiHelper'
 
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
@@ -14,6 +15,8 @@ const store = new Vuex.Store({
     state: {
         rankingList: {},
         hasRewardResult:{},
+        userGiftRate:{},
+        anchorGiftRate:{}
     },
     getters: {
         receiverTop:state => {
@@ -65,25 +68,85 @@ const store = new Vuex.Store({
         },
     },
     actions: {
+        FETCH_USER_GIFT(context,options){
+          console.log('request user gift options : ', options)
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/user_gift_rate')
+          var timestamp = (new Date()).valueOf();
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+            console.log("user gift response", response.data)
+            context.commit("loadUserGiftRate", {result: response.data})
+          }).catch(reason => {
+            console.log("user gift error :",reason);
+            let HOST = process.env.HOST;
+            var data = {}
+            if (HOST === 'dev' || HOST === 'prod'){
+                  data = buildUserGiftTestData()
+            }
+            context.commit("loadUserGiftRate", {result: data})
+          })
+        },
+        FETCH_USER_LUCK_DRAW(context,options){
+          console.log('request user luck draw options : ', options)
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/user_get_gift')
+          var timestamp = (new Date()).valueOf();
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+            console.log("user luck draw  response", response.data)
+            return response.data 
+          }).catch(reason => {
+            console.log("user luck draw error :",reason);
+            let HOST = process.env.HOST;
+            var data = {}
+            if (HOST === 'dev' || HOST === 'prod'){
+                  data = buildUserLuckDrawTestData()
+            }
+            return data
+          })
+        },
+        FETCH_ANCHOR_GIFT(context,options){
+          console.log('request anchor gift options : ', options)
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/anchor_gift_rate')
+          var timestamp = (new Date()).valueOf();
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+            console.log("anchor gift response", response.data)
+            var data = response.data
+            context.commit("loadanchorGiftRate", {result: data})
+          }).catch(reason => {
+            console.log("user gift error :",reason);
+            let HOST = process.env.HOST;
+            var data = {}
+            if (HOST === 'dev' || HOST === 'prod'){
+                  data = buildAnchorGiftTestData()
+            }
+            context.commit("loadanchorGiftRate", {result: data})
+          })
+        },
+        FETCH_ANCHOR_LUCK_DRAW(context,options){
+          console.log('request anchor luck draw options : ', options)
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/anchor_get_gift')
+          var timestamp = (new Date()).valueOf();
+          var giftId = options.giftId
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp,'gift_id':giftId})).then((response) => {
+            console.log("anchor luck draw  response", response.data)
+            return response.data
+          }).catch(reason => {
+            console.log("anchor luck draw error :",reason);
+            let HOST = process.env.HOST;
+            var data = {}
+            if (HOST === 'dev' || HOST === 'prod'){
+                  data = buildAnchorLuckDrawTestData()
+            }
+            return data
+          })
+        },
         FETCH_HAS_REWARD(context,options){
           console.log('request has reward options : ', options)
-          console.log("has reward jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-          var currentJid = "user_1021550@bj2.1-1.io";
-
-          if (window.plat == "android" || window.plat == "ios"){
-            currentJid = window.jid;
-          }
-          var api = '/ranking_activity/has_reward'
-          let HOST = process.env.HOST;
-          if (HOST === 'dev' || HOST === 'prod'){
-            api = 'http://54.222.148.146:46000/ranking_activity/has_reward'
-          }
-          if (HOST === 'B0'){
-            api = 'http://54.222.148.146:46000/ranking_activity/has_reward'
-          } else if (HOST === 'B1'){
-            api = 'http://vshow-api-ra.1-1.io/ranking_activity/has_reward'
-          }
-
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/has_reward')
+          console.log('api',api)
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
               console.log("has reward response", response.data)
               var data = {}
@@ -112,21 +175,9 @@ const store = new Vuex.Store({
         FETCH_REWARD(context,options){
             console.log('request reward options : ', options)
             console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-            var currentJid = "user_1021550@bj2.1-1.io";
 
-            if (window.plat == "android" || window.plat == "ios"){
-              currentJid = window.jid;
-            }
-            var api = '/ranking_activity/get_reward'
-            let HOST = process.env.HOST;
-            if (HOST === 'dev' || HOST === 'prod'){
-              api = 'http://54.222.148.146:46000/ranking_activity/get_reward'
-            }
-            if (HOST === 'B0'){
-              api = 'http://54.222.148.146:46000/ranking_activity/get_reward'
-            } else if (HOST === 'B1'){
-              api = 'http://vshow-api-ra.1-1.io/ranking_activity/get_reward'
-            }
+            var currentJid = getCurrentJid()
+            var api = requestApiUrl('/ranking_activity/get_reward')
 
             return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("reward response", response.data)
@@ -143,6 +194,10 @@ const store = new Vuex.Store({
             //发布的时候换成服务端的域名
             console.log("request get options: ", options)
             console.log("rank list jid:" + window.jid + " lang:" + window.lang + " plat:" + plat);
+
+            var currentJid = getCurrentJid()
+            var api = requestApiUrl('/ranking_activity/rank')
+
             var list = {};
             if (window.localStorage){
                var localRankingList = window.localStorage.getItem("rankingList");
@@ -150,42 +205,6 @@ const store = new Vuex.Store({
                 list = JSON.parse(localRankingList);
                }
             }
-            //http://54.222.148.146:46000/
-
-          var api = 'ranking_activity/rank'
-          /*
-          部署在nginx后面的话，用proxy解决跨域问题。nginx配置如下：
-          location /ranking_activity/ {
-            # proxy_set_header X-Real-IP $remote_addr;
-            # proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            # proxy_set_header X-NginX-Proxy true;
-            proxy_pass http://54.222.148.146:46000/ranking_activity/;
-            # proxy_ssl_session_reuse off;
-            # proxy_set_header Host $http_host;
-            # proxy_redirect off;
-          }*/
-          if(!isDev){
-            //如果部署在CDN，也要用这个地址，服务端处理跨域问题
-            api = 'http://54.222.148.146:46000/ranking_activity/rank'
-          }
-
-          let HOST = process.env.HOST;
-          if (HOST === 'dev' || HOST === 'prod'){
-            api = 'http://54.222.148.146:46000/ranking_activity/rank'
-          }
-          if (HOST === 'B0'){
-            api = 'http://54.222.148.146:46000/ranking_activity/rank'
-          } else if (HOST === 'B1'){
-            api = 'http://vshow-api-ra.1-1.io/ranking_activity/rank'
-          }
-          var currentJid = "user_1021502@bj2.1-1.io";
-          if (HOST === 'B1'){
-            currentJid = "user_5653054@vshow-euc1.1-1.io"
-          }
-          if (window.plat == "android" || window.plat == "ios"){
-            currentJid = window.jid;
-          }
-          console.log("HOST:"+HOST+" api:"+api);
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
@@ -226,6 +245,14 @@ const store = new Vuex.Store({
         },
         loadHasRewardResult(state, data){
           state.hasRewardResult = data.result
+        },
+        loadUserGiftRate(state,data){
+          console.log('user gift data ', data.result)
+          state.userGiftRate = data.result
+        },
+        loadanchorGiftRate(state,data){
+          console.log('anchor gift data ', data.result)
+          state.anchorGiftRate = data.result
         }
     }
 });
