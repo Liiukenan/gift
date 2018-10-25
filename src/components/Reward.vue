@@ -39,14 +39,14 @@ export default {
   data: function() {
     return {
       popBgs: [
-        require("../../static/img/pop_bg_congratulations_arab.png"),
-        require("../../static/img/pop_bg_congratulations_german.png"),
-        require("../../static/img/pop_bg_congratulations_en.png"),
-        require("../../static/img/pop_bg_congratulations_spain.png"),
-        require("../../static/img/pop_bg_congratulations_french.png"),
-        require("../../static/img/pop_bg_congratulations_hindi.png"),
-        require("../../static/img/pop_bg_congratulations_indonesia.png"),
-        require("../../static/img/pop_bg_congratulations_turkey.png")
+        require("../static/img/pop_bg_congratulations_arab.png"),
+        require("../static/img/pop_bg_congratulations_german.png"),
+        require("../static/img/pop_bg_congratulations_en.png"),
+        require("../static/img/pop_bg_congratulations_spain.png"),
+        require("../static/img/pop_bg_congratulations_french.png"),
+        require("../static/img/pop_bg_congratulations_hindi.png"),
+        require("../static/img/pop_bg_congratulations_indonesia.png"),
+        require("../static/img/pop_bg_congratulations_turkey.png")
       ],
       showAnimateLayout:false,
       obtainReward:false,
@@ -61,9 +61,9 @@ export default {
   },
   created(){
       var currentJid = window.jid
-      this.rewardCoinBg = require('../../static/img/reward_coin_bg.png')
-      this.rewardLeftCoins = require('../../static/img/coins_left.png')
-      this.rewardRightCoins = require('../../static/img/coins_right.png')
+      this.rewardCoinBg = require('../static/img/reward_coin_bg.png')
+      this.rewardLeftCoins = require('../static/img/coins_left.png')
+      this.rewardRightCoins = require('../static/img/coins_right.png')
   },
   mounted(){
       this.$nextTick(() => {
@@ -77,7 +77,7 @@ export default {
     },
     rewardPictureUrl:function(){
         var response = this.$store.state.hasRewardResult;
-        return this.isAnchor ? response.giftUrl : require('../../static/img/reward_coin.png')
+        return this.isAnchor ? response.giftUrl : require('../static/img/reward_coin.png')
     },
     rewardDes:function(){
         var str = ''
@@ -233,7 +233,7 @@ export default {
 
         var animateEle = document.getElementById('animate_layout')
         var coinEle = document.createElement('img')
-        coinEle.src = require('../../static/img/coin.png')
+        coinEle.src = require('../static/img/coin.png')
         coinEle.style.width = '58px'
         coinEle.style.height = '58px'
         coinEle.style.position = 'absolute'
@@ -365,7 +365,7 @@ export default {
         -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
-        transition: 
+        transition:
     }
 }
 .coins_left{
@@ -393,6 +393,3 @@ export default {
     top:0;
 }
 </style>
-
-
-

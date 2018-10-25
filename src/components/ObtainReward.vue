@@ -24,21 +24,21 @@ export default {
   data: function() {
     return {
       popBgs: [
-        require("../../static/img/pop_bg_congratulations_arab.png"),
-        require("../../static/img/pop_bg_congratulations_german.png"),
-        require("../../static/img/pop_bg_congratulations_en.png"),
-        require("../../static/img/pop_bg_congratulations_spain.png"),
-        require("../../static/img/pop_bg_congratulations_french.png"),
-        require("../../static/img/pop_bg_congratulations_hindi.png"),
-        require("../../static/img/pop_bg_congratulations_indonesia.png"),
-        require("../../static/img/pop_bg_congratulations_turkey.png")
+        require("../static/img/pop_bg_congratulations_arab.png"),
+        require("../static/img/pop_bg_congratulations_german.png"),
+        require("../static/img/pop_bg_congratulations_en.png"),
+        require("../static/img/pop_bg_congratulations_spain.png"),
+        require("../static/img/pop_bg_congratulations_french.png"),
+        require("../static/img/pop_bg_congratulations_hindi.png"),
+        require("../static/img/pop_bg_congratulations_indonesia.png"),
+        require("../static/img/pop_bg_congratulations_turkey.png")
       ],
       showAnimateLayout:false,
     };
   },
   created(){
       var currentJid = window.jid
-  }, 
+  },
   computed:{
     isAnchor:function(){
         var response = this.$store.state.hasRewardResult;
@@ -148,6 +148,3 @@ export default {
     display: flex;
 }
 </style>
-
-
-

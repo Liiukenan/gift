@@ -116,14 +116,14 @@
         dialog: false,
         showDialog: false,
         banner_bg: [
-          require("../../static/img/ranking_list_bg_ar.png"),
-          require("../../static/img/ranking_list_bg_de.png"),
-          require("../../static/img/ranking_list_bg_en.png"),
-          require("../../static/img/ranking_list_bg_es.png"),
-          require("../../static/img/ranking_list_bg_fr.png"),
-          require("../../static/img/ranking_list_bg_hi.png"),
-          require("../../static/img/ranking_list_bg_in.png"),
-          require("../../static/img/ranking_list_bg_tr.png"),
+          require("../static/img/ranking_list_bg_ar.png"),
+          require("../static/img/ranking_list_bg_de.png"),
+          require("../static/img/ranking_list_bg_en.png"),
+          require("../static/img/ranking_list_bg_es.png"),
+          require("../static/img/ranking_list_bg_fr.png"),
+          require("../static/img/ranking_list_bg_hi.png"),
+          require("../static/img/ranking_list_bg_in.png"),
+          require("../static/img/ranking_list_bg_tr.png"),
         ]
       }
     },
