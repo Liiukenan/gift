@@ -134,6 +134,7 @@ import { setTimeout } from 'timers';
           line-height 14px
           color  rgba(255,255,255,0.60)
           margin-bottom 11px
+          text-align left 
           .num-wrap
             display inline-block
             padding-left 10px
