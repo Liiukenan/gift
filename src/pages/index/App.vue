@@ -117,8 +117,7 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       console.log("fetchData");
-      this.$store
-        .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+      this.$store.dispatch("FETCH_USER_GIFT", { myJid: window.jid })
         .then((result) => {});
       this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
       });

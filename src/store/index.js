@@ -16,7 +16,8 @@ const store = new Vuex.Store({
         rankingList: {},
         hasRewardResult:{},
         userGiftRate:{},
-        anchorGiftRate:{}
+        anchorGiftRate:{},
+        activityId:2
     },
     getters: {
         receiverTop:state => {
@@ -73,7 +74,8 @@ const store = new Vuex.Store({
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/user_gift_rate')
           var timestamp = (new Date()).valueOf();
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+          var activityId = context.state.activityId
+          return Vue.axios.get(api,{params:{"jid":currentJid,'activity_id':activityId,'_t':timestamp}}).then((response) => {
             console.log("user gift response", response.data)
             context.commit("loadUserGiftRate", {result: response.data})
           }).catch(reason => {
@@ -91,7 +93,7 @@ const store = new Vuex.Store({
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/user_get_gift')
           var timestamp = (new Date()).valueOf();
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+          return Vue.axios.get(api, {params:{"jid":currentJid,'activity_id':1,'_t':timestamp}}).then((response) => {
             console.log("user luck draw  response", response.data)
             return response.data 
           }).catch(reason => {
@@ -109,7 +111,7 @@ const store = new Vuex.Store({
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/anchor_gift_rate')
           var timestamp = (new Date()).valueOf();
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp})).then((response) => {
+          return Vue.axios.post(api, {params:{"jid":currentJid,'activity_id':1,'_t':timestamp}}).then((response) => {
             console.log("anchor gift response", response.data)
             var data = response.data
             context.commit("loadanchorGiftRate", {result: data})
@@ -129,7 +131,7 @@ const store = new Vuex.Store({
           var api = requestApiUrl('/ranking_activity/anchor_get_gift')
           var timestamp = (new Date()).valueOf();
           var giftId = options.giftId
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,'activity_id':1,'_t':timestamp,'gift_id':giftId})).then((response) => {
+          return Vue.axios.post(api, {params:{"jid":currentJid,'activity_id':1,'_t':timestamp,'gift_id':giftId}}).then((response) => {
             console.log("anchor luck draw  response", response.data)
             return response.data
           }).catch(reason => {
@@ -209,6 +211,7 @@ const store = new Vuex.Store({
                 console.log("response", response.data)
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
+                  context.commit("loadActivityId", {result: response.data["activity"]["activity_id"]})
                   // 公布结果期间
                   if (status == 1){
                     // 本地缓存结果
@@ -253,6 +256,9 @@ const store = new Vuex.Store({
         loadanchorGiftRate(state,data){
           console.log('anchor gift data ', data.result)
           state.anchorGiftRate = data.result
+        },
+        loadActivityId(state,data){
+          state.activityId = data.result
         }
     }
 });
