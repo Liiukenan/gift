@@ -47,14 +47,20 @@ module.exports = {
     design_gift:"Designated gift"
   },
   ActivityPage: {
-    tab_receive:"Received",
-    tab_send:"Sent",
+    // 礼物列表名称
+    tab_receive:"Receiving gifts",
+    tab_send:"Sending gifts",
+    zbRules:"During the activity, Stars who get the specified number of Halloween pumpkin will win suprising prizes. More gifts recieved, more prizes to win.After the final results come out, Halloween pumpkins you received can't be used for getting prizes.When activity is over, the uncollected prizes become invalid automatically. Please take your prizes in time. ",
+    userRules:"How can we miss the fun pumpkin at Halloween? During the activity, every user gets a pumpkin lantern. You can light your pumpkin lantern after sending every 10 Halloween pampkins @. Pumpkin lantern can be repeatedly lighted.To open the lighted lantern, and you'll get surprising prizes.After the final results come out, Halloween pumpkins you sent can't be used for lighting your pumpkin lantern.  When activity is over, the unopened pumpkin lantern becomes invalid automatically. Please open it in time. ",
     time:"Time:@@@",
     time_1: "Time",
     activity_finish:"Activity ends. Thanks for attention!",
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",
     bt_regular:"Rules"
+
+
+
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",
