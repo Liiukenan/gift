@@ -15,12 +15,10 @@ export function requestApiUrl(apiName){
 }
 
 export function getCurrentJid(){
-    var currentJid = "user_1021550@bj2.1-1.io";
-
+    var currentJid = "user_1021614@bj2.1-1.io";
     if (window.plat == "android" || window.plat == "ios"){
         currentJid = window.jid;
     }
-
     return currentJid
 }
 

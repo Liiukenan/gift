@@ -53,6 +53,7 @@
   right 0
   bottom 0
   background rgba(0,0,0,0.40)
+  z-index 99999
   &.dialog-fadein-enter-active
     animation: confirm-fadein 0.3s
     .content

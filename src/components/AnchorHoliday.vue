@@ -1,7 +1,7 @@
 <template>
   <div class="anchor-wrap">
     <ul class="anchor">
-      <li class="anchor-item" v-for="item in dataList.gifts">
+      <li class="anchor-item" v-for="(item,index) in dataList.gifts" :key="index">
         <div class="anchor-left">
           <p class="txt-wrap">
             你已收到{{item.gift_name}}
@@ -32,7 +32,6 @@
         </div>
       </li> 
     </ul>
-
     <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
       <gift-content @comfrimGet="comfrimGet" :gift-data="giftData"/>
     </dialog-model/>
