@@ -142,7 +142,7 @@ export default {
       if(!scroll){
           document.documentElement.style.overflow = 'hidden';
           document.body.scroll = "no";
-          document.body.style.position = "fixed";          
+          document.body.style.position = "fixed";
           document.body.style.width = "100%";
       } else{
           document.documentElement.style.overflow = 'scroll';
