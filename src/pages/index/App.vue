@@ -1,118 +1,120 @@
 <template>
     <v-app id="app" light class="scroll-y">
-      <banner />
-      <v-tabs centered hide-slider @input="changeTab" class="tabs" color="transparent" :height="tabHeight">
-          <div class="tab_title">
-            <v-layout>
-              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
-                <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
-                  {{$t("ActivityPage.tab_receive")}}
-                </div>
-              </v-tab>
-              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
-                <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
-                  {{$t("ActivityPage.tab_send")}}
-                </div>
-              </v-tab>
-            </v-layout>
-          </div>
-          <v-tab-item>
-            <v-card color="white" class="tab_card">
-              <TopRank tabIndex="0" isLarge="true"/>
-              <RankingList tab_index="0"/>
-            </v-card>
-          </v-tab-item>
-          <v-tab-item>
-            <v-card color="white" class="tab_card">
-              <TopRank tabIndex="1" isLarge="true"/>
-              <ranking-list tab_index ="1"/>
-            </v-card>
-          </v-tab-item>
-      </v-tabs>
-      <transition name="slide-fade">
+      <banner/>
+      <div class="main">
+      <user></user>
+      <div class="changeTitle">
+        <span v-for="(item,index) in changeTitle" :key="index" :class="{'active':item.active}" @click="changeTab(index)">
+          <a href="javascript:void(0)">
+            {{item.title}}
+            <i></i>
+          </a>
+        </span>
+      </div>
+      <div class="gift-content">
+        <rankings v-show="rankShow"></rankings>
+        <guide v-show="!rankShow"></guide>
+      </div>
+      
+      <!-- <transition name="slide-fade">
         <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
-      </transition>
-
-      <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
-          <reward @closeDialog='closeDialog'/>
+      </transition> -->
       </div>
     </v-app>
 </template>
 
 <script>
-  import {mapGetters,mapState} from "vuex";
-  import RankingList from '../../components/RankingList'
-  import TopRank from '../../components/TopRank'
-  import MySelf from '../../components/MySelf'
-  import Banner from '../../components/Banner'
-  import Reward from '../../components/Reward'
-  import ObtainReward from '../../components/ObtainReward'
-  import {logEvent} from "../../common/jsInteractive"
-
-
+import { mapGetters, mapState} from "vuex";
+import Rankings from "../../components/Rankings.vue";
+import Guide from "../../components/Guide.vue";
+import Banner from '../../components/Banner'
+import Reward from '../../components/Reward'
+import ObtainReward from '../../components/ObtainReward'
+import {logEvent} from "../../common/jsInteractive"
+import User from '../../components/user'
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    RankingList,
-    TopRank,
     Banner,
-    MySelf,
-    Reward,
-    ObtainReward
+    Rankings,
+    Guide,
+    User
   },
-  data:function(){
-    return{
+  data: function() {
+    return {
       isTabOne: true,
-      isTabTwo:false,
-      color:0,
-      colors:[
-          'white',
-          'tab_text_color'
-      ],
-      tabIndex:0,
-      tabHeight:'48px',
-      closeStatus :false,
-    }
+      isTabTwo: false,
+      color: 0,
+      colors: ["white", "tab_text_color"],
+      tabIndex: 0,
+      tabHeight: "48px",
+      closeStatus: false,
+      rankShow: true,
+      active:true,
+      changeTitle:[
+        {
+          title:'Rankings',
+          active:true
+        },
+        {
+          title:'Guide to use',
+          active:false
+        }
+      ]
+    };
   },
   created() {
     // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
-    if(this.$i18n.locale === 'ar'){
-      document.documentElement.style.direction = 'rtl'
-      document.documentElement.style.unicodeBidi = 'bidi-override'
+    if (this.$i18n.locale === "ar") {
+      document.documentElement.style.direction = "rtl";
+      document.documentElement.style.unicodeBidi = "bidi-override";
     }
     var screenWidth = window.screen.width;
-    if (screenWidth>=500){
-      this.tabHeight = '90px';
+    if (screenWidth >= 500) {
+      this.tabHeight = "90px";
     }
     this.fetchData();
     // 活动页面展示
-    logEvent("event_activity_page_show", "")
+    logEvent("event_activity_page_show", "");
   },
-  computed:{
+  computed: {
     ...mapState({
-        resultData: "hasRewardResult"
-      }),
+      resultData: "hasRewardResult"
+    }),
     ...mapGetters({
       mySelf: "mySelf",
       myActivity: "activity"
     }),
-    hasReward(){
-      if(this.resultData == undefined){
-        return 0
+    hasReward() {
+      if (this.resultData == undefined) {
+        return 0;
       }
-      if(this.resultData.status == 1){
-          this.setBodyScroll(false)
-      }else{
-        this.setBodyScroll(true)
+      if (this.resultData.status == 1) {
+        this.setBodyScroll(false);
+      } else {
+        this.setBodyScroll(true);
       }
-      return this.resultData.status
+      return this.resultData.status;
     }
   },
-  methods:{
-    closeDialog(){
-      this.closeStatus = true
-      console.log('app  close dialog')
-      this.setBodyScroll(true)
+  methods: {
+    closeDialog() {
+      this.closeStatus = true;
+      console.log("app  close dialog");
+      this.setBodyScroll(true);
+    },
+    changeTab(index) {
+      console.log(2)
+      for(var x of this.changeTitle){
+        x.active=false;
+      }
+      this.changeTitle[index].active=true;
+      if(index==0){
+        this.rankShow=true;
+      }else{
+        this.rankShow=false;
+      }
+      
     },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
@@ -133,27 +135,27 @@ export default {
          logEvent("event_activity_ranking_send_show","")
        }
     },
-    loadTabHeight(val){
+
+    loadTabHeight(val) {
       console.log("height " + val);
       val.height = 90;
     },
-    setBodyScroll:function(scroll){
-      if(!scroll){
-          document.documentElement.style.overflow = 'hidden';
-          document.body.scroll = "no";
-          document.body.style.position = "fixed";          
-          document.body.style.width = "100%";
-      } else{
-          document.documentElement.style.overflow = 'scroll';
-          document.body.scroll = "yes";
-          document.body.style.position = "relative";
-          document.body.style.width = "100%";
+    setBodyScroll: function(scroll) {
+      if (!scroll) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.scroll = "no";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+      } else {
+        document.documentElement.style.overflow = "scroll";
+        document.body.scroll = "yes";
+        document.body.style.position = "relative";
+        document.body.style.width = "100%";
       }
-    },
+    }
   }
-}
+};
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -161,77 +163,70 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: rgba(226,53,166,1);
-  height: 100%;
+  background:  #000844;
 }
-  .mine_rank{
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    height: 56px;
-  }
-
-  .tab_title{
-    height: 32px;
-    border-radius: 50px;
-    background: rgba(158,0,232, 1);
-    white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .selected_tab_item{
-    border-radius: 50px;
-    background: white;
-    font-size: 12px;
-    font-weight: bold;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-transform: Capitalize;
-  }
-  .unselected_tab_item{
-    font-size: 12px;
-    font-weight: bold;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-transform: Capitalize;
-  }
-  .selected_tab_text{
-    color: rgba(158,0,232, 1);
-  }
-  .unselected_tab_text{
-    color: white;
-  }
-  .tab_card {
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 15px;
-    margin-bottom: 60px;
-  }
-  .slide-fade-enter-active {
-    transition: all 0.3s ease;
-  }
-  .slide-fade-leave-active {
-    transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
-  .slide-fade-enter, .slide-fade-leave-to {
-    transform: translateY(70px);
-    opacity: 0;
-  }
-  .tab_item{
-    width: 120px;
-    height: 32px;
-  }
-  .tabs{
-    margin-top: -40px;
-  }
-  .reward{
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
+#app .main{
+  width: 100%;
+  height: 100%;
+  background:url(src/resource/bg@3x.png) top left no-repeat;
+  background-size: 100%;
+  
+}
+.mine_rank {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 56px;
+}
+.changeTitle{
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.changeTitle span{
+  position: relative;
+  margin-right: 1.666667rem;
+  color: rgba(46,205,208,0.60);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+}
+.changeTitle span:last-child{
+  margin-right: 0;
+}
+.changeTitle span a{
+  color: rgba(46,205,208,0.60);
+  text-decoration: none;
+  font-size: .4rem;
+  transition: all 0.2s;
+}
+.changeTitle span.active,.changeTitle span.active a {
+  color: #2ECDD0;
+  font-weight: bold;
+  font-size: .533333rem;
+}
+.changeTitle span:hover, span a:hover {
+  color: #2ECDD0;
+}
+.changeTitle span::after, .changeTitle span.active i{
+  content: '';
+  display: block;
+  width: .666667rem;
+  height: .133333rem;
+  position: absolute;
+  bottom: -0.166667rem;
+  background:  #2ECDD0;
+  transition: all 0.3s ease-in-out;
+  transform: scale3d(0, 1, 1);
+  left: 36%;
+  border-radius: 3.333333rem;
+  transform-origin: 50% 0;
+}
+.changeTitle span:hover::after, .changeTitle span.active i {
+  transform: scale3d(1, 1, 1);
+}
+.gift-content{
+  position: relative;
+  height: 100%;
+  
+}
 </style>

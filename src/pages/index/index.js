@@ -8,12 +8,10 @@ import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
-
 import store from '../../store/index'
 import Vuetify from 'vuetify';
 import VueLazyload from 'vue-lazyload';
 import App from './App'
-
 
 Vue.use(Vuex);
 Vue.use(VueI18n);
@@ -47,12 +45,11 @@ const i18n = new VueI18n({
 });
 
 Vue.config.productionTip = false;
-
 /* eslint-disable no-new */
 const app = new Vue({
   el: '#app_content',
   i18n,
   components: { App },
   template: '<App/>',
-  store,
+  store
 });

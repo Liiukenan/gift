@@ -27,8 +27,8 @@ export function getCurrentJid(){
 export function buildUserGiftTestData(){
     var data = {}
     data.jid = "user_1021550@bj2.1-1.io"
-    data.gift_rate_score = '60'
-    data.gift_rate_require = '100'
+    data.gift_rate_score = 30
+    data.gift_rate_require = 100
     data.bonus = 0
     return data
 }

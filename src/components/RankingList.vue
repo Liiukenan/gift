@@ -33,7 +33,6 @@
 <script>
 import { mapGetters, mapState } from "vuex";
 import {jumpPersonDetail, logEvent} from "../common/jsInteractive"
-
 export default {
   name: "RankingList",
   data: function() {
@@ -67,47 +66,48 @@ export default {
 
   .item{
     width: 100%;
-    height: 56px;
+    height: 1.866667rem;
   }
 
   .anchor_id{
-    margin-left: 12px;
-    min-width: 25px;
-    font-size: 14px;
+    margin-left: .4rem;
+    min-width: .833333rem;
+    font-size: .466667rem;
     color: rgba(0,0,0,0.40);;
   }
   .anchor_head{
-    margin-left: 15px;
+    margin-left: .5rem;
   }
 
   .item_rank{
-    margin-right: 10px;
-    font-size: 10px;
-    color: rgba(0,0,0,0.40);;
+    margin-right: .333333rem;
+    font-size: .333333rem;
+    color: rgba(0,0,0,0.40);
+    padding:0;
   }
   .item_name{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     text-align: left;
     float: left;
-    min-width: 160px;
-    margin-left: 15px;
-    font-size: 14px;
+    width: 20rem;
+    margin-left: .5rem;
+    font-size: .466667rem;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
   }
 
   .item_divider{
     height:1px;
     border:none;
     border-top:1px solid #f1f1f1;
-    margin-right: 10px
+    margin-right: .333333rem;
   }
 
   .full_divider{
-    margin-left: 10px;
+    margin-left: .333333rem;
   }
   .head_divider{
-    margin-left: 60px;
+    margin-left: 2rem;
   }
 
 </style>
