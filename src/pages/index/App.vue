@@ -2,7 +2,8 @@
     <v-app id="app" light class="scroll-y">
       <banner/>
       <div class="main">
-      <user></user>
+      <user v-if="userShow"></user>
+      <AnchorHoliday v-if="!userShow"></AnchorHoliday>
       <div class="changeTitle">
         <span v-for="(item,index) in changeTitle" :key="index" :class="{'active':item.active}" @click="changeTab(index)">
           <a href="javascript:void(0)">
@@ -30,15 +31,18 @@ import Guide from "../../components/Guide.vue";
 import Banner from '../../components/Banner'
 import Reward from '../../components/Reward'
 import ObtainReward from '../../components/ObtainReward'
+import {getCurrentJid} from '../../store/ApiHelper'
 import {logEvent} from "../../common/jsInteractive"
 import User from '../../components/user'
+import AnchorHoliday from "../../components/AnchorHoliday.vue";
 export default {
   name: "App",
   components: {
     Banner,
     Rankings,
     Guide,
-    User
+    User,
+    AnchorHoliday
   },
   data: function() {
     return {
@@ -51,6 +55,7 @@ export default {
       closeStatus: false,
       rankShow: true,
       active:true,
+      userShow:false,
       changeTitle:[
         {
           title:'Rankings',
@@ -74,8 +79,11 @@ export default {
       this.tabHeight = "90px";
     }
     this.fetchData();
+    this.chooseContent();
     // 活动页面展示
     logEvent("event_activity_page_show", "");
+
+    
   },
   computed: {
     ...mapState({
@@ -118,22 +126,24 @@ export default {
     },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
-      console.log("fetchData");
-      this.$store.dispatch("FETCH_USER_GIFT", { myJid: window.jid })
-        .then((result) => {});
-      this.$store.dispatch("FETCH_RANKING_LIST", {myJid: window.jid}).then(() => {
-      });
+      // console.log("fetchData");
+      // this.$store
+      //   .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+      //   .then(result => {});
+      this.$store
+        .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
+        .then(() => {});
     },
-    changeTab(val){
-       this.isTabOne = val === 0;
-       this.isTabTwo = val === 1;
-       this.tabIndex = val;
-       if (this.isTabOne) {
-         logEvent("event_activity_ranking_receive_show","")
-       }
-       if (this.isTabTwo){
-         logEvent("event_activity_ranking_send_show","")
-       }
+    chooseContent(){
+      
+      // 判断是主播还是用户
+      // console.log('00000000000'+getCurrentJid().indexOf('user'))
+      if(getCurrentJid().indexOf('user')==-1){
+        this.userShow=false;
+        console.log('//////////sfdfasfd')
+      }else{
+        this.userShow=true;
+      }
     },
 
     loadTabHeight(val) {

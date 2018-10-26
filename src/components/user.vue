@@ -9,36 +9,65 @@
             <div class="send">
                 <div v-if="myGiftShow">你已送出南瓜礼物 {{userGiftData.gift_rate_score}}/{{userGiftData.gift_rate_require}}</div>
                 <div v-if="myGiftShow" class="progress">  
-                    <span class="bar" :style="{width: userGiftData.gift_rate_score+'%' }"></span>  
+                    <span class="bar" :style="{width: userGiftData.gift_rate_score/userGiftData.gift_rate_require*100+'%' }"></span>  
                 </div>
-                <button v-if="!myGiftShow">Receive</button>
+                <button v-if="!myGiftShow" @click="receive">Receive</button>
             </div>
         </div>
         <div class="sendInfo">
             Guide to use Guide to useGuide to useGuide to use Guide to useGuide to use
         </div>
+    <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
+      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData"/>
+    </dialog-model/>
     </div>
     
 </template>
 <script>
+import DialogModel from './Dialog'
+import GiftContent from './GiftContent'
 import { mapActions,mapState} from "vuex";
 export default {
   data () {
     return {
-        // myGiftShow:true
+        isShow:false,
+        giftData:{}
     }
+  },
+  components:{
+      DialogModel,
+      GiftContent
   },
   methods:{
       ...mapActions({
-        userGift: "FETCH_USER_GIFT"
-    })
+        userGift: "FETCH_USER_GIFT",
+        myGift :"FETCH_USER_LUCK_DRAW"
+    }),
+    receive(){
+        this.myGift(window.jid).then(res=>{
+            if(res){
+                this.userGift(window.jid);
+                this.isShow=true;
+                this.giftData = {}
+                setTimeout(() => {
+                    this.giftData = res
+                })
+            }
+        })
+    },
+    cancelDialog() {
+        this.isShow = false
+    },
+    comfrimGet() {
+        this.isShow = false
+      }
   },
   computed:{
     ...mapState({
         userGiftData:"userGiftRate"
     }),
     myGiftShow(){
-        if(this.userGiftData.gift_rate_score>=this.userGiftData.gift_rate_require){
+        if(this.userGiftData.gift_rate_score>=this.userGiftData.gift_rate_require || this.userGiftData.bonus>0){
           return false;
       }else{
           return true;
