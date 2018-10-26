@@ -5,7 +5,6 @@
     </div>
     <div class="content-gift">
       <h3 class="desc">
-        {{giftData}}
         Congratulations on your first prize in the "gift competition" and won the championship award.
       </h3>
       <div class="heart">

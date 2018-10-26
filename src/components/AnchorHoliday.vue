@@ -19,7 +19,7 @@
         <div class="anchor-right">
           <div class="gift-wrap">
             <i class="gift">
-              <img class="pic" :src="giftUrl(item.gift_id)" alt="">
+              <img class="pic" :src="giftUrl(item.gift_id-1)" alt="">
             </i>
             <span class="num">X 1</span>
           </div>
@@ -94,6 +94,9 @@ import { setTimeout } from 'timers';
             setTimeout(() => {
               this.giftData = res
             })
+            this.fetchAnchorGift().then(data => { //再次跟新数据
+              this.dataList = data
+            }).catch(console.error)
           }
         }).catch(console.error)
       },
