@@ -5,7 +5,7 @@
 
         <div class="content" :style="dailogSixe">
           <span class="close icon icon-ic_closed" @click="closeDialog()"></span>
-          <holy-gift @closeDialog="closeDialog"/>
+          <slot></slot>
         </div>
       </div>
     </div>
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-  import HolyGift from './HolyGift'
 
   export default {
     data() {
@@ -26,7 +25,7 @@
         default: () => {
           return {
             width: '300px',
-            height: '400px',
+            height: 'auto',
             borderRadius: '12px'
           }
         }
@@ -36,8 +35,7 @@
         default: false
       }
     },
-    components: { 
-      HolyGift
+    components: {
     },
     methods: {
       closeDialog() {
@@ -65,8 +63,9 @@
     left 50%
     transform translate3d(-50%, -50%, 0)
     .content
-      height 334px
+      height auto
       background #ffffff
+      padding-bottom 15px
     .close
       position absolute
       width 24px

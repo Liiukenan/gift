@@ -1,16 +1,16 @@
 <template>
   <div class="anchor-wrap">
     <ul class="anchor">
-      <li class="anchor-item">
+      <li class="anchor-item" v-for="item in dataList.gifts">
         <div class="anchor-left">
           <p class="txt-wrap">
-            你已收到南瓜礼物
+            你已收到{{item.gift_name}}
             <span class="num-wrap">
-              <i class="num">5</i>/5
+              <i class="num">{{item.gift_rate_score}}</i>/{{item.gift_rate_require}}
             </span>
           </p>
           <div class="prog-wrap">
-            <span class="bar">
+            <span class="bar" :style="progBar(item)">
               <i class="btn-bar icon icon-prog_bar_btn"></i>
             </span>
           </div>
@@ -18,92 +18,94 @@
 
         <div class="anchor-right">
           <div class="gift-wrap">
-            <i class="gift"></i>
-            <span class="num">X 3</span>
+            <i class="gift">
+              <img class="pic" :src="giftUrl(item.gift_id)" alt="">
+            </i>
+            <span class="num">X 1</span>
           </div>
           <div class="receive-wrap ">
             <!-- receive incomplete yes-->
-            <span class="btn yes">
+            <button class="btn" :disabled="disabledCon(item.could_get)" @click="getGift(item.gift_id)" :class="btnStatus(item.could_get)">
               <i class="icon icon-btn_yes"></i>
-            </span>
+            </button>
           </div>
         </div>
-      </li>
-
-      <li class="anchor-item">
-        <div class="anchor-left">
-          <p class="txt-wrap">
-            你已收到南瓜礼物
-            <span class="num-wrap">
-              <i class="num">5</i>/5
-            </span>
-          </p>
-          <div class="prog-wrap">
-            <span class="bar">
-              <i class="btn-bar icon icon-prog_bar_btn"></i>
-            </span>
-          </div>
-        </div>
-
-        <div class="anchor-right">
-          <div class="gift-wrap">
-            <i class="gift"></i>
-            <span class="num">X 3</span>
-          </div>
-          <div class="receive-wrap ">
-            <!-- receive incomplete yes-->
-            <span class="btn yes">
-              <i class="icon icon-btn_yes"></i>
-            </span>
-          </div>
-        </div>
-      </li>
-
-      <li class="anchor-item">
-        <div class="anchor-left">
-          <p class="txt-wrap">
-            你已收到南瓜礼物
-            <span class="num-wrap">
-              <i class="num">5</i>/5
-            </span>
-          </p>
-          <div class="prog-wrap">
-            <span class="bar">
-              <i class="btn-bar icon icon-prog_bar_btn"></i>
-            </span>
-          </div>
-        </div>
-
-        <div class="anchor-right">
-          <div class="gift-wrap">
-            <i class="gift"></i>
-            <span class="num">X 3</span>
-          </div>
-          <div class="receive-wrap ">
-            <!-- receive incomplete yes-->
-            <span class="btn yes">
-              <i class="icon icon-btn_yes"></i>
-            </span>
-          </div>
-        </div>
-      </li>
+      </li> 
     </ul>
 
-    <dailog :is-show="isShow"/>
+    <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
+      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData"/>
+    </dialog-model/>
   </div>
 </template>
 
 <script>
-import Dailog from './Dailog'
+import DialogModel from './Dialog'
+import GiftContent from './GiftContent'
+import {mapActions} from 'vuex'
+import { setTimeout } from 'timers';
+
+
   export default {
     data() {
       return {
-        isShow: true  
+        isShow: false,
+        dataList: {},
+        giftData: {}
       }
     },
     components: {
-      Dailog
-    }
+      DialogModel,
+      GiftContent
+    },
+    methods: {
+      ...mapActions({
+        fetchAnchorGift: 'FETCH_ANCHOR_GIFT',
+        fetchAnchorLuckDraw:'FETCH_ANCHOR_LUCK_DRAW'
+      }),
+      cancelDialog() {
+        this.isShow = false
+      },
+      progBar(item) {
+        let scale = `${(item.gift_rate_score/item.gift_rate_require)*100}%`
+        return {'width': scale}
+      },
+      btnStatus(could_get) {
+        var className = ['incomplete', 'receive', 'yes']
+        return `${className[could_get]}`
+      },
+      giftUrl(id) {
+        id = id || 0
+        let giftSrc = {}
+        let ipcNames = ['laser_ball','love','ring','rose']
+        for(let item of ipcNames) {
+          giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
+        }
+        return giftSrc[ipcNames[id]]
+      },
+      disabledCon(isCan) {
+        return isCan === 1 ? false : true
+      },
+      getGift(giftId) {
+        this.fetchAnchorLuckDraw({myJid: this.dataList.jid, giftId: giftId}).then(res => {
+          if(+res.status === 1) { //成功回调
+            this.isShow = true
+            this.giftData = {}
+            setTimeout(() => {
+              this.giftData = res
+            })
+          }
+        }).catch(console.error)
+      },
+      comfrimGet() {
+        this.isShow = false
+      }
+    },
+    created() {
+      this.fetchAnchorGift().then(data => {
+        this.dataList = data
+      }).catch(console.error)
+    },
   }
 </script>
 
@@ -174,6 +176,9 @@ import Dailog from './Dailog'
             display inline-block
             width 44px
             height 44px
+            .pic
+              width 100%
+              height 100%
           .num
             display inline-block
             font-size 12px
@@ -208,4 +213,8 @@ import Dailog from './Dailog'
               display none
             &.yes .icon
               margin-top 4px
+
+*:focus {
+	outline:none
+}
 </style>

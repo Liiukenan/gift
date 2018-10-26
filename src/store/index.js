@@ -117,6 +117,7 @@ const store = new Vuex.Store({
             console.log("anchor gift response", response.data)
             var data = response.data
             context.commit("loadanchorGiftRate", {result: data})
+            return data
           }).catch(reason => {
             console.log("user gift error :",reason);
             let HOST = process.env.HOST;
@@ -125,6 +126,7 @@ const store = new Vuex.Store({
                   data = buildAnchorGiftTestData()
             }
             context.commit("loadanchorGiftRate", {result: data})
+            return data
           })
         },
         FETCH_ANCHOR_LUCK_DRAW(context,options){
