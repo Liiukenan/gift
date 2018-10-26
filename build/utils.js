@@ -12,6 +12,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var PAGE_PATH = path.resolve(__dirname, '../src/pages')
 // 用于做相应的merge处理
 var merge = require('webpack-merge')
+const SpritesmithPlugin = require("webpack-spritesmith");
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -122,6 +123,33 @@ exports.entries = function() {
   return map
 }
 
+// 对生成精灵图的css进行定义
+const templateFunction = function(data) {
+  // console.log(data.sprites);
+  const shared = ".icon { background-image: url(I); display: inline-block }".replace(
+    "I",
+    data.sprites[0].image
+  );
+  const TW = data.sprites[0].total_width;
+  const TH = data.sprites[0].total_height;
+  // 注意：此处默认图标使用的是二倍图，咨询UI把所有图片换成二倍图
+  const perSprite = data.sprites
+    .map(function(sprite) {
+      const BGS = `background-size: ${TW / 2}px ${TH / 2}px;`;
+      return `.icon-N { width: SWpx; height: SHpx; }\n.icon-N .icon, .icon-N.icon {  background-position: Xpx Ypx; ${BGS}} `
+        .replace(/N/g, sprite.name)
+        .replace(/SW/g, sprite.width / 2)
+        .replace(/SH/g, sprite.height / 2)
+        .replace(/W/g, sprite.width)
+        .replace(/H/g, sprite.height)
+        .replace(/X/g, sprite.offset_x / 2)
+        .replace(/Y/g, sprite.offset_y / 2);
+    })
+    .join("\n");
+
+  return shared + "\n" + perSprite;
+};
+
 //多页面输出配置
 // 与上面的多页面入口配置相同，读取pages文件夹下的对应的html后缀文件，然后放入数组中
 exports.htmlPlugin = function() {
@@ -150,5 +178,35 @@ exports.htmlPlugin = function() {
     }
     arr.push(new HtmlWebpackPlugin(conf))
   })
+
+  arr.push(new SpritesmithPlugin({
+    // 目标小图标
+    src: {
+      cwd: path.resolve(__dirname, "../src/assets/imgs/icons"),
+      glob: "*.png"
+    },
+    // 输出雪碧图文件及样式文件
+    target: {
+      image: path.resolve(__dirname, "../src/assets/css/sprite.png"),
+      css: [
+        [
+          path.resolve(__dirname, "../src/assets/css/sprite.css"),
+          {
+            format: "function_based_template"
+          }
+        ]
+      ]
+    },
+    customTemplates: {
+      function_based_template: templateFunction
+    },
+    // 样式文件中调用雪碧图地址写法
+    apiOptions: {
+      cssImageRef: "./sprite.png"
+    },
+    spritesmithOptions: {
+      padding: 2
+    }
+  }))
   return arr
 }

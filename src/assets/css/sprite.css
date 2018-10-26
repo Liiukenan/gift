@@ -1,0 +1,7 @@
+.icon { background-image: url(./sprite.png); display: inline-block }
+.icon-btn_yes { width: 20px; height: 14px; }
+.icon-btn_yes .icon, .icon-btn_yes.icon {  background-position: 0px -25px; background-size: 49px 39px;} 
+.icon-ic_closed { width: 24px; height: 24px; }
+.icon-ic_closed .icon, .icon-ic_closed.icon {  background-position: 0px 0px; background-size: 49px 39px;} 
+.icon-prog_bar_btn { width: 24px; height: 24px; }
+.icon-prog_bar_btn .icon, .icon-prog_bar_btn.icon {  background-position: -25px 0px; background-size: 49px 39px;} 

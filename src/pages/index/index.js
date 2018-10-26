@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import 'vue-material/dist/theme/default.css'
 // import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+import "../../assets/css/sprite.css";
 
 import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
