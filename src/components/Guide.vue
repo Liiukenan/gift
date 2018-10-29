@@ -70,12 +70,29 @@
 </template>
 
 <script>
+import {getCurrentJid} from '../store/ApiHelper'
 export default {
   data () {
     return {
         rulesShow:true
     };
   },
+  methods:{
+      chooseContent(){
+      
+      // 判断是主播还是用户
+      if(getCurrentJid().indexOf('user')==-1){
+        //   主播
+        this.rulesShow=true;
+      }else{
+        //   用户
+        this.rulesShow=false;
+      }
+    },
+  },
+  created(){
+      this.chooseContent();
+  }
 }
 </script>
 <style>

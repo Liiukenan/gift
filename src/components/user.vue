@@ -4,6 +4,7 @@
         <div class="user-gift">
             <div class="user-point">
                 <img src="../resource/pumpkeen_un @3x.png" alt="" v-if="myGiftShow">
+                <span class="num" v-if="!myGiftShow">{{userGiftData.bonus}}</span>
                 <img src="../resource/Pumpkeen_small@3x.png" alt=""  v-if="!myGiftShow">
             </div>
             <div class="send">
@@ -18,7 +19,7 @@
             Guide to use Guide to useGuide to useGuide to use Guide to useGuide to use
         </div>
     <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
-      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData"/>
+      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData" :is-user="true"/>
     </dialog-model/>
     </div>
     
@@ -98,6 +99,23 @@ export default {
         width: 1.866667rem;
         height: 1.866667rem;
         float: left;
+        
+    }
+    .user-point{
+        position: relative;
+    }
+    .user-point .num{
+        position:absolute;
+        left: 1.5rem;
+        top: .2rem;
+        left: 1.333333rem;
+        color: #fff;
+        background: #D6163F;
+        border: 1px solid #FFFFFF;
+        border-radius:50%;
+        display: inline-block;
+        width: .533333rem;
+        height: .533333rem;
     }
     .user-box .sendInfo{
         color: rgba(47,195,197,0.70);

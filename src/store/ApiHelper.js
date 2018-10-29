@@ -15,7 +15,7 @@ export function requestApiUrl(apiName){
 }
 
 export function getCurrentJid(){
-    var currentJid = "anchor_1008527@bj2.1-1.";
+    var currentJid = "user_1022275@bj2.1-1.io";
     if (window.plat == "android" || window.plat == "ios"){
         currentJid = window.jid;io
     }
@@ -24,7 +24,7 @@ export function getCurrentJid(){
 
 export function buildUserGiftTestData(){
     var data = {}
-    data.jid = "user_1021550@bj2.1-1.io"
+    data.jid = "user_1022228@bj2.1-1.io"
     data.gift_rate_score = 30
     data.gift_rate_require = 100
     data.bonus = 0

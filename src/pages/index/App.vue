@@ -139,9 +139,10 @@ export default {
       // 判断是主播还是用户
       // console.log('00000000000'+getCurrentJid().indexOf('user'))
       if(getCurrentJid().indexOf('user')==-1){
+        // 主播
         this.userShow=false;
-        console.log('//////////sfdfasfd')
       }else{
+        // 用户
         this.userShow=true;
       }
     },
