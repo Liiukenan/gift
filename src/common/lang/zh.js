@@ -46,7 +46,8 @@ module.exports = {
     userSendInfo:'每累积赠送10个万圣节南瓜可以获得1次抽奖机会',
     anchor_incomplete: "未完成",
     anchor_receive: "等待领取",
-    anchor_list_tit: "已收到万圣节南瓜"
+    anchor_list_tit: "已收到万圣节南瓜",
+    bt_ranking:"排行榜",
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

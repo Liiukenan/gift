@@ -51,13 +51,24 @@ module.exports = {
     design_gift: "Gewidmetes Geschenk"
   },
   ActivityPage: {
-    tab_receive: "Erhalten",
-    tab_send: "Verschicken",
+
+    tab_receive:"Erhalten",
+    tab_send:"Verschicken",
+    zbRules:"Während der Aktivität gewinnen Stars, die die angegebene Anzahl von Halloween-Kürbissen erhalten, überraschende Preise. Mehr Geschenke erhalten, mehr Preise zu gewinnen.Nachdem die Endergebnisse vorliegen, können Halloween-Kürbisse, die du erhalten hast, nicht mehr für Preise verwendet werden. Wenn die Aktivität beendet ist, werden die nicht abgeholten Preise automatisch ungültig. Bitte nimm deine Preise rechtzeitig entgegen. ",
+    userRules:"Was wäre Halloween ohne lustige Kürbisse? Während der Aktivität erhält jeder Benutzer eine Kürbislaterne. Du kannst deine Kürbislaterne anzünden, nachdem du alle 10 Halloween-Kürbisse @ geschickt hast. Die Kürbislaterne kann wiederholt beleuchtet werden.Um die brennende Laterne zu öffnen, bekommst du tolle Preise.Nachdem die endgültigen Ergebnisse vorliegen, können Halloween-Kürbisse, die du verschickt hast, nicht mehr zum Anzünden deiner Kürbislaterne verwendet werden.  Wenn die Aktivität beendet ist, wird die ungeöffnete Kürbislaterne automatisch ungültig. Bitte öffne es rechtzeitig. ",
+    bt_me_punching:"Klettere bis an die Spitze",
+    bt_help_punching:"Hilf meinem Mädchen",
+    bt_ranking:"Rangliste",
+    numberPum:"Anzahl der erhaltenen Kürbisse ",
+    value:"Wert(Münzen)",
+    prize:"Preis",
+    conis:"Münzen",
+    vip1:"VIP(3 Tage)",
+    vip2:"VIP(7 Tage)",
+
     time: "Zeitraum: @@@",
     time_1: "Zeitraum",
     activity_finish: "Aktivität läuft aus. Danke für deine Teilnahme!",
-    bt_me_punching: "Klettere bis an die Spitze",
-    bt_help_punching: "Hilf meinem Mädchen",
     bt_regular: "Regeln",
     get_gift_gems: "Du hast den Preis @ erhalten. Der Preis wird automatisch auf dein Konto überwiesen. ",
     get_gift_vips: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. ",
