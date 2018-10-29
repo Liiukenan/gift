@@ -178,9 +178,8 @@ export default {
 #app .main{
   width: 100%;
   height: 100%;
-  background:url(src/resource/bg@3x.png) top left no-repeat;
+  background:url(./src/static/img/bg.png) top left no-repeat;
   background-size: 100%;
-  
 }
 .mine_rank {
   width: 100%;
