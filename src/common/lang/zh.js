@@ -38,7 +38,10 @@ module.exports = {
     activity_finish:"活动已结束，感谢关注！",
     bt_me_punching:"我要冲榜",
     bt_help_punching:"帮她冲榜",
-    bt_regular:"规则说明"
+    bt_regular:"规则说明",
+    get_gift_gems: "",
+    get_gift_vips: "",
+    get_gift_anchor: "",
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

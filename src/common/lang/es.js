@@ -58,7 +58,10 @@ module.exports = {
     activity_finish: "La actividad termina ¡Gracias por la atención!",
     bt_me_punching: "Llegar a la cima",
     bt_help_punching: "Ayuda a mi niña",
-    bt_regular: "Reglas"
+    bt_regular: "Reglas",
+    get_gift_gems: "Ha obtenido un premio @. El premio se ingresará automáticamente en su cuenta.",
+    get_gift_vips: "Ha obtenido un premio @. El premio entra en vigor automáticamente.",
+    get_gift_anchor: "Ha ganado el premio @. El premio entra en vigor automáticamente. Consulte el Informe de ingresos para obtener más información.",
   },
   ActivityPerson: {
     distance_100: "se necesitan @@@ obsequios para ascender 1 lugar",

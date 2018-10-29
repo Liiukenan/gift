@@ -58,7 +58,10 @@ module.exports = {
     activity_finish: "Kegiatan selesai. Terima kasih atas perhatiannya!",
     bt_me_punching: "Mencapai puncak",
     bt_help_punching: "Membantu gadisku",
-    bt_regular: "Aturan"
+    bt_regular: "Aturan",
+    get_gift_gems: "Anda mendapat hadiah @. Hadiah secara otomatis akan dimasukkan ke akun Anda. ",
+    get_gift_vips: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. ",
+    get_gift_anchor: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. Coba periksa Laporan Pendapatan untuk rincian.   ",
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

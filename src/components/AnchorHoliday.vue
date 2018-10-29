@@ -21,7 +21,7 @@
             <i class="gift">
               <img class="pic" :src="giftUrl(item.gift_id-1)" alt="">
             </i>
-            <span class="num">X 1</span>
+            <span class="num">X {{index===2 ? 2 : 1}}</span>
           </div>
           <div class="receive-wrap ">
             <!-- receive incomplete yes-->
@@ -88,7 +88,7 @@ import { setTimeout } from 'timers';
       giftUrl(id) {
         id = id || 0
         let giftSrc = {}
-        let ipcNames = ['laser_ball','love','ring','rose']
+        let ipcNames = ['rose','laser_ball','ring','love']
         for(let item of ipcNames) {
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }

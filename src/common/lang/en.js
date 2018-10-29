@@ -57,10 +57,10 @@ module.exports = {
     activity_finish:"Activity ends. Thanks for attention!",
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",
-    bt_regular:"Rules"
-
-
-
+    bt_regular:"Rules",
+    get_gift_gems: "You've got prize @. Prize will be automatically put into your account. ",
+    get_gift_vips: "You've got prize @. Prize takes effect automatically. ",
+    get_gift_anchor: "You've got prize @. Prize takes effect automatically. Go check Income Report for details. "
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",

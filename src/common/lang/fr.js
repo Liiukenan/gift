@@ -63,7 +63,10 @@ module.exports = {
     activity_finish: "Fin de l'activité. Merci de votre attention !",
     bt_me_punching: "Atteignez la première place",
     bt_help_punching: "Aidez ma petite amie",
-    bt_regular: "Règles"
+    bt_regular: "Règles",
+    get_gift_gems: "Vous avez reçu un prix @. Le prix sera automatiquement ajouté à votre compte.",
+    get_gift_vips: "Vous avez reçu un prix @. Le prix prend effet immédiatement.",
+    get_gift_anchor: "Vous avez reçu un prix @. Le prix prend effet immédiatement. Allez vérifier le rapport de revenus pour plus de détails.",
   },
   ActivityPerson: {
     distance_100: "@@@ cadeaux sont nécessaires afin de monter d'une place",

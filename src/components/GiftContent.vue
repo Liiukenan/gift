@@ -5,13 +5,13 @@
     </div>
     <div class="content-gift">
       <h3 class="desc" v-if="isUser">
-        <!-- 金币 -->
-        <template v-if="giftData.gift_type === 'gems'">You've got prize @. Prize will be automaticcaly put into your account. </template>
+        <!-- 金币 --> 
+        <template v-if="giftData.gift_type === 'gems'">{{$t("ActivityPage.get_gift_gems").replace('@', giftData.gift_name || '')}}</template>
         <!-- vip -->
-        <template v-else>You've got prize @. Prize takes effect automatically </template>
+        <template v-else>{{$t("ActivityPage.get_gift_vip").replace('@', giftData.gift_name || '')}}</template>
       </h3>
       <h3 class="desc" v-else>
-        You've got prize @. Prize takes effect automatically. Go check Income Report for details.   
+        {{$t("ActivityPage.get_gift_anchor").replace('@', giftData.gift_name || '')}}  
       </h3>
       <div class="heart">
         <img class="bg" v-if="isUser" :src="getUserUrl(giftData.gift_type === 'gems' ? giftData.gift_type : giftData.gift_num)" alt="">
@@ -72,7 +72,7 @@
       giftUrl(id) {
         id = id || 0
         let giftSrc = {}
-        let ipcNames = ['laser_ball','love','ring','rose']
+        let ipcNames = ['rose','laser_ball','ring','love']
         for(let item of ipcNames) {
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }

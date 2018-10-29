@@ -58,7 +58,10 @@ module.exports = {
     activity_finish: "Aktivität läuft aus. Danke für deine Teilnahme!",
     bt_me_punching: "Klettere bis an die Spitze",
     bt_help_punching: "Hilf meinem Mädchen",
-    bt_regular: "Regeln"
+    bt_regular: "Regeln",
+    get_gift_gems: "Du hast den Preis @ erhalten. Der Preis wird automatisch auf dein Konto überwiesen. ",
+    get_gift_vips: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. ",
+    get_gift_anchor: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. Sieh dir den Einkommensbericht an, um Details zu erfahren.   ",
   },
   ActivityPerson: {
     distance_100:

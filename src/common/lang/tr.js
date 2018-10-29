@@ -58,7 +58,10 @@ module.exports = {
     activity_finish: "Etkinlik bitti. Dikkatiniz için teşekkürler!",
     bt_me_punching: "Sıralamaya gir",
     bt_help_punching: "Hemen yardım et",
-    bt_regular: "Kurallar"
+    bt_regular: "Kurallar",
+    get_gift_gems: "Ödül @ kazandınız. Ödül otomatik olarak hesabınıza yüklenecektir.",
+    get_gift_vips: "Ödül @ kazandınız. Ödül otomatik olarak yürürlüğe girecektir.",
+    get_gift_anchor: "Ödülün var @. Ödül otomatik olarak hesabına akrtarılır. Bilgi için gelir raporunu kontrol edin.",
   },
   ActivityPerson: {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",
