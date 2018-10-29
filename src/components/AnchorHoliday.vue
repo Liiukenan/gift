@@ -4,7 +4,7 @@
       <li class="anchor-item" v-for="(item,index) in dataList.gifts" :key="index">
         <div class="anchor-left">
           <p class="txt-wrap">
-            你已收到{{item.gift_name}}
+            <span class="num-left">{{$t("ActivityPage.anchor_list_tit")}}{{item.gift_name}}</span>
             <span class="num-wrap">
               <i class="num">{{item.gift_rate_score}}</i>/{{item.gift_rate_require}}
             </span>
@@ -26,6 +26,12 @@
           <div class="receive-wrap ">
             <!-- receive incomplete yes-->
             <button class="btn" :disabled="disabledCon(item.could_get)" @click="getGift(item.gift_id)" :class="btnStatus(item.could_get)">
+              <span v-show="item.could_get === 0">
+                {{$t("ActivityPage.anchor_incomplete")}}
+              </span>
+              <span v-show="item.could_get === 1">
+                {{$t("ActivityPage.anchor_receive")}} 
+              </span>
               <i class="icon icon-btn_yes"></i>
             </button>
           </div>
@@ -116,7 +122,7 @@ import { setTimeout } from 'timers';
       }
     },
     created() {
-      
+      console.log(this.$t("ActivityPage"), 'wukai')
     },
   }
 </script>
@@ -216,12 +222,14 @@ import { setTimeout } from 'timers';
             &.receive:after
               content "Receive"
               display inline-block
+              display none
             &.incomplete, &.yes
               background rgba(255,255,255,0.10)
               color rgba(255,255,255,0.40)
             &.incomplete:after
               content "incomplete"
               display inline-block
+              display none
             &.incomplete .icon
               display none
             &.yes .icon

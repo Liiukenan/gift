@@ -68,7 +68,10 @@ module.exports = {
     get_gift_vips: "Vous avez reçu un prix @. Le prix prend effet immédiatement.",
     get_gift_anchor: "Vous avez reçu un prix @. Le prix prend effet immédiatement. Allez vérifier le rapport de revenus pour plus de détails.",
     gift_btn: "Je connais",
-    userSendInfo:"Tiene 1 oportunidad más de sacar el premio después de enviar cada 10 calabazas de Halloween @."
+    userSendInfo:"Tiene 1 oportunidad más de sacar el premio después de enviar cada 10 calabazas de Halloween @.",
+    anchor_incomplete: "Annulé",
+    anchor_receive: "Recevoir",
+    anchor_list_tit: "Vous avez une citrouille d'Halloween "
   },
   ActivityPerson: {
     distance_100: "@@@ cadeaux sont nécessaires afin de monter d'une place",

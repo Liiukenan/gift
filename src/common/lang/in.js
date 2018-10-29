@@ -63,7 +63,10 @@ module.exports = {
     get_gift_vips: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. ",
     get_gift_anchor: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. Coba periksa Laporan Pendapatan untuk rincian.   ",
     gift_btn: "Saya Tahu",
-    userSendInfo:"Anda punya 1 kesempatan lagi untuk mengambil undian setelah mengirim setiap 10 labu Halloween @."
+    userSendInfo:"Anda punya 1 kesempatan lagi untuk mengambil undian setelah mengirim setiap 10 labu Halloween @.",
+    anchor_incomplete: "Batalkan",
+    anchor_receive: "Untuk Menerima",
+    anchor_list_tit: "Anda mendapat labu Halloween"
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

@@ -69,8 +69,11 @@ module.exports = {
     get_gift_vips: "You've got prize @. Prize takes effect automatically. ",
     get_gift_anchor: "You've got prize @. Prize takes effect automatically. Go check Income Report for details. ",
     gift_btn: "I Know ",
-    userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins'
+    userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins',
 
+    anchor_incomplete: "Undone",
+    anchor_receive: "To Receive",
+    anchor_list_tit: "You've got Halloween pumpkin "
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",

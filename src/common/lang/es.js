@@ -62,7 +62,10 @@ module.exports = {
     get_gift_gems: "Ha obtenido un premio @. El premio se ingresará automáticamente en su cuenta.",
     get_gift_vips: "Ha obtenido un premio @. El premio entra en vigor automáticamente.",
     get_gift_anchor: "Ha ganado el premio @. El premio entra en vigor automáticamente. Consulte el Informe de ingresos para obtener más información.",
-    gift_btn: "Yo Sé"
+    gift_btn: "Yo Sé",
+    anchor_incomplete: "Deshecho ",
+    anchor_receive: "Para Recibir",
+    anchor_list_tit: "Ha obtenido calabaza de Halloween "
   },
   ActivityPerson: {
     distance_100: "se necesitan @@@ obsequios para ascender 1 lugar",
