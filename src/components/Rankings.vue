@@ -5,12 +5,12 @@
     <v-tabs centered hide-slider @click="changeTab" class="tabs" color="transparent">
           <div class="tab_title">
             <v-layout>
-              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+              <v-tab @click="tabClick" class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
                 <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
                   {{$t("ActivityPage.tab_receive")}}
                 </div>
               </v-tab>
-              <v-tab class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+              <v-tab @click="tabClick" class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
                 <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
                   {{$t("ActivityPage.tab_send")}}
                 </div>
@@ -67,12 +67,17 @@ export default {
        this.isTabTwo = val === 1;
        this.tabIndex = val;
        if (this.isTabOne) {
-         logEvent("event_activity_ranking_receive_show","")
+         logEvent("event_activity_ranking_receive_show","");
        }
        if (this.isTabTwo){
-         logEvent("event_activity_ranking_send_show","")
+         logEvent("event_activity_ranking_send_show","");
        }
     },
+    tabClick(){
+      this.isTabOne=!this.isTabOne;
+      this.isTabTwo=!this.isTabTwo;
+
+    }
   }
 }
 </script>
@@ -86,7 +91,7 @@ export default {
     
     .tab_title{
     height: 1.066667rem;
-    width: 8rem;
+    /* width: 8rem; */
     border-radius: 1.666667rem;
     background:  #2ECDD0;
     white-space: nowrap;
@@ -108,7 +113,6 @@ export default {
     font-size: .4rem;
     font-weight: bold;
     height: 100%;
-    width: 4rem;
     
     text-transform: Capitalize;
   }
@@ -116,8 +120,6 @@ export default {
     font-size:.4rem;
     font-weight: bold;
     height: 100%;
-    padding-left: .333333rem;
-    padding-right: .333333rem;
     text-transform: Capitalize;
   }
   .selected_tab_text{
@@ -144,8 +146,9 @@ export default {
     opacity: 0;
   }
   .tab_item{
-    width: 4rem;
     height: 1.066667rem;
+    overflow: hidden;
+    padding:0 .3rem;
   }
 
 </style>
