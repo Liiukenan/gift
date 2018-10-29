@@ -48,8 +48,8 @@ module.exports = {
   },
   ActivityPage: {
     // 礼物列表名称
-    tab_receive:"Receiving gifts",
-    tab_send:"Sending gifts",
+    tab_receive:"Receive",
+    tab_send:"Send",
     zbRules:"During the activity, Stars who get the specified number of Halloween pumpkin will win suprising prizes. More gifts recieved, more prizes to win.After the final results come out, Halloween pumpkins you received can't be used for getting prizes.When activity is over, the uncollected prizes become invalid automatically. Please take your prizes in time. ",
     userRules:"How can we miss the fun pumpkin at Halloween? During the activity, every user gets a pumpkin lantern. You can light your pumpkin lantern after sending every 10 Halloween pampkins @. Pumpkin lantern can be repeatedly lighted.To open the lighted lantern, and you'll get surprising prizes.After the final results come out, Halloween pumpkins you sent can't be used for lighting your pumpkin lantern.  When activity is over, the unopened pumpkin lantern becomes invalid automatically. Please open it in time. ",
     time:"Time:@@@",
@@ -58,10 +58,19 @@ module.exports = {
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",
     bt_regular:"Rules",
-    get_gift_gems: "You've got prize @. Prize will be automatically put into your account. ",
+    bt_ranking:"Ranking List",
+    numberPum:"Number of Pumpkin Received",
+    value:"Value(coins)",
+    prize:"Prize",
+    conis:"Coins",
+    vip1:"VIP(3 days)",
+    vip2:"VIP(7 days)",
+    get_gift_gems: "You've got prize @. Prize will be automatically put into your account.",
     get_gift_vips: "You've got prize @. Prize takes effect automatically. ",
     get_gift_anchor: "You've got prize @. Prize takes effect automatically. Go check Income Report for details. ",
-    gift_btn: "I Know "
+    gift_btn: "I Know ",
+    userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins'
+
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",

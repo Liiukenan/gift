@@ -71,6 +71,8 @@ export default {
     };
   },
   created() {
+    this.changeTitle[0].title=this.$t("ActivityPage.bt_ranking");
+    this.changeTitle[1].title=this.$t("ActivityPage.bt_regular");
     // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
     if (this.$i18n.locale === "ar") {
       document.documentElement.style.direction = "rtl";

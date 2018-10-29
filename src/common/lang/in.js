@@ -28,10 +28,10 @@ module.exports = {
         "5 Teratas: Hadiah（bernilai 7999 koin）+100 undangan panggilan video/hari * 6 hari<br>\n" +
         "6 Teratas: Hadiah（bernilai 7999 koin）+100 undangan panggilan video/hari * 5 hari<br>\n" +
         "7 Teratas: Hadiah（bernilai 4999 koin）+100 undangan panggilan video/hari * 4 hari<br>\n" +
-        "8 Teratas: Hadiah（bernilai 4999 koin）+100 undangan panggilan video/hari * 3 hari<br>\n" +
-        "9 Teratas: Hadiah（bernilai 4999 koin）+100 undangan panggilan video/hari * 2 hari<br>\n" +
-        "10 Teratas: Hadiah（bernilai 4999 koin）+100 undangan panggilan video/hari * 1 hari",
-      send_Top10:"10 Teratas di Daftar Mengirim",
+        "8 Teratas: Hadiah（bernilai 4999 kouserSendInfon）+100 undangan panggilan video/hari * 3 hari<br>\n" +
+        "9 Teratas: Hadiah（bernilai 4999 kouserSendInfon）+100 undangan panggilan video/hari * 2 hari<br>\n" +
+        "10 Teratas: Hadiah（bernilai 4999 kuserSendInfoin）+100 undangan panggilan video/hari * 1 hari",
+      send_Top10:"10 Teratas di Daftar MengiuserSendInfoim",
       send_Top10_content:"1 Teratas: Chat video gratis selama 1 jam/hari * 7 hari<br>\n" +
         "2 Teratas: Chat video gratis selama 1 jam/hari * 6 hari<br>\n" +
         "3 Teratas: Chat video gratis selama 1 jam/hari * 5 hari<br>\n" +
@@ -62,7 +62,8 @@ module.exports = {
     get_gift_gems: "Anda mendapat hadiah @. Hadiah secara otomatis akan dimasukkan ke akun Anda. ",
     get_gift_vips: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. ",
     get_gift_anchor: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. Coba periksa Laporan Pendapatan untuk rincian.   ",
-    gift_btn: "Saya Tahu"
+    gift_btn: "Saya Tahu",
+    userSendInfo:"Anda punya 1 kesempatan lagi untuk mengambil undian setelah mengirim setiap 10 labu Halloween @."
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

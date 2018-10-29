@@ -68,7 +68,8 @@ module.exports = {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",
     distance_150: "Listede sıralanmak için @@@ hediyeleri gereklidir.",
     distance_else: "Özür dileriz listede bulunmuyorsunuz",
-    frist: "Tebrikler! İlk sıra sende!"
+    frist: "Tebrikler! İlk sıra sende!",
+    userSendInfo:"Her 10 Halloween pumpkins'i @ gönderdikten sonra 1 çekiliş şansı elde edeceksiniz."
   },
   Reward:{
     get_reward:'Ödül al',

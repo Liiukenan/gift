@@ -12,14 +12,14 @@ export default {
       dialog: false,
       showDialog: false,
       banner_bg: [
-        require("../static/img/ranking_list_bg_ar.png"),
-        require("../static/img/ranking_list_bg_de.png"),
-        require("../static/img/ranking_list_bg_en.png"),
-        require("../static/img/ranking_list_bg_es.png"),
-        require("../static/img/ranking_list_bg_fr.png"),
-        require("../static/img/ranking_list_bg_hi.png"),
-        require("../static/img/ranking_list_bg_in.png"),
-        require("../static/img/ranking_list_bg_tr.png")
+        require("../static/img/list_bg_arab@3x.png"),
+        require("../static/img/list_bg_german@3x.png"),
+        require("../static/img/list_bg_en@3x.png"),
+        require("../static/img/list_bg_spain@3x.png"),
+        require("../static/img/list_bg_french@3x.png"),
+        require("../static/img/list_bg_hindi@3x.png"),
+        require("../static/img/list_bg_indonesia@3x.png"),
+        require("../static/img/list_bg_turkey@3x.png"),
       ],
       calBgImage:true
     };

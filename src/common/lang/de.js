@@ -62,7 +62,9 @@ module.exports = {
     get_gift_gems: "Du hast den Preis @ erhalten. Der Preis wird automatisch auf dein Konto überwiesen. ",
     get_gift_vips: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. ",
     get_gift_anchor: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. Sieh dir den Einkommensbericht an, um Details zu erfahren.   ",
-    gift_btn: "Ich weiß"
+    gift_btn: "Ich weiß",
+    get_gift_anchor: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. Sieh dir den Einkommensbericht an, um Details zu erfahren.",
+    userSendInfo:"Du bekommst 1 weitere Chance, einen Preis zu erhalten, nachdem du alle 10 Halloween-Kürbisse @ verschickt hast."
   },
   ActivityPerson: {
     distance_100:

@@ -1,4 +1,3 @@
-
 export function requestApiUrl(apiName){
     console.log("has reward jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
     var api = '/ranking_activity/has_reward'
@@ -13,7 +12,6 @@ export function requestApiUrl(apiName){
     }
     return api
 }
-
 export function getCurrentJid(){
     var currentJid = "user_1022275@bj2.1-1.io";
     // var currentJid = "anchor_1022083@bj2.1-1.io";

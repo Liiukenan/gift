@@ -5,19 +5,19 @@
             <div class="user-point">
                 <img src="../resource/pumpkeen_un @3x.png" alt="" v-if="myGiftShow">
                 <span class="num" v-if="!myGiftShow">{{userGiftData.bonus}}</span>
-                <img src="../resource/Pumpkeen_small@3x.png" alt=""  v-if="!myGiftShow">
+                <img src="../resource/Pumpkeen_small@3x.png" v-if="!myGiftShow">
             </div>
             <div class="send">
-                <div v-if="myGiftShow">你已送出南瓜礼物 {{userGiftData.gift_rate_score}}/{{userGiftData.gift_rate_require}}</div>
+                <div v-if="myGiftShow">{{$t("ActivityPage.userSendInfo").replace('@','')}}: {{userGiftData.gift_rate_score+'/'+userGiftData.gift_rate_require}}</div>
                 <div v-if="myGiftShow" class="progress">  
                     <span class="bar" :style="{width: userGiftData.gift_rate_score/userGiftData.gift_rate_require*100+'%' }"></span>  
                 </div>
                 <button v-if="!myGiftShow" @click="receive">Receive</button>
             </div>
         </div>
-        <div class="sendInfo">
+        <!-- <div class="sendInfo">
             Guide to use Guide to useGuide to useGuide to use Guide to useGuide to use
-        </div>
+        </div> -->
     <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
       <gift-content @comfrimGet="comfrimGet" :gift-data="giftData" :is-user="true"/>
     </dialog-model/>
@@ -74,6 +74,9 @@ export default {
       }else{
           return true;
       }
+    },
+    info(){
+        
     }
   },
   watch:{
@@ -124,12 +127,16 @@ export default {
     .user-gift .send{
         float: left;
         width: 5.5rem;
-        text-align: center;
         margin-left: .266667rem;
         overflow: hidden;
-        padding-top: .333333rem;
-         color: #FF4F18;
+        padding-top:.166667rem;
+        color: #FF4F18;
+        text-align: left;
         
+    }
+    .user-gift .icon{
+        display: inline-block;
+        vertical-align: bottom;
     }
     .user-gift .send button{
         color: #fff;

@@ -42,7 +42,11 @@ module.exports = {
     get_gift_gems: "您获得了@，奖励已自动发放到您的账户",
     get_gift_vips: "您获得了@，奖励已自动生效",
     get_gift_anchor: "您获得了@，礼物奖励已自动发放，您可以在主播日报中查看发放详情",
-    gift_btn: "我知道了"
+    gift_btn: "我知道了",
+    get_gift_gems: "",
+    get_gift_vips: "",
+    get_gift_anchor: "",
+    userSendInfo:'每累积赠送10个万圣节南瓜可以获得1次抽奖机会'
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

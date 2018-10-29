@@ -12,54 +12,53 @@
             <div class="guideTable">
             <table v-show="rulesShow" class="zbTable">
                 <tr>
-                    <th>Number of Pumpkin Sent</th>
-                    <th>Prize</th>
-                    <th>Value (coins)</th>
+                    <th>{{$t("ActivityPage.numberPum")}}</th>
+                    <th>{{$t("ActivityPage.prize")}}</th>
+                    <th>{{$t("ActivityPage.value")}}</th>
                 </tr>
                 <tr>
                     <td>50</td>
-                    <td>Love*1</td>
+                    <td><img src="../static/img/Halloween/love.png" alt="" class="small-icon">*1</td>
                     <td>100</td>
                 </tr>
                 <tr>
                     <td>100</td>
-                    <td>Rose*1</td>
+                    <td><img src="../static/img/Halloween/rose.png" alt="" class="small-icon">*1</td>
                     <td>499</td>
                 </tr>
                 <tr>
                     <td>500</td>
-                    <td>Ring*2</td>
+                    <td><img src="../static/img/Halloween/ring.png" alt="" class="small-icon">*1</td>
                     <td>1998</td>
                 </tr>
                 <tr>
                     <td>1000</td>
-                    <td>Laser ball*1</td>
+                    <td><img src="../static/img/Halloween/laser_ball.png" alt="" class="small-icon">*1</td>
                     <td>4999</td>
                 </tr>
             </table>
             <table v-show="!rulesShow" class="userTable">
                 <tr>
-                    <th width="50%">Number of Pumpkin Received </th>
-                    <th width="50%">Prize</th>
+                    <th width="50%">{{$t("ActivityPage.numberPum")}}</th>
+                    <th width="50%">{{$t("ActivityPage.prize")}}</th>
                 </tr>
                 <tr>
                     <td rowspan="5">10</td>
-                    <td>50 Coins</td>
+                    <td>50 {{$t("ActivityPage.conis")}}</td>
                 </tr>
                 <tr>
-                    <td>100 Coins</td>
-                   
+                    <td>100 {{$t("ActivityPage.conis")}}</td>
                 </tr>
                 <tr>
-                    <td>200 Coins</td>
+                    <td>200 {{$t("ActivityPage.conis")}}</td>
                     
                 </tr>
                 <tr>
-                    <td>VIP 3 days</td>
+                    <td>{{$t("ActivityPage.vip1")}}</td>
                    
                 </tr>
                 <tr>
-                    <td>VIP 7 days</td>
+                    <td>{{$t("ActivityPage.vip2")}}</td>
                 </tr>
             </table>
         </div>
@@ -121,6 +120,13 @@ export default {
     left: 0;
     top: 0;
     width: 100%;
+}
+.small-icon{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: .066667rem;
 }
 .guideMain{
     background: rgba(255,255,255,0.70);
