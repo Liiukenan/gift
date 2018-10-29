@@ -33,7 +33,7 @@
       </li> 
     </ul>
     <dialog-model :is-show="isShow" @cancelDialog="cancelDialog">
-      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData"/>
+      <gift-content @comfrimGet="comfrimGet" :gift-data="giftData" :is-user="false"/>
     </dialog-model/>
   </div>
 </template>

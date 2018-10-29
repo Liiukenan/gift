@@ -4,15 +4,22 @@
       <img class="head" :src="headUrl()" alt="">
     </div>
     <div class="content-gift">
-      <h3 class="desc">
-        Congratulations on your first prize in the "gift competition" and won the championship award.
+      <h3 class="desc" v-if="isUser">
+        <!-- 金币 -->
+        <template v-if="giftData.gift_type === 'gems'">You've got prize @. Prize will be automaticcaly put into your account. </template>
+        <!-- vip -->
+        <template v-else>You've got prize @. Prize takes effect automatically </template>
+      </h3>
+      <h3 class="desc" v-else>
+        You've got prize @. Prize takes effect automatically. Go check Income Report for details.   
       </h3>
       <div class="heart">
-        <img class="bg" :src="giftUrl(giftData.gift_id-1)" alt="">
+        <img class="bg" v-if="isUser" :src="getUserUrl(giftData.gift_type === 'gems' ? giftData.gift_type : giftData.gift_num)" alt="">
+        <img class="bg" v-else :src="giftUrl(giftData.gift_id-1)" alt="">
       </div>
-      <p class="txt">
+      <!-- <p class="txt">
         Free calls are x3 hours long.
-      </p>
+      </p> -->
       <div class="btn-wrap" @click="comfrimGet">
         <span class="btn">
           Get
@@ -45,6 +52,10 @@
         default: () => {
           return {}
         }
+      },
+      isUser: {
+        type: Boolean,
+        default: true
       }
     },
     watch: {
@@ -65,7 +76,21 @@
         for(let item of ipcNames) {
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }
-        return giftSrc[ipcNames[id]]
+        return giftSrc[ipcNames[id] || 'laser_ball']
+      },
+      getUserUrl(type) {
+        type = type || 'gems'
+        let map = {
+          'gems': 'gems',
+          '3': 'vip3',
+          '7': 'vip7'
+        }
+        let giftSrc = {}
+        let ipcNames = ['gems','vip3','vip7']
+        for(let item of ipcNames) {
+          giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
+        }
+        return giftSrc[map[type+'']]
       },
       headUrl() {
         let picPath = {};
@@ -107,11 +132,15 @@
         height 140px
         margin -10px auto 0
         z-index 0
-        // background-image url(./src/static/img/reward_coin_bg.png)
+        background-image url(./src/static/img/reward_coin_bg.png)
         background-size cover
         .bg
-          width 100%
-          height 100%
+          width 70%
+          height 70%
+          position absolute
+          top 50%
+          left 50%
+          transform translate3d(-50%, -50%, 0)
       .txt
         color #F54A6F
         margin-top -11px
