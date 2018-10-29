@@ -62,6 +62,7 @@ module.exports = {
     get_gift_gems: "Du hast den Preis @ erhalten. Der Preis wird automatisch auf dein Konto überwiesen. ",
     get_gift_vips: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. ",
     get_gift_anchor: "Du hast den Preis @ erhalten. Der Preis wird automatisch wirksam. Sieh dir den Einkommensbericht an, um Details zu erfahren.   ",
+    gift_btn: "Ich weiß"
   },
   ActivityPerson: {
     distance_100:

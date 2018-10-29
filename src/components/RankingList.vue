@@ -76,7 +76,7 @@ export default {
     color: rgba(0,0,0,0.40);;
   }
   .anchor_head{
-    margin-left: .5rem;
+    /* margin-left: .5rem; */
   }
 
   .item_rank{

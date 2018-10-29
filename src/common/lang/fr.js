@@ -67,6 +67,7 @@ module.exports = {
     get_gift_gems: "Vous avez reçu un prix @. Le prix sera automatiquement ajouté à votre compte.",
     get_gift_vips: "Vous avez reçu un prix @. Le prix prend effet immédiatement.",
     get_gift_anchor: "Vous avez reçu un prix @. Le prix prend effet immédiatement. Allez vérifier le rapport de revenus pour plus de détails.",
+    gift_btn: "Je connais"
   },
   ActivityPerson: {
     distance_100: "@@@ cadeaux sont nécessaires afin de monter d'une place",

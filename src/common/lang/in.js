@@ -62,6 +62,7 @@ module.exports = {
     get_gift_gems: "Anda mendapat hadiah @. Hadiah secara otomatis akan dimasukkan ke akun Anda. ",
     get_gift_vips: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. ",
     get_gift_anchor: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. Coba periksa Laporan Pendapatan untuk rincian.   ",
+    gift_btn: "Saya Tahu"
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

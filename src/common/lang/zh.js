@@ -39,9 +39,10 @@ module.exports = {
     bt_me_punching:"我要冲榜",
     bt_help_punching:"帮她冲榜",
     bt_regular:"规则说明",
-    get_gift_gems: "",
-    get_gift_vips: "",
-    get_gift_anchor: "",
+    get_gift_gems: "您获得了@，奖励已自动发放到您的账户",
+    get_gift_vips: "您获得了@，奖励已自动生效",
+    get_gift_anchor: "您获得了@，礼物奖励已自动发放，您可以在主播日报中查看发放详情",
+    gift_btn: "我知道了"
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

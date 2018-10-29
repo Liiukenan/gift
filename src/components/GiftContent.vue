@@ -22,7 +22,7 @@
       </p> -->
       <div class="btn-wrap" @click="comfrimGet">
         <span class="btn">
-          Get
+          {{$t("ActivityPage.gift_btn")}}
         </span>
       </div>
     </div>

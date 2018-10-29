@@ -62,6 +62,7 @@ module.exports = {
     get_gift_gems: "Ödül @ kazandınız. Ödül otomatik olarak hesabınıza yüklenecektir.",
     get_gift_vips: "Ödül @ kazandınız. Ödül otomatik olarak yürürlüğe girecektir.",
     get_gift_anchor: "Ödülün var @. Ödül otomatik olarak hesabına akrtarılır. Bilgi için gelir raporunu kontrol edin.",
+    gift_btn: "Anladım"
   },
   ActivityPerson: {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",
