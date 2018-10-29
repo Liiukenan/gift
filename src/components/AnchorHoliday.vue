@@ -41,7 +41,7 @@
 <script>
 import DialogModel from './Dialog'
 import GiftContent from './GiftContent'
-import {mapActions} from 'vuex'
+import {mapActions,mapState} from 'vuex'
 import { setTimeout } from 'timers';
 
 
@@ -56,6 +56,18 @@ import { setTimeout } from 'timers';
     components: {
       DialogModel,
       GiftContent
+    },
+    computed:{
+      ...mapState({
+        activityId:"activityId",
+      })
+    },
+    watch:{
+      activityId:function(newval,oldVal){
+          this.fetchAnchorGift().then(data => {
+            this.dataList = data
+          }).catch(console.error)
+      }
     },
     methods: {
       ...mapActions({
@@ -104,9 +116,7 @@ import { setTimeout } from 'timers';
       }
     },
     created() {
-      this.fetchAnchorGift().then(data => {
-        this.dataList = data
-      }).catch(console.error)
+      
     },
   }
 </script>

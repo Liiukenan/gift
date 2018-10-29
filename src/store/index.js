@@ -17,7 +17,7 @@ const store = new Vuex.Store({
         hasRewardResult:{},
         userGiftRate:{},
         anchorGiftRate:{},
-        activityId:2
+        activityId:-1
     },
     getters: {
         receiverTop:state => {

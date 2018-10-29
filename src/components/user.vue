@@ -64,7 +64,8 @@ export default {
   },
   computed:{
     ...mapState({
-        userGiftData:"userGiftRate"
+        userGiftData:"userGiftRate",
+        activityId:"activityId",
     }),
     myGiftShow(){
         if(this.userGiftData.gift_rate_score>=this.userGiftData.gift_rate_require || this.userGiftData.bonus>0){
@@ -74,9 +75,13 @@ export default {
       }
     }
   },
+  watch:{
+      activityId:function(newval,oldVal){
+        this.userGift(window.jid)
+      }
+  },
   created(){
-      
-      this.userGift(window.jid);
+    //   this.userGift(window.jid);
   }
 }
 </script>
