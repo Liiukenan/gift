@@ -12,7 +12,7 @@
                 <div v-if="myGiftShow" class="progress">  
                     <span class="bar" :style="{width: userGiftData.gift_rate_score/userGiftData.gift_rate_require*100+'%' }"></span>  
                 </div>
-                <button v-if="!myGiftShow" @click="receive">Receive</button>
+                <button v-if="!myGiftShow" @click="receive">{{$t("ActivityPage.tab_receive")}}</button>
             </div>
         </div>
         <!-- <div class="sendInfo">

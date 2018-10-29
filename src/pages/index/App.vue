@@ -5,7 +5,7 @@
       <user v-if="userShow"></user>
       <AnchorHoliday v-if="!userShow"></AnchorHoliday>
       <div class="changeTitle">
-        <span v-for="(item,index) in changeTitle" :key="index" :class="{'active':item.active}" @click="changeTab(index)">
+        <span v-for="(item,index) in changeTitle"  :key="index" :class="{'active':item.active,'styleAr':styleAr}" @click="changeTab(index)">
           <a href="javascript:void(0)">
             {{item.title}}
             <i></i>
@@ -93,6 +93,14 @@ export default {
     ...mapState({
       resultData: "hasRewardResult"
     }),
+    styleAr(){
+       // 阿拉伯语适配
+      if (window.lang == "ar") {
+        return true;
+      }else{
+        return '';
+      }
+    },
     ...mapGetters({
       mySelf: "mySelf",
       myActivity: "activity"
@@ -208,6 +216,12 @@ export default {
 }
 .changeTitle span:last-child{
   margin-right: 0;
+}
+.changeTitle span.styleAr:first-child{
+  margin-right: 0;
+}
+.changeTitle span.styleAr:last-child{
+  margin-right: 1rem;
 }
 .changeTitle span a{
   color: rgba(46,205,208,0.60);
