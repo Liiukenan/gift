@@ -52,9 +52,7 @@ module.exports = {
     tab_send:"Send",
     zbRules:"During the activity, Stars who get the specified number of Halloween pumpkin will win suprising prizes. More gifts recieved, more prizes to win.After the final results come out, Halloween pumpkins you received can't be used for getting prizes.When activity is over, the uncollected prizes become invalid automatically. Please take your prizes in time. ",
     userRules:"How can we miss the fun pumpkin at Halloween? During the activity, every user gets a pumpkin lantern. You can light your pumpkin lantern after sending every 10 Halloween pampkins @. Pumpkin lantern can be repeatedly lighted.To open the lighted lantern, and you'll get surprising prizes.After the final results come out, Halloween pumpkins you sent can't be used for lighting your pumpkin lantern.  When activity is over, the unopened pumpkin lantern becomes invalid automatically. Please open it in time. ",
-    time:"Time:@@@",
-    time_1: "Time",
-    activity_finish:"Activity ends. Thanks for attention!",
+    userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins',
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",
     bt_regular:"Rules",
@@ -69,8 +67,9 @@ module.exports = {
     get_gift_vips: "You've got prize @. Prize takes effect automatically. ",
     get_gift_anchor: "You've got prize @. Prize takes effect automatically. Go check Income Report for details. ",
     gift_btn: "I Know ",
-    userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins',
-
+    time:"Time:@@@",
+    time_1: "Time",
+    activity_finish:"Activity ends. Thanks for attention!",
     anchor_incomplete: "Undone",
     anchor_receive: "To Receive",
     anchor_list_tit: "You've got Halloween pumpkin "

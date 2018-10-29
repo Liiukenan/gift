@@ -51,14 +51,27 @@ module.exports = {
     design_gift: "Belirlenen hediyeler"
   },
   ActivityPage: {
-    tab_receive: "Kabul et",
-    tab_send: "Gönder",
+    tab_receive:"Kabul et",
+    tab_send:"Gönder",
+    zbRules:"Etkinlik sırasında, belirtilen sayıda Cadılar Bayramı balkabağı alan Yıldızlar, sürpriz ödüller kazanacak. Daha fazla hediye alarak bu etkinliğin benzersiz ödüllerini yakala.Son sonuçlardan sonra, aldığınız Halloween kabakları ödül almak için kullanılamaz.Etkinlik bittiğinde, tahsil edilmeyen ödüller otomatik olarak geçersiz olur. Lütfen ödüllerinizi zamanında alın.",
+    userRules:"Cadılar Bayramı'nda eğlenceli balkabağı nasıl özleyebiliriz? Etkinlik sırasında, her kullanıcı bir balkabağı fenerine kavuşur.Her 10 Halloween pampkin'i @ gönderdikten sonra balkabağı fenerini yakabilirsin. Kabak fener tekrar tekrar aydınlatılabilir.Işıklı fener açmak için şaşırtıcı ödüller alırsınız.Son sonuçlar geldikten sonra, gönderdiğiniz Halloween balkabağı balkabağı fenerinizi aydınlatmak için kullanılamaz.Etkinlik bittiğinde, açılmamış balkabağı fener otomatik olarak geçersiz olur. Lütfen zamanında açın.",
+    userSendInfo:"Her 10 Halloween pumpkins'i @ gönderdikten sonra 1 çekiliş şansı elde edeceksiniz.",
+    bt_me_punching:"Sıralamaya gir",
+    bt_help_punching:"Hemen yardım et",
+    bt_regular:"Kural açıklaması",
+    bt_ranking:"Sıralama listesi",
+    numberPum:"Alınan Kabak Sayısı",
+    value:"Değer(Çip)",
+    prize:"Ödül",
+    conis:"Çip",
+    vip1:"VIP(3 gün)",
+    vip2:"VIP(7 gün)",
+
+
+
     time: "Saat: @@@",
     time_1: "Saat",
     activity_finish: "Etkinlik bitti. Dikkatiniz için teşekkürler!",
-    bt_me_punching: "Sıralamaya gir",
-    bt_help_punching: "Hemen yardım et",
-    bt_regular: "Kurallar",
     get_gift_gems: "Ödül @ kazandınız. Ödül otomatik olarak hesabınıza yüklenecektir.",
     get_gift_vips: "Ödül @ kazandınız. Ödül otomatik olarak yürürlüğe girecektir.",
     get_gift_anchor: "Ödülün var @. Ödül otomatik olarak hesabına akrtarılır. Bilgi için gelir raporunu kontrol edin.",
