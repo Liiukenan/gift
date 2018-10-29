@@ -6,9 +6,9 @@
     <div class="content-gift">
       <h3 class="desc" v-if="isUser">
         <!-- 金币 --> 
-        <template v-if="giftData.gift_type === 'gems'">{{$t("ActivityPage.get_gift_gems").replace('@', giftData.gift_name || '')}}</template>
+        <span v-if="giftData.gift_type === 'gems'">{{$t("ActivityPage.get_gift_gems").replace('@', giftData.gift_name || '')}}</span>
         <!-- vip -->
-        <template v-else>{{$t("ActivityPage.get_gift_vip").replace('@', giftData.gift_name || '')}}</template>
+        <span v-else>{{$t("ActivityPage.get_gift_vips").replace('@', giftData.gift_name || '')}}</span>
       </h3>
       <h3 class="desc" v-else>
         {{$t("ActivityPage.get_gift_anchor").replace('@', giftData.gift_name || '')}}  
