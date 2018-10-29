@@ -133,7 +133,7 @@ import { setTimeout } from 'timers';
     .anchor
       padding 0px
     .anchor-item
-      padding-left 15px
+      padding-left 10px
       overflow hidden
       border-radius 12px
       background rgba(0,0,0,0.35)
@@ -143,7 +143,7 @@ import { setTimeout } from 'timers';
         float left
       .anchor-left
         padding 20px 0 27px
-        width calc(100% - 112px)
+        width calc(100% - 125px)
         .txt-wrap
           margin 0px
           font-size 12px
@@ -175,14 +175,14 @@ import { setTimeout } from 'timers';
             position absolute
             right -11px
             top 50%
-            transform translateY(-50%)
+            transform translateY(-55%)
             width 23px
             height 23px
             
       .anchor-right
-        width 112px
+        width 125px
         padding 4px 0 8px
-        padding 0 12px
+        padding 0 10px 0 16px
         overflow hidden
         .gift-wrap
           padding 2px 0px 2px
