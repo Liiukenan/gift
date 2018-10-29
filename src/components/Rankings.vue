@@ -2,15 +2,15 @@
 <template>
 <transition name="slider" mode="out-in">
 <div class="rankings">
-    <v-tabs centered hide-slider @click="changeTab" class="tabs" color="transparent">
+    <v-tabs centered hide-slider class="tabs" color="transparent">
           <div class="tab_title">
             <v-layout>
-              <v-tab @click="tabClick" class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
+              <v-tab @click="tabClick(0)" class="tab_item" v-bind:class="{selected_tab_item: isTabOne , unselected_tab_item : isTabTwo}">
                 <div v-bind:class="{selected_tab_text: isTabOne , unselected_tab_text : isTabTwo}">
                   {{$t("ActivityPage.tab_receive")}}
                 </div>
               </v-tab>
-              <v-tab @click="tabClick" class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
+              <v-tab @click="tabClick(1)" class="tab_item" v-bind:class="{selected_tab_item: isTabTwo , unselected_tab_item : isTabOne}">
                 <div v-bind:class="{selected_tab_text: isTabTwo , unselected_tab_text : isTabOne}">
                   {{$t("ActivityPage.tab_send")}}
                 </div>
@@ -62,20 +62,32 @@ export default {
     })
   },
   methods:{
-    changeTab(val){
-       this.isTabOne = val === 0;
-       this.isTabTwo = val === 1;
-       this.tabIndex = val;
-       if (this.isTabOne) {
-         logEvent("event_activity_ranking_receive_show","");
-       }
-       if (this.isTabTwo){
-         logEvent("event_activity_ranking_send_show","");
-       }
-    },
-    tabClick(){
-      this.isTabOne=!this.isTabOne;
-      this.isTabTwo=!this.isTabTwo;
+    // changeTab(val){
+    //   console.log('0000000000000')
+    //    this.isTabOne = val === 0;
+    //    this.isTabTwo = val === 1;
+    //    this.tabIndex = val;
+    //    if (this.isTabOne) {
+    //      logEvent("event_activity_ranking_receive_show","");
+    //    }
+    //    if (this.isTabTwo){
+    //      logEvent("event_activity_ranking_send_show","");
+    //    }
+    // },
+    tabClick(index){
+      if(index==0){
+        this.isTabOne=true;
+        this.isTabTwo=false;
+        logEvent("event_activity_ranking_receive_show","");
+      }else{
+        this.isTabOne=false;
+        this.isTabTwo=true;
+        logEvent("event_activity_ranking_send_show","");
+        
+      }
+      this.$emit('transIndex',index);
+      
+
 
     }
   }

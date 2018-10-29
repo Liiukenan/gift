@@ -13,13 +13,13 @@
         </span>
       </div>
       <div class="gift-content">
-        <rankings v-show="rankShow"></rankings>
+        <rankings v-show="rankShow" @transIndex="getIndex"></rankings>
         <guide v-show="!rankShow"></guide>
       </div>
       
-      <!-- <transition name="slide-fade">
-        <my-self  v-if="(mySelf != undefined && mySelf['role'] == 'anchor' && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && tabIndex == 1 )" class="mine_rank" />
-      </transition> -->
+      <transition name="slide-fade">
+        <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && userShow == true && tabIndex == 1 )" class="mine_rank" />
+      </transition>
       </div>
     </v-app>
 </template>
@@ -30,6 +30,7 @@ import Rankings from "../../components/Rankings.vue";
 import Guide from "../../components/Guide.vue";
 import Banner from '../../components/Banner'
 import Reward from '../../components/Reward'
+import MySelf from '../../components/MySelf'
 import ObtainReward from '../../components/ObtainReward'
 import {getCurrentJid} from '../../store/ApiHelper'
 import {logEvent} from "../../common/jsInteractive"
@@ -42,7 +43,8 @@ export default {
     Rankings,
     Guide,
     User,
-    AnchorHoliday
+    AnchorHoliday,
+    MySelf
   },
   data: function() {
     return {
@@ -106,13 +108,16 @@ export default {
     }
   },
   methods: {
+    getIndex(msg){
+      this.tabIndex=msg;
+      console.log(msg);
+    },
     closeDialog() {
       this.closeStatus = true;
       console.log("app  close dialog");
       this.setBodyScroll(true);
     },
     changeTab(index) {
-      console.log(2)
       for(var x of this.changeTitle){
         x.active=false;
       }
@@ -135,7 +140,6 @@ export default {
         .then(() => {});
     },
     chooseContent(){
-      
       // 判断是主播还是用户
       // console.log('00000000000'+getCurrentJid().indexOf('user'))
       if(getCurrentJid().indexOf('user')==-1){
