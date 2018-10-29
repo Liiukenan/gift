@@ -19,7 +19,7 @@ export function getCurrentJid(){
     // var currentJid = "anchor_1022083@bj2.1-1.io";
 
     if (window.plat == "android" || window.plat == "ios"){
-        currentJid = window.jid;io
+        currentJid = window.jid;
     }
     return currentJid
 }
