@@ -72,7 +72,7 @@
       giftUrl(id) {
         id = id || 0
         let giftSrc = {}
-        let ipcNames = ['rose','laser_ball','ring','love']
+        let ipcNames = ['love','rose','ring','laser_ball',]
         for(let item of ipcNames) {
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }
