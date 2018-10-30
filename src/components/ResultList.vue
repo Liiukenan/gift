@@ -39,14 +39,14 @@ export default {
   data: function() {
     return {
       popBgs: [
-        require("../static/img/pop_bg_ar.png"),
-        require("../static/img/pop_bg_de.png"),
-        require("../static/img/pop_bg_en.png"),
-        require("../static/img/pop_bg_es.png"),
-        require("../static/img/pop_bg_fr.png"),
-        require("../static/img/pop_bg_hi.png"),
-        require("../static/img/pop_bg_in.png"),
-        require("../static/img/pop_bg_tr.png")
+        require("../static/img/pop2_bg_ar.png"),
+        require("../static/img/pop2_bg_de.png"),
+        require("../static/img/pop2_bg_en.png"),
+        require("../static/img/pop2_bg_es.png"),
+        require("../static/img/pop2_bg_fr.png"),
+        require("../static/img/pop2_bg_hi.png"),
+        require("../static/img/pop2_bg_in.png"),
+        require("../static/img/pop2_bg_tr.png")
       ],
       rootHeight: 0
     };
