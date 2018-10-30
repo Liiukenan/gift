@@ -17,7 +17,10 @@
         <guide v-show="rankShow"></guide>
       </div>
       <transition name="slide-fade">
-        <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && userShow == true && tabIndex == 1 )" class="mine_rank" />
+        <!-- <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && userShow == true && tabIndex == 1 )" class="mine_rank" /> -->
+          <my-self  v-if="showBox" class="mine_rank" />
+          <!-- <my-self  v-if="!rankShow  && !userShow && tabIndex ==0 " class="mine_rank" /> -->
+
       </transition>
       </div>
     </v-app>
@@ -92,6 +95,16 @@ export default {
     ...mapState({
       resultData: "hasRewardResult"
     }),
+    showBox(){
+      if(!this.rankShow && this.userShow == false && this.tabIndex == 0){
+        return true;
+      }
+      if(!this.rankShow && this.userShow == true && this.tabIndex == 1){
+        return true;
+      }
+      
+
+    },
     styleAr(){
        // 阿拉伯语适配
       if (window.lang == "ar") {
@@ -132,17 +145,9 @@ export default {
       this.changeTitle[index].active=true;
       if(index==0){
         this.rankShow=true;
-        this.tabIndex=3;
       }else{
         this.rankShow=false;
-        if(this.tabIndex==0){
-          this.userShow=false
-        }
-        if(this.tabIndex==1){
-          this.userShow=true;
-        }
         
-        // this.userShow=true;
       }
       
     },
