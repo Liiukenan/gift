@@ -44,13 +44,23 @@
                 </tr>
                 <tr>
                     <td rowspan="5">10</td>
-                    <td>50 {{$t("ActivityPage.conis")}}</td>
+                    <td>
+                        <span v-if="trang">50 {{$t("ActivityPage.conis")}}</span> 
+                        <span v-if="!trang"> {{$t("ActivityPage.conis")}} 50</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td>100 {{$t("ActivityPage.conis")}}</td>
+                    <td>
+                        <span v-if="trang">100 {{$t("ActivityPage.conis")}}</span>
+                        <span v-if="!trang">{{$t("ActivityPage.conis")}} 100</span>
+
+                    </td>
                 </tr>
                 <tr>
-                    <td>200 {{$t("ActivityPage.conis")}}</td>
+                    <td>
+                        <span v-if="trang">200 {{$t("ActivityPage.conis")}}</span>
+                        <span v-if="!trang">{{$t("ActivityPage.conis")}} 200</span>
+                    </td>
                     
                 </tr>
                 <tr>
@@ -73,12 +83,12 @@ import {getCurrentJid} from '../store/ApiHelper'
 export default {
   data () {
     return {
-        rulesShow:true
+        rulesShow:true,
+        trang:true
     };
   },
   methods:{
       chooseContent(){
-      
       // 判断是主播还是用户
       if(getCurrentJid().indexOf('user')==-1){
         //   主播
@@ -91,6 +101,11 @@ export default {
   },
   created(){
       this.chooseContent();
+      if(window.lang="ar"){
+          this.trang=true;
+      }else{
+          this.trang=false;
+      }
   }
 }
 </script>
