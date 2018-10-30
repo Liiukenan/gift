@@ -78,7 +78,11 @@ module.exports = {
     anchor_incomplete: "Batalkan",
     anchor_receive: "Untuk Menerima",
     anchor_list_tit: "Anda mendapat labu Halloween",
-    user_gift_name: "",
+    user_gift_name_vip3: "VIP (3 hari)",
+    user_gift_name_vip7: "VIP (7 hari)",
+    user_gift_name_gems50: "50 koin",
+    user_gift_name_gems100: "100 koin",
+    user_gift_name_gems200: "200 koin",
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

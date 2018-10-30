@@ -75,7 +75,11 @@ module.exports = {
     anchor_incomplete: "Undone",
     anchor_receive: "To Receive",
     anchor_list_tit: "You've got Halloween pumpkin ",
-    user_gift_name: ""
+    user_gift_name_vip3: "VIP(3 days)",
+    user_gift_name_vip7: "VIP(7 days)",
+    user_gift_name_gems50: "50 Coins",
+    user_gift_name_gems100: "100 Coins",
+    user_gift_name_gems200: "200 Coins",
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",

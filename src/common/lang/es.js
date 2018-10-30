@@ -78,7 +78,11 @@ module.exports = {
     anchor_incomplete: "Deshecho ",
     anchor_receive: "Para Recibir",
     anchor_list_tit: "Ha obtenido calabaza de Halloween ",
-    user_gift_name: ""
+    user_gift_name_vip3: "VIP (3 días)",
+    user_gift_name_vip7: "VIP (7 días)",
+    user_gift_name_gems50: "50 monedas",
+    user_gift_name_gems100: "100 monedas",
+    user_gift_name_gems200: "200 monedas",
   },
   ActivityPerson: {
     distance_100: "se necesitan @@@ obsequios para ascender 1 lugar",

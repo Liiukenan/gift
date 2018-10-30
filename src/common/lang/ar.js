@@ -88,7 +88,11 @@ module.exports = {
     anchor_incomplete: "غير منتهي",
     anchor_receive: "جاهز للإستلام",
     anchor_list_tit: "لقد حصلت على هالوين اليقطين",
-    user_gift_name: ""
+    user_gift_name_vip3: "(3أيام) VIP",
+    user_gift_name_vip7: "(7أيام) VIP",
+    user_gift_name_gems50: "50 العملات",
+    user_gift_name_gems100: "100 العملات",
+    user_gift_name_gems200: "200 العملات",
     
   },
   ActivityPerson: {

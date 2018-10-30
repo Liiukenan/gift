@@ -80,7 +80,11 @@ module.exports = {
     anchor_incomplete: "Widerrufen ",
     anchor_receive: "Zum Empfangen",
     anchor_list_tit: "Du hast Halloween-Kürbis ",
-    user_gift_name: ""
+    user_gift_name_vip3: "VIP (3 Tage)",
+    user_gift_name_vip7: "VIP (7 Tage)",
+    user_gift_name_gems50: "50 Münzen",
+    user_gift_name_gems100: "100 Münzen",
+    user_gift_name_gems200: "200 Münzen",
   },
   ActivityPerson: {
     distance_100:

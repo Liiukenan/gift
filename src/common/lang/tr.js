@@ -79,7 +79,11 @@ module.exports = {
     anchor_incomplete: "Yapılmamış",
     anchor_receive: "Kabul Et",
     anchor_list_tit: "Cadılar Bayramı Balkabağınız var",
-    user_gift_name: "",
+    user_gift_name_vip3: "VIP (3 gün)",
+    user_gift_name_vip7: "VIP (7 gün)",
+    user_gift_name_gems50: "50 çip",
+    user_gift_name_gems100: "100 çip",
+    user_gift_name_gems200: "200 çip",
   },
   ActivityPerson: {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",

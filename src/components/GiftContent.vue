@@ -6,9 +6,9 @@
     <div class="content-gift">
       <h3 class="desc" v-if="isUser">
         <!-- 金币 --> 
-        <span v-if="giftData.gift_type === 'gems'">{{$t("ActivityPage.get_gift_gems").replace('@', giftData.gift_name || '')}}</span>
+        <span v-if="giftData.gift_type === 'gems'">{{$t("ActivityPage.get_gift_gems").replace('@', userGiftName() || '')}}</span>
         <!-- vip -->
-        <span v-else>{{$t("ActivityPage.get_gift_vips").replace('@', giftData.gift_name || '')}}</span>
+        <span v-else>{{$t("ActivityPage.get_gift_vips").replace('@', userGiftName() || '')}}</span>
       </h3>
       <h3 class="desc" v-else>
         {{$t("ActivityPage.get_gift_anchor").replace('@', giftData.gift_name || '')}}  
@@ -58,13 +58,6 @@
         default: true
       }
     },
-    watch: {
-      giftData(n,o) {
-        console.log(n, 'wukai')
-      }
-    },
-    components: {
-    },
     methods: {
       cancelDialog() {
         this.isShow = false
@@ -77,6 +70,20 @@
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }
         return giftSrc[ipcNames[id] || 'laser_ball']
+      },
+      userGiftName() {
+        let mapName = {
+          '3': 'vip3',
+          '7': 'vip7',
+          '50': 'gems50',
+          '100': 'gems100',
+          '200': 'gems200',
+        }
+        let giftNameLang =  '';
+        if(!!mapName[this.giftData.gift_num]) {
+          giftNameLang = this.$t(`ActivityPage.user_gift_name_${mapName[this.giftData.gift_num]}`) || ''
+        }
+        return giftNameLang
       },
       getUserUrl(type) {
         type = type || 'gems'
@@ -108,7 +115,10 @@
       },
       comfrimGet() {
         this.$emit('comfrimGet')
-      }
+      },
+      created() {
+        console.log(giftData, 'wukai')
+      },
     }
   }
 </script>

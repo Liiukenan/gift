@@ -78,7 +78,11 @@ module.exports = {
     anchor_incomplete: "अपरिपूर्ण",
     anchor_receive: "प्राप्त करने के लिए",
     anchor_list_tit: "आपको हेलोवीन पम्पकिन्स मिला है ",
-    user_gift_name: ""
+    user_gift_name_vip3: "VIP (3 दिन)",
+    user_gift_name_vip7: "VIP (7 दिन)",
+    user_gift_name_gems50: "50 सिक्के",
+    user_gift_name_gems100: "100 सिक्के",
+    user_gift_name_gems200: "200 सिक्के",
   },
   ActivityPerson: {
     distance_100_1: "@@@ उपहार आपकी रैंकिंग को बढ़ा देंगे",

@@ -83,7 +83,11 @@ module.exports = {
     time: "Heure: @@@",
     time_1: "Heure",
     activity_finish: "Fin de l'activité. Merci de votre attention !",
-    user_gift_name: ""
+    user_gift_name_vip3: "VIP (3 jours)",
+    user_gift_name_vip7: "VIP (7 jours)",
+    user_gift_name_gems50: "50 pièces",
+    user_gift_name_gems100: "100 pièces",
+    user_gift_name_gems200: "200 pièces",
   },
   ActivityPerson: {
     distance_100: "@@@ cadeaux sont nécessaires afin de monter d'une place",
