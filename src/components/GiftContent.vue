@@ -80,13 +80,19 @@
       },
       getUserUrl(type) {
         type = type || 'gems'
+        // let map = {
+        //   'gems': 'gems',
+        //   '3': 'vip3',
+        //   '7': 'vip7'
+        // }
         let map = {
           'gems': 'gems',
-          '3': 'vip3',
-          '7': 'vip7'
+          '3': 'vip',
+          '7': 'vip'
         }
         let giftSrc = {}
-        let ipcNames = ['gems','vip3','vip7']
+        // let ipcNames = ['gems','vip3','vip7']
+        let ipcNames = ['gems','vip']
         for(let item of ipcNames) {
           giftSrc[item] = require(`../static/img/Halloween/${item}.png`)
         }
