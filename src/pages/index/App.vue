@@ -50,7 +50,7 @@ export default {
       isTabTwo: false,
       color: 0,
       colors: ["white", "tab_text_color"],
-      tabIndex: 0,
+      tabIndex: 3,
       tabHeight: "48px",
       closeStatus: false,
       rankShow: true,
@@ -135,8 +135,14 @@ export default {
         this.tabIndex=3;
       }else{
         this.rankShow=false;
-        this.tabIndex=1;
-        this.userShow=true;
+        if(this.tabIndex==0){
+          this.userShow=false
+        }
+        if(this.tabIndex==1){
+          this.userShow=true;
+        }
+        
+        // this.userShow=true;
       }
       
     },
