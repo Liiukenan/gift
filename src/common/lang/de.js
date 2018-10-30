@@ -67,8 +67,9 @@ module.exports = {
     vip1:"VIP(3 Tage)",
     vip2:"VIP(7 Tage)",
     toReacive:"Zum Empfangen",
-    time: "Zeitraum: @@@",
-    time_1: "Zeitraum",
+
+    time: "Zeit: @@@",
+    time_1: "Zeit",
     activity_finish: "Aktivität läuft aus. Danke für deine Teilnahme!",
     bt_regular: "Regeln",
     get_gift_gems: "Du hast den Preis @ erhalten. Der Preis wird automatisch auf dein Konto überwiesen. ",

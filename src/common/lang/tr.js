@@ -68,8 +68,9 @@ module.exports = {
     vip1:"VIP(3 gün)",
     vip2:"VIP(7 gün)",
     toReacive:"Kabul Et",
-    time: "Saat: @@@",
-    time_1: "Saat",
+
+    time: "Faaliyet süresi: @@@",
+    time_1: "Faaliyet süresi",
     activity_finish: "Etkinlik bitti. Dikkatiniz için teşekkürler!",
     get_gift_gems: "Ödül @ kazandınız. Ödül otomatik olarak hesabınıza yüklenecektir.",
     get_gift_vips: "Ödül @ kazandınız. Ödül otomatik olarak yürürlüğe girecektir.",
