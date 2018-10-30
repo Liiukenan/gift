@@ -4,7 +4,7 @@
       <li class="anchor-item" v-for="(item,index) in dataList.gifts" :key="index">
         <div class="anchor-left">
           <p class="txt-wrap">
-            <span class="num-left">{{$t("ActivityPage.anchor_list_tit")}}{{item.gift_name}}</span>
+            {{$t("ActivityPage.anchor_list_tit")}} {{item.gift_name}}
             <span class="num-wrap">
               <i class="num">{{item.gift_rate_score}}</i>/{{item.gift_rate_require}}
             </span>
@@ -25,7 +25,7 @@
           </div>
           <div class="receive-wrap ">
             <!-- receive incomplete yes-->
-            <button class="btn" :disabled="disabledCon(item.could_get)" @click="getGift(item.gift_id)" :class="btnStatus(item.could_get)">
+            <button class="btn" :disabled="disabledCon(item.could_get)" @click="getGift(item)" :class="btnStatus(item.could_get)">
               <span v-show="item.could_get === 0">
                 {{$t("ActivityPage.anchor_incomplete")}}
               </span>
@@ -48,7 +48,7 @@
 import DialogModel from './Dialog'
 import GiftContent from './GiftContent'
 import {mapActions,mapState} from 'vuex'
-import { setTimeout } from 'timers';
+import { setTimeout, setInterval } from 'timers';
 
 
   export default {
@@ -70,9 +70,9 @@ import { setTimeout } from 'timers';
     },
     watch:{
       activityId:function(newval,oldVal){
-          this.fetchAnchorGift().then(data => {
-            this.dataList = data
-          }).catch(console.error)
+        this.fetchAnchorGift().then(data => {
+          this.dataList = data
+        }).catch(console.error)
       }
     },
     methods: {
@@ -103,12 +103,13 @@ import { setTimeout } from 'timers';
       disabledCon(isCan) {
         return isCan === 1 ? false : true
       },
-      getGift(giftId) {
-        this.fetchAnchorLuckDraw({myJid: this.dataList.jid, giftId: giftId}).then(res => {
+      getGift(item) {
+        this.fetchAnchorLuckDraw({myJid: this.dataList.jid, giftId: item.gift_id}).then(res => {
           if(+res.status === 1) { //成功回调
             this.isShow = true
             this.giftData = {}
             setTimeout(() => {
+              res.gift_name = item.gift_name
               this.giftData = res
             })
             this.fetchAnchorGift().then(data => { //再次跟新数据
@@ -120,10 +121,7 @@ import { setTimeout } from 'timers';
       comfrimGet() {
         this.isShow = false
       }
-    },
-    created() {
-      console.log(this.$t("ActivityPage"), 'wukai')
-    },
+    }
   }
 </script>
 
@@ -209,7 +207,8 @@ import { setTimeout } from 'timers';
             display block
             font-size 12px
             color #ffffff
-            width 100%
+            min-width 85%
+            margin 0 auto 
             text-align center
             height 22px
             line-height 22px
@@ -233,7 +232,7 @@ import { setTimeout } from 'timers';
             &.incomplete .icon
               display none
             &.yes .icon
-              margin-top 4px
+              margin-top 3px
 
 *:focus {
 	outline:none
