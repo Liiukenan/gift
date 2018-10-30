@@ -74,7 +74,8 @@ module.exports = {
     activity_finish:"Activity ends. Thanks for attention!",
     anchor_incomplete: "Undone",
     anchor_receive: "To Receive",
-    anchor_list_tit: "You've got Halloween pumpkin "
+    anchor_list_tit: "You've got Halloween pumpkin ",
+    user_gift_name: ""
   },
   ActivityPerson:{
     distance_100_1:"@@@ gift will promote your ranking up",

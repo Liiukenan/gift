@@ -77,9 +77,8 @@ module.exports = {
     gift_btn: "Saya Tahu",
     anchor_incomplete: "Batalkan",
     anchor_receive: "Untuk Menerima",
-    anchor_list_tit: "Anda mendapat labu Halloween"
-
-
+    anchor_list_tit: "Anda mendapat labu Halloween",
+    user_gift_name: "",
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

@@ -78,7 +78,8 @@ module.exports = {
     gift_btn: "Anladım",
     anchor_incomplete: "Yapılmamış",
     anchor_receive: "Kabul Et",
-    anchor_list_tit: "Cadılar Bayramı Balkabağınız var"
+    anchor_list_tit: "Cadılar Bayramı Balkabağınız var",
+    user_gift_name: "",
   },
   ActivityPerson: {
     distance_100: "1 yere çıkmak için @@@ hediyeler gerekiyor",

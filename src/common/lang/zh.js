@@ -48,6 +48,7 @@ module.exports = {
     anchor_receive: "等待领取",
     anchor_list_tit: "已收到万圣节南瓜",
     bt_ranking:"排行榜",
+    user_gift_name: "",
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

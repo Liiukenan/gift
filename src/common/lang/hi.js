@@ -77,7 +77,8 @@ module.exports = {
     userSendInfo:"आपको हर 10 हेलोवीन पम्पकिन्स भेजने के बाद पुरस्कार आकर्षित करने का 1 और मौका मिलता ह",
     anchor_incomplete: "अपरिपूर्ण",
     anchor_receive: "प्राप्त करने के लिए",
-    anchor_list_tit: "आपको हेलोवीन पम्पकिन्स मिला है "
+    anchor_list_tit: "आपको हेलोवीन पम्पकिन्स मिला है ",
+    user_gift_name: ""
   },
   ActivityPerson: {
     distance_100_1: "@@@ उपहार आपकी रैंकिंग को बढ़ा देंगे",

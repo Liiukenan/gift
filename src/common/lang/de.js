@@ -79,7 +79,8 @@ module.exports = {
     userSendInfo:"Du bekommst 1 weitere Chance, einen Preis zu erhalten, nachdem du alle 10 Halloween-Kürbisse @ verschickt hast.",
     anchor_incomplete: "Widerrufen ",
     anchor_receive: "Zum Empfangen",
-    anchor_list_tit: "Du hast Halloween-Kürbis "
+    anchor_list_tit: "Du hast Halloween-Kürbis ",
+    user_gift_name: ""
   },
   ActivityPerson: {
     distance_100:

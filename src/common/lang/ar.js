@@ -87,7 +87,8 @@ module.exports = {
     gift_btn: 'أنا أعلم',
     anchor_incomplete: "غير منتهي",
     anchor_receive: "جاهز للإستلام",
-    anchor_list_tit: "لقد حصلت على هالوين اليقطين"
+    anchor_list_tit: "لقد حصلت على هالوين اليقطين",
+    user_gift_name: ""
     
   },
   ActivityPerson: {

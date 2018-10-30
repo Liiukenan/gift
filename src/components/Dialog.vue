@@ -1,6 +1,6 @@
 <template>
   <transition name="dialog-fadein">
-    <div class="dialog-wrap" v-if="isShow" @click.stop>
+    <div class="dialog-wrap" v-if="isShow" @click.stop @touchmove="touchmove">
       <div class="content-wrap">
 
         <div class="content" :style="dailogSixe">
@@ -40,6 +40,9 @@
     methods: {
       closeDialog() {
         this.$emit('cancelDialog')
+      },
+      touchmove(event) {
+        event.preventDefault();
       }
     },
   }

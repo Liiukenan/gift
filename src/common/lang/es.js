@@ -77,7 +77,8 @@ module.exports = {
     gift_btn: "Yo Sé",
     anchor_incomplete: "Deshecho ",
     anchor_receive: "Para Recibir",
-    anchor_list_tit: "Ha obtenido calabaza de Halloween "
+    anchor_list_tit: "Ha obtenido calabaza de Halloween ",
+    user_gift_name: ""
   },
   ActivityPerson: {
     distance_100: "se necesitan @@@ obsequios para ascender 1 lugar",
