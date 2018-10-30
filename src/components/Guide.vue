@@ -101,7 +101,7 @@ export default {
   },
   created(){
       this.chooseContent();
-      if(window.lang == "ar"){
+      if(window.lang=="ar"){
           this.trang=true;
       }else{
           this.trang=false;

@@ -135,7 +135,8 @@ export default {
         this.tabIndex=3;
       }else{
         this.rankShow=false;
-        
+        this.tabIndex=1;
+        this.userShow=true;
       }
       
     },
