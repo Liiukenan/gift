@@ -53,7 +53,7 @@ export default {
       isTabTwo: false,
       color: 0,
       colors: ["white", "tab_text_color"],
-      tabIndex: 3,
+      tabIndex: 0,
       tabHeight: "48px",
       closeStatus: false,
       rankShow: true,
@@ -135,7 +135,6 @@ export default {
     },
     closeDialog() {
       this.closeStatus = true;
-      console.log("app  close dialog");
       this.setBodyScroll(true);
     },
     changeTab(index) {
@@ -147,7 +146,6 @@ export default {
         this.rankShow=true;
       }else{
         this.rankShow=false;
-        
       }
       
     },
