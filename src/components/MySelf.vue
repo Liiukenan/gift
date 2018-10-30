@@ -8,7 +8,6 @@
          <img class="mine_head" v-bind:src="`${mySelf.avatarUrl}`"/>
         </v-layout>
       </v-flex>
-
       <v-flex xs6 v-if="myActivity != undefined && myActivity['status'] == 0">
         <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
@@ -25,13 +24,11 @@
       <v-spacer/>
     </v-layout>
 </template>
-
 <script>
   import {jumpOnlineUser, jumpMain, logEvent} from "../common/jsInteractive"
   import {mapGetters} from "vuex";
-
   export default {
-        name: "MySelf",
+      name: "MySelf",
       data:function () {
          return{
            count:0,
@@ -80,7 +77,6 @@
 </script>
 
 <style scoped>
-
   .mine_root{
     width: 100%;
     box-shadow:-0px 5px 15px black;

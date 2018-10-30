@@ -39,7 +39,7 @@
             </table>
             <table v-show="!rulesShow" class="userTable">
                 <tr>
-                    <th width="50%">{{$t("ActivityPage.numberPum")}}</th>
+                    <th width="50%">{{$t("ActivityPage.usernumberPum")}}</th>
                     <th width="50%">{{$t("ActivityPage.prize")}}</th>
                 </tr>
                 <tr>

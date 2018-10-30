@@ -54,13 +54,14 @@ module.exports = {
     tab_receive:"Terima",
     tab_send:"Kirim",
     zbRules:"Selama kegiatan, Bintang yang memiliki jumlah labu Halloween tertentu akan memenangkan hadiah kejutan. Makin banyak hadiah diterima, makin banyak undian untuk dimenangkan.Setelah hasil akhir keluar, labu Halloween yang Anda terima tak dapat digunakan untuk mendapatkan hadiah. Saat kegiatan berakhir, hadiah yang tak diambil secara otomatis akan menjadi tidak sah. Harap mengambil hadiah Anda secara tepat waktu. ",
-    userRules:"Bagaimana mungkin kita melewatkan labu menyenangkan saat Halloween? Selama kegiatan, setiap pengguna mendapat lentera labu. Anda dapat menyalakan lentera labu Anda setelah mengirim setiap 10 labu Halloween @. Lentera labu dapat dinyalakan berulang-ulang.Bukalah lentera yang telah dinyalakan, dan Anda akan mendapat hadiah kejutan.Setelah hasil akhir keluar, labu Halloween yang Anda kirimkan tak dapat digunakan untuk menyalakan lentera labu Anda.  Saat kegiatan berakhir, lentera labu yang tak dibuka secara otomatis akan menjadi tidak sah. Harap membukanya secara tepat waktu. ",
+    userRules:"Bagaimana mungkin kita melewatkan labu menyenangkan saat Halloween? Selama kegiatan, setiap pengguna mendapat lentera labu. Anda dapat menyalakan lentera labu Anda setelah mengirim setiap 10 labu Halloween . Lentera labu dapat dinyalakan berulang-ulang.Bukalah lentera yang telah dinyalakan, dan Anda akan mendapat hadiah kejutan.Setelah hasil akhir keluar, labu Halloween yang Anda kirimkan tak dapat digunakan untuk menyalakan lentera labu Anda.  Saat kegiatan berakhir, lentera labu yang tak dibuka secara otomatis akan menjadi tidak sah. Harap membukanya secara tepat waktu. ",
     userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins',
     bt_me_punching:"Mencapai puncak",
     bt_help_punching:"Membantu gadisku",
     bt_regular:"Aturan",
     bt_ranking:"Daftar peringkat",
     numberPum:"Jumlah Labu Diterima",
+    usernumberPum:"Jumlah Labu Dikirim",
     value:"Nilai(koin)",
     prize:"Hadiah",
     conis:"koin",
@@ -68,6 +69,7 @@ module.exports = {
     vip2:"VIP(@ hari)",
     time: "Waktu: @@@",
     time_1: "Waktu",
+    toReacive:"Untuk Menerima",
     activity_finish: "Kegiatan selesai. Terima kasih atas perhatiannya!",
     get_gift_gems: "Anda mendapat hadiah @. Hadiah secara otomatis akan dimasukkan ke akun Anda.",
     get_gift_vips: "Anda mendapat hadiah @. Hadiah secara otomatis akan berlaku. ",
@@ -76,6 +78,8 @@ module.exports = {
     anchor_incomplete: "Batalkan",
     anchor_receive: "Untuk Menerima",
     anchor_list_tit: "Anda mendapat labu Halloween"
+
+
   },
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",

@@ -12,7 +12,7 @@
                 <div v-if="myGiftShow" class="progress">  
                     <span class="bar" :style="{width: userGiftData.gift_rate_score/userGiftData.gift_rate_require*100+'%' }"></span>  
                 </div>
-                <button v-if="!myGiftShow" @click="receive">{{$t("ActivityPage.tab_receive")}}</button>
+                <button v-if="!myGiftShow" @click="receive">{{$t("ActivityPage.toReacive")}}</button>
             </div>
         </div>
         <!-- <div class="sendInfo">
@@ -145,7 +145,7 @@ export default {
         background-image: linear-gradient(0deg, #C826A8 0%, #EF3276 52%, #FC673F 100%); 
         font-size: .466667rem;
         border-radius: .633333rem;
-        margin-top: .333333rem;
+        margin-top: .5rem;
         outline: none;
     }
     .user-gift .progress {  

@@ -13,17 +13,15 @@
         </span>
       </div>
       <div class="gift-content">
-        <rankings v-show="rankShow" @transIndex="getIndex"></rankings>
-        <guide v-show="!rankShow"></guide>
+        <rankings v-show="!rankShow" @transIndex="getIndex" :tabIndex="tabIndex"></rankings>
+        <guide v-show="rankShow"></guide>
       </div>
-      
       <transition name="slide-fade">
-        <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && mySelf['role'] == 'user' && userShow == true && tabIndex == 1 )" class="mine_rank" />
+        <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && userShow == true && tabIndex == 1 )" class="mine_rank" />
       </transition>
       </div>
     </v-app>
 </template>
-
 <script>
 import { mapGetters, mapState} from "vuex";
 import Rankings from "../../components/Rankings.vue";
@@ -58,6 +56,7 @@ export default {
       rankShow: true,
       active:true,
       userShow:false,
+      fadeSlide:true,
       changeTitle:[
         {
           title:'Rankings',
@@ -71,8 +70,8 @@ export default {
     };
   },
   created() {
-    this.changeTitle[0].title=this.$t("ActivityPage.bt_ranking");
-    this.changeTitle[1].title=this.$t("ActivityPage.bt_regular");
+    this.changeTitle[0].title=this.$t("ActivityPage.bt_regular");
+    this.changeTitle[1].title=this.$t("ActivityPage.bt_ranking");
     // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
     if (this.$i18n.locale === "ar") {
       document.documentElement.style.direction = "rtl";
@@ -120,7 +119,6 @@ export default {
   methods: {
     getIndex(msg){
       this.tabIndex=msg;
-      console.log(msg);
     },
     closeDialog() {
       this.closeStatus = true;
@@ -134,8 +132,10 @@ export default {
       this.changeTitle[index].active=true;
       if(index==0){
         this.rankShow=true;
+        this.tabIndex=3;
       }else{
         this.rankShow=false;
+        
       }
       
     },

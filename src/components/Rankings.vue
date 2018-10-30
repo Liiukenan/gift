@@ -39,6 +39,7 @@ import TopRank from './TopRank'
 import {logEvent} from "../common/jsInteractive"
 import {mapGetters} from "vuex";
 export default {
+  props:['tabIn'],
   data () {
     return{
       isTabOne: true,
