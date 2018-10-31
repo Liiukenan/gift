@@ -94,72 +94,72 @@
 <style>
 
   .first_img {
-    margin-top: -10px;
-    width: 72px;
-    height: 72px;
+    margin-top: -0.333333rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     border: thick solid rgba(248, 231, 28, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
 
   .small_first_img {
-    margin-top: -10px;
-    width: 60px;
-    height: 60px;
+    margin-top: -0.333333rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: thick solid rgba(248, 231, 28, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
 
   .second_img {
-    margin-top: -10px;
-    width: 60px;
-    height: 60px;
+    margin-top: -.333333rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: thick solid rgba(198, 198, 198, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
   .small_second_img{
-    margin-top: -10px;
-    width: 48px;
-    height: 48px;
+    margin-top: -.333333rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     border: thick solid rgba(198, 198, 198, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
 
   .third_img {
-    margin-top: -10px;
-    width: 60px;
-    height: 60px;
+    margin-top: -0.333333rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: thick solid rgba(177, 106, 10, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
 
   .small_third_img {
     margin-top: -10px;
-    width: 48px;
-    height: 48px;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     border: thick solid rgba(177, 106, 10, 1);
-    border-width: 2px;
+    border-width: .066667rem;
   }
 
   .second_layout{
-    margin-top: 13px;
+    margin-top: .433333rem;
   }
   .third_layout{
-    margin-top: 13px;
+    margin-top: .433333rem;
   }
 
   .rank_gift{
-    font-size: 10px;
+    font-size: .333333rem;
     color: rgba(0, 0, 0, 0.4);
   }
 
   .anchor_name{
-    font-size: 14px;
+    font-size: .466667rem;
     color: rgba(0, 0, 0, 0.8);
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -169,13 +169,13 @@
   }
 
   .anchor_crown{
-      height: 20px;
+      height: .666667rem;
       z-index: 0
   }
 
   .anchor_rank_img{
-    width: 20px;
-    margin-top: -12px;
+    width: .666667rem;
+    margin-top: -0.4rem;
   }
 
 </style>

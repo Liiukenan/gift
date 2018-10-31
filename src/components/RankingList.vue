@@ -75,9 +75,7 @@ export default {
     font-size: .466667rem;
     color: rgba(0,0,0,0.40);;
   }
-  .anchor_head{
-    /* margin-left: .5rem; */
-  }
+ 
 
   .item_rank{
     margin-right: .333333rem;

@@ -114,27 +114,27 @@ export default {
   margin-right: 10%;
 }
 .title_bg {
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 150px;
+  margin-left:.666667rem;
+  margin-right: .666667rem;
+  width: 5rem;
 }
 .receiver_title {
   position: absolute;
-  margin: 0 auto;
-  top: 3px;
+  margin: auto;
+  top: .1rem;
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: .466667rem;
 }
 .send_title {
   position: absolute;
   left: 0;
-  margin-top: 3px;
+  margin-top: .1rem;
   right: 0;
   top: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: .466667rem;
 }
 .title {
   position: relative;
@@ -142,23 +142,23 @@ export default {
   width: 100%;
 }
 .result_btn {
-  border-radius: 18px;
+  border-radius: .6rem;
   background-image: linear-gradient(
     -180deg,
     #fc673f 0%,
     #ef3276 50%,
     #c826a8 100%
   );
-  min-width: 200px;
-  font-size: 16px;
-  height: 36px;
+  min-width: 6.666667rem;
+  font-size: .533333rem;
+  height: 1.2rem;
 }
 .result_card {
-  margin-top: -10px;
+  margin-top: -0.333333rem;
   background: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding-bottom: 5px;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  padding-bottom: .166667rem;
 }
 .result_title {
   background-image: linear-gradient(
