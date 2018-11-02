@@ -6,10 +6,8 @@
       <AnchorHoliday v-if="!userShow"></AnchorHoliday>
       <div class="changeTitle">
         <span v-for="(item,index) in changeTitle"  :key="index" :class="{'active':item.active,'styleAr':styleAr}" @click="changeTab(index)">
-          <a href="javascript:void(0)">
             {{item.title}}
             <i></i>
-          </a>
         </span>
       </div>
       <div class="gift-content">
@@ -218,10 +216,11 @@ export default {
 }
 .changeTitle span{
   position: relative;
-  margin-right: 1.666667rem;
+  margin-right: 1rem;
   color: rgba(46,205,208,0.60);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  font-size: .4rem;
   
 }
 .changeTitle span:last-child{
@@ -233,21 +232,12 @@ export default {
 .changeTitle span.styleAr:last-child{
   margin-right: 1rem;
 }
-.changeTitle span a{
-  color: rgba(46,205,208,0.60);
-  text-decoration: none;
-  font-size: .4rem;
-  transition: all 0.2s;
-}
-.changeTitle span.active,.changeTitle span.active a {
+.changeTitle span.active{
   color: #2ECDD0;
   font-weight: bold;
   font-size: .533333rem;
 }
-.changeTitle span:hover, span a:hover {
-  color: #2ECDD0;
-}
-.changeTitle span::after, .changeTitle span.active i{
+.changeTitle span.active i{
   content: '';
   display: block;
   width: .666667rem;
@@ -257,11 +247,11 @@ export default {
   background:  #2ECDD0;
   transition: all 0.3s ease-in-out;
   transform: scale3d(0, 1, 1);
-  left: 36%;
+  left: 25%;
   border-radius: 3.333333rem;
   transform-origin: 50% 0;
 }
-.changeTitle span:hover::after, .changeTitle span.active i {
+.changeTitle span.active i {
   transform: scale3d(1, 1, 1);
 }
 .gift-content{

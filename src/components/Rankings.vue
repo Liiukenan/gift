@@ -95,16 +95,17 @@ export default {
       let dy = startY - endY;
       let dx = endX - startX;
       let result = 0;
-      console.log(startX);
-      console.log(endX);
-      if(dx>0){
+      if(dx>35){
         this.isTabOne=true;
         this.isTabTwo=false;
         this.$emit('transIndex',0);
-      }else{
+        return;
+      }
+      if(dx<-35){
         this.isTabOne=false;
         this.isTabTwo=true;
         this.$emit('transIndex',1);
+        return;
       }
     },
     tabClick(index){
