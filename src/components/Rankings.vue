@@ -17,13 +17,15 @@
               </v-tab>
             </v-layout>
           </div>
-          <v-tab-item>
+          <v-tab-item @touchstart='touchStart' 
+                      @touchend='touchEnd'>
             <v-card color="white" class="tab_card">
               <TopRank tabIndex="0" isLarge="true"/>
               <RankingList tab_index="0"/>
             </v-card>
           </v-tab-item>
-          <v-tab-item>
+          <v-tab-item @touchstart='touchStart' 
+                      @touchend='touchEnd'>
             <v-card color="white" class="tab_card">
               <TopRank tabIndex="1" isLarge="true"/>
               <ranking-list tab_index ="1"/>
@@ -49,7 +51,11 @@ export default {
           'white',
           'tab_text_color'
       ],
-      tabIndex:0
+      tabIndex:0,
+      startX:'',
+      startY:'',
+      endX:'',
+      endY:''
     }
   },
   components:{
@@ -75,6 +81,32 @@ export default {
     //      logEvent("event_activity_ranking_send_show","");
     //    }
     // },
+    touchStart(e){
+      this.startX = e.touches[0].pageX;
+      this.startY = e.touches[0].pageY;
+      e = e || window.event;
+    },
+    touchEnd(e){
+      this.endX = e.changedTouches[0].pageX;
+      this.endY = e.changedTouches[0].pageY;
+      this.upOrDown(this.startX,this.startY,this.endX,this.endY);
+    },
+    upOrDown(startX, startY, endX, endY){
+      let dy = startY - endY;
+      let dx = endX - startX;
+      let result = 0;
+      console.log(startX);
+      console.log(endX);
+      if(dx>0){
+        this.isTabOne=true;
+        this.isTabTwo=false;
+        this.$emit('transIndex',0);
+      }else{
+        this.isTabOne=false;
+        this.isTabTwo=true;
+        this.$emit('transIndex',1);
+      }
+    },
     tabClick(index){
       if(index==0){
         this.isTabOne=true;

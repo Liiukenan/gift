@@ -29,30 +29,53 @@ module.exports = {
     design_gift:"指定礼物"
   },
   ActivityPage: {
-    tab_receive:"收礼榜",
-    tab_send:"送出榜",
+    // 礼物列表名称
+    tab_receive:"收糖榜",
+    tab_send:"送糖榜",
     zbRules:"·活动期间主播收到指定数量的万圣节南瓜@，即可获得惊喜奖励，收到的礼物越多，获得奖励就越丰厚。·结果公示日期后，收到的万圣节南瓜将不会换取奖励·活动结束后，所有未领取的奖励将自动作废，请及时领取",
     userRules:"·万圣节怎么少的了搞怪南瓜灯！活动期间每个用户均有一盏属于自己的南瓜灯。·活动期间每赠送10个万圣节南瓜@，即可点亮南瓜灯1次，南瓜灯可多次累积点亮·每次开启点亮的南瓜灯，均会获得惊喜奖励·结果公示日期后赠送万圣节南瓜将不会点亮南瓜灯·活动结束后，所有未开启的南瓜灯将自动作废，请及时开启",
-    time:"活动时间：@@@",
-    time_1: "活动时间",
-    activity_finish:"活动已结束，感谢关注！",
-    bt_me_punching:"我要冲榜",
-    bt_help_punching:"帮她冲榜",
+    userSendInfo:"每累积赠送10个万圣节南瓜可以获得1次抽奖机会",
+    bt_me_punching:"去收糖",
+    bt_help_punching:"去送糖",
     bt_regular:"规则说明",
+    bt_ranking:"排行榜",
+    numberPum:"累积收到南瓜数量",
+    usernumberPum:"送出南瓜数量",
+    value:"礼物价值（金币）",
+    prize:"对应奖励",
+    conis:"金币",
+    vip1:"VIP （3天）",
+    vip2:"VIP （7天）",
+    toReacive:"等待领取",
+    time:"Time:@@@",
+    time_1: "Time",
+    activity_finish:"活动已结束，感谢关注！",
     get_gift_gems: "您获得了@，奖励已自动发放到您的账户",
     get_gift_vips: "您获得了@，奖励已自动生效",
     get_gift_anchor: "您获得了@，礼物奖励已自动发放，您可以在主播日报中查看发放详情",
     gift_btn: "我知道了",
-    userSendInfo:'每累积赠送10个万圣节南瓜可以获得1次抽奖机会',
     anchor_incomplete: "未完成",
     anchor_receive: "等待领取",
     anchor_list_tit: "已收到万圣节南瓜",
-    bt_ranking:"排行榜",
     user_gift_name_vip3: "VIP（3天）",
     user_gift_name_vip7: "VIP（7天）",
     user_gift_name_gems50: "50金币",
     user_gift_name_gems100: "100金币",
     user_gift_name_gems200: "200金币",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   },
   ActivityPerson:{
     distance_100_1:"距离前1名还差@@@个礼物",

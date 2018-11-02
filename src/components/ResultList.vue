@@ -1,5 +1,5 @@
 <template>
-      <v-layout align-center justify-center class="result_content" column>
+      <v-layout align-center justify-center class="result_content" column @click="unMove">
         <div>
           <div class="result_title">
             <img :src="getPopBg()" style="width:100%"/>
@@ -20,17 +20,12 @@
                   {{$t("ActivityPage.tab_send")}}
                   </span>
               </div>
-
               <top-rank tabIndex="1" isLarge=""/>
-
               <v-btn dark style="color: white" class="result_btn" @click="jumpActivityDetail">{{$t("HomePage.bt_enter")}}</v-btn>
-
           </v-card>
-
           </div>
       </v-layout>
 </template>
-
 <script>
 import TopRank from "./TopRank";
 import { enterEventDetails } from "../common/jsInteractive";
@@ -65,6 +60,9 @@ export default {
     this.fetchData();
   },
   methods: {
+    unMove(){
+      console.log(1243)
+    },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       console.log("fetchData");
