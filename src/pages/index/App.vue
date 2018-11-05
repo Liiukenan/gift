@@ -2,22 +2,20 @@
     <v-app id="app" light class="scroll-y">
       <banner/>
       <div class="main">
-      <user v-if="userShow"></user>
-      <AnchorHoliday v-if="!userShow"></AnchorHoliday>
-      <div class="changeTitle">
+      <!-- <user v-if="userShow"></user> -->
+      <!-- <AnchorHoliday v-if="!userShow"></AnchorHoliday> -->
+      <!-- <div class="changeTitle">
         <span v-for="(item,index) in changeTitle"  :key="index" :class="{'active':item.active,'styleAr':styleAr}" @click="changeTab(index)">
             {{item.title}}
             <i></i>
         </span>
-      </div>
+      </div> -->
       <div class="gift-content">
-        <rankings v-show="!rankShow" @transIndex="getIndex" :tabIndex="tabIndex"></rankings>
-        <guide v-show="rankShow"></guide>
+        <rankings  @transIndex="getIndex" :tabIndex="tabIndex"></rankings>
+        <!-- <guide v-show="rankShow"></guide> -->
       </div>
       <transition name="slide-fade">
-        <!-- <my-self  v-if="(mySelf != undefined && userShow == false && tabIndex == 0 )||(mySelf != undefined && userShow == true && tabIndex == 1 )" class="mine_rank" /> -->
-          <my-self  v-if="showBox" class="mine_rank" />
-          <!-- <my-self  v-if="!rankShow  && !userShow && tabIndex ==0 " class="mine_rank" /> -->
+          <my-self  v-if="showBox" class="mine_rank"/>
 
       </transition>
       </div>
@@ -33,16 +31,16 @@ import MySelf from '../../components/MySelf'
 import ObtainReward from '../../components/ObtainReward'
 import {getCurrentJid} from '../../store/ApiHelper'
 import {logEvent} from "../../common/jsInteractive"
-import User from '../../components/user'
-import AnchorHoliday from "../../components/AnchorHoliday.vue";
+// import User from '../../components/user'
+// import AnchorHoliday from "../../components/AnchorHoliday.vue";
 export default {
   name: "App",
   components: {
     Banner,
     Rankings,
     Guide,
-    User,
-    AnchorHoliday,
+    // User,
+    // AnchorHoliday,
     MySelf
   },
   data: function() {
@@ -54,9 +52,9 @@ export default {
       tabIndex: 0,
       tabHeight: "48px",
       closeStatus: false,
-      rankShow: true,
+      // rankShow: true,
       active:true,
-      userShow:false,
+      // userShow:false,
       fadeSlide:true,
       changeTitle:[
         {
@@ -196,12 +194,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background:  #000844;
+  /* background:  #000844; */
+  background: #231D4A;
 }
 #app .main{
   width: 100%;
   height: 100%;
-  background:url(./src/static/img/bg.png) top left no-repeat;
+  /* background:url(./src/static/img/bg.png) top left no-repeat;
+   */
+  background: #231D4A;
   background-size: 100%;
 }
 .mine_rank {

@@ -1,6 +1,80 @@
 <template>
   <div class="banner_root" :style="{backgroundImage: 'url(' + getBannerBg() + ')' }">
+    <v-layout column class="banner_content">
+      <v-flex>
+        <v-layout right class="text-xs-center">
+          <v-dialog
+            v-model="dialog"
+            width="90%"
+            height="80%"
+            scrollable>
+            <v-btn
+              fab right class="banner_float"
+              slot="activator"
+              dark>
+              {{$t("ActivityPage.bt_regular")}}
+            </v-btn>
+
+
+            <v-card color="white" style="border-radius: 6px;padding: 15px 10px 15px 15px" v-if="showDialog">
+              <button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
+                <img src="../pages/index/assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
+              </button>
+
+              <v-card-text style="height: 500px; margin-top: 10px;">
+              <!-- Title -->
+              <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
+                {{$t("Ranking.incentiveDetails.title")}}
+              </div>
+              <v-spacer/>
+              <!-- Time -->
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p >{{$t("ActivityPage.time_1")}}</p>
+              </div>
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p >{{getActivityTime()}}</p>
+              </div>
+                <!-- activity incentives -->
+                <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
+                </div>
+                <v-spacer/>
+                <!-- top10 -->
+                <div style="text-align: center; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
+                </div>
+                <div style="text-align: left; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.receive_Top10_content')"></p>
+                </div>
+
+                <div style="text-align: center; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
+                </div>
+                <div style="text-align: left; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.send_Top10_content')"></p>
+                </div>
+              <!-- rules -->
+              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+                <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
+              </div>
+              <!-- rules detail -->
+              <div style="text-align: left; width: 100%;font-size: 14px">
+                <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
+              </div>
+              <!--</div>-->
+              <v-spacer/>
+            </v-card-text>
+            </v-card>
+          </v-dialog>
+        </v-layout>
+      </v-flex>
+      <v-spacer/>
+      <v-spacer/>
     <button class="banner-btn">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
+
+      <v-spacer/>
+      <v-spacer/>
+    </v-layout>
   </div>
 </template>
 <script>
@@ -25,6 +99,10 @@ export default {
     };
   },
   methods: {
+    onCloseBtn(event){
+        console.log("close btn clicked")
+        this.dialog = false
+    },
     getActivityTime: function() {
       var time = "";
       if (this.myActivity != null && this.myActivity.hasOwnProperty("time")) {
@@ -95,19 +173,26 @@ export default {
 <style scoped>
 .banner_root {
   background-size: cover;
-  /* border-bottom: 1px solid #000844;
-   */
 }
 .banner-btn {
-  height: 0.533333rem;
-  padding:0 .366667rem;
-  line-height: .533333rem;
+  padding:.133333rem .4rem;
   border-radius: 100px;
-  background: rgba(7, 6, 34, 0.45);
+  background: rgba(7,6,34,0.45);
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.333333rem;
-  color: #2fc3c5;
-  margin: 48% auto 3%;
+  margin: 39% auto 3%;
+  transform: scale(0.8);
+  color: #DA485D;
+}
+.banner_float{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(-180deg, #D200B7 0%, #950083 100%);
+  box-shadow: 0 3px 4px 0 rgba(170,47,161,0.30);
+  width:1.75rem;
+  height: 1.75rem;
+  font-size: .4rem;
   transform: scale(0.8);
 }
 

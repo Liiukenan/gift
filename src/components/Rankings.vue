@@ -92,21 +92,56 @@ export default {
       this.upOrDown(this.startX,this.startY,this.endX,this.endY);
     },
     upOrDown(startX, startY, endX, endY){
+      let direction = this.GetSlideDirection(startX, startY, endX, endY);
+      switch(direction) {
+        case 0:
+          console.log("没滑动");
+          break;
+        case 1:
+          console.log("向上");
+          break;
+        case 2:
+          console.log("向下");
+          break;
+        case 3:
+          this.isTabOne=false;
+          this.isTabTwo=true;
+          this.$emit('transIndex',1);
+          break;
+        case 4:
+          this.isTabOne=true;
+          this.isTabTwo=false;
+          this.$emit('transIndex',0);
+          break;
+        default:
+          break;
+      }
+    },
+    //根据起点和终点返回方向 1：向上，2：向下，3：向左，4：向右,0：未滑动
+    GetSlideDirection:function (startX, startY, endX, endY) {
       let dy = startY - endY;
       let dx = endX - startX;
       let result = 0;
-      if(dx>35){
-        this.isTabOne=true;
-        this.isTabTwo=false;
-        this.$emit('transIndex',0);
-        return;
+      //如果滑动距离太短
+      if(Math.abs(dx) < 2 && Math.abs(dy) < 2) {
+        return result;
       }
-      if(dx<-35){
-        this.isTabOne=false;
-        this.isTabTwo=true;
-        this.$emit('transIndex',1);
-        return;
+      let angle = this.GetSlideAngle(dx, dy);
+      if(angle >= -45 && angle < 45) {
+        result = 4;
+      }else if (angle >= 45 && angle < 135) {
+        result = 1;
+      }else if (angle >= -135 && angle < -45) {
+        result = 2;
       }
+      else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+        result = 3;
+      }
+      return result;
+    },
+    //返回角度
+    GetSlideAngle:function (dx, dy) {
+      return Math.atan2(dy, dx) * 180 / Math.PI;
     },
     tabClick(index){
       if(index==0){
@@ -139,7 +174,7 @@ export default {
     height: 1.066667rem;
     /* width: 8rem; */
     border-radius: 1.666667rem;
-    background:  #2ECDD0;
+    background: #9E00E8;
     white-space: nowrap;
     margin:0 auto;
   }
@@ -150,10 +185,13 @@ export default {
     top: -1px;
   }
   .rankings .v-tabs__container{
-    height: 1.6rem;
+    height: 1.066667rem;
+    margin-bottom: 7px;
+    
   }
 
   .selected_tab_item{
+    
     border-radius: 1.666667rem;
     background: white;
     font-size: .4rem;
@@ -169,7 +207,7 @@ export default {
     text-transform: Capitalize;
   }
   .selected_tab_text{
-    color: #2ECDD0;
+    color:  #9E00E8;
   }
   .unselected_tab_text{
     color: white;
