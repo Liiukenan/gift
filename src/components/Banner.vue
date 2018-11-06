@@ -70,7 +70,7 @@
       </v-flex>
       <v-spacer/>
       <v-spacer/>
-    <button class="banner-btn">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
+    <button class="banner-btn" :class="bannerBtnFr">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
 
       <v-spacer/>
       <v-spacer/>
@@ -157,7 +157,14 @@ export default {
    
     ...mapGetters({
       myActivity: "activity"
-    })
+    }),
+    bannerBtnFr(){
+      if(window.lang=="fr"){
+        return 'banner-btn-fr';
+      }else{
+        return '';
+      }
+    }
   },
   mounted() {
     this.calBgImage =
@@ -183,6 +190,7 @@ export default {
   margin: 39% auto 3%;
   transform: scale(0.8);
   color: #DA485D;
+  outline: none;
 }
 .banner_float{
   position: absolute;
@@ -194,6 +202,9 @@ export default {
   height: 1.75rem;
   font-size: .4rem;
   transform: scale(0.8);
+}
+.banner-btn-fr{
+  margin: 41% auto 3%;
 }
 
 </style>

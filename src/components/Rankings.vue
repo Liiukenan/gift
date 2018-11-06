@@ -182,14 +182,12 @@ export default {
     position: absolute;
     width: 100%;
     left: 0;
-    top: -1px;
+    top: 0;
   }
   .rankings .v-tabs__container{
     height: 1.066667rem;
     margin-bottom: 7px;
-    
   }
-
   .selected_tab_item{
     
     border-radius: 1.666667rem;

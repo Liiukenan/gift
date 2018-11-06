@@ -167,4 +167,7 @@ export default {
     rgba(255, 255, 255, 1) 100%
   );
 }
+a{
+  outline: none;
+}
 </style>

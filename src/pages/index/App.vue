@@ -188,6 +188,9 @@ export default {
 };
 </script>
 <style>
+*{
+  outline: none;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -222,7 +225,6 @@ export default {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   font-size: .4rem;
-  
 }
 .changeTitle span:last-child{
   margin-right: 0;
