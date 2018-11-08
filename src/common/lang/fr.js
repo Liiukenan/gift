@@ -2,7 +2,7 @@ module.exports = {
   Ranking: {
     incentiveDetails: {
       title: "Détails de l'incitatif",
-      activity_rules: "Règles :",
+      activity_rules: "Règles",
       rules_content:
         "1. Pendant l'activité, le seul cadeau est\n" +
         "officiellement désigné comme « cadeau d'activité ».\n<br>" +

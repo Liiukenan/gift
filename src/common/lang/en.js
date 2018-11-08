@@ -2,7 +2,7 @@ module.exports = {
   Ranking:{
     incentiveDetails:{
       title:"Incentive Details",
-      activity_rules:"Rules:",
+      activity_rules:"Rules",
       rules_content:"1. During activity, the one gift is offically designated as \"activity gift\".<br>\n" +
         "2. Received list is ranked from high to low according to the number of activity gift that stars have received.<br>\n" +
         "3. Sent list is ranked from high to low according to the number of activity gift that users have sent.<br>\n" +

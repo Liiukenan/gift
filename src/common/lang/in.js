@@ -2,7 +2,7 @@ module.exports = {
   Ranking: {
     incentiveDetails: {
       title: "Rincian Insentif",
-      activity_rules: "Aturan:",
+      activity_rules: "Aturan",
       rules_content:
         '1. Selama aktivitas, satu hadiah ditetapkan sebagai "hadiah aktivitas".<br>\n' +
         "2. Daftar hadiah yang diterima diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah diterima oleh bintang.<br>\n" +

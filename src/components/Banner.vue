@@ -30,13 +30,13 @@
               <v-spacer/>
               <!-- Time -->
               <div class="rule-time">
-                <p>{{$t("ActivityPage.time_1")}}:</p>
-                <p>{{getActivityTime()}}</p>
+                <p>{{$t("ActivityPage.time_1")}}</p>
+                <p class="font-small">{{getActivityTime()}}</p>
               </div>
                <v-spacer/>
-                <div class="rule-incentives font-bold">
-                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
-                  <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
+                <div class="rule-incentives">
+                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')" class="font-bold"></p>
+                  <p v-html="$t('Ranking.incentiveDetails.send_Top10')" class="font-small"></p>
                 </div>
                 <!-- top10 -->
                 <table class="rule-prize">
@@ -178,7 +178,7 @@
                 <!-- activity incentives -->
                  <div class="rule-incentives">
                   
-                  <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
+                  <p v-html="$t('Ranking.incentiveDetails.receive_Top10')" class="font-small"></p>
                 </div>
                 <table class="rule-prize">
                   <tr>
@@ -352,7 +352,7 @@
                 </table>
               <!-- rules -->
               <div class="rule-details-title">
-                <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
+                <p class="font-middle">{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
               </div>
               <!-- rules detail -->
               <div class="rule-content">
@@ -530,7 +530,7 @@ export default {
 .rule-title{
   text-align: center;
    font-weight: bold;
-   font-size: .6rem;
+   font-size: 18px;
    margin-top:.333333rem;
 }
 p{
@@ -538,7 +538,7 @@ p{
 }
 .rule-time{
   text-align: center;
-  font-size: .466667rem;
+  font-size: 14px;
   margin:0;
 }
 .rule-time p:first-child{
@@ -546,7 +546,7 @@ p{
 }
 .rule-incentives{
   margin-top: .333333rem;
-  font-size: .466667rem;
+  font-size: 14px;
   
 }
 .rule-prize{
@@ -607,10 +607,9 @@ p{
   
 }
 .rule-content{
-  font-size: 14px;
   color: rgba(0,0,0,0.60);
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
 
 }
 .font-bold{
@@ -622,5 +621,10 @@ p{
   vertical-align:top;
   margin-top: 4px;
 }
-
+.font-small{
+  font-size: 12px;
+}
+.font-middle{
+  font-size: 14px;
+}
 </style>

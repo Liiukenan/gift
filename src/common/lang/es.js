@@ -2,7 +2,7 @@ module.exports = {
   Ranking: {
     incentiveDetails: {
       title: "Detalles de incentivo",
-      activity_rules: "Reglas:",
+      activity_rules: "Reglas",
       rules_content:
         '1. Durante la actividad, el único regalo se designa oficialmente como "regalo de actividad".<br>\n' +
         "2. La lista recibida se clasifica de mayor a menor según la cantidad de regalos de las estrellas de actividad que hayan recibido.<br>\n" +
