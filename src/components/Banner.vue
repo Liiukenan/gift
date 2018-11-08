@@ -15,8 +15,13 @@
               {{$t("ActivityPage.bt_regular")}}
             </v-btn>
             <v-card color="white" class="rule-card" v-if="showDialog">
-              <button v-on:click="onCloseBtn" class="rule-btn">
-              </button>
+            <div class="close-box">
+              <div class="close-main">
+                <button v-on:click="onCloseBtn" class="rule-btn"></button>
+              </div>
+                
+            </div>
+              
               <v-card-text>
               <!-- Title -->
               <div class="rule-title">
@@ -29,7 +34,8 @@
                 <p>{{getActivityTime()}}</p>
               </div>
                <v-spacer/>
-                <div class="rule-incentives">
+                <div class="rule-incentives font-bold">
+                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
                   <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
                 </div>
                 <!-- top10 -->
@@ -44,12 +50,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 1
+                       1
                     </td>
                    
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *7{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendOne")}}
                       </p>
@@ -57,12 +63,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 2
+                       2
                     </td>
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *6{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendTwo")}}
                       </p>
@@ -70,12 +76,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 3
+                       3
                     </td>
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *5{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*5{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendThree")}}
                       </p>
@@ -83,12 +89,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 4
+                       4
                     </td>
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *4{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendFour")}}
                       </p>
@@ -96,12 +102,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 5
+                       5
                     </td>
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *3{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendFive")}}
                       </p>
@@ -109,12 +115,12 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 6
+                       6
                     </td>
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *2{{$t("Ranking.incentiveDetails.days")}}
+                      <span class="font-bold"> *2{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendSix")}}
                       </p>
@@ -122,11 +128,11 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 7
+                       7
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *1{{$t("Ranking.incentiveDetails.day")}}
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendSeven")}}
                       </p>
@@ -134,11 +140,11 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 8
+                       8
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *1{{$t("Ranking.incentiveDetails.day")}}
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendEight")}}
                       </p>
@@ -146,11 +152,11 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 9
+                       9
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *1{{$t("Ranking.incentiveDetails.day")}}
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendNine")}}
                       </p>
@@ -158,11 +164,11 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 10
+                       10
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       *1{{$t("Ranking.incentiveDetails.day")}}
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendTen")}}
                       </p>
@@ -171,7 +177,7 @@
                 </table>
                 <!-- activity incentives -->
                  <div class="rule-incentives">
-                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
+                  
                   <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
                 </div>
                 <table class="rule-prize">
@@ -185,15 +191,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 1
+                       1
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift1.png" alt="">
-                       *1
+                      <span class="font-bold"> *1</span>
                     </td>
                     <td class="gift3 border-right border-top">
                       <img src="../static/img/card1.png" alt="">
-                       *10{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*10{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -201,15 +207,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 2
+                       2
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift1.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *9{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*9{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -217,15 +223,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 3
+                       3
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift1.png" alt="">
-                       *1
+                      <span class="font-bold"> *1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *8{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*8{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -233,15 +239,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 4
+                       4
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift2.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *7{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -249,15 +255,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 5
+                       5
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift2.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *6{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -265,15 +271,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 6
+                       6
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift2.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *5{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*5{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -281,15 +287,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 7
+                       7
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *4{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -297,15 +303,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 8
+                       8
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *3{{$t("Ranking.incentiveDetails.days")}}
+                      <span class="font-bold"> *3{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -313,15 +319,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 9
+                       9
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *2{{$t("Ranking.incentiveDetails.days")}}
+                       <span class="font-bold">*2{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -329,15 +335,15 @@
                   </tr>
                   <tr>
                     <td class="gift1 border-left">
-                      {{$t("Ranking.incentiveDetails.top")}} 10
+                       10
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
-                       *1
+                       <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
-                       *1{{$t("Ranking.incentiveDetails.day")}}
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -345,11 +351,11 @@
                   </tr>
                 </table>
               <!-- rules -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
+              <div class="rule-details-title">
                 <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
               </div>
               <!-- rules detail -->
-              <div style="text-align: left; width: 100%;font-size: 14px">
+              <div class="rule-content">
                 <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
               </div>
               <!--</div>-->
@@ -500,12 +506,24 @@ export default {
 .rule-card{
   border-radius: .2rem;
 }
+.close-box{
+  height: 30px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.close-main{
+  position: relative;
+}
 .rule-btn{
   width: .466667rem; 
   height: .466667rem; 
-  position: absolute; 
-  right: .466667rem;
-  top: .466667rem;
+  margin-right: 10px;
+  margin-top: 10px;
+  float: right;
   background: url('./src/static/img/ic_closed.png') no-repeat;
   background-size: cover;
 }
@@ -523,27 +541,31 @@ p{
   font-size: .466667rem;
   margin:0;
 }
+.rule-time p:first-child{
+  font-weight: bold;
+}
 .rule-incentives{
   margin-top: .333333rem;
   font-size: .466667rem;
   
 }
 .rule-prize{
-  font-size: .466667rem;
+  font-size:14px;
   font-weight: normal;
   width: 100%;
   border-collapse: collapse;
   margin-top: .266667rem;
+  background: rgba(158,0,232,0.07);
 }
 .rule-prize th{
   font-weight: 400;
-  padding:.266667rem 0;
+  padding:5px 0;
   text-align: center;
   border: 1px solid rgba(0,0,0,0.11);
 }
 .rule-prize td{
   border: 1px solid rgba(0,0,0,0.11);
-  padding:.266667rem 0;
+  padding:5px 0;
 }
 .rule-prize img{
   width: .8rem;
@@ -563,6 +585,7 @@ p{
 .rule-prize .gift-info{
   font-size: 12px;
   transform: scale(0.8);
+  margin-top: -4px;
 }
 .rule-prize .border-top{
   border-top: none;
@@ -572,9 +595,32 @@ p{
 }
 .rule-prize .border-left{
   border-left: none;
+  font-weight: bold;
 }
 .rule-prize .border-bottom{
   border-bottom: none;
+}
+.rule-details-title{
+  font-size: 14px;
+  margin-top: .7rem;
+  font-weight: bold;
+  
+}
+.rule-content{
+  font-size: 14px;
+  color: rgba(0,0,0,0.60);
+  text-align: left;
+  font-size: 14px;
+
+}
+.font-bold{
+  font-weight: bold;
+  color: rgba(0,0,0,0.80);
+}
+.gift3 .font-bold{
+  display:inline-block;
+  vertical-align:top;
+  margin-top: 4px;
 }
 
 </style>

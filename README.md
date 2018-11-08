@@ -29,5 +29,7 @@ B1渠道:http://vshow-api-ra.1-1.io/ranking_activity/rank
 npm run build -- B1  发布版本包
 npm run build -- B0  测试版本包
 
+dist-20181108-B0-03  发布名称
+
 测试多语言
 http://0.0.0.0:8080/?plat=ios&jid=xxx@.jid.com&lang=en
