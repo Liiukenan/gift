@@ -207,13 +207,7 @@ export default {
   .unselected_tab_text{
     color: white;
   }
-  .tab_card {
-    /* padding: .333333rem; */
-    margin-left: .333333rem;
-    margin-right: .333333rem;
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-  }
+  
   .slide-fade-enter-active {
     transition: all 0.3s ease;
   }
@@ -229,5 +223,12 @@ export default {
     overflow: hidden;
     padding:0 .3rem;
   }
-
+  .tab_card {
+    /* padding: .333333rem; */
+    margin-left: .333333rem;
+    margin-right: .333333rem;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
 </style>
