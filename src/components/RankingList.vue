@@ -11,7 +11,7 @@
                     {{x.ranking}}
                   </div>
                   <div class="anchor_head" >
-                    <v-list-tile-avatar size="48px" >
+                    <v-list-tile-avatar size="1.5rem" >
                     <img v-lazy="`${x.avatarUrl}`" />
                     </v-list-tile-avatar>
                   </div>
@@ -75,7 +75,7 @@ export default {
     font-size: .466667rem;
     color: rgba(0,0,0,0.40);;
   }
- 
+
 
   .item_rank{
     margin-right: .333333rem;
@@ -91,7 +91,7 @@ export default {
     font-size: .466667rem;
     overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
   }
 
   .item_divider{
@@ -109,4 +109,3 @@ export default {
   }
 
 </style>
-
