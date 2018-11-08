@@ -279,6 +279,10 @@ export default {
 .result_root {
   text-align: center;
   background: rgba(0, 0, 0, 0.4) !important;
+  position: fixed;
+  left: 0;
+  top:0;
+
 }
 .reward_title {
   background-image: linear-gradient(

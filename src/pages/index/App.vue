@@ -16,8 +16,11 @@
       </div>
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
-
       </transition>
+      <!-- v-if='this.hasReward == 1 && !this.closeStatus' -->
+      <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
+          <reward @closeDialog='closeDialog'/>
+      </div>
       </div>
     </v-app>
 </template>
@@ -41,7 +44,9 @@ export default {
     Guide,
     // User,
     // AnchorHoliday,
-    MySelf
+    MySelf,
+    Reward,
+    ObtainReward
   },
   data: function() {
     return {
@@ -148,12 +153,14 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       // console.log("fetchData");
-      // this.$store
-      //   .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
-      //   .then(result => {});
+      
       this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
-        .then(() => {});
+        .then(() => {
+          this.$store
+          .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+          .then(result => {});
+        });
     },
     chooseContent(){
       // 判断是主播还是用户

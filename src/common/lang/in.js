@@ -8,7 +8,7 @@ module.exports = {
         "2. Daftar hadiah yang diterima diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah diterima oleh bintang.<br>\n" +
         "3. Daftar hadiah yang dikirim diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah dikirim pengguna.<br>\n" +
         "4. Data daftar peringkat mungkin tertunda saat jaringan sibuk. Mohon bersabar.",
-      activity_incentives: "Insentif:",
+      activity_incentives: "Insentif",
       receive_Top3: "3 Teratas di Daftar Menerima",
       receive_Top3_content:
         "1 Teratas: 10.000 koin+100 undangan panggilan video/hari * 3 hari<br>\n" +
@@ -32,16 +32,20 @@ module.exports = {
         "9 Teratas: Hadiah（bernilai 4999 kouserSendInfon）+100 undangan panggilan video/hari * 2 hari<br>\n" +
         "10 Teratas: Hadiah（bernilai 4999 kuserSendInfoin）+100 undangan panggilan video/hari * 1 hari",
       send_Top10:"10 Teratas di Daftar MengiuserSendInfoim",
-      send_Top10_content:"1 Teratas: Chat video gratis selama 1 jam/hari * 7 hari<br>\n" +
-        "2 Teratas: Chat video gratis selama 1 jam/hari * 6 hari<br>\n" +
-        "3 Teratas: Chat video gratis selama 1 jam/hari * 5 hari<br>\n" +
-        "4 Teratas: Chat video gratis selama 1 jam/hari * 4 hari<br>\n" +
-        "5 Teratas: Chat video gratis selama 1 jam/hari * 3 hari<br>\n" +
-        "6 Teratas: Chat video gratis selama 1 jam/hari * 2 hari<br>\n" +
-        "7 Teratas: Chat video gratis selama 1 jam/hari * 1 hari<br>\n" +
-        "8 Teratas: Chat video gratis selama 1 jam/hari * 1 hari<br>\n" +
-        "9 Teratas: Chat video gratis selama 1 jam/hari * 1 hari<br>\n" +
-        "10 Teratas: Chat video gratis selama 1 jam/hari * 1 hari"
+      sendOne:"Chat video gratis selama 1 jam/hari * 7 hari",
+      sendTwo:"Chat video gratis selama 1 jam/hari * 6 hari",
+      sendThree:"Chat video gratis selama 1 jam/hari * 5 hari",
+      sendFour:"Chat video gratis selama 1 jam/hari * 4 hari",
+      sendFive:"Chat video gratis selama 1 jam/hari * 3 hari",
+      sendSix:"Chat video gratis selama 1 jam/hari * 2 hari",
+      sendSeven:"Chat video gratis selama 1 jam/hari * 1 hari",
+      sendEight:"Chat video gratis selama 1 jam/hari * 1 hari",
+      sendNine:"Chat video gratis selama 1 jam/hari * 1 hari",
+      sendTen:"Chat video gratis selama 1 jam/hari * 1 hari",
+      top: "Teratas",
+      day: "hari",
+      days: "hari",
+      anthorIncentives:"100 undangan panggilan video"
     }
   },
   HomePage: {

@@ -154,7 +154,8 @@ const store = new Vuex.Store({
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/has_reward')
           console.log('api',api)
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"active_id":this.activityId})).then((response) => {
+          var activityId = context.state.activityId
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId})).then((response) => {
               console.log("has reward response", response.data)
               var data = {}
               if(response.data == undefined || response.data == ""){
@@ -185,8 +186,8 @@ const store = new Vuex.Store({
 
             var currentJid = getCurrentJid()
             var api = requestApiUrl('/ranking_activity/get_reward')
-
-            return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":this.activityId})).then((response) => {
+            var activityId = context.state.activityId
+            return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId})).then((response) => {
                 console.log("reward response", response.data)
                 if(response.data == undefined || response.data == ""){
                   return false

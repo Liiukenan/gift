@@ -11,7 +11,6 @@
       <v-flex xs6 v-if="myActivity != undefined && myActivity['status'] == 0">
         <div class="mine_des text-xs-left">{{rankDes}}</div>
       </v-flex>
-     
       <v-flex xs7 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
         <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>

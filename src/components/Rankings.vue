@@ -147,17 +147,14 @@ export default {
       if(index==0){
         this.isTabOne=true;
         this.isTabTwo=false;
+        this.$emit('transIndex',index);
         logEvent("event_activity_ranking_receive_show","");
       }else{
         this.isTabOne=false;
         this.isTabTwo=true;
+        this.$emit('transIndex',index);
         logEvent("event_activity_ranking_send_show","");
-        
       }
-      this.$emit('transIndex',index);
-      
-
-
     }
   }
 }

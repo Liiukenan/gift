@@ -11,7 +11,7 @@ module.exports = {
         "4. Les données de la liste de classement peuvent\n" +
         "être retardées lorsque le réseau est occupé.\n" +
         "Veuillez s'il vous plaît vous montrer patients.",
-      activity_incentives: "Incitatifs :",
+      activity_incentives: "Incitatifs",
       receive_Top3: "Top 3 de la liste des destinataires",
       receive_Top3_content:
         "Top 1 : 10 000 pièces + 100 invitations à des appels\n" +
@@ -37,16 +37,20 @@ module.exports = {
         "Top 9 : Cadeau （valeur 4999 pièces） + 100 invitations à des appels vidéo/jour * 2 jours<br>\n" +
         "Top 10 : Cadeau （valeur 4999 pièces） + 100 invitations à des appels vidéo/jour * 1 jour<br>\n",
       send_Top10:"Top 10 de la liste d'envoi",
-      send_Top10_content:"Top 1 : Chat vidéo gratuit pendant 1 heure/jour * 7 jours<br>\n" +
-        "Top 2 : Chat vidéo gratuit pendant 1 heure/jour * 6 jours<br>\n" +
-        "Top 3 : Chat vidéo gratuit pendant 1 heure/jour * 5 jours<br>\n" +
-        "Top 4 : Chat vidéo gratuit pendant 1 heure/jour * 4 jours<br>\n" +
-        "Top 5 : Chat vidéo gratuit pendant 1 heure/jour * 3 jours<br>\n" +
-        "Top 6 : Chat vidéo gratuit pendant 1 heure/jour * 2 jours<br>\n" +
-        "Top 7 : Chat vidéo gratuit pendant 1 heure/jour * 1 jour<br>\n" +
-        "Top 8 : Chat vidéo gratuit pendant 1 heure/jour * 1 jour<br>\n" +
-        "Top 9 : Chat vidéo gratuit pendant 1 heure/jour * 1 jour<br>\n" +
-        "Top 10 : Chat vidéo gratuit pendant 1 heure/jour * 1 jour"
+      sendOne:"Chat vidéo gratuit pendant 1 heure/jour * 7 jours",
+      sendTwo:"Chat vidéo gratuit pendant 1 heure/jour * 6 jours",
+      sendThree:"Chat vidéo gratuit pendant 1 heure/jour * 5 jours",
+      sendFour:"Chat vidéo gratuit pendant 1 heure/jour * 4 jours",
+      sendFive:"Chat vidéo gratuit pendant 1 heure/jour * 3 jours",
+      sendSix:"Chat vidéo gratuit pendant 1 heure/jour * 2 jours",
+      sendSeven:"Chat vidéo gratuit pendant 1 heure/jour * 1 jour",
+      sendEight:"Chat vidéo gratuit pendant 1 heure/jour * 1 jour",
+      sendNine:"Chat vidéo gratuit pendant 1 heure/jour * 1 jour",
+      sendTen:"Chat vidéo gratuit pendant 1 heure/jour * 1 jour",
+      top: "Top",
+      day: "jour",
+      days: "jours",
+      anthorIncentives:"100 invitations à des appels vidéo"
     }
   },
   HomePage: {

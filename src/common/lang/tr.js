@@ -8,7 +8,7 @@ module.exports = {
         "2. Alınan liste, yıldızların aldığı etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
         "3. Gönderilen liste, kullanıcıların gönderdiği etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
         "4. Şebeke meşgul olduğunda sıralama listesi verileri gecikebilir. Lütfen sabırlı olun.",
-      activity_incentives: "Activite teşvik:",
+      activity_incentives: "Activite teşvik",
       receive_Top3: "3 En çok hediye alanlar:",
       receive_Top3_content:
         "Top 1: 10000 coins + 100 defa video çağrı davetiyeleri/gün * 3 gün<br>\n" +
@@ -31,17 +31,20 @@ module.exports = {
         "Top 9: Hediye（Miktar: 4999 çip） + 100 defa video çağrı davetiyeleri/gün * 2 gün<br>\n" +
         "Top 10: Hediye（Miktar: 4999 çip） + 100 defa video çağrı davetiyeleri/gün * 1 gün",
       send_Top10:"10 en çok hediye gönderenler:",
-      send_Top10_content:"Top 1: ücretsiz video sohbet 1 saat/gün * 7 gün\n" +
-        "Top 2: ücretsiz video sohbet 1 saat/gün * 6 gün<br>\n" +
-        "Top 3: ücretsiz video sohbet 1 saat/gün * 5 gün<br>\n" +
-        "Top 4: ücretsiz video sohbet 1 saat/gün * 4 gün<br>\n" +
-        "Top 5: ücretsiz video sohbet 1 saat/gün * 3 gün<br>\n" +
-        "Top 6: ücretsiz video sohbet 1 saat/gün * 2 gün<br>\n" +
-        "Top 7: ücretsiz video sohbet 1 saat/gün * 1 gün<br>\n" +
-        "Top 8: ücretsiz video sohbet 1 saat/gün * 1 gün<br>\n" +
-        "Top 9: ücretsiz video sohbet 1 saat/gün * 1 gün<br>\n" +
-        "Top 10: ücretsiz video sohbet 1 saat/gün * 1 gün"
-
+      sendOne:"ücretsiz video sohbet 1 saat/gün * 7 gün",
+      sendTwo:"ücretsiz video sohbet 1 saat/gün * 6 gün",
+      sendThree:"ücretsiz video sohbet 1 saat/gün * 5 gün",
+      sendFour:"ücretsiz video sohbet 1 saat/gün * 4 gün",
+      sendFive:"ücretsiz video sohbet 1 saat/gün * 3 gün",
+      sendSix:"ücretsiz video sohbet 1 saat/gün * 2 gün",
+      sendSeven:"ücretsiz video sohbet 1 saat/gün * 1 gün",
+      sendEight:"ücretsiz video sohbet 1 saat/gün * 1 gün",
+      sendNine:"ücretsiz video sohbet 1 saat/gün * 1 gün",
+      sendTen:"ücretsiz video sohbet 1 saat/gün * 1 gün",
+      top: "Top",
+      day: "gün",
+      days: "gün",
+      anthorIncentives:"100 defa video çağrı davetiyeleri"
     }
   },
   HomePage: {

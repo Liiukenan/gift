@@ -14,45 +14,336 @@
               dark>
               {{$t("ActivityPage.bt_regular")}}
             </v-btn>
-
-
-            <v-card color="white" style="border-radius: 6px;padding: 15px 10px 15px 15px" v-if="showDialog">
-              <button v-on:click="onCloseBtn" style="width: 30px; height: 30px; display:flex; position: absolute; right: 0px; top: 5px;">
-                <img src="../pages/index/assets/ic_closed.png" style="width:20px; height:20px; margin:0 auto">
+            <v-card color="white" class="rule-card" v-if="showDialog">
+              <button v-on:click="onCloseBtn" class="rule-btn">
               </button>
-
-              <v-card-text style="height: 500px; margin-top: 10px;">
+              <v-card-text>
               <!-- Title -->
-              <div style="text-align: center; width: 100%; margin-top: 10px; font-weight: bold;font-size: 18px">
+              <div class="rule-title">
                 {{$t("Ranking.incentiveDetails.title")}}
               </div>
               <v-spacer/>
               <!-- Time -->
-              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
-                <p >{{$t("ActivityPage.time_1")}}</p>
+              <div class="rule-time">
+                <p>{{$t("ActivityPage.time_1")}}:</p>
+                <p>{{getActivityTime()}}</p>
               </div>
-              <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
-                <p >{{getActivityTime()}}</p>
-              </div>
-                <!-- activity incentives -->
-                <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
+               <v-spacer/>
+                <div class="rule-incentives">
+                  <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
                 </div>
-                <v-spacer/>
                 <!-- top10 -->
-                <div style="text-align: center; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
+                <table class="rule-prize">
+                  <tr>
+                    <th class="border-top border-left">
+                      {{$t("Ranking.incentiveDetails.top")}}
+                    </th>
+                    <th class="border-top border-right">
+                      {{$t("Ranking.incentiveDetails.activity_incentives")}}
+                    </th>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 1
+                    </td>
+                   
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *7{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendOne")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 2
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *6{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendTwo")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 3
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *5{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendThree")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 4
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *4{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFour")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 5
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *3{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 6
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *2{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendSix")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 7
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *1{{$t("Ranking.incentiveDetails.day")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendSeven")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 8
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *1{{$t("Ranking.incentiveDetails.day")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendEight")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 9
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *1{{$t("Ranking.incentiveDetails.day")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendNine")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 10
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       *1{{$t("Ranking.incentiveDetails.day")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendTen")}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <!-- activity incentives -->
+                 <div class="rule-incentives">
+                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')"></p>
+                  <p v-html="$t('Ranking.incentiveDetails.receive_Top10')"></p>
                 </div>
-                <div style="text-align: left; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.receive_Top10_content')"></p>
-                </div>
-
-                <div style="text-align: center; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.send_Top10')"></p>
-                </div>
-                <div style="text-align: left; width: 100%;font-size: 14px">
-                <p v-html="$t('Ranking.incentiveDetails.send_Top10_content')"></p>
-                </div>
+                <table class="rule-prize">
+                  <tr>
+                    <th class="border-top border-left">
+                      {{$t("Ranking.incentiveDetails.top")}}
+                    </th>
+                    <th colspan="2" class="border-top border-right border-bottom">
+                      {{$t("Ranking.incentiveDetails.activity_incentives")}}
+                    </th>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 1
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift1.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right border-top">
+                      <img src="../static/img/card1.png" alt="">
+                       *10{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 2
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift1.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *9{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 3
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift1.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *8{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 4
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift2.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *7{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 5
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift2.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *6{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 6
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift2.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *5{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 7
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift3.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *4{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 8
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift3.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *3{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 9
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift3.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *2{{$t("Ranking.incentiveDetails.days")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                      {{$t("Ranking.incentiveDetails.top")}} 10
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift3.png" alt="">
+                       *1
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       *1{{$t("Ranking.incentiveDetails.day")}}
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
               <!-- rules -->
               <div style="text-align: center; width: 100%; margin-top: 10px;font-size: 14px">
                 <p >{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
@@ -86,16 +377,17 @@ export default {
       dialog: false,
       showDialog: false,
       banner_bg: [
-        require("../static/img/list_bg_ar.png"),
-        require("../static/img/list_bg_de.png"),
-        require("../static/img/list_bg_en.png"),
-        require("../static/img/list_bg_es.png"),
-        require("../static/img/list_bg_fr.png"),
-        require("../static/img/list_bg_hi.png"),
-        require("../static/img/list_bg_in.png"),
-        require("../static/img/list_bg_tr.png"),
+        require("../static/img/ranking-list_bg_ar.jpg"),
+        require("../static/img/ranking-list_bg_de.jpg"),
+        require("../static/img/ranking-list_bg_en.jpg"),
+        require("../static/img/ranking-list_bg_es.jpg"),
+        require("../static/img/ranking-list_bg_fr.jpg"),
+        require("../static/img/ranking-list_bg_hi.jpg"),
+        require("../static/img/ranking-list_bg_in.jpg"),
+        require("../static/img/ranking-list_bg_tr.jpg"),
       ],
-      calBgImage:true
+      calBgImage:true,
+      
     };
   },
   methods: {
@@ -154,7 +446,6 @@ export default {
     }, 0);
   },
   computed: {
-   
     ...mapGetters({
       myActivity: "activity"
     }),
@@ -205,6 +496,85 @@ export default {
 }
 .banner-btn-fr{
   margin: 41% auto 3%;
+}
+.rule-card{
+  border-radius: .2rem;
+}
+.rule-btn{
+  width: .466667rem; 
+  height: .466667rem; 
+  position: absolute; 
+  right: .466667rem;
+  top: .466667rem;
+  background: url('./src/static/img/ic_closed.png') no-repeat;
+  background-size: cover;
+}
+.rule-title{
+  text-align: center;
+   font-weight: bold;
+   font-size: .6rem;
+   margin-top:.333333rem;
+}
+p{
+  margin:0;
+}
+.rule-time{
+  text-align: center;
+  font-size: .466667rem;
+  margin:0;
+}
+.rule-incentives{
+  margin-top: .333333rem;
+  font-size: .466667rem;
+  
+}
+.rule-prize{
+  font-size: .466667rem;
+  font-weight: normal;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: .266667rem;
+}
+.rule-prize th{
+  font-weight: 400;
+  padding:.266667rem 0;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.11);
+}
+.rule-prize td{
+  border: 1px solid rgba(0,0,0,0.11);
+  padding:.266667rem 0;
+}
+.rule-prize img{
+  width: .8rem;
+  height: .8rem;
+  vertical-align: bottom;
+  display: inline-block;
+  margin-right: .166667rem;
+  
+  
+}
+.rule-prize .gift1{
+  width: 21%;
+}
+.rule-prize .gift2{
+  width: 24%;
+}
+.rule-prize .gift-info{
+  font-size: 12px;
+  transform: scale(0.8);
+}
+.rule-prize .border-top{
+  border-top: none;
+}
+.rule-prize .border-right{
+  border-right: none;
+}
+.rule-prize .border-left{
+  border-left: none;
+}
+.rule-prize .border-bottom{
+  border-bottom: none;
 }
 
 </style>

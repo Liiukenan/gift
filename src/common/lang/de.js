@@ -8,7 +8,7 @@ module.exports = {
         "2. Empfangene Liste ist nach der Anzahl an von Stars erhaltenen Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
         "3. Gesendete Liste ist nach der Anzahl an von Nutzern versendeten Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
         "4. Die Daten für die Rangliste könnten verzögert sein, wenn das Netzwerk ausgelastet ist. Bitte haben Sie Geduld.",
-      activity_incentives: "Prämien:",
+      activity_incentives: "Prämien",
       receive_Top3: "Top 3 der Empfängerliste:",
       receive_Top3_content:
         "Top 1: 10000 Münzen + 100 Einladungen zum Videoanruf / Tag * 3 Tage<br>\n" +
@@ -31,16 +31,20 @@ module.exports = {
         "Top 9: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 2 Tage<br>\n" +
         "Top 10: Geschenk (Wert 4999 Münzen) + 100 Einladungen zum Videoanruf / Tag * 1 Tage",
       send_Top10:"Top 10 der Senderliste:",
-      send_Top10_content:"Top 1: Kostenloser Videochat für 1 Stunde / Tag * 7 Tage<br>\n" +
-        "Top 2: Kostenloser Videochat für 1 Stunde / Tag * 6 Tage<br>\n" +
-        "Top 3: Kostenloser Videochat für 1 Stunde / Tag * 5 Tage<br>\n" +
-        "Top 4: Kostenloser Videochat für 1 Stunde / Tag * 4 Tage<br>\n" +
-        "Top 5: Kostenloser Videochat für 1 Stunde / Tag * 3 Tage<br>\n" +
-        "Top 6: Kostenloser Videochat für 1 Stunde / Tag * 2 Tage<br>\n" +
-        "Top 7: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
-        "Top 8: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
-        "Top 9: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage<br>\n" +
-        "Top 10: Kostenloser Videochat für 1 Stunde / Tag * 1 Tage"
+      sendOne:"Kostenloser Videochat für 1 Stunde / Tag * 7 Tage",
+      sendTwo:"Kostenloser Videochat für 1 Stunde / Tag * 6 Tage",
+      sendThree:"Kostenloser Videochat für 1 Stunde / Tag * 5 Tage",
+      sendFour:"Kostenloser Videochat für 1 Stunde / Tag * 4 Tage",
+      sendFive:"Kostenloser Videochat für 1 Stunde / Tag * 3 Tage",
+      sendSix:"Kostenloser Videochat für 1 Stunde / Tag * 2 Tage",
+      sendSeven:"Kostenloser Videochat für 1 Stunde / Tag * 1 Tage",
+      sendEight:"Kostenloser Videochat für 1 Stunde / Tag * 1 Tage",
+      sendNine:"Kostenloser Videochat für 1 Stunde / Tag * 1 Tage",
+      sendTen:"Kostenloser Videochat für 1 Stunde / Tag * 1 Tage",
+      top:"Top",
+      day:"Tage",
+      days:"Tage",
+      anthorIncentives:"100 Einladungen zum Videoanruf"
 
     }
   },

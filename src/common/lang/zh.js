@@ -19,7 +19,21 @@ module.exports = {
       receive_Top10:"",
       receive_Top10_content:"",
       send_Top10:"",
-      send_Top10_content:""
+      send_Top10_content:"",
+      sendOne:"",
+      sendTwo:"",
+      sendThree:"",
+      sendFour:"",
+      sendFive:"",
+      sendSix:"",
+      sendSeven:"",
+      sendEight:"",
+      sendNine:"",
+      sendTen:"",
+      top:"Top",
+      day:"天",
+      days:"天",
+      anthorIncentives:""
     }
   },
   HomePage: {
