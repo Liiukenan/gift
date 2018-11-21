@@ -29,6 +29,7 @@ export function jumpPersonDetail(jid) {
   if (plat == "android") {
     jsInteractive.jumpPersonDetail(jid)
   } else if (plat == "ios") {
+    
     var message = {methodName: 'jumpPersonDetail', jsonParams: JSON.stringify({"jid": jid})};
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
@@ -62,7 +63,7 @@ export function jumpOnlineUser() {
 // example:     key:value;key:value
 // 分号分割键值对，冒号分割key value
 export function logEvent(event,map) {
-  console.log("logEvent:" + event);
+  // console.log("logEvent:" + event);
   if (plat == "android") {
     jsInteractive.logEvent(event,map)
   } else if (plat == "ios") {

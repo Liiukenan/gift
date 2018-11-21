@@ -4,7 +4,7 @@
       <div class="content-wrap">
 
         <div class="content" :style="dailogSixe">
-          <span class="close icon icon-ic_closed" @click="closeDialog()"></span>
+          <span class="close icon icon-ic_closed" @click="closeDialog"></span>
           <slot></slot>
         </div>
       </div>
@@ -39,7 +39,7 @@
     },
     methods: {
       closeDialog() {
-        this.$emit('cancelDialog')
+        this.$emit('cancelDialog',false)
       },
       touchmove(event) {
         event.preventDefault();

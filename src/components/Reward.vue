@@ -115,9 +115,9 @@ export default {
     }
   },
   methods: {
-    checkScores(){
-         console.log('----check scores ')
-         this.$emit('closeDialog')
+    checkScores(msg){
+         this.$emit('closeDialog',msg)
+        //  this.obtainReward=msg;
     },
     getPopBg: function() {
       var path;
@@ -161,6 +161,7 @@ export default {
           this.receiveAnimate()
         }
         this.fetchData()
+
     },
     receiveAnimate:function(){
             this.showAnimateLayout = true
@@ -264,11 +265,10 @@ export default {
         })
     },
     fetchData() {
-      console.log("fetchData");
       this.$store
         .dispatch("FETCH_REWARD", { myJid: window.jid })
         .then((result) => {
-            this.obtainReward = result
+            this.obtainReward = result;
         });
     }
   }
@@ -288,9 +288,8 @@ export default {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 30%,
-    rgba(255, 255, 255, 1) 35%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 255, 255, 1) 80%
   );
 }
 .reward_content {
@@ -349,7 +348,7 @@ export default {
   background-image: linear-gradient(
     -180deg,
     #fc673f 0%,
-    #ef3276 50%,
+    #ef3276 20%,
     #c826a8 100%
   );
   min-width: 200px;

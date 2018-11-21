@@ -4,7 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import qs from 'qs';
 import {loadError} from "../common/jsInteractive";
-import {requestApiUrl , getCurrentJid,buildUserGiftTestData,buildUserLuckDrawTestData,buildAnchorGiftTestData,buildAnchorLuckDrawTestData} from './ApiHelper'
+import {requestApiUrl,getCurrentJid,buildUserGiftTestData,buildUserLuckDrawTestData,buildAnchorGiftTestData,buildAnchorLuckDrawTestData} from './ApiHelper'
 
 Vue.use(Vuex);
 Vue.use(VueAxios, axios);
@@ -72,6 +72,7 @@ const store = new Vuex.Store({
         FETCH_USER_GIFT(context,options){
           console.log('request user gift options : ', options)
           var currentJid = getCurrentJid()
+
           var api = requestApiUrl('/ranking_activity/user_gift_rate')
           var timestamp = (new Date()).valueOf();
           var activityId = context.state.activityId
@@ -109,6 +110,7 @@ const store = new Vuex.Store({
         },
         FETCH_ANCHOR_GIFT(context,options){
           console.log('request anchor gift options : ', options)
+          
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/anchor_gift_rate')
           var timestamp = (new Date()).valueOf();
@@ -136,6 +138,7 @@ const store = new Vuex.Store({
           var timestamp = (new Date()).valueOf();
           var giftId = options.giftId
           var activityId = context.state.activityId
+          
           return Vue.axios.get(api, {params:{"jid":currentJid,'activity_id':activityId,'_t':timestamp,'gift_id':giftId}}).then((response) => {
             console.log("anchor luck draw  response", response.data)
             return response.data
@@ -151,16 +154,17 @@ const store = new Vuex.Store({
         },
         FETCH_HAS_REWARD(context,options){
           console.log('request has reward options : ', options)
-          var currentJid = getCurrentJid()
+          var currentJid = getCurrentJid();
+          console.log(getCurrentJid(),'kenan1234')
           var api = requestApiUrl('/ranking_activity/has_reward')
-          console.log('api',api)
-          var activityId = context.state.activityId
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId})).then((response) => {
-              console.log("has reward response", response.data)
+          let activity=parseInt(localStorage.getItem('activity_id'));
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activity})).then((response) => {
+              console.log("has reward response,api", response.data)
               var data = {}
               if(response.data == undefined || response.data == ""){
                 data = {status:0}
               }else{
+                
                 data.status = response.data.status
                 data.giftUrl = response.data.gift_url
                 data.userType = response.data.user_type
@@ -174,6 +178,7 @@ const store = new Vuex.Store({
                 data.inviteDays = response.data.invite_days
                 data.activityId = response.data.activity_id
               }
+
               context.commit("loadHasRewardResult", {result: data})
             }).catch(reason => {
               console.log("has reward error :",reason);
@@ -183,10 +188,10 @@ const store = new Vuex.Store({
         FETCH_REWARD(context,options){
             console.log('request reward options : ', options)
             console.log("jid:" + window.jid + " lang:" + window.lang + " plat:" + plat)
-
             var currentJid = getCurrentJid()
             var api = requestApiUrl('/ranking_activity/get_reward')
             var activityId = context.state.activityId
+            console.log(activityId,'kenan');
             return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId})).then((response) => {
                 console.log("reward response", response.data)
                 if(response.data == undefined || response.data == ""){
@@ -214,10 +219,13 @@ const store = new Vuex.Store({
                }
             }
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
-                console.log("response", response.data)
+                
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
+                  localStorage.setItem('activity_id',response.data["activity"]["activity_id"]);
                   context.commit("loadActivityId", {result: response.data["activity"]["activity_id"]})
+                  
+                  
                   // 公布结果期间
                   if (status == 1){
                     // 本地缓存结果
@@ -226,7 +234,7 @@ const store = new Vuex.Store({
                   } else if (status == 0){
                     // 下架期间
                   } else if (status == 2){
-                    loadError()
+                    // loadError()
                     // 上一次显示结果
                      if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
                        console.log("show last:", list)
@@ -238,7 +246,7 @@ const store = new Vuex.Store({
                 context.commit("loadRankingList", {rankingList: response.data})
             }).catch(reason => {
               console.log("reason:",reason);
-              loadError()
+              // loadError()
               // 请求异常，显示公布结果期间内容
               if (list.hasOwnProperty("activity") && list["activity"]["status"] == 1){
                 console.log("show last:", list)

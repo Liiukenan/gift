@@ -4,7 +4,7 @@
             <div v-for="(x, index) in  tab_index == 0 ? receiverData:sendData"
               v-bind:item="x"
               v-bind:index="index"
-              v-bind:key="x.id">
+              v-bind:key="x.jid">
               <hr class="item_divider" v-bind:class="{full_divider: index===0 , head_divider:index !== 0}"/>
               <v-layout v-ripple fill-height align-center class="item" @click="listItemClick(x)">
                   <div class="anchor_id">

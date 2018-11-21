@@ -73,8 +73,9 @@ export default {
         closePager()
     },
     checkScores:function(){
-        this.$emit('checkScores');
-        // enterEventDetails("")
+        this.$emit('checkScores',true);
+        // enterEventDetails("");
+        
     }
   }
 };
@@ -85,9 +86,9 @@ export default {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(255, 255, 255, 1) 45%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(0, 0, 0, 0) 50%,
+   
+    rgba(255, 255, 255, 1) 80%
   );
 }
 .reward_content {

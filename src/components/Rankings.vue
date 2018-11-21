@@ -94,15 +94,15 @@ export default {
     upOrDown(startX, startY, endX, endY){
       let direction = this.GetSlideDirection(startX, startY, endX, endY);
       switch(direction) {
-        case 0:
-          console.log("没滑动");
-          break;
-        case 1:
-          console.log("向上");
-          break;
-        case 2:
-          console.log("向下");
-          break;
+        // case 0:
+        //   console.log("没滑动");
+        //   break;
+        // case 1:
+        //   console.log("向上");
+        //   break;
+        // case 2:
+        //   console.log("向下");
+        //   break;
         case 3:
           this.isTabOne=false;
           this.isTabTwo=true;
@@ -174,6 +174,7 @@ export default {
     background: #9E00E8;
     white-space: nowrap;
     margin:0 auto;
+    
   }
   .rankings{
     position: absolute;

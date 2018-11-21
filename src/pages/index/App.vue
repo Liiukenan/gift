@@ -2,6 +2,7 @@
     <v-app id="app" light class="scroll-y">
       <banner/>
       <div class="main">
+        
       <!-- <user v-if="userShow"></user> -->
       <!-- <AnchorHoliday v-if="!userShow"></AnchorHoliday> -->
       <!-- <div class="changeTitle">
@@ -17,7 +18,7 @@
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
       </transition>
-      <!-- v-if='this.hasReward == 1 && !this.closeStatus' -->
+      <!-- v-if='' -->
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
           <reward @closeDialog='closeDialog'/>
       </div>
@@ -89,7 +90,6 @@ export default {
     this.chooseContent();
     // 活动页面展示
     logEvent("event_activity_page_show", "");
-
     
   },
   computed: {
@@ -127,6 +127,7 @@ export default {
       } else {
         this.setBodyScroll(true);
       }
+      console.log(this.resultData,'kenan')
       return this.resultData.status;
     }
   },
@@ -134,8 +135,8 @@ export default {
     getIndex(msg){
       this.tabIndex=msg;
     },
-    closeDialog() {
-      this.closeStatus = true;
+    closeDialog(msg) {
+      this.closeStatus = msg;
       this.setBodyScroll(true);
     },
     changeTab(index) {
@@ -205,15 +206,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* background:  #000844; */
-  background: #231D4A;
+  background: #5E31CD;
 }
 #app .main{
   width: 100%;
   height: 100%;
   /* background:url(./src/static/img/bg.png) top left no-repeat;
    */
-  background: #231D4A;
+  padding-top: 8px;
+
+   
+  
+  background: #5E31CD;
   background-size: 100%;
+  position: relative;
 }
 .mine_rank {
   width: 100%;

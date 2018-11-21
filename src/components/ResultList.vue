@@ -1,8 +1,11 @@
 <template>
       <v-layout align-center justify-center class="result_content" column @click="unMove">
-        <div>
+        <div class="result-main">
           <div class="result_title">
             <img :src="getPopBg()" style="width:100%"/>
+          </div>
+          <div class="result_white">
+
           </div>
           <v-card flat class="result_card">
               <div class="title">
@@ -100,7 +103,6 @@ export default {
   }
 };
 </script>
-
 <style>
 .result_root {
   text-align: center;
@@ -112,27 +114,27 @@ export default {
   margin-right: 10%;
 }
 .title_bg {
-  margin-left:.666667rem;
-  margin-right: .666667rem;
-  width: 5rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 150px;
 }
 .receiver_title {
   position: absolute;
-  margin: auto;
-  top: .1rem;
+  margin: 0 auto;
+  top: 3px;
   left: 0;
   right: 0;
   text-align: center;
-  font-size: .466667rem;
+  font-size: 14px;
 }
 .send_title {
   position: absolute;
   left: 0;
-  margin-top: .1rem;
+  margin-top: 3px;
   right: 0;
   top: 0;
   text-align: center;
-  font-size: .466667rem;
+  font-size: 14px;
 }
 .title {
   position: relative;
@@ -140,34 +142,31 @@ export default {
   width: 100%;
 }
 .result_btn {
-  border-radius: .6rem;
+  border-radius: 18px;
   background-image: linear-gradient(
     -180deg,
     #fc673f 0%,
     #ef3276 50%,
     #c826a8 100%
   );
-  min-width: 6.666667rem;
-  font-size: .533333rem;
-  height: 1.2rem;
+  min-width: 200px;
+  font-size: 16px;
+  height: 36px;
 }
 .result_card {
-  margin-top: -0.333333rem;
+  margin-top: -10px;
   background: white;
-  border-bottom-left-radius: .5rem;
-  border-bottom-right-radius: .5rem;
-  padding-bottom: .166667rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 5px;
 }
 .result_title {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 30%,
-    rgba(255, 255, 255, 1) 35%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(255, 255, 255, 1) 85%,
     rgba(255, 255, 255, 1) 100%
   );
-}
-a{
-  outline: none;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 <v-app class="result_root">
-    <reward @closeDialog='closeDialog' v-if='resultData.status == 1'/>
+    <reward @closeDialog='closeDialog' v-if="resultData.status == 1"/>
     <result-list v-if='resultData.status == 0'/>
 </v-app>
 </template>
@@ -22,7 +22,7 @@ export default {
     Reward,
     ResultList
   },
-  created() {
+  mounted() {
     this.fetchData();
   },
   computed: {
@@ -31,7 +31,7 @@ export default {
       }),
   },
   methods: {
-    closeDialog(){
+    closeDialog(msg){
       console.log('app result close dialog')
       enterEventDetails('')
     },
@@ -53,5 +53,6 @@ export default {
 .result_root {
   text-align: center;
   background: rgba(0, 0, 0, 0.4) !important;
+ 
 }
 </style>

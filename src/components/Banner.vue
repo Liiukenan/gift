@@ -457,7 +457,8 @@ export default {
     }),
     bannerBtnFr(){
       if(window.lang=="fr"){
-        return 'banner-btn-fr';
+        // return 'banner-btn-fr';
+        return '';
       }else{
         return '';
       }
@@ -484,10 +485,13 @@ export default {
   background: rgba(7,6,34,0.45);
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.333333rem;
-  margin: 39% auto 3%;
+  margin: 39% auto 0%;
   transform: scale(0.8);
-  color: #DA485D;
+  color: rgba(255,255,255,0.60);
   outline: none;
+}
+.banner_content{
+  /* margin-top: .333333rem; */
 }
 .banner_float{
   position: absolute;
