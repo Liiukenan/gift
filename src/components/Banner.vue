@@ -480,28 +480,25 @@ export default {
   background-size: cover;
 }
 .banner-btn {
-  padding:.133333rem .4rem;
+  padding:0 .333333rem;
   border-radius: 100px;
-  background: rgba(7,6,34,0.45);
+  background: rgba(255,255,255,0.33);
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.333333rem;
-  margin: 39% auto 0%;
+  margin: 42% auto 0%;
   transform: scale(0.8);
-  color: rgba(255,255,255,0.60);
+  color: rgba(235,45,141,0.70);
   outline: none;
-}
-.banner_content{
-  /* margin-top: .333333rem; */
 }
 .banner_float{
   position: absolute;
   right: 0;
   top: 0;
-  background-image: linear-gradient(-180deg, #D200B7 0%, #950083 100%);
+  background-image: linear-gradient(-180deg, #FF5BBD 0%, #EB2D8D 100%);
   box-shadow: 0 3px 4px 0 rgba(170,47,161,0.30);
-  width:1.75rem;
-  height: 1.75rem;
-  font-size: .4rem;
+  width: 1.444444rem;
+  height: 1.444444rem;
+  font-size: .333333rem;
   transform: scale(0.8);
 }
 .banner-btn-fr{

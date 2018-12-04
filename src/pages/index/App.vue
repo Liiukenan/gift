@@ -208,7 +208,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* background:  #000844; */
-  background: #5E31CD;
+  background: #F7A687;
 }
 #app .main{
   width: 100%;
@@ -219,7 +219,7 @@ export default {
 
    
   
-  background: #5E31CD;
+  background: #F7A687;
   background-size: 100%;
   position: relative;
 }

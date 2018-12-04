@@ -171,7 +171,7 @@ export default {
     height: 1.066667rem;
     /* width: 8rem; */
     border-radius: 1.666667rem;
-    background: #9E00E8;
+    background: #EB2D8D;
     white-space: nowrap;
     margin:0 auto;
     
@@ -203,7 +203,7 @@ export default {
     text-transform: Capitalize;
   }
   .selected_tab_text{
-    color:  #9E00E8;
+    color:  #EB2D8D;
   }
   .unselected_tab_text{
     color: white;
