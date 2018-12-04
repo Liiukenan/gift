@@ -3,8 +3,8 @@ export function requestApiUrl(apiName){
     var api = '/ranking_activity/has_reward'
     let HOST = process.env.HOST;
     if (HOST === 'dev' || HOST === 'prod'){
-        // api = 'http://54.222.148.146:46000' + apiName
-        api = 'http://vshow-api-ra.1-1.io' + apiName
+        api = 'http://54.222.148.146:46000' + apiName
+        // api = 'http://vshow-api-ra.1-1.io' + apiName
     }
     if (HOST === 'B0'){
         api = 'http://54.222.148.146:46000' + apiName
@@ -14,7 +14,7 @@ export function requestApiUrl(apiName){
     return api
 }
 export function getCurrentJid(){
-    var currentJid = "user_1023206@bj2.1-1.io";
+    var currentJid = "user_1017360@bj2.1-1.io";
     if (window.plat == "android" || window.plat == "ios"){
         currentJid = window.jid;
     }

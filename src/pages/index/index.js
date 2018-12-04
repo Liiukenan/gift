@@ -36,9 +36,13 @@ var getParamValue = function(url, key) {
   // return "ar";
 };
 window.plat = getParamValue(window.location.href, "plat") || "android";
-window.jid =
-  getParamValue(window.location.href, "jid") || "user_1023206@bj2.1-1.io";
-window.lang = getParamValue(window.location.href, "lang") || "en";
+window.jid =getParamValue(window.location.href, "jid") || "user_1023206@bj2.1-1.io";
+let countryCodeArr=['en','ar','de','es','fr','hi','in','tr','zh'];
+let countryCode=getParamValue(window.location.href, "lang");
+if(!countryCodeArr.includes(countryCode)){
+  countryCode="en"
+}
+window.lang = countryCode || "en";
 const i18n = new VueI18n({
   // locale: getParamValue(window.location.href, "lang"), // 语言标识
   locale: window.lang, // 语言标识

@@ -37,13 +37,13 @@ export default {
     },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
-      console.log("fetchData");
-      this.$store
-        .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
-        .then((result) => {});
-      this.$store
+       this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
-        .then(() => {});
+        .then(() => {
+          this.$store
+          .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+          .then(result => {});
+        });
     }
   }
 };

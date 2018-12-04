@@ -1,7 +1,21 @@
 <template>
 <v-app class="result_root">
+    <!-- <v-alert
+      :value="true"
+      color="warning"
+      icon="priority_high"
+      outline
+></v-alert> -->
+ <!-- <v-alert
+      :value="alert"
+      type="success"
+      transition="scale-transition"
+    ></v-alert> -->
+      
+
     <v-layout align-center justify-center column class="reward_content" v-if="!obtainReward">
         <div>
+            
             <div class="reward_title">
                 <img :src="getPopBg()" style="width:100%"/>
             </div>
@@ -34,6 +48,7 @@
 import dynamics from 'dynamics.js'
 import ObtainReward from './ObtainReward'
 import { setTimeout } from 'timers';
+import { mapState} from "vuex";
 export default {
   name: "Reward",
   data: function() {
@@ -71,6 +86,9 @@ export default {
       })
   },
   computed:{
+    ...mapState({
+      resultData: "hasRewardResult"
+    }),
     isAnchor:function(){
         var response = this.$store.state.hasRewardResult;
         return response.userType == 'anchor'
@@ -157,6 +175,7 @@ export default {
         rightCoinsElement.style.left = width+"px"
     },
     receiveReward:function(){
+        
         if(!this.isAnchor){
           this.receiveAnimate()
         }
@@ -268,6 +287,10 @@ export default {
       this.$store
         .dispatch("FETCH_REWARD", { myJid: window.jid })
         .then((result) => {
+            if (!result) {
+                this.$emit('closeDialog',!result);
+                return;
+            }
             this.obtainReward = result;
         });
     }

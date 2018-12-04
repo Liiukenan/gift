@@ -18,7 +18,6 @@
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
       </transition>
-      <!-- v-if='' -->
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
           <reward @closeDialog='closeDialog'/>
       </div>
@@ -92,6 +91,7 @@ export default {
     logEvent("event_activity_page_show", "");
     
   },
+  
   computed: {
     ...mapState({
       resultData: "hasRewardResult"
@@ -108,6 +108,7 @@ export default {
     },
     styleAr(){
        // 阿拉伯语适配
+       
       if (window.lang == "ar") {
         return true;
       }else{
@@ -122,6 +123,7 @@ export default {
       if (this.resultData == undefined) {
         return 0;
       }
+      // alert(window.lang)
       if (this.resultData.status == 1) {
         this.setBodyScroll(false);
       } else {
