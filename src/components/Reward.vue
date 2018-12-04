@@ -34,6 +34,7 @@
 import dynamics from 'dynamics.js'
 import ObtainReward from './ObtainReward'
 import { setTimeout } from 'timers';
+import { mapState} from "vuex";
 export default {
   name: "Reward",
   data: function() {
@@ -71,6 +72,9 @@ export default {
       })
   },
   computed:{
+    ...mapState({
+      resultData: "hasRewardResult"
+    }),
     isAnchor:function(){
         var response = this.$store.state.hasRewardResult;
         return response.userType == 'anchor'
@@ -117,7 +121,6 @@ export default {
   methods: {
     checkScores(msg){
          this.$emit('closeDialog',msg)
-        //  this.obtainReward=msg;
     },
     getPopBg: function() {
       var path;
@@ -268,6 +271,10 @@ export default {
       this.$store
         .dispatch("FETCH_REWARD", { myJid: window.jid })
         .then((result) => {
+            if (!result) {
+                this.$emit('closeDialog',!result);
+                return;
+            }
             this.obtainReward = result;
         });
     }
@@ -368,7 +375,6 @@ export default {
         -moz-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
-        transition:
     }
 }
 .coins_left{
