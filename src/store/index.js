@@ -164,7 +164,6 @@ const store = new Vuex.Store({
               if(response.data == undefined || response.data == ""){
                 data = {status:0}
               }else{
-                
                 data.status = response.data.status
                 data.giftUrl = response.data.gift_url
                 data.userType = response.data.user_type
@@ -178,7 +177,6 @@ const store = new Vuex.Store({
                 data.inviteDays = response.data.invite_days
                 data.activityId = response.data.activity_id
               }
-
               context.commit("loadHasRewardResult", {result: data})
             }).catch(reason => {
               console.log("has reward error :",reason);

@@ -20,7 +20,7 @@ module.exports = {
         "Top 1: ücretsiz video sohbet 1 saat/gün * 3 gün<br>\n" +
         "Top 2: ücretsiz video sohbet 1 saat/gün * 2 gün<br>\n" +
         "Top 3: ücretsiz video sohbet 1 saat/gün * 1 gün",
-      receive_Top10:"10 En çok hediye alanlar",
+      receive_Top10:"5 En çok hediye alanlar",
       receive_Top10_content:"Top 1: Hediye（Miktar: 9999 çip）+ 100 defa video çağrı davetiyeleri/gün * 10 gün<br>\n" +
         "Top 2: Hediye（Miktar: 9999 çip） + 100 defa video çağrı davetiyeleri/gün * 9 gün<br>\n" +
         "Top 3: Hediye（Miktar: 9999 çip） + 100 defa video çağrı davetiyeleri/gün * 8 gün<br>\n" +
@@ -31,7 +31,7 @@ module.exports = {
         "Top 8: Hediye（Miktar: 4999 çip） + 100 defa video çağrı davetiyeleri/gün * 3 gün<br>\n" +
         "Top 9: Hediye（Miktar: 4999 çip） + 100 defa video çağrı davetiyeleri/gün * 2 gün<br>\n" +
         "Top 10: Hediye（Miktar: 4999 çip） + 100 defa video çağrı davetiyeleri/gün * 1 gün",
-      send_Top10:"10 en çok hediye gönderenler",
+      send_Top10:"5 en çok hediye gönderenler",
       sendOne:"ücretsiz video sohbet 1 saat/gün ",
       sendTwo:"ücretsiz video sohbet 1 saat/gün ",
       sendThree:"ücretsiz video sohbet 1 saat/gün ",

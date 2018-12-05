@@ -20,7 +20,7 @@ module.exports = {
         "Top 1: video chat gratis durante 1 hora / día * 3 días<br>\n" +
         "Top 2: video chat gratis durante 1 hora / día * 2 días<br>\n" +
         "Top 3: video chat gratis durante 1 hora / día * 1 día",
-      receive_Top10: "Top 10 de la lista de recepción",
+      receive_Top10: "Top 5 de la lista de recepción",
       receive_Top10_content: "Top 1: Regalo （vale la pena 9999 monedas）+ 100 invitaciones de videollamadas / día * 10 días<br>\n" +
         "Top 2: Regalo （vale la pena 9999 monedas） + 100 invitaciones de videollamadas / día * 9 días<br>\n" +
         "Top 3: Regalo （vale la pena 9999 monedas） + 100 invitaciones de videollamadas / día * 8 días<br>\n" +
@@ -31,7 +31,7 @@ module.exports = {
         "Top 8: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 3 días<br>\n" +
         "Top 9: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 2 días<br>\n" +
         "Top 10: Regalo （vale la pena 4999 monedas） + 100 invitaciones de videollamadas / día * 1 día",
-      send_Top10: "Top 10 de la lista de envío",
+      send_Top10: "Top 5 de la lista de envío",
       sendOne: "video chat gratis durante 1 hora / día ",
       sendTwo: "video chat gratis durante 1 hora / día ",
       sendThree: "video chat gratis durante 1 hora / día ",

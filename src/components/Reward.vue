@@ -105,12 +105,13 @@ export default {
             str = str.replace('@',rank)
         }else{
             str = this.$t("Reward.send_des")
+            
             var rewardNum = 1
-            if(rank == 1) rewardNum = 7
-            else if(rank == 2) rewardNum = 6
+            if(rank == 1) rewardNum = 9
+            else if(rank == 2) rewardNum = 7
             else if(rank == 3) rewardNum = 5
-            else if(rank == 4) rewardNum = 4
-            else if(rank == 5) rewardNum = 3
+            else if(rank == 4) rewardNum = 3
+            else if(rank == 5) rewardNum = 1
             else if(rank == 6) rewardNum = 2
             str = str.replace('@@',rewardNum)
             str = str.replace('@',rank)
