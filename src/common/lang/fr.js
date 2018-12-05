@@ -10,7 +10,8 @@ module.exports = {
         "3. La liste envoyée est classée par ordre décroissant en fonction du nombre de cadeaux d'activité envoyés par les utilisateurs.d'activité que les utilisateurs reçoivent.\n<br>" +
         "4. Les données de la liste de classement peuvent\n" +
         "être retardées lorsque le réseau est occupé.\n" +
-        "Veuillez s'il vous plaît vous montrer patients.",
+        "Veuillez s'il vous plaît vous montrer patients.\n<br>" +
+        "5. Si différents utilisateurs reçoivent ou envoient le même nombre de cadeaux, le premier qui reçoit ou envoie ce nombre de cadeaux sera classé plus haut.",
       activity_incentives: "Incitatifs",
       receive_Top3: "Top 3 de la liste des destinataires",
       receive_Top3_content:

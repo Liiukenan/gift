@@ -7,7 +7,8 @@ module.exports = {
         '1. Selama aktivitas, satu hadiah ditetapkan sebagai "hadiah aktivitas".<br>\n' +
         "2. Daftar hadiah yang diterima diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah diterima oleh bintang.<br>\n" +
         "3. Daftar hadiah yang dikirim diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah dikirim pengguna.<br>\n" +
-        "4. Data daftar peringkat mungkin tertunda saat jaringan sibuk. Mohon bersabar.",
+        "4. Data daftar peringkat mungkin tertunda saat jaringan sibuk. Mohon bersabar.<br>\n" +
+        "5. Jika pengguna yang berbeda menerima atau mendapatkan jumlah hadiah yang sama, yang lebih dahulu menerima atau mengirimkan jumlah itu akan. mendapat peringkat lebih tinggi. ",
       activity_incentives: "Insentif",
       receive_Top3: "3 Teratas di Daftar Menerima",
       receive_Top3_content:

@@ -7,7 +7,8 @@ module.exports = {
         '1. Während der Aktivität, wird das Geschenk offiziell als "Aktivitätsgeschenk" bezeichnet.<br>\n' +
         "2. Empfangene Liste ist nach der Anzahl an von Stars erhaltenen Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
         "3. Gesendete Liste ist nach der Anzahl an von Nutzern versendeten Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
-        "4. Die Daten für die Rangliste könnten verzögert sein, wenn das Netzwerk ausgelastet ist. Bitte haben Sie Geduld.",
+        "4. Die Daten für die Rangliste könnten verzögert sein, wenn das Netzwerk ausgelastet ist. Bitte haben Sie Geduld.<br>\n" +
+        "5. Wenn verschiedene Benutzer dieselbe Anzahl von Geschenken empfangen oder senden, wird derjenige, der als erster diese Anzahl von Geschenken erhält oder sendet, höher eingestuft.",
       activity_incentives: "Prämien",
       receive_Top3: "Top 3 der Empfängerliste:",
       receive_Top3_content:

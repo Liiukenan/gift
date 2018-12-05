@@ -55,7 +55,7 @@
                    
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*9{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendOne")}}
                       </p>
@@ -68,7 +68,7 @@
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendTwo")}}
                       </p>
@@ -94,7 +94,7 @@
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendFour")}}
                       </p>
@@ -107,73 +107,16 @@
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendFive")}}
                       </p>
                     </td>
                   </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       6
-                    </td>
-                    
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                      <span class="font-bold"> *2{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendSix")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       7
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendSeven")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       8
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendEight")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       9
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendNine")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       10
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendTen")}}
-                      </p>
-                    </td>
-                  </tr>
+                
+               
+               
+                
                 </table>
                 <!-- activity incentives -->
                  <div class="rule-incentives">
@@ -210,7 +153,7 @@
                        2
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift1.png" alt="">
+                      <img src="../static/img/gift2.png" alt="">
                        <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
@@ -226,7 +169,7 @@
                        3
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift1.png" alt="">
+                      <img src="../static/img/gift3.png" alt="">
                       <span class="font-bold"> *1</span>
                     </td>
                     <td class="gift3 border-right">
@@ -242,7 +185,7 @@
                        4
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift2.png" alt="">
+                      <img src="../static/img/gift4.png" alt="">
                        <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
@@ -258,7 +201,7 @@
                        5
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift2.png" alt="">
+                      <img src="../static/img/gift5.png" alt="">
                        <span class="font-bold">*1</span>
                     </td>
                     <td class="gift3 border-right">
@@ -269,86 +212,10 @@
                       </p>
                     </td>
                   </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       6
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift2.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*5{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       7
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       8
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                      <span class="font-bold"> *3{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       9
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*2{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       10
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.day")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
+                
+                  
+                  
+                 
                 </table>
               <!-- rules -->
               <div class="rule-details-title">

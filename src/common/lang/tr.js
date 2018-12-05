@@ -7,7 +7,8 @@ module.exports = {
         '1. Etkinlik sırasında, bir hediye resmi adı "etkinlik hediyesi" olarak belirlenir.<br>\n' +
         "2. Alınan liste, yıldızların aldığı etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
         "3. Gönderilen liste, kullanıcıların gönderdiği etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
-        "4. Şebeke meşgul olduğunda sıralama listesi verileri gecikebilir. Lütfen sabırlı olun.",
+        "4. Şebeke meşgul olduğunda sıralama listesi verileri gecikebilir. Lütfen sabırlı olun.<br>\n" +
+        "5. Farklı kullanıcılar aynı sayıda hediye alır veya gönderirse, bu sayıyı alan veya gönderen ilk kişi daha yüksek sırada yerini alacaktır.",
       activity_incentives: "Activite teşvik",
       receive_Top3: "3 En çok hediye alanlar:",
       receive_Top3_content:

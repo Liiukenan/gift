@@ -6,7 +6,8 @@ module.exports = {
       rules_content:"1. During activity, the one gift is offically designated as \"activity gift\".<br>\n" +
         "2. Received list is ranked from high to low according to the number of activity gift that stars have received.<br>\n" +
         "3. Sent list is ranked from high to low according to the number of activity gift that users have sent.<br>\n" +
-        "4. Ranking list data may be delayed when network's busy. Please be patient.",
+        "4. Ranking list data may be delayed when network's busy. Please be patient.<br>\n" +
+        "5. If different users receive or send the same number of gifts, the first one who receives or sends that number of gifts will rank higher. ",
       activity_incentives:"Incentives",
       receive_Top3:"Top 3 of Receiving List",
       receive_Top3_content:"Top 1: 10,000 coins+100 video call invitations/day * 3 days<br>\n" +

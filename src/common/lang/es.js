@@ -7,7 +7,8 @@ module.exports = {
         '1. Durante la actividad, el único regalo se designa oficialmente como "regalo de actividad".<br>\n' +
         "2. La lista recibida se clasifica de mayor a menor según la cantidad de regalos de las estrellas de actividad que hayan recibido.<br>\n" +
         "3. La lista enviada se clasifica de mayor a menor de acuerdo con la cantidad de regalos de actividad que los usuarios enviaron.<br>\n" +
-        "4. Los datos de la lista de clasificación pueden retrasarse cuando la red está ocupada. Por favor sea paciente.",
+        "4. Los datos de la lista de clasificación pueden retrasarse cuando la red está ocupada. Por favor sea paciente.<br>\n" +
+        "5. Si diferentes usuarios reciben o envían la misma cantidad de regalos, el primero que reciba o envíe esa cantidad de regalos tendrá una. clasificación más alta.",
       activity_incentives: "Incentivos",
       receive_Top3: "Top 3 de la lista de recepción",
       receive_Top3_content:
