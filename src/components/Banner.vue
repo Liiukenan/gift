@@ -65,7 +65,6 @@
                     <td class="gift1 border-left">
                        2
                     </td>
-                    
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
                        <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
@@ -154,11 +153,7 @@
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
-<<<<<<< HEAD
-                       <span class="font-bold">*2</span>
-=======
                        <span class="font-bold">*1</span>
->>>>>>> 鲜花活动2
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">

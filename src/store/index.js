@@ -72,7 +72,6 @@ const store = new Vuex.Store({
         FETCH_USER_GIFT(context,options){
           console.log('request user gift options : ', options)
           var currentJid = getCurrentJid()
-
           var api = requestApiUrl('/ranking_activity/user_gift_rate')
           var timestamp = (new Date()).valueOf();
           var activityId = context.state.activityId
@@ -229,7 +228,9 @@ const store = new Vuex.Store({
                   localStorage.setItem('activity_id',response.data["activity"]["activity_id"]);
                   context.commit("loadActivityId", {result: response.data["activity"]["activity_id"]})
                   // 公布结果期间
+                  window.localStorage.setItem("rankStatus",status);
                   if (status == 1){
+                    
                     // 本地缓存结果
                     window.localStorage.setItem("rankingList",JSON.stringify(response.data));
                     // 活动期间

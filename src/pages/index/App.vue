@@ -159,10 +159,11 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       // console.log("fetchData");
+      console.log(this.hasReward,'kenan9')
       this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
         .then(() => {
-          if(localStorage.getItem("rankingList")){
+          if(localStorage.getItem("rankStatus")==1){
             this.$store
             .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
             .then(result => {});
