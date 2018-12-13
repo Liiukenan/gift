@@ -164,7 +164,7 @@ export default {
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 60%,
     rgba(255, 255, 255, 1) 85%,
     rgba(255, 255, 255, 1) 100%
   );

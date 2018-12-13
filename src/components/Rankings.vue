@@ -171,7 +171,7 @@ export default {
     height: 1.066667rem;
     /* width: 8rem; */
     border-radius: 1.666667rem;
-    background: #EB2D8D;
+    background: #FFE8B0;
     white-space: nowrap;
     margin:0 auto;
     
@@ -203,10 +203,10 @@ export default {
     text-transform: Capitalize;
   }
   .selected_tab_text{
-    color:  #EB2D8D;
+    color: #EB2D8D;
   }
   .unselected_tab_text{
-    color: white;
+    color: #EB2D8D;
   }
   
   .slide-fade-enter-active {
@@ -222,7 +222,8 @@ export default {
   .tab_item{
     height: 1.066667rem;
     overflow: hidden;
-    padding:0 .3rem;
+    /* padding:0 .3rem; */
+    min-width: 2.5rem;
   }
   .tab_card {
     /* padding: .333333rem; */

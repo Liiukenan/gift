@@ -137,8 +137,8 @@
                        1
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift1.png" alt="">
-                      <span class="font-bold"> *1</span>
+                      <img src="../static/img/gift3.png" alt="">
+                      <span class="font-bold"> *2</span>
                     </td>
                     <td class="gift3 border-right border-top">
                       <img src="../static/img/card1.png" alt="">
@@ -153,8 +153,8 @@
                        2
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift2.png" alt="">
-                       <span class="font-bold">*1</span>
+                      <img src="../static/img/gift3.png" alt="">
+                       <span class="font-bold">*2</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -169,8 +169,8 @@
                        3
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                      <span class="font-bold"> *1</span>
+                      <img src="../static/img/gift6.png" alt="">
+                      <span class="font-bold"> *6</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -185,8 +185,8 @@
                        4
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift4.png" alt="">
-                       <span class="font-bold">*1</span>
+                      <img src="../static/img/gift6.png" alt="">
+                       <span class="font-bold">*4</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -201,8 +201,8 @@
                        5
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift5.png" alt="">
-                       <span class="font-bold">*1</span>
+                      <img src="../static/img/gift6.png" alt="">
+                       <span class="font-bold">*3</span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">

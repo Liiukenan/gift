@@ -35,14 +35,14 @@
     data() {
       return {
         langArr: [
-          'pop_bg_congratulations_arab',
-          'pop_bg_congratulations_german',
+          'pop_bg_congratulations_ar',
+          'pop_bg_congratulations_de',
           'pop_bg_congratulations_en',
-          'pop_bg_congratulations_spain',
-          'pop_bg_congratulations_french',
-          'pop_bg_congratulations_hindi',
-          'pop_bg_congratulations_indonesia',
-          'pop_bg_congratulations_turkey',
+          'pop_bg_congratulations_es',
+          'pop_bg_congratulations_fr',
+          'pop_bg_congratulations_hi',
+          'pop_bg_congratulations_in',
+          'pop_bg_congratulations_tr',
         ]
       }
     },
