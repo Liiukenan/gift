@@ -13,6 +13,7 @@ export function closePager() {
 // 进入活动详情页面
 export function enterEventDetails(url) {
   console.log("enterEventDetails:" + url);
+  
   if (plat == "android"){
     jsInteractive.enterEventDetails(url)
   } else if (plat == "ios"){

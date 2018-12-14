@@ -18,7 +18,9 @@
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
       </transition>
+     
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
+      
           <reward @closeDialog='closeDialog'/>
       </div>
       </div>
@@ -120,6 +122,7 @@ export default {
       myActivity: "activity"
     }),
     hasReward() {
+      console.log(this.resultData,'kenan777')
       if (this.resultData == undefined) {
         return 0;
       }
@@ -156,14 +159,18 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       // console.log("fetchData");
-      
       this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
         .then(() => {
-          this.$store
-          .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
-          .then(result => {});
+          if(localStorage.getItem("rankingList")){
+            this.$store
+            .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
+            .then(result => {});
+          }
+          
+          
         });
+        
     },
     chooseContent(){
       // 判断是主播还是用户

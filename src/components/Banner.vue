@@ -154,7 +154,11 @@
                     </td>
                     <td class="gift2">
                       <img src="../static/img/gift3.png" alt="">
+<<<<<<< HEAD
                        <span class="font-bold">*2</span>
+=======
+                       <span class="font-bold">*1</span>
+>>>>>>> 鲜花活动2
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -354,8 +358,10 @@ export default {
   font-size: 0.333333rem;
   margin: 42% auto 0%;
   transform: scale(0.8);
-  color: rgba(235,45,141,0.70);
+  color: #FFE9CE;
   outline: none;
+  line-height: 0.55rem;
+  
 }
 .banner_float{
   position: absolute;

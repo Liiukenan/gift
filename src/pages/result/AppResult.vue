@@ -40,6 +40,7 @@ export default {
        this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
         .then(() => {
+         
           this.$store
           .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
           .then(result => {});
