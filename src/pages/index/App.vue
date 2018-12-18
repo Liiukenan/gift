@@ -122,7 +122,6 @@ export default {
       myActivity: "activity"
     }),
     hasReward() {
-      console.log(this.resultData,'kenan777')
       if (this.resultData == undefined) {
         return 0;
       }
