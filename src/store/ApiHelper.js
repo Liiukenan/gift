@@ -14,14 +14,14 @@ export function requestApiUrl(apiName){
     return api
 }
 export function getCurrentJid(){
-    var currentJid = "anchor_1006257@bj2.1-1.io";
+    var currentJid = "anchor_1014239@bj2.1-1.io";
     if (window.plat == "android" || window.plat == "ios"){
         currentJid = window.jid;
     }
     return currentJid;
 }
 
-export function buildUserGiftTestData(){Object
+export function buildUserGiftTestData(){
     var data = {}
     data.jid = "user_1022228@bj2.1-1.io"
     data.gift_rate_score = 30

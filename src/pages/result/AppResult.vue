@@ -1,7 +1,7 @@
 <template>
 <v-app class="result_root">
     <reward @closeDialog='closeDialog' v-if="resultData.status == 1"/>
-    <result-list v-if='resultData.status == 0'/>
+    <result-list v-else/>
 </v-app>
 </template>
 
@@ -23,16 +23,24 @@ export default {
     ResultList
   },
   mounted() {
-    this.fetchData();
+    this.fetchData().then((res)=>{
+      console.log(res,'shuaibing')
+    });
   },
   computed: {
       ...mapState({
         resultData: "hasRewardResult"
       }),
+      giftStatus(){
+        if(localStorage.getItem('giftStatus')=='1'){
+          return true;
+        }else{
+          return false;
+        }
+      }
   },
   methods: {
     closeDialog(msg){
-      console.log('app result close dialog')
       enterEventDetails('')
     },
     fetchData() {
@@ -40,10 +48,10 @@ export default {
        this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
         .then(() => {
-         
           this.$store
           .dispatch("FETCH_HAS_REWARD", { myJid: window.jid })
-          .then(result => {});
+          .then(result => {
+          });
         });
     }
   }

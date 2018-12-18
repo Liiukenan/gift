@@ -159,11 +159,9 @@ const store = new Vuex.Store({
 
           return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activity})).then((response) => {
               var data = {}
-              
               if(response.data == undefined || response.data == ""){
                 data = {status:0}
               }else{
-                
                 data.status = response.data.status
                 data.giftUrl = response.data.gift_url
                 data.userType = response.data.user_type
@@ -177,7 +175,10 @@ const store = new Vuex.Store({
                 data.inviteDays = response.data.invite_days
                 data.activityId = response.data.activity_id
               }
+              
               context.commit("loadHasRewardResult", {result: data})
+              localStorage.setItem('giftStatus',response.data.status);
+              return data;
             }).catch(reason => {
               console.log("has reward error :",reason);
               context.commit("loadHasRewardResult", {result: {status:0}})
@@ -229,6 +230,7 @@ const store = new Vuex.Store({
                   context.commit("loadActivityId", {result: response.data["activity"]["activity_id"]})
                   // 公布结果期间
                   window.localStorage.setItem("rankStatus",status);
+                  
                   if (status == 1){
                     
                     // 本地缓存结果
