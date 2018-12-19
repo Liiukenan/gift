@@ -156,7 +156,6 @@ export default {
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
       // console.log("fetchData");
-      console.log(this.hasReward,'kenan9')
       this.$store
         .dispatch("FETCH_RANKING_LIST", { myJid: window.jid })
         .then(() => {
@@ -222,7 +221,7 @@ export default {
   background: #9D1024;
   background-size: 100%;
   position: relative;
-  margin-top:.4rem
+  margin-top:1rem;
 }
 .mine_rank {
   width: 100%;

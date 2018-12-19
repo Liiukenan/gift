@@ -18,8 +18,11 @@
                   <div class="item_name">
                     {{x.nickname}}
                   </div>
-                  <v-card-text class="item_rank">
-                    <span class="right">
+                  <v-card-text class="item_rank right">
+                    <span class="icon-snow">
+                      <img src="../static/img/ic_score.png" alt="">
+                    </span>
+                    <span class="snow-cont">
                       {{x.gifts}}
                     </span>
                   </v-card-text>
@@ -80,8 +83,21 @@ export default {
   .item_rank{
     margin-right: .333333rem;
     font-size: .333333rem;
-    color: rgba(0,0,0,0.40);
+    color: #DAA926;
     padding:0;
+  }
+  .snow-cont{
+    display: inline-block;
+    margin-top: 1px;
+    vertical-align: top;
+    margin-left: 2px;
+  }
+  .icon-snow{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .icon-snow img{
+    width: .361111rem;
   }
   .item_name{
     text-align: left;

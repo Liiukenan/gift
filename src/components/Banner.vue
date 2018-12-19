@@ -413,7 +413,7 @@ export default {
 .myGift{
   position: absolute;
   left:50%;
-  bottom:16%;
+  bottom:13%;
   transform: translateX(-50%);
   width: 3.6rem;
   
@@ -424,19 +424,16 @@ export default {
     border-radius: .222222rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.333333rem;
-    /* transform: scale(0.8); */
-    /* line-height: 0.55rem; */
+    
     color: #EBD584;
     outline: none;
     position: absolute;
     left:50%;
-    top:91%;
-    transform: translateX(-50%);
-    width: 5.555556rem
+    top:100%;
+    width: 5.555556rem;
+    z-index: 99;
+    transform: scale(0.9) translateX(-55%);
   }
-.myGift{
-  
-}
 .banner_float{
   position: absolute;
   right: 0;

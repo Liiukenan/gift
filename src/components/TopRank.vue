@@ -1,5 +1,5 @@
 <template>
-  <v-layout style="display:flex">
+  <v-layout style="display:flex" class="topRank">
       <v-layout style="flex:1" v-ripple column justify-end align-center @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].jid:''):(sendTop != undefined?sendTop[1].jid:''))">
             <v-layout column align-center class="second_layout">
               <img class="anchor_crown" src="../resource/top_second.png"/>
@@ -7,12 +7,15 @@
                    v-bind:src="`${tabIndex == 0 ? (receiverTop != undefined?(receiverTop[1].avatarUrl):'') : (sendTop != undefined?sendTop[1].avatarUrl:'')}`"/>
               <img  class="anchor_rank_img" src="../resource/rank_second.png"/>
             </v-layout>
-          <v-layout>
+          <div>
             <span class="anchor_name" v-bind:style="{width:'80px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].nickname:''): (sendTop != undefined?sendTop[1].nickname:'')}}</span>
-          </v-layout>
-          <v-layout color="top_anchor_gift_color">
+          </div>
+          <div style="height:30px">
+            <span class="icon-snow">
+                <img src="../static/img/ic_score.png" alt="">
+            </span>
             <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[1].gifts:'') : (sendTop != undefined?sendTop[1].gifts:'')}}</span>
-          </v-layout>
+          </div>
       </v-layout>
 
     <v-layout style="flex:1;" v-ripple column align-center @click="personDetail(tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].jid:''):(sendTop != undefined?sendTop[0].jid:''))">
@@ -22,12 +25,15 @@
                v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[0].avatarUrl):'') : (sendTop != undefined?sendTop[0].avatarUrl:'')}`"/>
           <img  class="anchor_rank_img" src="../resource/rank_first.png"/>
         </v-layout>
-      <v-layout>
+      <div>
         <div class="anchor_name" v-bind:style="{width:'80px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].nickname:''): (sendTop != undefined?sendTop[0].nickname:'')}}</div>
-      </v-layout>
-      <v-layout>
+      </div>
+      <div style="height:30px">
+        <span class="icon-snow">
+                <img src="../static/img/ic_score.png" alt="">
+            </span>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[0].gifts:'') : (sendTop != undefined?sendTop[0].gifts:'')}}</span>
-      </v-layout>
+      </div>
     </v-layout>
 
     <v-layout  style="flex:1" v-ripple column justify-end align-center @click="personDetail(tabIndex == 0 ?receiverTop[2].jid : sendTop[2].jid)">
@@ -37,12 +43,15 @@
             v-bind:src="`${tabIndex == 0 ?(receiverTop != undefined?(receiverTop[2].avatarUrl):'') : (sendTop != undefined?sendTop[2].avatarUrl:'')}`"/>
           <img class="anchor_rank_img" src="../resource/rank_third.png"/>
         </v-layout>
-      <v-layout>
+      <div >
         <span class="anchor_name" v-bind:style="{width:'80px'}">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].nickname:''): (sendTop != undefined?sendTop[2].nickname:'')}}</span>
-      </v-layout>
-      <v-layout>
+      </div>
+      <div style="height:30px">
+        <span class="icon-snow">
+                <img src="../static/img/ic_score.png" alt="">
+            </span>
         <span class="rank_gift">{{tabIndex == 0 ?(receiverTop != undefined?receiverTop[2].gifts:'') : (sendTop != undefined?sendTop[2].gifts:'')}}</span>
-      </v-layout>
+      </div>
     </v-layout>
   </v-layout>
 
@@ -127,7 +136,13 @@
     border: thick solid rgba(198, 198, 198, 1);
     border-width: .066667rem;
   }
+  .topRank .icon-snow img{
+    vertical-align: top;
 
+  }
+  .topRank .icon-snow{
+    float: left;
+  }
   .third_img {
     margin-top: -0.333333rem;
     width: 2rem;
@@ -156,6 +171,12 @@
   .rank_gift{
     font-size: .333333rem;
     color: rgba(0, 0, 0, 0.4);
+    margin-top: .027778rem;
+    color: #DAA926;
+    margin-left: .111111rem;
+    display: block;
+    float: left;
+ 
   }
 
   .anchor_name{
