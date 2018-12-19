@@ -15,9 +15,9 @@
         <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>
        <v-flex xs5 v-if="myActivity != undefined && myActivity['status'] == 0">
-          <v-btn class="mine_btn" round dark style="textTransform:none">
-            <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
-            <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
+          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'url(' + getBtnBg() + ') no-repeat','box-shadow':'none','background-color':'none','background-size':'cover'}">
+            <!-- <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
+            <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span> -->
           </v-btn>
       </v-flex>
       <v-flex xs4 class="right item_rank"  v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
@@ -28,12 +28,33 @@
 <script>
 import { jumpOnlineUser, jumpMain, logEvent } from "../common/jsInteractive";
 import { mapGetters } from "vuex";
+import {getCurrentJid} from '../store/ApiHelper'
 export default {
   name: "MySelf",
   data: function() {
     return {
       count: 0,
-      rankDes: ""
+      rankDes: "",
+      anchor_btn: [
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_ar.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_de.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_en.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_es.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_fr.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_hi.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_in.png"),
+        require("../static/img/btn_hit_the_top/btn_hit_the_top_tr.png"),
+      ],
+      user_btn:[
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_ar.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_de.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_en.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_es.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_fr.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_hi.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_in.png"),
+        require("../static/img/btn_help_my_girl/btn_help_my_girl_tr.png"),
+      ],
     };
   },
   methods: {
@@ -44,12 +65,82 @@ export default {
       } else {
         jumpOnlineUser();
       }
+    },
+    getBtnBg: function() {
+      var path;
+      if(this.userShow){
+        switch(window.lang){
+          case 'ar':
+          path = this.user_btn[0];
+          break;
+          case 'de':
+          path = this.user_btn[1];
+          break;
+          case 'en':
+          path = this.user_btn[2];
+          break;
+          case 'es':
+          path = this.user_btn[3];
+          break;
+          case 'fr':
+          path = this.user_btn[4];
+          break;
+          case 'hi':
+          path = this.user_btn[5];
+          break;
+          case 'in':
+          path = this.user_btn[6];
+          break;
+          case 'tr':
+          path = this.user_btn[7];
+          break;
+        }
+      }else{
+        switch(window.lang){
+          case 'ar':
+          path = this.anchor_btn[0];
+          break;
+          case 'de':
+          path = this.anchor_btn[1];
+          break;
+          case 'en':
+          path = this.anchor_btn[2];
+          break;
+          case 'es':
+          path = this.anchor_btn[3];
+          break;
+          case 'fr':
+          path = this.anchor_btn[4];
+          break;
+          case 'hi':
+          path = this.anchor_btn[5];
+          break;
+          case 'in':
+          path = this.anchor_btn[6];
+          break;
+          case 'tr':
+          path = this.anchor_btn[7];
+          break;
+        }
+      }
+      return path;
+      
     }
   },
   computed: {
     ...mapGetters({
       myActivity: "activity"
     }),
+    userShow(){
+      // 判断是主播还是用户
+      if(getCurrentJid().indexOf('user')==-1){
+        //   主播
+        return false;
+      }else{
+        //   用户
+        return true;
+      }
+    },
     mySelf: function() {
       var data = this.$store.getters.mySelf;
       var rank = data.ranking;
@@ -106,16 +197,9 @@ export default {
   color: rgba(0, 0, 0, 0.6);
 }
 .mine_btn {
-  height: 1.066667rem;
-  background-image: linear-gradient(
-    -180deg,
-    #fc673f 0%,
-    #ef3276 50%,
-    #c826a8 100%
-  );
-  font-size: .4rem;
-  margin-top:-0.033333rem;
-  text-transform: capitalize;
+  width: 2.222222rem;
+  height: 1rem;
+  
 }
 .mine_head {
   border-radius: 50%;

@@ -168,13 +168,14 @@ export default {
 }
     
     .tab_title{
-    height: 1.066667rem;
+    
     /* width: 8rem; */
-    border-radius: 1.666667rem;
-    background: #FFE8B0;
+    border: 1px solid #EBD584;
+    border-radius: 22px;
     white-space: nowrap;
     margin:0 auto;
-    
+    padding:.111111rem;
+    height: 1.222222rem;
   }
   .rankings{
     position: absolute;
@@ -187,26 +188,28 @@ export default {
     margin-bottom: 7px;
   }
   .selected_tab_item{
-    
     border-radius: 1.666667rem;
-    background: white;
+    background: #F0CF78;
     font-size: .4rem;
     font-weight: bold;
-    height: 100%;
+    height: 1rem;
     
     text-transform: Capitalize;
   }
+
   .unselected_tab_item{
-    font-size:.4rem;
+    
     font-weight: bold;
     height: 100%;
     text-transform: Capitalize;
   }
   .selected_tab_text{
-    color: #EB2D8D;
+    color: #000000;
+    font-size:.333333rem;
   }
   .unselected_tab_text{
-    color: #EB2D8D;
+    color: #F7D469;
+    font-size:.333333rem;
   }
   
   .slide-fade-enter-active {
@@ -219,11 +222,15 @@ export default {
     transform: translateY(2.333333rem);
     opacity: 0;
   }
+  .v-tabs__content{
+    margin-top: .222222rem;
+  }
   .tab_item{
-    height: 1.066667rem;
+    /* height: 1.066667rem; */
     overflow: hidden;
     /* padding:0 .3rem; */
     min-width: 2.5rem;
+    height: 0.94rem;
   }
   .tab_card {
     /* padding: .333333rem; */

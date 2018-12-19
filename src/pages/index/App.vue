@@ -20,7 +20,6 @@
       </transition>
      
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
-      
           <reward @closeDialog='closeDialog'/>
       </div>
       </div>
@@ -110,7 +109,6 @@ export default {
     },
     styleAr(){
        // 阿拉伯语适配
-       
       if (window.lang == "ar") {
         return true;
       }else{
@@ -215,20 +213,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* background:  #000844; */
-  background: #ED4176;
+  background: #9D1024;
 }
-#app .main{
+.main{
   width: 100%;
   height: 100%;
-  /* background:url(./src/static/img/bg.png) top left no-repeat;
-   */
   padding-top: 8px;
-
-   
-  
-  background: #ED4176;
+  background: #9D1024;
   background-size: 100%;
   position: relative;
+  margin-top:.4rem
 }
 .mine_rank {
   width: 100%;

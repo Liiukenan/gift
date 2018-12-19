@@ -56,8 +56,8 @@ module.exports = {
     design_gift: "Hadiah bertujuan"
   },
   ActivityPage: {
-    tab_receive:"Terima",
-    tab_send:"Kirim",
+    tab_receive:"Penerima Top",
+    tab_send:"Pengirim Top",
     zbRules:"Selama kegiatan, Bintang yang memiliki jumlah labu Halloween tertentu akan memenangkan hadiah kejutan. Makin banyak hadiah diterima, makin banyak undian untuk dimenangkan.Setelah hasil akhir keluar, labu Halloween yang Anda terima tak dapat digunakan untuk mendapatkan hadiah. Saat kegiatan berakhir, hadiah yang tak diambil secara otomatis akan menjadi tidak sah. Harap mengambil hadiah Anda secara tepat waktu. ",
     userRules:"Bagaimana mungkin kita melewatkan labu menyenangkan saat Halloween? Selama kegiatan, setiap pengguna mendapat lentera labu. Anda dapat menyalakan lentera labu Anda setelah mengirim setiap 10 labu Halloween . Lentera labu dapat dinyalakan berulang-ulang.Bukalah lentera yang telah dinyalakan, dan Anda akan mendapat hadiah kejutan.Setelah hasil akhir keluar, labu Halloween yang Anda kirimkan tak dapat digunakan untuk menyalakan lentera labu Anda.  Saat kegiatan berakhir, lentera labu yang tak dibuka secara otomatis akan menjadi tidak sah. Harap membukanya secara tepat waktu. ",
     userSendInfo:'Anda punya 1 kesempatan lagi untuk mengambil undian setelah mengirim setiap 10 labu Halloween ',

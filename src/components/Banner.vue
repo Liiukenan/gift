@@ -1,4 +1,5 @@
 <template>
+<div class="banner-main">
   <div class="banner_root" :style="{backgroundImage: 'url(' + getBannerBg() + ')' }">
     <v-layout column class="banner_content">
       <v-flex>
@@ -233,15 +234,21 @@
       </v-flex>
       <v-spacer/>
       <v-spacer/>
-    <button class="banner-btn" :class="bannerBtnFr">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
+      
 
       <v-spacer/>
       <v-spacer/>
     </v-layout>
+    <div class="banner-box">
+    </div>
+  </div>
+      <img  :src="giftId()" alt="" class="myGift" v-if="userShow">
+      <button class="banner-btn" :class="bannerBtnFr">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
   </div>
 </template>
 <script>
 import { mapGetters } from "vuex";
+import {getCurrentJid} from '../store/ApiHelper'
 export default {
   name: "Banner",
   data() {
@@ -258,7 +265,18 @@ export default {
         require("../static/img/ranking-list_bg_in.jpg"),
         require("../static/img/ranking-list_bg_tr.jpg"),
       ],
+      anchor_bg:[
+        require("../static/img/ranking-list_bg_ar.jpg"),
+        require("../static/img/ranking-list_bg_de.jpg"),
+        require("../static/img/anchor_ranking-list_bg_en.jpg"),
+        require("../static/img/ranking-list_bg_es.jpg"),
+        require("../static/img/ranking-list_bg_fr.jpg"),
+        require("../static/img/ranking-list_bg_hi.jpg"),
+        require("../static/img/ranking-list_bg_in.jpg"),
+        require("../static/img/ranking-list_bg_tr.jpg"),
+      ],
       calBgImage:true,
+      userShow:false
       
     };
   },
@@ -266,6 +284,9 @@ export default {
     onCloseBtn(event){
         console.log("close btn clicked")
         this.dialog = false
+    },
+    giftId(){
+      return require(`../static/img/${localStorage.getItem('gift_id')}.png`)
     },
     getActivityTime: function() {
       var time = "";
@@ -290,37 +311,63 @@ export default {
     },
     getBannerBg: function() {
       var path;
-      if (window.lang == "ar") {
-        path = this.banner_bg[0];
-      } else if (window.lang == "de") {
-        path = this.banner_bg[1];
-      } else if (window.lang == "en") {
-        path = this.banner_bg[2];
-      } else if (window.lang == "es") {
-        path = this.banner_bg[3];
-      } else if (window.lang == "fr") {
-        path = this.banner_bg[4];
-      } else if (window.lang == "hi") {
-        path = this.banner_bg[5];
-      } else if (window.lang == "in") {
-        path = this.banner_bg[6];
-      } else if (window.lang == "tr") {
-        path = this.banner_bg[7];
-      } else {
-        path = this.banner_bg[2];
+      if(this.userShow){
+        if (window.lang == "ar") {
+          path = this.banner_bg[0];
+        } else if (window.lang == "de") {
+          path = this.banner_bg[1];
+        } else if (window.lang == "en") {
+          path = this.banner_bg[2];
+        } else if (window.lang == "es") {
+          path = this.banner_bg[3];
+        } else if (window.lang == "fr") {
+          path = this.banner_bg[4];
+        } else if (window.lang == "hi") {
+          path = this.banner_bg[5];
+        } else if (window.lang == "in") {
+          path = this.banner_bg[6];
+        } else if (window.lang == "tr") {
+          path = this.banner_bg[7];
+        } else {
+          path = this.banner_bg[2];
+        }
+      }else{
+        switch(window.lang){
+          case 'ar':
+          path = this.anchor_bg[0];
+          break;
+          case 'de':
+          path = this.anchor_bg[1];
+          break;
+          case 'en':
+          path = this.anchor_bg[2];
+          break;
+        }
       }
       return path;
+      
     }
   },
   created() {
     setTimeout(() => {
       this.showDialog = true;
     }, 0);
+    // 判断是主播还是用户
+   
+    if(getCurrentJid().indexOf('user')==-1){
+      //   主播
+      this.userShow=false;
+    }else{
+      //   用户
+      this.userShow=true;
+    }
+     
   },
   computed: {
     ...mapGetters({
       myActivity: "activity"
     }),
+    
     bannerBtnFr(){
       if(window.lang=="fr"){
         // return 'banner-btn-fr';
@@ -342,32 +389,65 @@ export default {
 };
 </script>
 <style scoped>
+.banner-main{
+  position: relative;
+}
 .banner_root {
   background-size: cover;
+  padding-bottom: 5%;
 }
-.banner-btn {
-  padding:0 .333333rem;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.33);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.333333rem;
-  margin: 42% auto 0%;
-  transform: scale(0.8);
-  color: #FFE9CE;
-  outline: none;
-  line-height: 0.55rem;
+
+.banner-box {
+  
+  
+  
+  margin: 64% auto 0%;
+  padding-top: 10px;
+
+  
+  
+ 
+
+  
+}
+.myGift{
+  position: absolute;
+  left:50%;
+  bottom:16%;
+  transform: translateX(-50%);
+  width: 3.6rem;
+  
+}
+ .banner-btn{
+    padding:0 .333333rem;
+    background: rgba(0,0,0,0.30);
+    border-radius: .222222rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.333333rem;
+    /* transform: scale(0.8); */
+    /* line-height: 0.55rem; */
+    color: #EBD584;
+    outline: none;
+    position: absolute;
+    left:50%;
+    top:91%;
+    transform: translateX(-50%);
+    width: 5.555556rem
+  }
+.myGift{
   
 }
 .banner_float{
   position: absolute;
   right: 0;
   top: 0;
-  background-image: linear-gradient(-180deg, #FF5BBD 0%, #EB2D8D 100%);
+  background-image: linear-gradient(-180deg, #FF7676 0%, #FF7676 100%);
   box-shadow: 0 3px 4px 0 rgba(170,47,161,0.30);
   width: 1.444444rem;
   height: 1.444444rem;
   font-size: .333333rem;
   transform: scale(0.8);
+  /* background-color: #FF7676; */
 }
 .banner-btn-fr{
   margin: 41% auto 3%;

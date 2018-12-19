@@ -55,8 +55,8 @@ module.exports = {
     design_gift: "Belirlenen hediyeler"
   },
   ActivityPage: {
-    tab_receive:"Kabul et",
-    tab_send:"Gönder",
+    tab_receive:"En İyi hediye alanlar",
+    tab_send:"En İyi hediye Gönderenler",
     zbRules:"Etkinlik sırasında, belirtilen sayıda Cadılar Bayramı balkabağı alan Yıldızlar, sürpriz ödüller kazanacak. Daha fazla hediye alarak bu etkinliğin benzersiz ödüllerini yakala.Son sonuçlardan sonra, aldığınız Halloween kabakları ödül almak için kullanılamaz.Etkinlik bittiğinde, tahsil edilmeyen ödüller otomatik olarak geçersiz olur. Lütfen ödüllerinizi zamanında alın.",
     userRules:"Cadılar Bayramı'nda eğlenceli balkabağı nasıl özleyebiliriz? Etkinlik sırasında, her kullanıcı bir balkabağı fenerine kavuşur.Her 10 Halloween pampkin'i  gönderdikten sonra balkabağı fenerini yakabilirsin. Kabak fener tekrar tekrar aydınlatılabilir.Işıklı fener açmak için şaşırtıcı ödüller alırsınız.Son sonuçlar geldikten sonra, gönderdiğiniz Halloween balkabağı balkabağı fenerinizi aydınlatmak için kullanılamaz.Etkinlik bittiğinde, açılmamış balkabağı fener otomatik olarak geçersiz olur. Lütfen zamanında açın.",
     userSendInfo:"Her 10 Halloween pumpkins'i @ gönderdikten sonra 1 çekiliş şansı elde edeceksiniz.",

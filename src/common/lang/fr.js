@@ -61,8 +61,8 @@ module.exports = {
     design_gift: "Cadeau désigné"
   },
   ActivityPage: {
-    tab_receive:"Recevoir",
-    tab_send:"Envoyer",
+    tab_receive:"Top destinataires",
+    tab_send:"Top expéditeurs",
     zbRules:"Pendant l'activité, les Étoiles qui obtiendront le nombre de citrouilles d'Halloween indiqué gagneront des cadeaux étonnants. Plus de cadeaux reçus, plus de prix à gagner. Après la publication des résultats finaux, les citrouilles d'Halloween que vous avez reçues ne pourront plus être utilisées pour obtenir des prix. A la fin de l'activité, les prix non collectés deviendront automatiquement invalides. Merci de récupérer vos prix à temps.",
     userRules:"Comment ne pas s'amuser avec les citrouilles à Halloween ?Pendant l'activité, chaque utilisateur obtient une lanterne citrouille.Vous pouvez allumer votre lanterne citrouille après avoir envoyé 10 citrouilles d'Halloween . La lanterne citrouille peut être allumée plusieurs fois. Pour ouvrir la lanterne allumée, et obtenir des prix étonnants.Après la publication des résultats finaux, les citrouilles d'Halloween que vous avez envoyées ne pourront plus être utilisées pour allumer votre lanterne citrouille. À la fin de l'activité, les lanternes citrouilles non ouvertes deviendront automatiquement invalides. Merci de les ouvrir à temps. ",
     userSendInfo:"Vous avez 1 chance supplémentaire d'être tiré au sort à chaque fois que vous envoyez 10 citrouilles d'Halloween.",

@@ -223,14 +223,15 @@ const store = new Vuex.Store({
             
             
           return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
-                console.log(response,'kenan16')
+                
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
+                  var gift_id = response.data["activity"]["gift_id"];
                   localStorage.setItem('activity_id',response.data["activity"]["activity_id"]);
                   context.commit("loadActivityId", {result: response.data["activity"]["activity_id"]})
                   // 公布结果期间
                   window.localStorage.setItem("rankStatus",status);
-                  
+                  window.localStorage.setItem("gift_id",gift_id);
                   if (status == 1){
                     
                     // 本地缓存结果

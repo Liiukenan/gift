@@ -57,8 +57,8 @@ module.exports = {
   },
   ActivityPage: {
 
-    tab_receive:"Erhalten",
-    tab_send:"Verschicken",
+    tab_receive:"Top-Empfänger",
+    tab_send:"Top-Sender",
     zbRules:"Während der Aktivität gewinnen Stars, die die angegebene Anzahl von Halloween-Kürbissen erhalten, überraschende Preise. Mehr Geschenke erhalten, mehr Preise zu gewinnen.Nachdem die Endergebnisse vorliegen, können Halloween-Kürbisse, die du erhalten hast, nicht mehr für Preise verwendet werden. Wenn die Aktivität beendet ist, werden die nicht abgeholten Preise automatisch ungültig. Bitte nimm deine Preise rechtzeitig entgegen. ",
     userRules:"Was wäre Halloween ohne lustige Kürbisse? Während der Aktivität erhält jeder Benutzer eine Kürbislaterne. Du kannst deine Kürbislaterne anzünden, nachdem du alle 10 Halloween-Kürbisse  geschickt hast. Die Kürbislaterne kann wiederholt beleuchtet werden.Um die brennende Laterne zu öffnen, bekommst du tolle Preise.Nachdem die endgültigen Ergebnisse vorliegen, können Halloween-Kürbisse, die du verschickt hast, nicht mehr zum Anzünden deiner Kürbislaterne verwendet werden.  Wenn die Aktivität beendet ist, wird die ungeöffnete Kürbislaterne automatisch ungültig. Bitte öffne es rechtzeitig. ",
     bt_me_punching:"Klettere bis an die Spitze",

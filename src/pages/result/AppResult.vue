@@ -1,7 +1,7 @@
 <template>
 <v-app class="result_root">
     <reward @closeDialog='closeDialog' v-if="resultData.status == 1"/>
-    <result-list v-else/>
+    <result-list v-if="resultData.status == 0"/>
 </v-app>
 </template>
 

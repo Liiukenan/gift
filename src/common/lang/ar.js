@@ -66,8 +66,8 @@ module.exports = {
     design_gift: "ممیزة ھدية"
   },
   ActivityPage: {
-    tab_receive:"استلام",
-    tab_send:"إرسال",
+    tab_receive:"كبارالمستقبلين",
+    tab_send:"كبار المرسلين",
     bt_me_punching:"ضرب القمة",
     bt_help_punching:"ساعدها",
     bt_regular:"قواعد",
