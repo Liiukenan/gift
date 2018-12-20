@@ -75,7 +75,7 @@ export default {
   .anchor_id{
     margin-left: .4rem;
     min-width: .833333rem;
-    font-size: .466667rem;
+    font-size: .333333rem;
     color: rgba(0,0,0,0.40);;
   }
 
