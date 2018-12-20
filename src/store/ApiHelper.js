@@ -16,9 +16,9 @@ export function requestApiUrl(apiName){
 export function getCurrentJid(){
     var currentJid = "anchor_1016747@bj2.1-1.io";
     // var currentJid = "user_1024882@bj2.1-1.io";
-    // if (window.plat == "android" || window.plat == "ios"){
-    //     currentJid = window.jid;
-    // }
+    if (window.plat == "android" || window.plat == "ios"){
+        currentJid = window.jid;
+    }
     return currentJid;
 }
 
