@@ -56,7 +56,7 @@
                    
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*9{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendOne")}}
                       </p>
@@ -68,7 +68,7 @@
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendTwo")}}
                       </p>
@@ -94,7 +94,7 @@
                     
                     <td class="gift3 border-right">
                       <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
+                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.sendFour")}}
                       </p>
@@ -103,6 +103,71 @@
                   <tr>
                     <td class="gift1 border-left">
                        5
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       6
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       <span class="font-bold">*2{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       7
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       8
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       9
+                    </td>
+                    
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card2.png" alt="">
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.sendFive")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       10
                     </td>
                     
                     <td class="gift3 border-right">
@@ -137,8 +202,8 @@
                        1
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                      <span class="font-bold"> *2</span>
+                      <img src="../static/img/gift7.png" alt="">
+                      <span class="font-bold"></span>
                     </td>
                     <td class="gift3 border-right border-top">
                       <img src="../static/img/card1.png" alt="">
@@ -153,8 +218,8 @@
                        2
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift3.png" alt="">
-                       <span class="font-bold">*1</span>
+                      <img src="../static/img/gift7.png" alt="">
+                       <span class="font-bold"></span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -169,8 +234,8 @@
                        3
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                      <span class="font-bold"> *6</span>
+                      <img src="../static/img/gift7.png" alt="">
+                      <span class="font-bold"></span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -185,8 +250,8 @@
                        4
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                       <span class="font-bold">*4</span>
+                      <img src="../static/img/gift8.png" alt="">
+                       <span class="font-bold"></span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
@@ -201,12 +266,92 @@
                        5
                     </td>
                     <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                       <span class="font-bold">*3</span>
+                      <img src="../static/img/gift8.png" alt="">
+                       <span class="font-bold"></span>
                     </td>
                     <td class="gift3 border-right">
                       <img src="../static/img/card1.png" alt="">
                        <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       6
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift8.png" alt="">
+                       <span class="font-bold"></span>
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       <span class="font-bold">*5{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       7
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift9.png" alt="">
+                       <span class="font-bold"></span>
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       <span class="font-bold">*4{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       8
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift9.png" alt="">
+                       <span class="font-bold"></span>
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       9
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift9.png" alt="">
+                       <span class="font-bold"></span>
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       <span class="font-bold">*2{{$t("Ranking.incentiveDetails.days")}}</span>
+                      <p class="gift-info">
+                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="gift1 border-left">
+                       10
+                    </td>
+                    <td class="gift2">
+                      <img src="../static/img/gift9.png" alt="">
+                       <span class="font-bold"></span>
+                    </td>
+                    <td class="gift3 border-right">
+                      <img src="../static/img/card1.png" alt="">
+                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
                       <p class="gift-info">
                         {{$t("Ranking.incentiveDetails.anthorIncentives")}}
                       </p>
@@ -266,14 +411,14 @@ export default {
         require("../static/img/ranking-list_bg_tr.jpg"),
       ],
       anchor_bg:[
-        require("../static/img/ranking-list_bg_ar.jpg"),
-        require("../static/img/ranking-list_bg_de.jpg"),
+        require("../static/img/anchor_ranking-list_bg_ar.jpg"),
+        require("../static/img/anchor_ranking-list_bg_de.jpg"),
         require("../static/img/anchor_ranking-list_bg_en.jpg"),
-        require("../static/img/ranking-list_bg_es.jpg"),
-        require("../static/img/ranking-list_bg_fr.jpg"),
-        require("../static/img/ranking-list_bg_hi.jpg"),
-        require("../static/img/ranking-list_bg_in.jpg"),
-        require("../static/img/ranking-list_bg_tr.jpg"),
+        require("../static/img/anchor_ranking-list_bg_es.jpg"),
+        require("../static/img/anchor_ranking-list_bg_fr.jpg"),
+        require("../static/img/anchor_ranking-list_bg_hi.jpg"),
+        require("../static/img/anchor_ranking-list_bg_in.jpg"),
+        require("../static/img/anchor_ranking-list_bg_tr.jpg"),
       ],
       calBgImage:true,
       userShow:false
@@ -342,6 +487,20 @@ export default {
           case 'en':
           path = this.anchor_bg[2];
           break;
+           case 'es':
+          path = this.anchor_bg[3];
+          break;
+           case 'fr':
+          path = this.anchor_bg[4];
+          break;
+           case 'hi':
+          path = this.anchor_bg[5];
+          break;
+           case 'in':
+          path = this.anchor_bg[6];
+          break;
+           case 'tr':
+          path = this.anchor_bg[7];
         }
       }
       return path;
