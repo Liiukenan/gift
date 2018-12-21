@@ -1,5 +1,5 @@
 <template>
-<div class="banner-main">
+<div class="banner-main" >
   <div class="banner_root" :style="{backgroundImage: 'url(' + getBannerBg() + ')' }">
     <v-layout column class="banner_content">
       <v-flex>
@@ -28,7 +28,6 @@
               <div class="rule-title">
                 {{$t("Ranking.incentiveDetails.title")}}
               </div>
-              <v-spacer/>
               <!-- Time -->
               <div class="rule-time">
                 <p>{{$t("ActivityPage.time_1")}}</p>
@@ -377,12 +376,6 @@
           </v-dialog>
         </v-layout>
       </v-flex>
-      <v-spacer/>
-      <v-spacer/>
-      
-
-      <v-spacer/>
-      <v-spacer/>
     </v-layout>
     <div class="banner-box">
     </div>
@@ -550,24 +543,16 @@ export default {
 <style scoped>
 .banner-main{
   position: relative;
+  
 }
 .banner_root {
   background-size: cover;
-  padding-bottom: 5%;
+  padding-top: 69%;
 }
 
-.banner-box {
-  
-  
-  
-  margin: 64% auto 0%;
+.banner-box{
+  margin: 0 auto;
   padding-top: 10px;
-
-  
-  
- 
-
-  
 }
 .myGift{
   position: absolute;
@@ -590,7 +575,7 @@ export default {
     left:50%;
     top:100%;
     width: 5.555556rem;
-    z-index: 99;
+    z-index: 30;
     transform: scale(0.9) translateX(-55%);
   }
 .banner_float{
