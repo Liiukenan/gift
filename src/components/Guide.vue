@@ -185,7 +185,6 @@ export default {
 }
 .zbTable th{
     width: 33.3%;
-    padding:
 }
 
 </style>

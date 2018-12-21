@@ -37,7 +37,7 @@ var getParamValue = function(url, key) {
 };
 window.plat = getParamValue(window.location.href, "plat") || "android";
 window.jid =getParamValue(window.location.href, "jid") || "user_1023206@bj2.1-1.io";
-let countryCodeArr=['en','ar','de','es','fr','hi','in','tr','zh'];
+let countryCodeArr=['en','ar','de','es','fr','hi','in','tr'];
 let countryCode=getParamValue(window.location.href, "lang");
 if(!countryCodeArr.includes(countryCode)){
   countryCode="en"
@@ -56,7 +56,7 @@ const i18n = new VueI18n({
     hi: require("../../common/lang/hi"),
     in: require("../../common/lang/in"),
     tr: require("../../common/lang/tr"),
-    zh: require("../../common/lang/zh")
+    // zh: require("../../common/lang/zh")
   }
 });
 
