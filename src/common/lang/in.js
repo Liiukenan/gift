@@ -21,7 +21,7 @@ module.exports = {
         "2 Teratas: Chat video gratis selama 1 jam/hari *2 hari<br>\n" +
         "3 Teratas: Chat video gratis selama 1 jam/hari *1 hari<br>\n" +
         "3 Teratas: Chat video gratis selama 1 jam/hari *1 hari",
-      receive_Top10:"5 Teratas di Daftar Menerima",
+      receive_Top10:"10 Teratas di Daftar Menerima",
       receive_Top10_content:"1 Teratas: Hadiah（bernilai 9999 koin）+100 undangan panggilan video/hari * 10 hari<br>\n" +
         "2 Teratas: Hadiah（bernilai 9999 koin）+100 undangan panggilan video/hari * 9 hari<br>\n" +
         "3 Teratas: Hadiah（bernilai 9999 koin）+100 undangan panggilan video/hari * 8 hari<br>\n" +
@@ -32,7 +32,7 @@ module.exports = {
         "8 Teratas: Hadiah（bernilai 4999 kouserSendInfon）+100 undangan panggilan video/hari * 3 hari<br>\n" +
         "9 Teratas: Hadiah（bernilai 4999 kouserSendInfon）+100 undangan panggilan video/hari * 2 hari<br>\n" +
         "10 Teratas: Hadiah（bernilai 4999 kuserSendInfoin）+100 undangan panggilan video/hari * 1 hari",
-      send_Top10:"5 Teratas di Daftar MengiuserSendInfoim",
+      send_Top10:"10 Teratas di Daftar MengiuserSendInfoim",
       sendOne:"Chat video gratis selama 1 jam/hari ",
       sendTwo:"Chat video gratis selama 1 jam/hari ",
       sendThree:"Chat video gratis selama 1 jam/hari ",

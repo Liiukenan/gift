@@ -17,7 +17,7 @@ module.exports = {
       send_Top3_content:"Top 1: Free video chat for 1 hour/day * 3 days<br>\n" +
         "Top 2: Free video chat for 1 hour/day * 2 days<br>\n" +
         "Top 3: Free video chat for 1 hour/day * 1 day",
-      receive_Top10:"Top 5 of Receiving List",
+      receive_Top10:"Top 10 of Receiving List",
       receiveOne:"Gift（worth 9999 coins）+100 video call invitations/day * 10 days",
       receiveTwo:"Gift（worth 9999 coins）+100 video call invitations/day * 9 days",
       receiveThree:"Gift（worth 9999 coins）+100 video call invitations/day * 8 days",
@@ -28,7 +28,7 @@ module.exports = {
       receiveEight:"Gift（worth 4999 coins）+100 video call invitations/day * 3 days",
       receiveNine:"Gift（worth 4999 coins）+100 video call invitations/day * 2 days",
       receiveTen:"Gift（worth 4999 coins）+100 video call invitations/day * 1 day",
-      send_Top10:"Top 5 of Sending List",
+      send_Top10:"Top 10 of Sending List",
       sendOne:"Free video chat for 1 hour/day",
       sendTwo:"Free video chat for 1 hour/day",
       sendThree:"Free video chat for 1 hour/day",
