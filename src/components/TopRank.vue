@@ -138,6 +138,7 @@
   }
   .topRank .icon-snow img{
     vertical-align: top;
+    width: .36rem;
 
   }
   .topRank .icon-snow{
