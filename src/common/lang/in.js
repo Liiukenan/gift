@@ -92,6 +92,8 @@ module.exports = {
   ActivityPerson: {
     distance_100: "@@@ hadiah diperlukan untuk naik 1 peringkat",
     distance_150: "@@@ hadiah diperlukan untuk bisa masuk daftar",
+    distance_100_1: "@@@ hadiah diperlukan untuk naik 1 peringkat",
+    distance_150_1: "@@@ hadiah diperlukan untuk bisa masuk daftar",
     distance_else: "Maaf, Anda tidak masuk daftar",
     frist: "Selamat! Anda nomor 1!"
   },

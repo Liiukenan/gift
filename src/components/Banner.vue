@@ -582,7 +582,7 @@ export default {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: linear-gradient(-180deg, #FF7676 0%, #FF7676 100%);
+  background-image: linear-gradient(-180deg, #FAD961 0%, #F89F3D 100%);
   box-shadow: 0 3px 4px 0 rgba(170,47,161,0.30);
   width: 1.444444rem;
   height: 1.444444rem;

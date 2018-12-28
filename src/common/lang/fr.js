@@ -97,6 +97,8 @@ module.exports = {
   ActivityPerson: {
     distance_100: "@@@ cadeaux sont nécessaires afin de monter d'une place",
     distance_150: "@@@ cadeaux sont nécessaires pour être classé dans la liste",
+    distance_100_1: "@@@ cadeaux sont nécessaires afin de monter d'une place",
+    distance_150_1: "@@@ cadeaux sont nécessaires pour être classé dans la liste",
     distance_else: "Désolé, vous n'êtes pas dans la liste",
     frist: "Félicitations ! Vous êtes en tête du classement !"
   },

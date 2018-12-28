@@ -15,9 +15,9 @@
         <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>
        <v-flex xs5 v-if="myActivity != undefined && myActivity['status'] == 0">
-          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'url(' + getBtnBg() + ') no-repeat','box-shadow':'none','background-color':'none','background-size':'cover'}">
-            <!-- <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
-            <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span> -->
+          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'linear-gradient(-180deg, #D00B50 0%, #E10B55 51%, #A00448 100%)','box-shadow':'none','background-color':'none','background-size':'cover'}">
+            <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
+            <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
       </v-flex>
       <v-flex xs4 class="right item_rank"  v-if="myActivity != undefined && myActivity['status'] == 1">{{mySelf['gifts']}}</v-flex>
@@ -146,6 +146,7 @@ export default {
       var rank = data.ranking;
       var dist = data.distance;
       var des = "";
+      
       if (rank == "99+") {
         des = this.$t("ActivityPerson.distance_150").replace(
           "@@@",
@@ -160,6 +161,7 @@ export default {
       } else if (rank == "1") {
         des = this.$t("ActivityPerson.frist");
       } else if (rank <= 100) {
+        
         des = this.$t("ActivityPerson.distance_100").replace(
           "@@@",
           data.distance + 1
@@ -197,8 +199,10 @@ export default {
   color: rgba(0, 0, 0, 0.6);
 }
 .mine_btn {
-  width: 2.222222rem;
+  /* width: 2.222222rem; */
   height: 1rem;
+  /* margin-right:28px; */
+  margin:0px;
   
 }
 .mine_head {
@@ -212,5 +216,7 @@ export default {
 .mine_nickname {
   font-size: .4rem;
 }
-
+.flex.xs5{
+  max-width: 46%;
+}
 </style>

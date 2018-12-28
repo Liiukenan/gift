@@ -96,6 +96,10 @@ module.exports = {
       "@@@ Geschenke sind nötig, um einen Platz nach oben zu klettern",
     distance_150:
       "@@@ Geschenke sind nötig, um in der Liste aufgeführt zu werden",
+      distance_100_1:
+      "@@@ Geschenke sind nötig, um einen Platz nach oben zu klettern",
+    distance_150_1:
+      "@@@ Geschenke sind nötig, um in der Liste aufgeführt zu werden",
     distance_else: "Entschuldigung, du bist nicht in der Liste",
     frist: "Herzlichen Glückwunsch! Du bist auf Platz 1!"
   },

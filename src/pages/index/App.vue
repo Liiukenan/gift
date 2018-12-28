@@ -211,14 +211,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* background:  #000844; */
-  background: #9D1024;
+  background: #74003F;
 }
 .main{
   width: 100%;
   height: 100%;
   padding-top: 8px;
-  background: #9D1024;
+  background: #74003F;
   background-size: 100%;
   position: relative;
   margin-top:1rem;

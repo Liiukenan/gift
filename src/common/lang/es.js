@@ -92,6 +92,8 @@ module.exports = {
   ActivityPerson: {
     distance_100: "se necesitan @@@ obsequios para ascender 1 lugar",
     distance_150: "@@@ regalos son necesarios para clasificar en la lista",
+    distance_100_1: "se necesitan @@@ obsequios para ascender 1 lugar",
+    distance_150_1: "@@@ regalos son necesarios para clasificar en la lista",
     distance_else: "Lo siento, no está en la lista",
     frist: "Felicidades! ¡Eres el top 1!"
   },
