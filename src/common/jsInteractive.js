@@ -1,6 +1,7 @@
 // 关闭当前页面
 export function closePager() {
   console.log("closePager");
+  
   if (plat == "android") {
     jsInteractive.closePager();
   } else if (plat == "ios") {

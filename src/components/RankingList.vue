@@ -76,14 +76,14 @@ export default {
     margin-left: .4rem;
     min-width: .833333rem;
     font-size: .333333rem;
-    color: rgba(0,0,0,0.40);;
+    color: rgba(0,0,0,0.40);
   }
 
 
   .item_rank{
     margin-right: .333333rem;
     font-size: .333333rem;
-    color: #DAA926;
+    color: rgba(0,0,0,0.40);
     padding:0;
   }
   .snow-cont{

@@ -170,7 +170,7 @@ export default {
     .tab_title{
     
     /* width: 8rem; */
-    border: 1px solid #EBD584;
+    border: 1px solid rgba(255,255,255,0.60);
     border-radius: 22px;
     white-space: nowrap;
     margin:0 auto;
@@ -189,7 +189,7 @@ export default {
   }
   .selected_tab_item{
     border-radius: 1.666667rem;
-    background: #F0CF78;
+    background: #FFEFF3;
     font-size: .4rem;
     font-weight: bold;
     height: 1rem;
@@ -204,11 +204,11 @@ export default {
     text-transform: Capitalize;
   }
   .selected_tab_text{
-    color: #000000;
+    color: #FA4484;
     font-size:.333333rem;
   }
   .unselected_tab_text{
-    color: #F7D469;
+    color: #fff;
     font-size:.333333rem;
   }
   

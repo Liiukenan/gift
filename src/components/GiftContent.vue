@@ -107,7 +107,7 @@
       },
       headUrl() {
         let picPath = {};
-        let langs = ['ar','de','en','es','fr','hi','in','tr','zh'];
+        let langs = ['ar','de','en','es','fr','hi','in','tr'];
         for(let [i, item] of Object.entries(langs)) {
           picPath[item] = require(`../static/img/Halloween/${this.langArr[i] || this.langArr[2]}.png`)
         }

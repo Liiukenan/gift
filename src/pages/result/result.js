@@ -40,7 +40,7 @@ const i18n = new VueI18n({
     'hi': require('../../common/lang/hi'),
     'in': require('../../common/lang/in'),
     'tr': require('../../common/lang/tr'),
-    'zh': require('../../common/lang/zh')
+    // 'zh': require('../../common/lang/zh')
   }
 });
 

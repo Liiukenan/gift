@@ -15,7 +15,7 @@
         <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>
        <v-flex xs5 v-if="myActivity != undefined && myActivity['status'] == 0">
-          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'linear-gradient(-180deg, #D00B50 0%, #E10B55 51%, #A00448 100%)','box-shadow':'none','background-color':'none','background-size':'cover'}">
+          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'linear-gradient(-179deg, #FFE4F1 0%, #FF4BA7 48%, #EF3436 100%)','box-shadow':'none','background-color':'none','background-size':'cover'}">
             <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>

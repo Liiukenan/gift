@@ -103,6 +103,7 @@ export default {
             str = str.replace('@@@',response.inviteTimes)
             str = str.replace('@@@@',response.inviteDays)
             str = str.replace('@',rank)
+            
         }else{
             str = this.$t("Reward.send_des")
             
@@ -112,9 +113,9 @@ export default {
             else if(rank == 3) rewardNum = 5
             else if(rank == 4) rewardNum = 3
             else if(rank == 5) rewardNum = 1
-            else if(rank == 6) rewardNum = 2
             str = str.replace('@@',rewardNum)
             str = str.replace('@',rank)
+           
         }
         return str
     }

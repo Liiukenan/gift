@@ -173,7 +173,6 @@
     font-size: .333333rem;
     color: rgba(0, 0, 0, 0.4);
     margin-top: .027778rem;
-    color: #DAA926;
     margin-left: .111111rem;
     display: block;
     float: left;

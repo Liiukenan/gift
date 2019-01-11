@@ -1,6 +1,6 @@
 <template>
     <v-app id="app" light class="scroll-y">
-      <banner/>
+      <banner></banner>
       <div class="main">
         
       <!-- <user v-if="userShow"></user> -->
@@ -18,7 +18,7 @@
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
       </transition>
-     
+     <!-- this.hasReward == 1 && !this.closeStatus -->
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
           <reward @closeDialog='closeDialog'/>
       </div>
@@ -75,6 +75,7 @@ export default {
     };
   },
   created() {
+    
     this.changeTitle[0].title=this.$t("ActivityPage.bt_regular");
     this.changeTitle[1].title=this.$t("ActivityPage.bt_ranking");
     // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
@@ -90,6 +91,7 @@ export default {
     this.chooseContent();
     // 活动页面展示
     logEvent("event_activity_page_show", "");
+    
     
   },
   
@@ -151,7 +153,6 @@ export default {
       }else{
         this.rankShow=false;
       }
-      
     },
     fetchData() {
       // this.$i18n.locale = "en"; // 切换语言
@@ -211,13 +212,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #74003F;
+  background: #E94F70;
 }
 .main{
   width: 100%;
   height: 100%;
   padding-top: 8px;
-  background: #74003F;
+  background: #E94F70;
   background-size: 100%;
   position: relative;
   margin-top:1rem;
