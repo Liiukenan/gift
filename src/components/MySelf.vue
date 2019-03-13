@@ -14,8 +14,9 @@
       <v-flex xs7 text-xs-left v-if="myActivity != undefined && myActivity['status'] == 1">
         <div class="list-item__title mine_nickname" >{{mySelf['nickname']}}</div>
       </v-flex>
+      
        <v-flex xs5 v-if="myActivity != undefined && myActivity['status'] == 0">
-          <v-btn class="mine_btn" round dark style="textTransform:none" :style="{'background': 'linear-gradient(-179deg, #FFE4F1 0%, #FF4BA7 48%, #EF3436 100%)','box-shadow':'none','background-color':'none','background-size':'cover'}">
+          <v-btn class="mine_btn" round dark style="textTransform:none">
             <span v-show="mySelf['role']=='user'" >{{$t("ActivityPage.bt_help_punching")}}</span>
             <span v-show="mySelf['role']=='anchor'">{{$t("ActivityPage.bt_me_punching")}}</span>
           </v-btn>
@@ -203,7 +204,17 @@ export default {
   height: 1rem;
   /* margin-right:28px; */
   margin:0px;
+  background-image: linear-gradient(-180deg, #FF4BA7 0%, #EF3436 100%);
+  /* box-shadow: 0 1px 4px 0 rgba(120,14,75,0.60); */
+  border-radius: 18px;
+  /* border:1px solid rgba(115,7,83,1); */
   
+}
+.mine_btn span{
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(70,4,4,0.40);
+  font-weight: bold;
+
 }
 .mine_head {
   border-radius: 50%;

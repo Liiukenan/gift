@@ -412,52 +412,57 @@ export default {
 <style scoped>
 .banner-main{
   position: relative;
-  
 }
 .banner_root {
   background-size: cover;
-  padding-top: 69%;
+  padding-top: 47%;
 }
 
-.banner-box{
-  margin: 0 auto;
-  padding-top: 10px;
-}
+/* .banner-box{ */
+  /* margin: 0 auto; */
+  /* padding-top: 10px; */
+/* } */
 .myGift{
   position: absolute;
   left:50%;
   bottom:13%;
   transform: translateX(-50%);
   width: 3.6rem;
-  
 }
  .banner-btn{
-    padding:0 .333333rem;
-    background: rgba(0,0,0,0.30);
-    border-radius: .222222rem;
-    font-size: 0.333333rem;
-    
-    color: #fff;
+    padding:0 .277778rem;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.33);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 8px;
+    font-size: .333333rem;
+    color: rgba(235,45,141,0.70);
     outline: none;
+    /* font-weight: bold; */
     position: absolute;
+    line-height: .444444rem;
+    height: .444444rem;
     left:50%;
-    top:100%;
-    width: 5.555556rem;
+    bottom:0;
+    width: 6rem;
     z-index: 30;
-    transform: scale(0.9) translateX(-55%);
+    transform: translateX(-50%);
   }
 .banner_float{
   position: absolute;
   right: 0;
   top: 0;
-  background-image: linear-gradient(-180deg, #FCBEA4 0%, #FF6748 100%);
-  box-shadow: 0 3px 4px 0 rgba(170,47,161,0.30);
-  width: 1.444444rem;
-  height: 1.444444rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
   font-weight:bold;
   font-size: .333333rem;
   transform: scale(0.8);
+  font-weight: bold;
   /* background-color: #FF7676; */
+  background-image: linear-gradient(-180deg, #FF5BBD 0%, #EB2D8D 100%);
+  /* border: 1px solid rgba(255,255,255,0.80); */
+  box-shadow: 0 2px 2px 0 rgba(121,15,15,0.38);
 }
 .banner-btn-fr{
   margin: 41% auto 3%;

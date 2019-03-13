@@ -18,7 +18,6 @@
       <transition name="slide-fade">
           <my-self  v-if="showBox" class="mine_rank"/>
       </transition>
-     <!-- this.hasReward == 1 && !this.closeStatus -->
       <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
           <reward @closeDialog='closeDialog'/>
       </div>
@@ -212,16 +211,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #E94F70;
+  background: #F7A687;
 }
 .main{
   width: 100%;
   height: 100%;
-  padding-top: 8px;
-  background: #E94F70;
+  background: #F7A687;
   background-size: 100%;
   position: relative;
-  margin-top:1rem;
+  margin-top:.416667rem;
 }
 .mine_rank {
   width: 100%;
