@@ -211,15 +211,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #F7A687;
+  background: #8508C0;
 }
 .main{
   width: 100%;
   height: 100%;
-  background: #F7A687;
+  background: #8508C0;
   background-size: 100%;
   position: relative;
-  margin-top:.416667rem;
+  margin-top:1.111111rem;
 }
 .mine_rank {
   width: 100%;

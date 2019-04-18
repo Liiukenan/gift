@@ -415,7 +415,7 @@ export default {
 }
 .banner_root {
   background-size: cover;
-  padding-top: 47%;
+  padding-top: 72%;
 }
 
 /* .banner-box{ */
@@ -432,18 +432,17 @@ export default {
  .banner-btn{
     padding:0 .277778rem;
     border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(255,255,255,0.33);
-    border: 1px solid rgba(255,255,255,0.10);
-    border-radius: 8px;
+    background: rgba(0,0,0,0.30);
+    border-radius: .222222rem;
     font-size: .333333rem;
-    color: rgba(235,45,141,0.70);
+    color: #fff;
     outline: none;
     /* font-weight: bold; */
     position: absolute;
     line-height: .444444rem;
     height: .444444rem;
     left:50%;
-    bottom:0;
+    /* bottom:-10px; */
     width: 6rem;
     z-index: 30;
     transform: translateX(-50%);
@@ -460,8 +459,8 @@ export default {
   transform: scale(0.8);
   font-weight: bold;
   /* background-color: #FF7676; */
-  background-image: linear-gradient(-180deg, #FF5BBD 0%, #EB2D8D 100%);
-  /* border: 1px solid rgba(255,255,255,0.80); */
+  background-image: linear-gradient(-180deg, #F86DFF 0%, #9613CF 100%);
+  border: 1px solid rgba(255,255,255,0.80);
   box-shadow: 0 2px 2px 0 rgba(121,15,15,0.38);
 }
 .banner-btn-fr{

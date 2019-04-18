@@ -168,14 +168,14 @@ export default {
 }
     
 .tab_title{
-    /* width: 6.666667rem; */
-    background: #EB2D8D;
-    /* border: 1px solid rgba(255,255,255,0.60); */
-    border-radius: .5rem;
+    width: 6.8;
+    border: 1px solid rgba(255,255,255,0.60);
+    background: none;
+    border-radius: 22px;
     white-space: nowrap;
     margin:0 auto;
-    /* padding:.111111rem; */
-    height: .888889rem;
+    padding:.111111rem;
+    height: 1.277778rem;
   }
   .rankings{
     position: absolute;
@@ -184,7 +184,7 @@ export default {
     top: 0;
   }
   .rankings .v-tabs__container{
-    height: 1.055556rem;
+    height: 1.277778rem;
     /* margin-bottom: 7px; */
   }
   .selected_tab_item{
@@ -204,7 +204,7 @@ export default {
     padding: 0 .527778rem;
   }
   .selected_tab_text{
-    color: #EB2D8D;
+    color: #A022F5;
     font-size:.333333rem;
   }
   .unselected_tab_text{
@@ -223,10 +223,10 @@ export default {
     opacity: 0;
   }
   .v-tabs__content{
-    margin-top: 0;
+    margin-top: .277778rem;
   }
   .tab_item{
-    height: .888889rem;
+    height: 1rem;
     overflow: hidden;
     padding:0 .3rem;
     min-width: 2.5rem;
