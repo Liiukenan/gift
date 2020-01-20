@@ -5,14 +5,13 @@ import "vue-material/dist/theme/default.css";
 // import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import "../../assets/css/sprite.css";
 import "vuetify/dist/vuetify.min.css"; // Ensure you are using css-loader
-
+import "../../assets/css/reset.css";// Ensure you are using css-loader
 import Vuex from "vuex";
 import VueI18n from "vue-i18n";
 import store from "../../store/index";
 import Vuetify from "vuetify";
 import VueLazyload from "vue-lazyload";
 import App from "./App";
-
 Vue.use(Vuex);
 Vue.use(VueI18n);
 Vue.use(Vuetify, {
@@ -29,7 +28,6 @@ Vue.use(Vuetify, {
 Vue.use(VueLazyload);
 var getParamValue = function(url, key) {
   var regex = new RegExp(key + "=([^&]*)", "i");
-  console.log(url.match(regex));
   if (url.match(regex)) {
     return url.match(regex)[1];
   }
@@ -37,12 +35,16 @@ var getParamValue = function(url, key) {
 };
 window.plat = getParamValue(window.location.href, "plat") || "android";
 window.jid =getParamValue(window.location.href, "jid") || "user_1023206@bj2.1-1.io";
-let countryCodeArr=['en','ar','de','es','fr','hi','in','tr'];
-let countryCode=getParamValue(window.location.href, "lang");
-if(!countryCodeArr.includes(countryCode)){
-  countryCode="en"
+let countryCodeArr=['en','ar','de','es','fr','hi','in','tr',"ko","zh_TW","ja"];
+// let countryCodeArr=['en','ar','hi','tr'];
+let countryCode=getParamValue(window.location.href, "lang") || 'en';
+let countryResult=false;
+for(var x of countryCodeArr){
+  if(countryCode.includes(x)){
+    countryResult=x
+  }
 }
-window.lang = countryCode || "en";
+window.lang = countryResult || "en";
 const i18n = new VueI18n({
   // locale: getParamValue(window.location.href, "lang"), // 语言标识
   locale: window.lang, // 语言标识
@@ -56,6 +58,9 @@ const i18n = new VueI18n({
     hi: require("../../common/lang/hi"),
     in: require("../../common/lang/in"),
     tr: require("../../common/lang/tr"),
+    ko: require("../../common/lang/ko"),
+    zh_TW: require("../../common/lang/zh_TW"),
+    ja: require("../../common/lang/ja"),
     // zh: require("../../common/lang/zh")
   }
 });

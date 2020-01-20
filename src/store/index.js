@@ -10,14 +10,22 @@ Vue.use(Vuex);
 Vue.use(VueAxios, axios);
 
 const isDev = process.env.NODE_ENV !== 'production'
-
-const store = new Vuex.Store({
+function getUrlParam (name) {
+  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return decodeURIComponent(r[2]); return null;
+}
+const pkgname=getUrlParam ('pkg')
+const store = new Vuex.Store({ 
     state: {
         rankingList: {},
         hasRewardResult:{},
         userGiftRate:{},
         anchorGiftRate:{},
-        activityId:-1
+        activityId:-1,
+        lastActive:false,
+        activityState:{},
+        list:[]
     },
     getters: {
         receiverTop:state => {
@@ -69,8 +77,32 @@ const store = new Vuex.Store({
         },
     },
     actions: {
+        ACTIVITYLIST(context,options){
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/get_actitiyrank')
+          var activityId = context.state.activityId
+          var listData=context.state.activityState
+          return Vue.axios.post(api,qs.stringify(options)).then((response) => {
+            // console.log("新活动状态", response.data)
+            // context.commit("list", {result: response.data})
+            return response.data;
+          }).catch(reason => {
+
+          })
+        },
+        ACTIVITYSTATE(context,options){
+          var currentJid = getCurrentJid()
+          var api = requestApiUrl('/ranking_activity/get_actitiyinfo')
+          var activityId = context.state.activityId
+          return Vue.axios.post(api,qs.stringify({jid:currentJid,pkg_name:pkgname,limit:'100',is_old_actitiy:options})).then((response) => {
+            context.commit("loadState", {result: response.data})
+            return response.data;
+          }).catch(reason => {
+          })
+        },
         FETCH_USER_GIFT(context,options){
-          console.log('request user gift options : ', options)
+          console.log('request user gift options11111 : ', options)
+          
           var currentJid = getCurrentJid()
           var api = requestApiUrl('/ranking_activity/user_gift_rate')
           var timestamp = (new Date()).valueOf();
@@ -94,6 +126,7 @@ const store = new Vuex.Store({
           var api = requestApiUrl('/ranking_activity/user_get_gift')
           var timestamp = (new Date()).valueOf();
           var activityId = context.state.activityId
+          
           return Vue.axios.get(api, {params:{"jid":currentJid,'activity_id':activityId,'_t':timestamp}}).then((response) => {
             console.log("user luck draw  response", response.data)
             return response.data 
@@ -155,9 +188,8 @@ const store = new Vuex.Store({
           var currentJid = getCurrentJid();
           var api = requestApiUrl('/ranking_activity/has_reward');
           let activity=parseInt(localStorage.getItem('activity_id'));
-          console.log(currentJid,'xuesong')
 
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activity})).then((response) => {
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activity,"pkg_name":pkgname})).then((response) => {
               var data = {}
               if(response.data == undefined || response.data == ""){
                 data = {status:0}
@@ -193,7 +225,8 @@ const store = new Vuex.Store({
             console.log('kenan6');
             var activityId = localStorage.getItem('activity_id');
             console.log(activityId,'kenan6')
-            return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId})).then((response) => {
+            
+            return Vue.axios.post(api, qs.stringify({"jid":currentJid,"activity_id":activityId,"pkg_name":pkgname})).then((response) => {
                 console.log("reward response", response.data)
                 if(response.data == undefined || response.data == ""){
                   return false
@@ -206,13 +239,8 @@ const store = new Vuex.Store({
         },
         FETCH_RANKING_LIST(context, options){
             //发布的时候换成服务端的域名
-            console.log("request get options: ", options)
-            console.log("rank list jid:" + window.jid + " lang:" + window.lang + " plat:" + plat);
-            console.log(context.stated,'kenan123')
             var currentJid = getCurrentJid()
-            
             var api = requestApiUrl('/ranking_activity/rank')
-            
             var list = {};
             if (window.localStorage){
                var localRankingList = window.localStorage.getItem("rankingList");
@@ -222,8 +250,7 @@ const store = new Vuex.Store({
             }
             
             
-          return Vue.axios.post(api, qs.stringify({"jid":currentJid})).then((response) => {
-                
+          return Vue.axios.post(api, qs.stringify({"jid":currentJid,"pkg_name":pkgname})).then((response) => {
                 if (response.data != null && window.localStorage){
                   var status = response.data["activity"]["status"];
                   var gift_id = response.data["activity"]["gift_id"];
@@ -233,11 +260,11 @@ const store = new Vuex.Store({
                   window.localStorage.setItem("rankStatus",status);
                   window.localStorage.setItem("gift_id",gift_id);
                   if (status == 1){
-                    
                     // 本地缓存结果
                     window.localStorage.setItem("rankingList",JSON.stringify(response.data));
                     // 活动期间
                   } else if (status == 0){
+                    
                     // 下架期间
                   } else if (status == 2){
                     // loadError()
@@ -263,6 +290,10 @@ const store = new Vuex.Store({
         }
     },
     mutations: {
+      
+        setLastActive(state,data){
+          state.lastActive=data;
+        },
         loadRankingList(state, payload){
             state.rankingList = payload.rankingList
         },
@@ -279,7 +310,14 @@ const store = new Vuex.Store({
         },
         loadActivityId(state,data){
           state.activityId = data.result
+        },
+        loadState(state,data){
+          state.activityState = data.result
+        },
+        list(state,data){
+          state.list = data.result
         }
+
     }
 });
 

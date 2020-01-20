@@ -8,7 +8,8 @@ module.exports = {
         "2. Daftar hadiah yang diterima diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah diterima oleh bintang.<br>\n" +
         "3. Daftar hadiah yang dikirim diberi peringkat dari tinggi hingga rendah menurut jumlah hadiah aktivitas yang telah dikirim pengguna.<br>\n" +
         "4. Data daftar peringkat mungkin tertunda saat jaringan sibuk. Mohon bersabar.<br>\n" +
-        "5. Jika pengguna yang berbeda menerima atau mendapatkan jumlah hadiah yang sama, yang lebih dahulu menerima atau mengirimkan jumlah itu akan. mendapat peringkat lebih tinggi. ",
+        "5. Jika pengguna yang berbeda menerima atau mendapatkan jumlah hadiah yang sama, yang lebih dahulu menerima atau mengirimkan jumlah itu akan. mendapat peringkat lebih tinggi.<br>\n" +
+        "6. Hadiah kegiatan akan diberikan secara otomatis setelah peringkat diperbarui. Harap memeriksa pesan resmi.",
       activity_incentives: "Insentif",
       receive_Top3: "3 Teratas di Daftar Menerima",
       receive_Top3_content:
@@ -107,5 +108,34 @@ module.exports = {
     user_get_reward_des:'Selamat! Anda mendapat hadiah ngobrol video gratis! Koin untuk ngobrol video gratis akan diberikan ke akun Anda setiap hari. Silakan lihat di saldo koin.',
     send_des:'@ Teratas: Chat video gratis selama 1 jam/hari * @@ hari',
     receive_des:'@ Teratas: Hadiah（bernilai @@ koin）+@@@ undangan panggilan video/hari * @@@@ hari'
+  },
+  newList: {
+    previous:'Peringkat Sebelumnya',
+    time:'Waktu:',
+    daily:'Harian',
+    allTime:'Sepanjang Masa',
+    hallFame:'Balai Masyhur',
+    ending:'Berakhir dalam',
+    ranking:'Peringkat',
+    bonus:'Insentif',
+    days:'hari',
+    toplist:'Insentif Toplist Harian',
+    alltimeList:'Insentif Toplist Sepanjang Masa',
+    top5:'5 Penerima Teratas',
+    prevAct:'Acara Sebelumnya',
+    ongoing:'Acara Sekarang',
+    unkonwn:'Tidak dikenal'
+  },
+  firstPage: {
+    title:'Kompetisi Bintang Hadiah yang baru',
+    firstOne:'1. Peringkat Harian yang Baru',
+    hit:'Jadilah yang teratas di daftar untuk mendapat hadiah koin Setiap Hari!',
+    dounble:"2. Hadiah GANDA",
+    doubleCont:"Hadiah dilakukan Harian dan di Final",
+    third:"3. Lebih Banyak Pemenang",
+    thirdCont:"Jumlah pemenang ditambah menjadi 10. Makin banyak peluang untuk mendapat hadiah.",
+    four:"4. Peringkat Eksklusif Wilayah",
+    fourCont:"Peringkat India hanya untuk gadis-gadis India, mempermudahmu untuk meraih kemenangan.",
+    noYet:"Belum ada siapa pun dalam daftar"
   }
 };

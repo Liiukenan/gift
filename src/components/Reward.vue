@@ -14,7 +14,13 @@
                     <img v-bind:src="rewardPictureUrl" class="reward_coin"/>
                 </div>
                 <div class="reward_coin_des">
-                    {{this.rewardCoinDes}}
+                    <span v-if="isAnchor">
+                      {{this.rewardCoinDes}}
+                    </span>
+                    <span v-else class="cont">
+                      <img src="../static/img/coins.png" alt>
+                      {{this.rewardCoinDes}}
+                    </span>
                 </div>
                 <v-btn dark style="color: white" class="reward_btn" @click="receiveReward">{{$t("Reward.get_reward")}}</v-btn>
             </v-card>
@@ -98,26 +104,34 @@ export default {
         var response = this.$store.state.hasRewardResult
         var rank = response.rank
         if(this.isAnchor){
-            str = this.$t("Reward.receive_des")
-            str = str.replace('@@',response.rewardNum)
-            str = str.replace('@@@',response.inviteTimes)
-            str = str.replace('@@@@',response.inviteDays)
-            str = str.replace('@',rank)
-            
+          str = this.$t("Reward.receive_des")
+          str = str.replace('@@',response.rewardNum)
+          str = str.replace('@@@',response.inviteTimes)
+          str = str.replace('@@@@',response.inviteDays)
+          str = str.replace('@',rank)
+          return str;
         }else{
-            str = this.$t("Reward.send_des")
-            
-            var rewardNum = 1
-            if(rank == 1) rewardNum = 9
-            else if(rank == 2) rewardNum = 7
-            else if(rank == 3) rewardNum = 5
-            else if(rank == 4) rewardNum = 3
-            else if(rank == 5) rewardNum = 1
-            str = str.replace('@@',rewardNum)
-            str = str.replace('@',rank)
+            switch(rank){
+              case 1:
+                str=16200;
+                break;
+              case 2:
+                str=12600;
+                break;
+              case 3:
+                str=9000;
+                break;
+              case 4:
+                str=5400;
+                break;
+              case 5:
+                str=1800;
+                break;
+            }
+            return str
            
         }
-        return str
+        
     }
   },
   methods: {
@@ -347,11 +361,19 @@ export default {
   animation: bg_rotate 4s linear infinite;
 
 }
-.reward_coin_des {
+.reward_coin_des{
   font-size: 14px;
   color: red;
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reward_coin_des span{
+  display: flex;
+}
+.reward_coin_des img{
+  width: .5556rem;
+  height: .5556rem;
 }
 .reward_btn {
   text-transform: capitalize;

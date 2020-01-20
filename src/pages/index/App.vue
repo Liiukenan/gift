@@ -1,66 +1,68 @@
 <template>
-    <v-app id="app" light class="scroll-y">
-      <banner></banner>
+    <v-app id="app" light class="scroll-y" :class="{stop:stop}">
+      <banner :date="date" :activity="activity" :hi="hi" @transtop="transtop"></banner>
       <div class="main">
-        
-      <!-- <user v-if="userShow"></user> -->
-      <!-- <AnchorHoliday v-if="!userShow"></AnchorHoliday> -->
-      <!-- <div class="changeTitle">
-        <span v-for="(item,index) in changeTitle"  :key="index" :class="{'active':item.active,'styleAr':styleAr}" @click="changeTab(index)">
-            {{item.title}}
-            <i></i>
-        </span>
-      </div> -->
       <div class="gift-content">
-        <rankings  @transIndex="getIndex" :tabIndex="tabIndex"></rankings>
-        <!-- <guide v-show="rankShow"></guide> -->
+        <rankings v-if="!lastActive"></rankings>
       </div>
-      <transition name="slide-fade">
-          <my-self  v-if="showBox" class="mine_rank"/>
-      </transition>
-      <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
+      <!-- <div class='reward' v-if='this.hasReward == 1 && !this.closeStatus'>
           <reward @closeDialog='closeDialog'/>
+      </div> -->
+      <!-- <transition name="fade">
+         <first-page @cancelPage='cancelPage' v-if="pageb" :hi="hi" :class="{stop:pageb}"></first-page>
+      </transition> -->
+      <div class="mt-16 bottom-img bottom-fix">
       </div>
       </div>
+      <transition name="fade">
+        <lastactive v-if="lastActive"></lastactive>
+      </transition>
+      <!-- <transition name="fade">
+        <result :receList="receList" :sendList="sendList" @hideResult="hideResult" v-if="res"></result>
+      </transition> -->
+      
     </v-app>
 </template>
 <script>
-import { mapGetters, mapState} from "vuex";
+import { mapGetters, mapState,mapActions} from "vuex";
 import Rankings from "../../components/Rankings.vue";
 import Guide from "../../components/Guide.vue";
 import Banner from '../../components/Banner'
 import Reward from '../../components/Reward'
-import MySelf from '../../components/MySelf'
+import firstPage from '../../components/FirstPage'
+import lastactive from '../../components/lastActivity'
 import ObtainReward from '../../components/ObtainReward'
+import Result from '../../components/Result'
 import {getCurrentJid} from '../../store/ApiHelper'
 import {logEvent} from "../../common/jsInteractive"
-// import User from '../../components/user'
-// import AnchorHoliday from "../../components/AnchorHoliday.vue";
 export default {
   name: "App",
   components: {
     Banner,
     Rankings,
     Guide,
-    // User,
-    // AnchorHoliday,
-    MySelf,
     Reward,
-    ObtainReward
+    ObtainReward,
+    firstPage,
+    lastactive,
+    Result
   },
   data: function() {
     return {
       isTabOne: true,
       isTabTwo: false,
+      lastAct:true,
       color: 0,
+      allList:"",
       colors: ["white", "tab_text_color"],
       tabIndex: 0,
       tabHeight: "48px",
       closeStatus: false,
-      // rankShow: true,
+      pageb:false,
       active:true,
-      // userShow:false,
       fadeSlide:true,
+      res:true,
+      rewardArr:[],
       changeTitle:[
         {
           title:'Rankings',
@@ -70,11 +72,16 @@ export default {
           title:'Guide to use',
           active:false
         }
-      ]
+      ],
+      sendList:[],
+      receList:[],
+      date:[],
+      hi:false,
+      activity:{},
+      stop:false
     };
   },
   created() {
-    
     this.changeTitle[0].title=this.$t("ActivityPage.bt_regular");
     this.changeTitle[1].title=this.$t("ActivityPage.bt_ranking");
     // 判断为阿拉伯语,添加属性direction:rtl;unicode-bidi:bidi-override;
@@ -86,17 +93,18 @@ export default {
     if (screenWidth >= 500) {
       this.tabHeight = "90px";
     }
-    this.fetchData();
+    // this.fetchData();
     this.chooseContent();
     // 活动页面展示
-    logEvent("event_activity_page_show", "");
-    
-    
+    try{
+      logEvent("event_activity_page_show", "");
+    }catch(e) {}
   },
   
   computed: {
     ...mapState({
-      resultData: "hasRewardResult"
+      resultData: "hasRewardResult",
+      lastActive:"lastActive"
     }),
     showBox(){
       if(!this.rankShow && this.userShow == false && this.tabIndex == 0){
@@ -105,8 +113,6 @@ export default {
       if(!this.rankShow && this.userShow == true && this.tabIndex == 1){
         return true;
       }
-      
-
     },
     styleAr(){
        // 阿拉伯语适配
@@ -116,10 +122,6 @@ export default {
         return '';
       }
     },
-    ...mapGetters({
-      mySelf: "mySelf",
-      myActivity: "activity"
-    }),
     hasReward() {
       if (this.resultData == undefined) {
         return 0;
@@ -134,13 +136,27 @@ export default {
       return this.resultData.status;
     }
   },
+  
   methods: {
+   ...mapActions({
+      actstate: "ACTIVITYSTATE",
+      giftList: "ACTIVITYLIST"
+    }),
+    transtop(msg){
+      this.stop=msg;
+    },
+    hideResult(msg){
+      this.res=msg;
+    },
     getIndex(msg){
       this.tabIndex=msg;
     },
     closeDialog(msg) {
       this.closeStatus = msg;
       this.setBodyScroll(true);
+    },
+    cancelPage(msg){
+      this.pageb=msg;
     },
     changeTab(index) {
       for(var x of this.changeTitle){
@@ -182,7 +198,6 @@ export default {
     },
 
     loadTabHeight(val) {
-      console.log("height " + val);
       val.height = 90;
     },
     setBodyScroll: function(scroll) {
@@ -198,10 +213,50 @@ export default {
         document.body.style.width = "100%";
       }
     }
+  },
+  mounted(){
+    //是否是第一次展示
+    this.actstate().then(result=>{
+      this.date=result.activity;
+      this.hi=result.profile.is_india_anchor;
+      this.activity=result;
+    });
+    // var sendData={
+    //     jid: window.jid,
+    //     type: "top_receivers",
+    //     date_type: "all_time",
+    //     is_old_actitiy: true
+    // }
+    // this.giftList(sendData).then(result => {
+    //   var newArr=[result[1],result[0],result[2]];
+    //   this.receList=newArr;
+    // });
+    // sendData.type="top_senders";
+    // this.giftList(sendData).then(result => {
+    //   var newArr=[result[1],result[0],result[2]];
+    //   this.sendList=newArr;
+    // });
+    var pageBolean=localStorage.getItem('firstPage');
+    if(pageBolean==1){
+      this.pageb=false;
+      return;
+    }
+    if(window.jid.indexOf('user')==-1){
+         this.pageb=true;
+    }else {
+      this.pageb=false;
+    }
+    
+    
+
+    
+  },
+  watch: {
+    
   }
 };
 </script>
-<style>
+<style lang='stylus' scoped>
 *{
   outline: none;
 }
@@ -211,22 +266,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: #8508C0;
+  background: #4F065E;
 }
 .main{
   width: 100%;
   height: 100%;
-  background: #8508C0;
+  background: #4F065E;
   background-size: 100%;
   position: relative;
-  margin-top:1.111111rem;
+  margin-top:.4444rem;
+  padding-bottom 2.2222rem;
 }
-.mine_rank {
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  height: 56px;
-}
+
 .changeTitle{
   text-align: center;
   margin-bottom: .5rem;
@@ -272,7 +323,19 @@ export default {
 }
 .gift-content{
   position: relative;
-  height: 100%;
-  
 }
+.bottom-fix{
+    position absolute
+    bottom 0
+    left 0
+    z-index 2
+  }
+ .bottom-img{
+    width:100%;
+    height:1.5556rem;
+    background:url('./src/static/img/bg_bottom.png') no-repeat center;
+    background-size:100%;
+  }
+
+
 </style>

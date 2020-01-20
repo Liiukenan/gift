@@ -11,7 +11,8 @@ module.exports = {
         "4. Les données de la liste de classement peuvent\n" +
         "être retardées lorsque le réseau est occupé.\n" +
         "Veuillez s'il vous plaît vous montrer patients.\n<br>" +
-        "5. Si différents utilisateurs reçoivent ou envoient le même nombre de cadeaux, le premier qui reçoit ou envoie ce nombre de cadeaux sera classé plus haut.",
+        "5. Si différents utilisateurs reçoivent ou envoient le même nombre de cadeaux, le premier qui reçoit ou envoie ce nombre de cadeaux sera classé plus haut.\n<br>" +
+        "6. Les récompenses de l'événement seront automatiquement attribuées après la mise à jour du classement. Veuillez consulter le message officiel.",
       activity_incentives: "Incitatifs",
       receive_Top3: "Top 3 de la liste des destinataires",
       receive_Top3_content:
@@ -112,5 +113,34 @@ module.exports = {
     user_get_reward_des:'Félicitations ! Vous avez remporté un chat vidéo gratuit ! Les pièces pour le chat vidéo gratuit seront mises sur votre compte journalier. Veuillez sil vous plait le vérifier dans le solde de pièces.',
     send_des:'Top @ : Chat vidéo gratuit pendant 1 heure/jour * @@ jours',
     receive_des:'Top @ : Cadeau （valeur @@ pièces） + @@@ invitations à des appels vidéo/jour * @@@@ jours'
+  },
+  newList: {
+    previous:'Classement Précédent',
+    time:'Heure :',
+    daily:'Journalier',
+    allTime:'Historique',
+    hallFame:'Temple de la Renommée',
+    ending:'Se termine',
+    ranking:'Classement',
+    bonus:'Gains',
+    days:'jours',
+    toplist:'Meilleurs Gains Journaliers',
+    alltimeList:'Historique des Meilleurs Gains',
+    top5:'Top 5 des Gagnants',
+    prevAct:'Événement précédent',
+    ongoing:'Événement en cours',
+    unkonwn:'Inconnu'
+  },
+  firstPage: {
+    title:'Nouveau Concours Gift Star',
+    firstOne:'1. Nouveau classement quotidien',
+    hit:'Entrez dans la liste pour obtenir des pièces récompense tous les jours !',
+    dounble:"2. DOUBLE Récompenses",
+    doubleCont:"Les récompenses sont pour le quotidien et la finale.",
+    third:"3. Plus de gagnants",
+    thirdCont:"Le nombre de gagnants est monté à 10. Plus de chances d'obtenir des récompenses.",
+    four:"4. Classement exclusif par région",
+    fourCont:"Le classement indien est réservé aux filles indiennes, ce qui vous permet de gagner plus facilement.",
+    noYet:"Personne n'est encore sur la liste"
   }
 };

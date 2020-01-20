@@ -8,7 +8,8 @@ module.exports = {
         "2. Empfangene Liste ist nach der Anzahl an von Stars erhaltenen Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
         "3. Gesendete Liste ist nach der Anzahl an von Nutzern versendeten Aktivitätsgeschenk von hoch nach niedrig sortiert. <br>\n" +
         "4. Die Daten für die Rangliste könnten verzögert sein, wenn das Netzwerk ausgelastet ist. Bitte haben Sie Geduld.<br>\n" +
-        "5. Wenn verschiedene Benutzer dieselbe Anzahl von Geschenken empfangen oder senden, wird derjenige, der als erster diese Anzahl von Geschenken erhält oder sendet, höher eingestuft.",
+        "5. Wenn verschiedene Benutzer dieselbe Anzahl von Geschenken empfangen oder senden, wird derjenige, der als erster diese Anzahl von Geschenken erhält oder sendet, höher eingestuft.<br>\n" +
+        "6. Event-Belohnungen werden automatisch vergeben, nachdem die Rangliste aktualisiert wurde. Bitte beachten Sie die offizielle Mitteilung.",
       activity_incentives: "Prämien",
       receive_Top3: "Top 3 der Empfängerliste:",
       receive_Top3_content:
@@ -113,5 +114,35 @@ module.exports = {
     user_get_reward_des:'Glückwunsch! Sie bekommen einen kostenlosen Video-Chat als Belohnung! Die Münzen für den kostenlosen Video-Chat werden Ihrem Konto pro Tag gutgeschrieben. Bitte überprüfen Sie diese im Kontostand.',
     send_des:'Top @: Kostenloser Videochat für 1 Stunde / Tag * @@ Tage',
     receive_des:'Top @: Geschenk (Wert @@ Münzen)  + @@@ Einladungen zum Videoanruf / Tag * @@@@ Tag'
+  },
+  newList: {
+    previous:'Vorherige Rangliste',
+    time:'Zeit:',
+    daily:'Täglich',
+    allTime:'Alle Zeiten',
+    hallFame:'Hall of Fame',
+    ending:'Ended in',
+    ranking:'Rangliste',
+    bonus:'Bonus',
+    days:'tage',
+    toplist:'Tägliche Top Bonus',
+    alltimeList:'Alle Zeiten Top Bonus',
+    top5:'Top 5 Empfänger',
+    prevAct:'Vorheriger Event',
+    ongoing:'Laufender Event',
+    unkonwn:'Unbekannt'
+
+  },
+  firstPage: {
+    title:'Neue Geschenke-Star-Wettbewerb',
+    firstOne:'1. Neue tägliche Rangliste',
+    hit:'Schaffe es in die Rangliste für Bonus Coins Jeden Tag!',
+    dounble:"2. DOPPELTE Belohnung",
+    doubleCont:"Belohnungen gibt es für Täglich und Final",
+    third:"3. Mehr Gewinner",
+    thirdCont:"Die Anzahl der Gewinner wurde auf 10 erhöht. Mehr Chancen Belohnungen zu erhalten.",
+    four:"4. Regionale Exklusive Rangliste",
+    fourCont:"Die indische Rangliste ist nur für indische Girls, so dass es noch leichter wird zu gewinnen.",
+    noYet:"Es befindet sich noch niemand auf der Liste"
   }
 };

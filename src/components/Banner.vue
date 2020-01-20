@@ -1,256 +1,198 @@
 <template>
-<div class="banner-main" >
-  <div class="banner_root" :style="{backgroundImage: 'url(' + getBannerBg() + ')' }">
-    <v-layout column class="banner_content">
-      <v-flex>
-        <v-layout right class="text-xs-center">
-          <v-dialog
-            v-model="dialog"
-            width="90%"
-            height="80%"
-            scrollable>
-            <v-btn
-              fab right class="banner_float"
-              slot="activator"
-              dark>
-              {{$t("ActivityPage.bt_regular")}}
-            </v-btn>
-            <v-card color="white" class="rule-card" v-if="showDialog">
-            <div class="close-box">
-              <div class="close-main">
-                <button v-on:click="onCloseBtn" class="rule-btn"></button>
-              </div>
+  <div class="banner-main">
+    <div class="banner_root" :style="{backgroundImage: 'url(' + getBannerBg() + ')' }">
+        <button class="previous-btn fc-white fs-12" @click="previous">
+          <span>{{$t("newList.prevAct")}}</span>
+        </button>
+        <button class="rules" @click="showRules">
+          <span>{{$t("Ranking.incentiveDetails.activity_rules")}}</span>
+        </button>
+      <v-layout>
+        <v-flex>
+          <v-layout>
+            <v-dialog v-model="dialog" width="100%" height="80%"   scrollable>
+              <v-card color="white" class="rule-card" v-if="showDialog">
+                <div class="close-box">
+                  <div class="close-main">
+                    <button v-on:click="onCloseBtn" class="rule-btn"></button>
+                  </div>
+                </div>
+                <v-card-text>
+                  <!-- Title -->
+                  <div class="rule-title bold">{{$t("firstPage.title")}}</div>
+                  <!-- Time -->
+                  <div class="rule-time mt-16 flex-center flex-column">
+                    <p>{{$t("firstPage.firstOne")}}</p>
+                    <p class="font-small fs-14 fc-hui1">{{$t("firstPage.hit")}}</p>
+                  </div>
+                  <div class="rule-time mt-16">
+                    <p>{{$t("firstPage.dounble")}}</p>
+                    <p class="font-small fs-14 fc-hui1">{{$t("firstPage.doubleCont")}}</p>
+                  </div>
+                  <div class="rule-time mt-16">
+                    <p>{{$t("firstPage.third")}}</p>
+                    <p class="font-small fs-14 fc-hui1">{{$t("firstPage.thirdCont")}}</p>
+                  </div>
+                  <div class="rule-time mt-16" v-if="hi">
+                    <p>{{$t("firstPage.four")}}</p>
+                    <p class="font-small fs-14 fc-hui1">{{$t("firstPage.fourCont")}}</p>
+                  </div>
+                  <v-spacer/>
+                  <div class="rule-incentives">
+                    <p
+                      v-html="$t('Ranking.incentiveDetails.activity_incentives')"
+                      class="font-bold fs-18"
+                    ></p>
+                    <p v-if="activity.reward_alltime" v-html="$t('Ranking.incentiveDetails.send_Top10').replace('5',activity.reward_alltime.user.length)" class="font-small bold fc-hui1 fs-14"></p>
+                  </div>
+                  <!-- top10 -->
+                  <table class="rule-prize rule-user">
+                    <tr>
+                      <th class="flex-between fc-hui1">
+                      <div class="pl-20 bold">{{$t("Ranking.incentiveDetails.top")}}</div>
+                      <div
+                        class="pr-20 bold"
+                      >{{$t("Ranking.incentiveDetails.activity_incentives")}}</div>
+                      </th>
+                    </tr>
+                    <template v-if="activity.reward_alltime">
+                    <tr  v-for="(item,index) in activity.reward_alltime.user" :key="index">
+                      <td class="flex-between flex-center">
+                        <div class="bold">{{index+1}}</div>
+                        <div class="bold  flex-right flex-center">
+                          <img src="../static/img/coin.png" class="w16">
+                          <span class="font-bold">{{item.reward_num}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                    </template>
+                  </table>
+                  <div class="rule-incentives">
+                    <p
+                      class="font-bold fs-18"
+                    >
+                    {{$t("newList.toplist")}}
+                    </p>
+                    <p class="font-small bold fc-hui1 fs-14" v-if="activity.reward_daily">
+                      {{$t("newList.top5").replace('5',activity.reward_daily.anchor.length)}}
+                    </p>
+                  </div>
+                  <!-- top10 -->
+                  <table class="rule-prize rule-user">
+                    <tr>
+                      <th class="flex-between fc-hui1">
+                      <div class="pl-20 bold">{{$t("Ranking.incentiveDetails.top")}}</div>
+                      <div
+                        class="pr-20 bold"
+                      >{{$t("Ranking.incentiveDetails.activity_incentives")}}</div>
+                      </th>
+                    </tr>
+                    <template v-if="activity.reward_daily">
+                      <tr v-for="(item,index) in activity.reward_daily.anchor" :key="index">
+                        <td class="flex-between flex-center">
+                          <div class="bold">{{index+1}}</div>
+                          <div class="bold  flex-right flex-center">
+                            <img src="../static/img/coin.png" class="w16">
+                            <span class="font-bold">{{item.reward_num}}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </template>
+                  </table>
+                  <div class="rule-incentives">
+                    <p
+                      class="font-bold fs-18"
+                    >
+                    {{$t("newList.alltimeList")}}
+                    </p>
+                    <p class="font-small bold fc-hui1 fs-14" v-if="activity.reward_alltime">
+                      {{$t("newList.top5").replace('5',activity.reward_alltime.anchor.length)}}
+                    </p>
+                  </div>
+                  <!-- top10 -->
+                  <table class="rule-prize rule-user">
+                    <tr>
+                      <th class="flex-between fc-hui1">
+                      <div class="pl-20 bold">{{$t("Ranking.incentiveDetails.top")}}</div>
+                      <div
+                        class="pr-20 bold"
+                      >{{$t("Ranking.incentiveDetails.activity_incentives")}}</div>
+                      </th>
+                    </tr>
+                    <template v-if="activity.reward_alltime!=undefined">
+                      <tr v-for="(item,index) in activity.reward_alltime.anchor" :key="index">
+                        <td class="flex-between flex-center">
+                          <div class="bold">{{index+1}}</div>
+                          <div class="bold  flex-right flex-center">
+                            <div class="mr-8 flex-center" v-if="item.invite_days>0">
+                              <img src="../static/img/ticket.png" class="w16">
+                              <span class="font-bold" v-if="item.invite_days>1">{{item.invite_days}} {{$t("Ranking.incentiveDetails.days")}}</span>
+                              <span class="font-bold" v-else>{{item.invite_days}} {{$t("Ranking.incentiveDetails.day")}}</span>
+                            </div>
+                            <div class="flex-center">
+                              <img src="../static/img/coin.png" class="w16">
+                              <span class="font-bold">{{item.reward_num}}</span>
+                            </div>
+                            
+                          </div>
+                        </td>
+                      </tr>
+                    </template>
+                  </table>
                 
-            </div>
+                  <!-- rules -->
+                  <div class="rule-details-title fs-18 bold">
+                    <p>{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
+                  </div>
+                  <!-- rules detail -->
+                  <div class="rule-content fc-hui2 fs-14" :class="{'langAr':langAr}">
+                    <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
+                  </div>
+                  <!--</div>-->
+                  <v-spacer/>
+                </v-card-text>
               
-              <v-card-text>
-              <!-- Title -->
-              <div class="rule-title">
-                {{$t("Ranking.incentiveDetails.title")}}
-              </div>
-              <!-- Time -->
-              <div class="rule-time">
-                <p>{{$t("ActivityPage.time_1")}}</p>
-                <p class="font-small">{{getActivityTime()}}</p>
-              </div>
-               <v-spacer/>
-                <div class="rule-incentives">
-                  <p v-html="$t('Ranking.incentiveDetails.activity_incentives')" class="font-bold"></p>
-                  <p v-html="$t('Ranking.incentiveDetails.send_Top10')" class="font-small"></p>
-                </div>
-                <!-- top10 -->
-                <table class="rule-prize">
-                  <tr>
-                    <th class="border-top border-left">
-                      {{$t("Ranking.incentiveDetails.top")}}
-                    </th>
-                    <th class="border-top border-right">
-                      {{$t("Ranking.incentiveDetails.activity_incentives")}}
-                    </th>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       1
-                    </td>
-                   
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*9{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendOne")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       2
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendTwo")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       3
-                    </td>
-                    
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*5{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendThree")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       4
-                    </td>
-                    
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*3{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendFour")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       5
-                    </td>
-                    
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card2.png" alt="">
-                       <span class="font-bold">*1{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.sendFive")}}
-                      </p>
-                    </td>
-                  </tr>
-                 
-                
-               
-               
-                
-                </table>
-                <!-- activity incentives -->
-                 <div class="rule-incentives">
-                  
-                  <p v-html="$t('Ranking.incentiveDetails.receive_Top10')" class="font-small"></p>
-                </div>
-                <table class="rule-prize">
-                  <tr>
-                    <th class="border-top border-left">
-                      {{$t("Ranking.incentiveDetails.top")}}
-                    </th>
-                    <th colspan="2" class="border-top border-right border-bottom">
-                      {{$t("Ranking.incentiveDetails.activity_incentives")}}
-                    </th>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       1
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift8.png" alt="">
-                      <span class="font-bold gift-number">*2</span>
-                      
-                    </td>
-                    <td class="gift3 border-right border-top">
-                      <img src="../static/img/card1.png" alt="">
-                      
-                       <span class="font-bold">*10{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       2
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift8.png" alt="">
-                       <span class="font-bold">*1</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*9{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       3
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                      <span class="font-bold">*6</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*8{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       4
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                       <span class="font-bold">*4</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*7{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="gift1 border-left">
-                       5
-                    </td>
-                    <td class="gift2">
-                      <img src="../static/img/gift6.png" alt="">
-                       <span class="font-bold">*3</span>
-                    </td>
-                    <td class="gift3 border-right">
-                      <img src="../static/img/card1.png" alt="">
-                       <span class="font-bold">*6{{$t("Ranking.incentiveDetails.days")}}</span>
-                      <p class="gift-info">
-                        {{$t("Ranking.incentiveDetails.anthorIncentives")}}
-                      </p>
-                    </td>
-                  </tr>
-                
-                  
-                  
-                 
-                </table>
-              <!-- rules -->
-              <div class="rule-details-title">
-                <p class="font-middle">{{$t("Ranking.incentiveDetails.activity_rules")}}</p>
-              </div>
-              <!-- rules detail -->
-              <div class="rule-content">
-                <p v-html="$t('Ranking.incentiveDetails.rules_content')"></p>
-              </div>
-              <!--</div>-->
-              <v-spacer/>
-            </v-card-text>
-            </v-card>
-          </v-dialog>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-    <div class="banner-box">
+              </v-card>
+          
+            </v-dialog>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+      <div class="banner-box"></div>
     </div>
-  </div>
-      <!-- <img  :src="giftId()" alt="" class="myGift" v-if="userShow"> -->
-      <button class="banner-btn" :class="bannerBtnFr">{{getActivityDesc(myActivity != null && myActivity.hasOwnProperty("status")?myActivity["status"]:"")}}</button>             
+    <div class="flex-justify-center flex-center">
+      <div
+      class="banner-btn mr-8 flex-center"
+    >{{$t("newList.time")}}{{date.time}}
+    </div>
+    </div>
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
-import {getCurrentJid} from '../store/ApiHelper'
+import { mapGetters,mapMutations } from "vuex";
+import { getCurrentJid } from "../store/ApiHelper";
 export default {
+  props:['date','activity','hi'],
   name: "Banner",
   data() {
     return {
       dialog: false,
       showDialog: false,
+      sendList:[
+        {money:16200},
+        {money:12600},
+        {money:9000},
+        {money:5400},
+        {money:1800}
+
+      ],
+      dailyList:[
+        {money:16200},
+        {money:12600},
+        {money:9000},
+        {money:5400},
+        {money:1800}
+      ],
       banner_bg: [
         require("../static/img/ranking-list_bg_ar.jpg"),
         require("../static/img/ranking-list_bg_de.jpg"),
@@ -260,29 +202,46 @@ export default {
         require("../static/img/ranking-list_bg_hi.jpg"),
         require("../static/img/ranking-list_bg_in.jpg"),
         require("../static/img/ranking-list_bg_tr.jpg"),
+        require("../static/img/ranking-list_bg_ko.jpg"),
+        require("../static/img/ranking-list_bg_zh_TW.jpg"),
+        require("../static/img/ranking-list_bg_ja.jpg")
       ],
-      anchor_bg:[
-        require("../static/img/anchor_ranking-list_bg_ar.jpg"),
-        require("../static/img/anchor_ranking-list_bg_de.jpg"),
-        require("../static/img/anchor_ranking-list_bg_en.jpg"),
-        require("../static/img/anchor_ranking-list_bg_es.jpg"),
-        require("../static/img/anchor_ranking-list_bg_fr.jpg"),
-        require("../static/img/anchor_ranking-list_bg_hi.jpg"),
-        require("../static/img/anchor_ranking-list_bg_in.jpg"),
-        require("../static/img/anchor_ranking-list_bg_tr.jpg"),
-      ],
-      calBgImage:true,
-      userShow:false
       
+      calBgImage: true,
+      userShow: false
     };
   },
   methods: {
-    onCloseBtn(event){
-        console.log("close btn clicked")
-        this.dialog = false
+    ...mapMutations([
+      "setLastActive"
+    ]),
+    getActivityDesc(d){
+      var des = "";
+      if (d.status === 0) {
+        des = this.$t("ActivityPage.time").replace(
+          "@@@",
+          d.time
+        );
+      } else if (d.status === 1) {
+        des = this.$t("ActivityPage.activity_finish");
+      } else if (d.status === 2) {
+        des = "";
+      }
+      return des;
     },
-    giftId(){
-      return require(`../static/img/${localStorage.getItem('gift_id')}.png`)
+    previous(){
+      this.setLastActive(true);
+    },
+    showRules(){
+      this.dialog = true;
+      this.$emit('transtop',true);
+    },
+    onCloseBtn(event) {
+      this.dialog = false;
+      this.$emit('transtop',false);
+    },
+    giftId() {
+      return require(`../static/img/${localStorage.getItem("gift_id")}.png`);
     },
     getActivityTime: function() {
       var time = "";
@@ -291,185 +250,161 @@ export default {
       }
       return time;
     },
-    getActivityDesc: function(status) {
-      var des = "";
-      if (status === 0) {
-        des = this.$t("ActivityPage.time").replace(
-          "@@@",
-          this.myActivity["time"]
-        );
-      } else if (status === 1) {
-        des = this.$t("ActivityPage.activity_finish");
-      } else if (status === 2) {
-        des = "";
-      }
-      return des;
-    },
-    getBannerBg:function(){
-      let n=null;
-      let lang=window.lang;
-      const langArr=["ar","de","en","es","fr","hi","in","tr"];
-      if(langArr.includes(lang)){
-        n=langArr.indexOf(lang);
+    getBannerBg: function() {
+      let n = null;
+      let lang = window.lang;
+      const langArr = ["ar", "de", "en", "es", "fr", "hi", "in", "tr","ko","zh_TW","ja"];
+      if (langArr.includes(lang)) {
+        n = langArr.indexOf(lang);
+      }else{
+        n =1
       }
       return this.banner_bg[n];
-    },
-    // getBannerBg: function() {
-    //   var path;
-    //   if(this.userShow){
-    //     if (window.lang == "ar") {
-    //       path = this.banner_bg[0];
-    //     } else if (window.lang == "de") {
-    //       path = this.banner_bg[1];
-    //     } else if (window.lang == "en") {
-    //       path = this.banner_bg[2];
-    //     } else if (window.lang == "es") {
-    //       path = this.banner_bg[3];
-    //     } else if (window.lang == "fr") {
-    //       path = this.banner_bg[4];
-    //     } else if (window.lang == "hi") {
-    //       path = this.banner_bg[5];
-    //     } else if (window.lang == "in") {
-    //       path = this.banner_bg[6];
-    //     } else if (window.lang == "tr") {
-    //       path = this.banner_bg[7];
-    //     } else {
-    //       path = this.banner_bg[2];
-    //     }
-    //   }else{
-    //     switch(window.lang){
-    //       case 'ar':
-    //       path = this.anchor_bg[0];
-    //       break;
-    //       case 'de':
-    //       path = this.anchor_bg[1];
-    //       break;
-    //       case 'en':
-    //       path = this.anchor_bg[2];
-    //       break;
-    //        case 'es':
-    //       path = this.anchor_bg[3];
-    //       break;
-    //        case 'fr':
-    //       path = this.anchor_bg[4];
-    //       break;
-    //        case 'hi':
-    //       path = this.anchor_bg[5];
-    //       break;
-    //        case 'in':
-    //       path = this.anchor_bg[6];
-    //       break;
-    //        case 'tr':
-    //       path = this.anchor_bg[7];
-    //     }
-    //   }
-     
-    //   return path;
-      
-    // }
-
+    }
   },
   created() {
     setTimeout(() => {
       this.showDialog = true;
     }, 0);
     // 判断是主播还是用户
-   
-    if(getCurrentJid().indexOf('user')==-1){
+    if (getCurrentJid().indexOf("user") == -1) {
       //   主播
-      this.userShow=false;
-    }else{
+      
+      this.userShow = false;
+    } else {
       //   用户
-      this.userShow=true;
+      this.userShow = true;
     }
-     
   },
   computed: {
     ...mapGetters({
       myActivity: "activity"
     }),
-    
-    bannerBtnFr(){
-      if(window.lang=="fr"){
-        // return 'banner-btn-fr';
-        return '';
+    langAr(){
+      if(window.lang=='ar'){
+        return true;
       }else{
-        return '';
+        return false;
+      }
+    },
+    bannerBtnFr() {
+      if (window.lang == "fr") {
+        // return 'banner-btn-fr';
+        return "";
+      } else {
+        return "";
       }
     }
   },
   mounted() {
     this.calBgImage =
       document.body.clientWidth / document.body.clientHeight > 1.83;
-      const that = this;
-      window.onresize = function temp() {
-        that.calBgImage =
+    const that = this;
+    window.onresize = function temp() {
+      that.calBgImage =
         document.body.clientWidth / document.body.clientHeight > 1.83;
-      };
+    };
   }
 };
 </script>
-<style scoped>
-.banner-main{
+<style lang='stylus' scoped>
+.banner-main {
   position: relative;
+  .previous-btn{
+    position:absolute;
+    right 0
+    top .4444rem
+    width 2rem
+    border-radius .2222rem 0 0 .2222rem
+    background-image: linear-gradient(180deg, #8923DE 0%, #FF26D2 100%);
+    transition all 0.2s
+    min-height 1rem
+    span{
+      transform scale(0.8)
+      display inline-block
+      word-break break-word
+      color: rgba(255,255,255,0.80);
+    }
+  }
+  .rules{
+    border-radius 50%
+    position absolute
+    left .3333rem
+    top .4444rem
+    width 1.25rem
+    height 1.25rem
+    color: rgba(255,255,255,0.80);
+    background-image: linear-gradient(180deg, #8923DE 0%, #FF26D2 100%);
+    span{
+      transform scale(0.8)
+      display inline-block
+    }
+  }
 }
 .banner_root {
   background-size: cover;
   padding-top: 72%;
+  
+}
+.v-dialog__content{
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
+
 /* .banner-box{ */
-  /* margin: 0 auto; */
-  /* padding-top: 10px; */
+/* margin: 0 auto; */
+/* padding-top: 10px; */
 /* } */
-.myGift{
+.myGift {
   position: absolute;
-  left:50%;
-  bottom:13%;
+  left: 50%;
+  bottom: 13%;
   transform: translateX(-50%);
   width: 3.6rem;
 }
- .banner-btn{
-    padding:0 .277778rem;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(0,0,0,0.30);
-    border-radius: .222222rem;
-    font-size: .333333rem;
-    color: #fff;
-    outline: none;
-    /* font-weight: bold; */
-    position: absolute;
-    line-height: .444444rem;
-    height: .444444rem;
-    left:50%;
-    /* bottom:-10px; */
-    width: 6rem;
-    z-index: 30;
-    transform: translateX(-50%);
-  }
-.banner_float{
+
+.banner-btn {
+  padding: 0 .4444rem;
+  background: rgba(0,0,0,0.30);
+  border-radius: .3056rem;
+  font-size: 0.333333rem;
+  color: #fff;
+  outline: none;
+  height .6111rem
+  line-height: 0.444444rem;
+  white-space nowrap
+  z-index: 30;
+}
+
+.banner_float {
   position: absolute;
   right: 0;
   top: 0;
   width: 1.25rem;
   height: 1.25rem;
-  line-height: 1.25rem;
-  font-weight:bold;
-  font-size: .333333rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: .3333rem;
   transform: scale(0.8);
   font-weight: bold;
-  /* background-color: #FF7676; */
-  background-image: linear-gradient(-180deg, #F86DFF 0%, #9613CF 100%);
-  border: 1px solid rgba(255,255,255,0.80);
-  box-shadow: 0 2px 2px 0 rgba(121,15,15,0.38);
+  background-image: linear-gradient(0deg, #860B81 0%, #EA1FD3 100%);
+  box-shadow: 0 2px 6px 0 rgba(205,94,94,0.60);
+  
 }
-.banner-btn-fr{
+.banner-btn-fr {
   margin: 41% auto 3%;
 }
-.rule-card{
-  border-radius: .2rem;
+.rule-card {
+  border-radius: 0.2rem;
 }
-.close-box{
+.close-box {
   height: 30px;
   width: 100%;
   background: #fff;
@@ -478,127 +413,129 @@ export default {
   left: 0;
   z-index: 999;
 }
-.close-main{
+.close-main {
   position: relative;
 }
-.rule-btn{
-  width: .466667rem; 
-  height: .466667rem; 
+.rule-btn {
+  width: 0.466667rem;
+  height: 0.466667rem;
   margin-right: 10px;
   margin-top: 10px;
   float: right;
-  background: url('./src/static/img/ic_closed.png') no-repeat;
+  background: url("./src/static/img/ic_closed.png") no-repeat;
   background-size: cover;
 }
-.rule-title{
+.rule-title {
   text-align: center;
-   font-weight: bold;
-   font-size: 18px;
-   margin-top:.333333rem;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 0.5rem;
 }
-p{
-  margin:0;
+p {
+  margin: 0;
 }
-.rule-time{
-  text-align: center;
+.rule-time {
+  padding 0 .5556rem
   font-size: 14px;
-  margin:0;
+
 }
-.rule-time p:first-child{
+.rule-time p:first-child {
   font-weight: bold;
 }
-.rule-incentives{
-  margin-top: .333333rem;
+.rule-incentives {
+  margin-top: .8333rem
   font-size: 14px;
-  
 }
-.rule-prize{
-  font-size:14px;
+.rule-prize {
+  font-size: 14px;
   font-weight: normal;
   width: 100%;
   border-collapse: collapse;
-  margin-top: .266667rem;
-  background: rgba(158,0,232,0.07);
+  background: #F9F2FF;
+  margin-top: 0.266667rem;
 }
-.rule-prize th{
+.rule-prize th {
   font-weight: 400;
-  padding:5px 0;
-  text-align: center;
-  border: 1px solid rgba(0,0,0,0.11);
+  padding-top: .1389rem;
+  padding-bottom: .1389rem;
 }
-.rule-prize td{
-  border: 1px solid rgba(0,0,0,0.11);
-  padding:5px 0;
+.rule-prize tr:nth-child(even){
+  background: rgba(255,255,255,0.50);
 }
-.rule-prize img{
-  width: .8rem;
-  height: .8rem;
+.rule-prize td {
+  padding: .2222rem .5556rem;
+}
+.rule-prize img {
   vertical-align: bottom;
   display: inline-block;
-  margin-right: .166667rem;
-  
-  
+  margin-right: .1111rem
 }
-.rule-prize .gift1{
+.rule-prize .gift1 {
   width: 21%;
 }
-.rule-prize .gift2{
+.rule-prize .gift2 {
   width: 24%;
 }
-.rule-prize .gift-info{
+.rule-prize .gift-info {
   font-size: 12px;
   transform: scale(0.8);
   margin-top: -4px;
 }
-.rule-prize .border-top{
+.rule-prize .border-top {
   border-top: none;
 }
-.rule-prize .border-right{
+.rule-prize .border-right {
   border-right: none;
 }
-.rule-prize .border-left{
+.rule-prize .border-left {
   border-left: none;
   font-weight: bold;
 }
-.rule-prize .border-bottom{
+.rule-prize .border-bottom {
   border-bottom: none;
 }
 .rule-prize .gift2 img {
   margin-right: 0;
-} 
-.rule-prize .gift2 span{
+}
+.rule-prize .gift2 span {
   margin-top: -5px;
   display: inline-block;
 }
-.rule-details-title{
-  font-size: 14px;
-  margin-top: .7rem;
-  font-weight: bold;
-  
+.rule-user .border-right img{
+  width: .5556rem;
+  height: .5556rem;
+  margin-right: 0;
 }
-.rule-content{
-  color: rgba(0,0,0,0.60);
+.rule-details-title {
+  margin-top: 0.7rem;
+}
+.rule-content {
   text-align: left;
-  font-size: 12px;
-
+  margin-top .2222rem
+  p{
+    word-break break-word
+  }
 }
-.font-bold{
+.langAr{
+  text-align right
+}
+.font-bold {
   font-weight: bold;
-  color: rgba(0,0,0,0.80);
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.gift3 .font-bold{
-  display:inline-block;
-  vertical-align:top;
+.gift3 .font-bold {
+  display: inline-block;
+  vertical-align: top;
   margin-top: 4px;
 }
-.gift3 .gift-number{
+.gift3 .gift-number {
   margin-top: 0px;
 }
-.font-small{
+.font-small {
   font-size: 12px;
 }
-.font-middle{
+.font-middle {
   font-size: 14px;
 }
 </style>

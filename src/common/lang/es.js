@@ -8,7 +8,8 @@ module.exports = {
         "2. La lista recibida se clasifica de mayor a menor según la cantidad de regalos de las estrellas de actividad que hayan recibido.<br>\n" +
         "3. La lista enviada se clasifica de mayor a menor de acuerdo con la cantidad de regalos de actividad que los usuarios enviaron.<br>\n" +
         "4. Los datos de la lista de clasificación pueden retrasarse cuando la red está ocupada. Por favor sea paciente.<br>\n" +
-        "5. Si diferentes usuarios reciben o envían la misma cantidad de regalos, el primero que reciba o envíe esa cantidad de regalos tendrá una. clasificación más alta.",
+        "5. Si diferentes usuarios reciben o envían la misma cantidad de regalos, el primero que reciba o envíe esa cantidad de regalos tendrá una. clasificación más alta.<br>\n" +
+        "6. Las recompensas de los eventos se emitirán automáticamente después de que se actualice la clasificación. Revise el mensaje oficial.",
       activity_incentives: "Incentivos",
       receive_Top3: "Top 3 de la lista de recepción",
       receive_Top3_content:
@@ -72,7 +73,7 @@ module.exports = {
     toReacive: "Top remitentes",
     tab_receive: "Top Receptores",
     tab_send: "Enviar",
-    time: "Hora: @@@",
+    time: "Tiempo: @@@",
     time_1: "Hora",
     activity_finish: "La actividad termina ¡Gracias por la atención!",
     bt_regular: "Reglas",
@@ -107,5 +108,34 @@ module.exports = {
     user_get_reward_des: '¡Felicidades！¡Tiene recompensa de videochat gratis! Las monedas para el videochat gratis se pondrán en su cuenta por día. Por favor compruebe en el balance de monedas.',
     send_des: 'Top @: video chat gratis durante 1 hora / día * @@ días',
     receive_des: 'Top @: Regalo （vale la pena @@ monedas）+ @@@ invitaciones de videollamadas / día * @@@@ días'
+  },
+  newList: {
+    previous:'Clasificación Anterior',
+    time:'Tiempo:',
+    daily:'Diario',
+    allTime:'Histórico',
+    hallFame:'Salón de la Fama',
+    ending:'Terminan en',
+    ranking:'Clasificación',
+    bonus:'Recompensas',
+    days:'días',
+    toplist:'Listado de Recompensas Diarias',
+    alltimeList:'Listado Histórico de Recompensas',
+    top5:'5 Principales Destinatarios',
+    prevAct:'Evento Anterior',
+    ongoing:'Evento en Curso',
+    unkonwn:'Desconocido'
+  },
+  firstPage: {
+    title:'Nuevo Competición de estrellas de regalo',
+    firstOne:'1. Nueva clasificación diaria',
+    hit:'¡Entra en la lista para obtener monedas de recompensa todos los días!',
+    dounble:"2. Recompensas DOBLES",
+    doubleCont:"Las recompensas son tanto diarias como finales",
+    third:"3. Más ganadores",
+    thirdCont:"El número de ganadores se incrementa a 10. Más posibilidades de obtener recompensas.",
+    four:"4. Clasificación exclusiva por región",
+    fourCont:"La clasificación india es solo para chicas indias, lo que facilita que ganes.",
+    noYet:"Lista vacía por el momento"
   }
 };

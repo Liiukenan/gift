@@ -8,7 +8,8 @@ module.exports = {
         "2. Alınan liste, yıldızların aldığı etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
         "3. Gönderilen liste, kullanıcıların gönderdiği etkinlik hediyelerinin sayısına göre yüksekten düşüğe doğru sıralanır.<br>\n" +
         "4. Şebeke meşgul olduğunda sıralama listesi verileri gecikebilir. Lütfen sabırlı olun.<br>\n" +
-        "5. Farklı kullanıcılar aynı sayıda hediye alır veya gönderirse, bu sayıyı alan veya gönderen ilk kişi daha yüksek sırada yerini alacaktır.",
+        "5. Farklı kullanıcılar aynı sayıda hediye alır veya gönderirse, bu sayıyı alan veya gönderen ilk kişi daha yüksek sırada yerini alacaktır.<br>\n" +
+        "6. Etkinlik ödülleri, sıralama güncellendikten sonra otomatik biçimde düzenlenir. Lütfen resmi mesaja bakın.",
       activity_incentives: "Activite teşvik",
       receive_Top3: "3 En çok hediye alanlar:",
       receive_Top3_content:
@@ -108,5 +109,35 @@ module.exports = {
     user_get_reward_des:'Tebrikler! Ödül olarak bedava görüntülü sohbetin var! Ücretsiz görüntülü sohbet için çipler ve dakilkalar hesabınıza günlük olarak eklenir. Lütfen bunları çip bakiyenizde kontrol edin.',
     send_des:'Top @: ücretsiz video sohbet 1 saat/gün * @@ gün',
     receive_des:'Top @: Hediye（Miktar: @@ çip）+ @@@ defa video çağrı davetiyeleri/gün * @@@@ gün'
+  },
+  newList: {
+    previous:'Önceki Sıralama',
+    time:'Zaman:',
+    daily:'Günlük',
+    allTime:'Tüm zamanlar',
+    hallFame:'Onur Listesi',
+    ending:'Bitiş zamanı',
+    ranking:'Sıralama',
+    bonus:'Teşvikler',
+    days:'gün',
+    toplist:'Günlük En İyiler Listesi Ikramiye',
+    alltimeList:'Tüm Zamanların En İyiler Listesi Ikramiye',
+    top5:'En Çok Ödül Alan 5 Alıcıları',
+    prevAct:'Önceki Etkinlik',
+    ongoing:'Devam Eden Etkinlik',
+    unkonwn:'Bilinmeyen'
+
+  },
+  firstPage: {
+    title:'Yeni Hediye Yıldız Yarışması',
+    firstOne:'1. Yeni Günlük Sıralama',
+    hit:'Her Gün ödül coinler almak için listeye girin!',
+    dounble:"2. ÇİFTE Ödüller",
+    doubleCont:"Ödüller hem Günlük hem de Toplamdır",
+    third:"3. Daha Fazla Kazanan",
+    thirdCont:"Kazananların sayısı 10'a yükseltildi. Ödül almak için daha fazla şansınız var.",
+    four:"4. Bölgeye Özel Sıralama",
+    fourCont:"Hindistan sıralaması sadece Hintli kızlar içindir, böylece daha kolay kazanabilirsiniz. ",
+    noYet:"Henüz listede kimse yoktur"
   }
 };

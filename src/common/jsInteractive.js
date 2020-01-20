@@ -10,7 +10,6 @@ export function closePager() {
   }
 
 }
-
 // 进入活动详情页面
 export function enterEventDetails(url) {
   console.log("enterEventDetails:" + url);
@@ -65,7 +64,6 @@ export function jumpOnlineUser() {
 // example:     key:value;key:value
 // 分号分割键值对，冒号分割key value
 export function logEvent(event,map) {
-  // console.log("logEvent:" + event);
   if (plat == "android") {
     jsInteractive.logEvent(event,map)
   } else if (plat == "ios") {

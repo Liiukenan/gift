@@ -3,12 +3,13 @@ module.exports = {
     incentiveDetails:{
       title:"Incentive Details",
       activity_rules:"Rules",
-      rules_content:"1. During activity, the one gift is offically designated as \"activity gift\".<br>\n" +
+      rules_content:"1. During activity, the one gift is officially designated as \"activity gift\".<br>\n" +
         "2. Received list is ranked from high to low according to the number of activity gift that stars have received.<br>\n" +
         "3. Sent list is ranked from high to low according to the number of activity gift that users have sent.<br>\n" +
         "4. Ranking list data may be delayed when network's busy. Please be patient.<br>\n" +
-        "5. If different users receive or send the same number of gifts, the first one who receives or sends that number of gifts will rank higher. ",
-      activity_incentives:"Incentives",
+        "5. If different users receive or send the same number of gifts, the first one who receives or sends that number of gifts will rank higher.<br>\n" +
+        "6. Activity rewards will be issued automatically after the ranking is updated. Please check the official message.",
+      activity_incentives:"Bonus",
       receive_Top3:"Top 3 of Receiving List",
       receive_Top3_content:"Top 1: 10,000 coins+100 video call invitations/day * 3 days<br>\n" +
         "Top 2: 10,000 coins+100 video call invitations/day * 2 days<br>\n" +
@@ -56,8 +57,8 @@ module.exports = {
     // 礼物列表名称
     tab_receive:"Top Receivers",
     tab_send:"Top Senders",
-    zbRules:"During the activity, Stars who get the specified number of Halloween pumpkin will win suprising prizes. More gifts recieved, more prizes to win.After the final results come out, Halloween pumpkins you received can't be used for getting prizes.When activity is over, the uncollected prizes become invalid automatically. Please take your prizes in time. ",
-    userRules:"How can we miss the fun pumpkin at Halloween? During the activity, every user gets a pumpkin lantern. You can light your pumpkin lantern after sending every 10 Halloween pampkins . Pumpkin lantern can be repeatedly lighted.To open the lighted lantern, and you'll get surprising prizes.After the final results come out, Halloween pumpkins you sent can't be used for lighting your pumpkin lantern.  When activity is over, the unopened pumpkin lantern becomes invalid automatically. Please open it in time. ",
+    zbRules:"During the activity, Stars who get the specified number of Halloween pumpkin will win surprising prizes. More gifts received, more prizes to win. After the final results come out, Halloween pumpkins you received can't be used for getting prizes. When activity is over, the uncollected prizes become invalid automatically. Please take your prizes in time. ",
+    userRules:"How can we miss the fun pumpkin at Halloween? During the activity, every user gets a pumpkin lantern. You can light your pumpkin lantern after sending every 10 Halloween pumpkins . Pumpkin lantern can be repeatedly lighted. To open the lighted lantern, and you'll get surprising prizes. After the final results come out, Halloween pumpkins you sent can't be used for lighting your pumpkin lantern.  When activity is over, the unopened pumpkin lantern becomes invalid automatically. Please open it in time. ",
     userSendInfo:'You get 1 more chance to draw prize after sending every 10 Halloween pumpkins',
     bt_me_punching:"Hit the top",
     bt_help_punching:"Help my girl",
@@ -105,5 +106,34 @@ module.exports = {
     user_get_reward_des:'Congrats! You\'ve got reward free video chat! The coins for free video chat will be put into your account per day. Please check them in coin balance.',
     send_des:'Top @: Free video chat for 1 hour/day * @@ days',
     receive_des:'Top @: Gift（worth @@ coins）+@@@ video call invitations/day * @@@@ days'
+  },
+  newList: {
+    previous:'Previous Ranking',
+    time:'Time:',
+    daily:'Daily',
+    allTime:'All-time',
+    hallFame:'Hall of Fame',
+    ending:'Ending in ',
+    ranking:'Ranking',
+    bonus:'Bonus',
+    days:'days',
+    toplist:'Daily Toplist Bonus',
+    alltimeList:'All-time Toplist Bonus',
+    top5:'Top 5 Receivers',
+    prevAct:'Previous Event',
+    ongoing:'Ongoing Event',
+    unkonwn:'Unknown'
+  },
+  firstPage: {
+    title:'New Gift Star Competition',
+    firstOne:'1. Daily Ranking is new',
+    hit:'Hit the list to get reward coins Every Day!',
+    dounble:"2. DOUBLE Rewards",
+    doubleCont:"Rewards are for both Daily and Final",
+    third:"3. More Winners",
+    thirdCont:"The number of winners is increased to 10. More chance to get rewards.",
+    four:"4. Region Exclusive Ranking",
+    fourCont:"Indian ranking is only for Indian girls, making it easier for you to win.",
+    noYet:"No one on the list yet"
   }
 }
