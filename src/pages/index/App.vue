@@ -276,12 +276,12 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    background: #4F065E;
+    background: #CB11AA;
 }
 .main {
     width: 100%;
     height: 100%;
-    background: #4F065E;
+    background: #CB11AA;
     background-size: 100%;
     position: relative;
     margin-top: .4444rem;
