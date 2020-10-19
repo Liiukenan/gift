@@ -34,7 +34,7 @@ var getParamValue = function(url, key) {
   // return "ar";
 };
 window.plat = getParamValue(window.location.href, "plat") || "android";
-window.jid =getParamValue(window.location.href, "jid") || "user_1023206@bj2.1-1.io";
+window.jid =getParamValue(window.location.href, "jid") || "anchor_1019281@bj2.1-1.io";
 let countryCodeArr=['en','ar','de','es','fr','hi','in','tr',"ko","zh_TW","ja"];
 // let countryCodeArr=['en','ar','hi','tr'];
 let countryCode=getParamValue(window.location.href, "lang") || 'en';
@@ -60,10 +60,76 @@ const i18n = new VueI18n({
     tr: require("../../common/lang/tr"),
     ko: require("../../common/lang/ko"),
     zh_TW: require("../../common/lang/zh_TW"),
-    ja: require("../../common/lang/ja"),
+    ja: require("../../common/lang/ja")
     // zh: require("../../common/lang/zh")
   }
 });
+function jumpConnect(){
+  var packageName=getParamValue(window.location.href, "packageName");
+  var versionCode=parseInt(getParamValue(window.location.href, "versionCode"));
+  window.bool=false;
+  var packages=[];
+  if(window.plat=='android'){
+    packages=[
+      {
+        title:'com.cherru.video.live.chat',
+        versionCode:3
+      },
+      {
+        title:'com.yochat.freechat',
+        versionCode:3
+      },
+      {
+        title:'com.live.videochat.india',
+        versionCode:27
+      },
+      {
+        title:'com.zakzak.lite.chat',
+        versionCode:6
+      },
+      {
+        title:'com.zakzak.live.chat',
+        versionCode:12
+      },
+      {
+        title:'com.zaku.live.chat',
+        versionCode:5
+      },
+      {
+        title:'com.fachat.freechat',
+        versionCode:20
+      }
+    ];
+  }else{
+    packages=[
+      {
+        title:'com.fachat.freechat',
+        versionCode:17
+      },
+      {
+        title:'com.parame.chat',
+        versionCode:14
+      },
+      {
+        title:'com.yepop.videochat',
+        versionCode:20
+      },
+      {
+        title:'com.fachat.lite.freechat',
+        versionCode:13
+      }
+    ];
+  }
+  
+  
+ 
+  packages.map(item=>{
+    if(packageName==item.title && (versionCode>=item.versionCode)){
+      window.bool=true;
+    }
+  })
+}
+jumpConnect();
 
 Vue.config.productionTip = false;
 /* eslint-disable no-new */

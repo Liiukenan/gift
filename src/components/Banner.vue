@@ -316,7 +316,7 @@ export default {
     top .4444rem
     width 2rem
     border-radius .2222rem 0 0 .2222rem
-    background-image: linear-gradient(180deg, #8923DE 0%, #FF26D2 100%);
+    background-image: linear-gradient(180deg, #FF6E8A 0%, #F53E68 100%);
     transition all 0.2s
     min-height 1rem
     span{
@@ -334,7 +334,7 @@ export default {
     width 1.25rem
     height 1.25rem
     color: rgba(255,255,255,0.80);
-    background-image: linear-gradient(180deg, #8923DE 0%, #FF26D2 100%);
+    background-image: linear-gradient(180deg, #FF6E8A 0%, #F53E68 100%);
     span{
       transform scale(0.8)
       display inline-block

@@ -32,17 +32,18 @@
     </div>
     <div class="line bg-hui1"></div>
     <div class="pt-16 bg-white" v-if="lastActive"></div>
-    
     <div
-      class="time bold fc-red flex-center flex-justify-center bg-white"
+      class="time bold fc-red bg-white"
       v-if="!lastActive && timeList"
     >
+    <div v-if="showTimes" class="flex-center flex-justify-center " style="height:1.2222rem;">
       <div class="mr-6">{{$t("newList.ending")}}</div>
-      <div v-if="this.dailyTime()">{{days}}d {{hours}}h</div>
-      <div v-else>
+      <div v-if="showHours">{{days}}d {{hours}}h</div>
+      <div class="flex-items-center" v-else>
         <span class="border-r4 fc-white bg-red ml-2 mr-2">{{hours}}</span>:
         <span class="border-r4 fc-white bg-red ml-2 mr-2">{{minutes}}</span>:
         <span class="border-r4 fc-white bg-red ml-2 mr-2">{{seconds}}</span>
+      </div>
       </div>
     </div>
     <ranklist :list="list" v-if="timeList" :coinslist="coinslist" :giftIcon="giftIcon"></ranklist>
@@ -69,6 +70,7 @@ export default {
       allhours: "",
       allminutes: "",
       allseconds: "",
+      showTimes:true,
       rankCenter: false,
       showBox: false,
       person: {
@@ -151,8 +153,8 @@ export default {
       nowTime: "",
       ans: false,
       timeActive: "",
-      trueState: "",
-      falseState: "",
+      trueState: {},
+      falseState: {},
       topReceivers: {
         daily: {
           jid: window.jid,
@@ -176,6 +178,7 @@ export default {
           coinslist: []
         }
       },
+      showHours:false,
       topSenders: {
         allTime: {
           jid: window.jid,
@@ -188,7 +191,6 @@ export default {
     };
   },
   mounted() {
-    
     if (window.jid.indexOf("anchor") != "-1") {
       this.showBox = true;
     } else {
@@ -205,13 +207,16 @@ export default {
         this.giftIcon = result.activity.thumbnail_url;
         this.coinslist = result.reward_alltime.anchor;
         this.nowTime = new Date(result.activity.now_time).getTime();
-        this.timeActive = setInterval(this.countTime, 1000);
+        // this.timeActive = setInterval(this.countTime, 1000);
       });
+      
     } else {
       this.actstate().then(result => {
         this.falseState = result;
         this.giftIcon = result.activity.thumbnail_url;
         this.coinslist = result.reward_daily.anchor;
+        // this.falseState.activity.now_time="2020/07/15 23:00:12";
+        // this.falseState.activity.end_time="2020/07/16 1:00:12";
         this.nowTime = new Date(result.activity.now_time).getTime();
         this.timeActive = setInterval(this.countTime, 1000);
       });
@@ -301,6 +306,40 @@ export default {
       // });
       data.date_type = "hall_of_fame";
       this.giftList(data).then(result => {
+        // result={
+        //   20200709:[
+        //     {
+        //       avatarUrl: "http://cdn2.1-1.io/s/files/ac/f6/acf69686a6564777b21690bc28bf4b214d3ec694/44ymFbpaLNYkXv2KYnAcLT8H90c5ZrKmGxSItcOE/JPEG_20200708_163146_469102858142097493.jpg",
+        //       gifts: 69,
+        //       jid: "anchor_25230078@vshow-euc1.1-1.io",
+        //       nickname: "🌸ivana🌸",
+        //       ranking: 1
+        //     },
+        //     {
+        //       avatarUrl: "http://cdn2.1-1.io/s/files/ee/c2/eec2e9128c3e611694be7c01193070c9a9e09477/fqQOqbvtXL0kp8wH8IJ2JEktdvIALPupZbOqFVNF/JPEG_20200402_132928_6797532164703530157.jpg",
+        //       gifts: 58,
+        //       jid: "anchor_82453495@vshow-euc1.1-1.io",
+        //       nickname: "yuvika",
+        //       ranking: 2
+        //     }
+        //   ],
+        //   20200710:[
+        //     {
+        //       avatarUrl: "http://cdn2.1-1.io/s/files/ae/ed/aeed8cc7c50f81446a7582e315a25f0be24ba5b3/V6FTWPh0aMcnfYqQC1y1nrFWEo9WtVIOI8yPwtkr/JPEG_20200121_011558_5635044551479826581.jpg",
+        //       gifts: 69,
+        //       jid: "anchor_25230078@vshow-euc1.1-1.io",
+        //       nickname: "🌸ivana🌸",
+        //       ranking: 1
+        //     },
+        //     {
+        //       avatarUrl: "http://cdn2.1-1.io/s/files/95/a1/95a1d85fc67b9f886f748b265507dc0d93a5d715/f3zNd89yDXl2gnUcbZecKBHUOEPRxPBKA3R7onxl/JPEG_20200704_123627_7334061772978185086.jpg",
+        //       gifts: 58,
+        //       jid: "anchor_82453495@vshow-euc1.1-1.io",
+        //       nickname: "yuvika",
+        //       ranking: 2
+        //     }
+        //   ]
+        // }
         var arr = [];
         var dateArr = [];
         for (var x in result) {
@@ -324,100 +363,137 @@ export default {
       });
       
     },
-    dailyTime(){
-      //设置结束时间
-      var todyYear = new Date(this.nowTime).getFullYear();
-      var todyMonth = new Date(this.nowTime).getMonth() + 1;
-      var todyDay = new Date(this.nowTime).getDate();
+    // dailyTime(){
+    //   //设置结束时间
+    //   var todyYear = new Date(this.nowTime).getFullYear();
+    //   var todyMonth = new Date(this.nowTime).getMonth() + 1;
+    //   var todyDay = new Date(this.nowTime).getDate();
       
-      var endDate = new Date(
-        todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
-      );
-      if(!this.falseState) return false;
-      //  如果是今天活动结束
-      if (
-        new Date(this.falseState.activity.end_time).getTime() - endDate.getTime() <= 86400000
+    //   var endDate = new Date(
+    //     todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
+    //   );
+    //   if(!this.falseState) return false;
+    //   //  如果是今天活动结束
+    //   if (
+    //     new Date(this.falseState.activity.end_time).getTime() - endDate.getTime() <= 86400000
         
-      ) {
-        
-        endDate = new Date(this.falseState.activity.end_time);
-        
-      }
-      // //如果不是今天结束
+    //   ) {
+    //     endDate = new Date(this.falseState.activity.end_time);
+    //   }
+    //   // //如果不是今天结束
       
-      if (
-        new Date(this.falseState.activity.end_time).getTime() - endDate.getTime() > 86400000
-      ) {
-        if (this.daily) {
-          if (this.ans) {
-            endDate = new Date(this.falseState.activity.end_time);
-          } else {
-            endDate = new Date(
-              todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
-            );
-          }
-        } else {
-          endDate = new Date(this.falseState.activity.end_time);
-        }
-      }
-      var end = endDate.getTime();
+    //   if (
+    //     new Date(this.falseState.activity.end_time).getTime() - endDate.getTime() > 86400000
+    //   ) {
+    //     if (this.daily) {
+    //       if (this.ans) {
+    //         endDate = new Date(this.falseState.activity.end_time);
+    //       } else {
+    //         endDate = new Date(
+    //           todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
+    //         );
+    //       }
+    //     } else {
+    //       endDate = new Date(this.falseState.activity.end_time);
+    //     }
+    //   }
+    //   var end = endDate.getTime();
       
-      //时间差
-      var leftTime = end - this.nowTime; // 结束秒数 - 现在秒数
-      var days=null;
-      if (leftTime >= 0) {
-        // 当结束时间大于等于0 的时候执行这里
-        if (this.daily) {
-          if (this.ans) {
-           days = true
-          } else {
-            days = false;
-          }
-        } else {
-          days = true;
-        }
-      }
-      return days;
-    },
+    //   //时间差
+    //   var leftTime = end - this.nowTime; // 结束秒数 - 现在秒数
+    //   var days=null;
+    //   if (leftTime >= 0) {
+    //     // 当结束时间大于等于0 的时候执行这里
+    //     if (this.daily) {
+    //       if (this.ans) {
+    //        days = true
+    //       } else {
+    //         days = false;
+    //       }
+    //     } else {
+    //       days = true;
+    //     }
+    //   }
+    //   return days;
+    // },
     countTime() {
       //设置结束时间
-      this.nowTime = this.nowTime + 1000;
+      this.nowTime+=1000;
       var todyYear = new Date(this.nowTime).getFullYear();
       var todyMonth = new Date(this.nowTime).getMonth() + 1;
       var todyDay = new Date(this.nowTime).getDate();
-      
       var endDate = new Date(
-        todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
+        todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:59"
       );
-      
+      var firstTime=null;
+      var lastTime=null;
+      // 当天最后时间
+      var overTime=new Date(endDate).getTime();
+      //活动结束最终时间
+      var endTime=new Date(this.falseState.activity.end_time).getTime();
+
       // 如果是今天活动结束
       var activity=this.falseState.activity || this.trueState.activity;
       if (
-        new Date(activity.end_time).getTime() - endDate.getTime() <= 86400000
+       (endTime-this.nowTime <86400000) && (endTime-this.nowTime >0)
       ) {
-        endDate = new Date(activity.end_time);
+
+           
+            // console.log(todyDay)
+            // console.log()
+         if (this.ans) {
+            // 如果是周榜
+            lastTime=endTime;
+            firstTime = this.nowTime;
+            this.showHours=false;
+            
+          } else {
+            // 如果是日榜
+            if(new Date(this.falseState.activity.end_time).getDate()-todyDay>0){
+              lastTime=endDate;
+              firstTime = this.nowTime;
+              this.showHours=false;
+            }else{
+                lastTime=endTime;
+                firstTime = this.nowTime;
+                this.showHours=false;
+            }
+            
+          }
       }
-      //如果不是今天结束
-      
+      //如果不是今天结束'
+      // console.log(this.falseState.activity.end_time)
+      // console.log(endDate)
+
       if (
-        new Date(activity.end_time).getTime() - endDate.getTime() >
-        86400000
+        endTime-this.nowTime >=86400000
       ) {
         if (this.daily) {
           if (this.ans) {
-            endDate = new Date(activity.end_time);
+            // 如果是周榜
+            lastTime=endTime;
+            firstTime=this.nowTime;
+            this.showHours=true;
+            
           } else {
-            endDate = new Date(
-              todyYear + "/" + todyMonth + "/" + todyDay + " 23:59:00"
-            );
+            // 如果是日榜
+            lastTime=overTime;
+            firstTime = this.nowTime;
+            this.showHours=false;
           }
         } else {
-          endDate = new Date(activity.end_time);
+          // 如果是送礼榜
+          lastTime=endTime;
+          firstTime=this.nowTime
+          this.showHours=true;
         }
       }
+      
+      //时间差
+      var leftTime = lastTime - firstTime; // 结束秒数 - 现在秒数
+      
       if (
-        new Date(activity.end_time).getTime() - endDate.getTime() <
-        0
+        leftTime <0
       ) {
         this.hours = 0;
         this.minutes = 0;
@@ -426,11 +502,6 @@ export default {
         return; // 并停止这个函数
       }
       
-      var end = endDate.getTime();
-      
-      //时间差
-      var leftTime = end - this.nowTime; // 结束秒数 - 现在秒数
-      
       if (leftTime >= 0) {
         // 当结束时间大于等于0 的时候执行这里
         this.days = Math.floor(leftTime / 1000 / 60 / 60 / 24);
@@ -438,10 +509,11 @@ export default {
         this.minutes = Math.floor((leftTime / 1000 / 60) % 60);
         this.seconds = Math.floor((leftTime / 1000) % 60);
       }
-      
+      this.showTimes=true;
     },
     changeTab(n) {
       this.coinslist = "";
+      this.showTimes=false;
       this.days='';
       this.hours='';
       this.minutes ='';
@@ -513,6 +585,7 @@ export default {
       // this.mylist(0);
     },
     changeDate(n) {
+      this.showTimes=false;
       this.days='';
       this.hours='';
       this.minutes ='';
@@ -559,6 +632,7 @@ export default {
             }
           }
           if (n == 1) {
+            // console.log(234)
             this.ans = true;
             this.list = this.topReceivers.allTime.list;
             this.rank(this.topReceivers.allTime.list);
@@ -571,7 +645,6 @@ export default {
               this.coinslist = this.trueState.reward_alltime.anchor;
             } else {
               this.coinslist = this.falseState.reward_alltime.anchor;
-              
             }
           }
 
@@ -625,9 +698,9 @@ export default {
       line-height: 0.6rem;
     }
   &.fc-red{
-    color: #FF856B;
+    color: #FF76BD;
     span{
-      background: #FF856B;
+      background: #FF76BD;
     }
   }
   }
@@ -650,6 +723,7 @@ export default {
     }
     .fc-black{
      color: #220227;
+
     }
   }
 
@@ -677,11 +751,11 @@ export default {
     a {
       padding: 0 0.5556rem;
       height: 0.8333rem;
-      color: #9066BD;
+      color:  #FF6080;
       white-space: nowrap;
     }
     .bg-pink{
-      background: #9066BD;
+      background: #FF6080;
     }
 
     .fc-white {

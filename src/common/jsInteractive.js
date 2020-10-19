@@ -25,13 +25,24 @@ export function enterEventDetails(url) {
 
 // 跳转到个人详情页面
 export function jumpPersonDetail(jid) {
-  console.log("jumpPersonDetail:" + jid);
-  logEvent("event_activity_page_profile_click","")
+  
+  logEvent("event_activity_page_profile_click","");
   if (plat == "android") {
-    jsInteractive.jumpPersonDetail(jid)
+    jsInteractive.jumpPersonDetail(jid);
+  } else if (plat == "ios") {
+    var message = {methodName: 'jumpPersonDetail', jsonParams: JSON.stringify({"jid": jid})};
+    window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
+  }
+}
+// 跳转到聊天界面
+export function jumpMessage(jid) {
+  logEvent("event_activity_page_chatroom_click","");
+  
+  if (plat == "android") {
+    jsInteractive.jumpMessage(jid);
   } else if (plat == "ios") {
     
-    var message = {methodName: 'jumpPersonDetail', jsonParams: JSON.stringify({"jid": jid})};
+    var message = {methodName: 'jumpMessage', jsonParams: JSON.stringify({"jid": jid})};
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
 }

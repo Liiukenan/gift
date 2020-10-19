@@ -9,11 +9,12 @@
           <div class="date-time mt-24 fc-white bold flex-left pl-8" :class="{'date-ar':langAr()}">{{inte.date | datetime}}</div>
           <div class="list-box">
             <div class="list-main mt-18 pl-24 pb-16">
+              <!-- @click="personDetail(item.jid)" -->
               <div
                 v-for="(item,i) in inte.data"
                 :key="i"
                 class="flex-column person-box flex-center pr-10"
-                @click="personDetail(item.jid)"
+                
                 :class="{'pr-38':i==inte.data.length-1}"
               >
                 <div class="person-pic">
@@ -46,7 +47,7 @@
   </div>
 </template>
 <script>
-import { jumpPersonDetail } from "../common/jsInteractive";
+import { jumpPersonDetail,jumpMessage} from "../common/jsInteractive";
 export default {
   props: ["datelist","giftIcon"],
   data() {
@@ -79,7 +80,17 @@ export default {
       return require("../static/img/ic_gift_ranking" + n + ".png");
     },
     personDetail: function(jid) {
-      jumpPersonDetail(jid);
+      if (jid.indexOf("user") == -1) {
+          //   主播 
+          
+            if(window.bool){
+              jumpMessage(jid);
+            }
+            // else{
+            //    jumpPersonDetail(jid);
+            // }
+            
+          }
     },
     listShow(){
         var i=0;

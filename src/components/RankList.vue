@@ -6,8 +6,9 @@
           <span>{{this.$t("newList.ranking")}}</span>
           <span v-if="!lastActive">{{this.$t("newList.bonus")}}</span>
         </div>
+        <!-- @click="personDetail(item.jid)" -->
         <div class="mt-8" v-if="list.length>0">
-          <div v-for="(item,index) in list" :key="index" class="width-100" :class="{'mt-8':item.ranking<coinslist.length+1}" @click="personDetail(item.jid)">
+          <div v-for="(item,index) in list" :key="index" class="width-100" :class="{'mt-8':item.ranking<coinslist.length+1}" >
             <div class="line bg-hui1 mb-8 mt-8" v-if="index==10"></div>
             <div
               class=" list-person flex-center mr-4 ml-4"
@@ -57,7 +58,7 @@
 </template>
 <script>
 import { mapGetters, mapState, mapActions } from "vuex";
-import {jumpPersonDetail} from "../common/jsInteractive";
+import {jumpPersonDetail,jumpMessage} from "../common/jsInteractive";
 export default {
   props:['list','coinslist','giftIcon'],
   data () {
@@ -85,7 +86,17 @@ export default {
         return require("../static/img/ic_gift_ranking" + n + ".png");
       },
       personDetail:function (jid) {
-        jumpPersonDetail(jid);
+        if (jid.indexOf("user") == -1) {
+            //   主播 
+            if(window.bool){
+              jumpMessage(jid);
+            }
+            // else{
+            //    jumpPersonDetail(jid);
+            // }
+            
+          }
+        
       },
   }
 }
@@ -94,7 +105,9 @@ export default {
 <style lang='stylus' scoped>
     .list-box {
     border-radius: 0px 0px 12px 12px;
-
+    .list{
+      margin-top -0.027778rem;
+    }
     
 
     .bg1 {
