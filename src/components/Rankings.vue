@@ -698,9 +698,9 @@ export default {
       line-height: 0.6rem;
     }
   &.fc-red{
-    color: #FF76BD;
+    color: #FF856B;
     span{
-      background: #FF76BD;
+      background: #FF856B;
     }
   }
   }
@@ -751,11 +751,11 @@ export default {
     a {
       padding: 0 0.5556rem;
       height: 0.8333rem;
-      color:  #FF6080;
+      color:  #9066BD;
       white-space: nowrap;
     }
     .bg-pink{
-      background: #FF6080;
+      background: #9066BD;
     }
 
     .fc-white {
