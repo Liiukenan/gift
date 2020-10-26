@@ -722,7 +722,7 @@ export default {
       color: #FF478D;
     }
     .fc-black{
-     color: #9A0FAB;
+     color: #220227;
 
     }
   }
@@ -751,11 +751,11 @@ export default {
     a {
       padding: 0 0.5556rem;
       height: 0.8333rem;
-      color:  #9A0FAB;
+      color:  #9066BD;
       white-space: nowrap;
     }
     .bg-pink{
-      background: #9A0FAB;
+      background: #9066BD;
     }
 
     .fc-white {
