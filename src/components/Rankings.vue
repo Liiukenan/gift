@@ -751,11 +751,11 @@ export default {
     a {
       padding: 0 0.5556rem;
       height: 0.8333rem;
-      color:  #9066BD;
+      color:  #6668A0;
       white-space: nowrap;
     }
     .bg-pink{
-      background: #9066BD;
+      background: #6668A0;
     }
 
     .fc-white {
