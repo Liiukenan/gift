@@ -41,7 +41,7 @@
                     </div>
                   </div>
                   <div class="flex-center" v-if="!lastActive && coinslist[index]!=undefined">
-                    <img src="../static/img/ic_ranking_coin.png" class="w16" />
+                    <img :src="coinsIcon" class="w16" />
                     <span class="ml-4 bold fc-hui2">{{coinslist[index].reward_num}}</span>
                   </div>
                 </div>
@@ -58,15 +58,19 @@
 </template>
 <script>
 import { mapGetters, mapState, mapActions } from "vuex";
-import {jumpPersonDetail,jumpMessage} from "../common/jsInteractive";
+import {jumpPersonDetail,jumpMessage, getQueryVariable} from "../common/jsInteractive";
 export default {
   props:['list','coinslist','giftIcon'],
   data () {
     return {
-      showLast:false
+      showLast:false,
+      coinsIcon:''
     };
   },
-  mounted(){},
+  mounted(){
+    const packageName=getQueryVariable('packageName');
+    this.coinsIcon=require(`../static/img/ic_coins_${packageName}.png`);
+  },
   watch:{
     lastActive(){
       if(this.lastActive){
