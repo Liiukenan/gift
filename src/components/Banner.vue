@@ -60,7 +60,7 @@
                       <td class="flex-between flex-center">
                         <div class="bold">{{index+1}}</div>
                         <div class="bold  flex-right flex-center">
-                          <img src="../static/img/coin.png" class="w16">
+                          <img :src="coinsIcon" class="w16">
                           <span class="font-bold">{{item.reward_num}}</span>
                         </div>
                       </td>
@@ -92,7 +92,7 @@
                         <td class="flex-between flex-center">
                           <div class="bold">{{index+1}}</div>
                           <div class="bold  flex-right flex-center">
-                            <img src="../static/img/coin.png" class="w16">
+                            <img :src="coinsIcon" class="w16">
                             <span class="font-bold">{{item.reward_num}}</span>
                           </div>
                         </td>
@@ -130,7 +130,7 @@
                               <span class="font-bold" v-else>{{item.invite_days}} {{$t("Ranking.incentiveDetails.day")}}</span>
                             </div>
                             <div class="flex-center">
-                              <img src="../static/img/coin.png" class="w16">
+                              <img :src="coinsIcon" class="w16">
                               <span class="font-bold">{{item.reward_num}}</span>
                             </div>
                             
@@ -170,6 +170,7 @@
 </template>
 <script>
 import { mapGetters,mapMutations } from "vuex";
+import { getIconName } from '../common/jsInteractive';
 import { getCurrentJid } from "../store/ApiHelper";
 export default {
   props:['date','activity','hi'],
@@ -178,6 +179,7 @@ export default {
     return {
       dialog: false,
       showDialog: false,
+      coinsIcon:'default',
       sendList:[
         {money:16200},
         {money:12600},
@@ -297,6 +299,8 @@ export default {
     }
   },
   mounted() {
+    const packageName=getIconName();
+    this.coinsIcon=require(`../static/img/${packageName}.png`);
     this.calBgImage =
       document.body.clientWidth / document.body.clientHeight > 1.83;
     const that = this;
@@ -334,7 +338,7 @@ export default {
     width 1.25rem
     height 1.25rem
     color: rgba(255,255,255,0.80);
-    background-image: linear-gradient(0deg, #3700A4 0%, #AD00AD 100%);
+    background-image: linear-gradient(0deg, #450087 0%, #BE00A1 100%);
     span{
       transform scale(0.8)
       display inline-block

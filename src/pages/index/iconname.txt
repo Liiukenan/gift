@@ -1,0 +1,29 @@
+fachat:com.fachat.freechat
+com.Miki.live.chat
+com.parame.live.chat
+com.parau.videochat
+com.topu.livechat
+com.videochat.livchat
+com.zaku.live.chat
+com.zakzak.live.chat
+com.cherru.video.live.chat
+
+
+fachat：com.fachat.freechat
+parau：com.parau.videochat
+Hooya - 原cherru安卓：com.cherru.video.live.chat
+parame：com.parame.live.chat
+zaku live：com.zaku.live.chat
+miki：com.miki.chat
+zakzak pro：com.live.videochat.india
+zakzak live：com.zakzak.live.chat
+zakzak lite：com.zakzak.lite.chat
+Hiyaa：com.hiyaa.videochat
+
+补充
+parau pro：com.parau.pro.videochat
+CherrU Pro（ios）：com.cherru.pro.video.chat
+
+
+
+

@@ -12,6 +12,7 @@ exports.jumpOnlineUser = jumpOnlineUser;
 exports.logEvent = logEvent;
 exports.loadError = loadError;
 exports.getQueryVariable = getQueryVariable;
+exports.getIconName = getIconName;
 
 // 关闭当前页面
 function closePager() {
@@ -21,7 +22,7 @@ function closePager() {
     jsInteractive.closePager();
   } else if (plat == "ios") {
     var message = {
-      methodName: 'closePager'
+      methodName: "closePager"
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
@@ -35,9 +36,9 @@ function enterEventDetails(url) {
     jsInteractive.enterEventDetails(url);
   } else if (plat == "ios") {
     var message = {
-      methodName: 'enterEventDetails',
+      methodName: "enterEventDetails",
       jsonParams: JSON.stringify({
-        "url": url
+        url: url
       })
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
@@ -52,9 +53,9 @@ function jumpPersonDetail(jid) {
     jsInteractive.jumpPersonDetail(jid);
   } else if (plat == "ios") {
     var message = {
-      methodName: 'jumpPersonDetail',
+      methodName: "jumpPersonDetail",
       jsonParams: JSON.stringify({
-        "jid": jid
+        jid: jid
       })
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
@@ -69,9 +70,9 @@ function jumpMessage(jid) {
     jsInteractive.jumpMessage(jid);
   } else if (plat == "ios") {
     var message = {
-      methodName: 'jumpMessage',
+      methodName: "jumpMessage",
       jsonParams: JSON.stringify({
-        "jid": jid
+        jid: jid
       })
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
@@ -86,7 +87,7 @@ function jumpMain() {
     jsInteractive.jumpMain();
   } else if (plat == "ios") {
     var message = {
-      methodName: 'jumpMain'
+      methodName: "jumpMain"
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
@@ -100,7 +101,7 @@ function jumpOnlineUser() {
     jsInteractive.jumpOnlineUser();
   } else if (plat == "ios") {
     var message = {
-      methodName: 'jumpOnlineUser'
+      methodName: "jumpOnlineUser"
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
@@ -122,8 +123,8 @@ function logEvent(event, map) {
     }
 
     var message = {
-      methodName: 'logEvent',
-      'event': event,
+      methodName: "logEvent",
+      event: event,
       jsonParams: JSON.stringify(json_info)
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
@@ -141,7 +142,7 @@ function loadError() {
     jsInteractive.loadError();
   } else if (plat == "ios") {
     var message = {
-      methodName: 'loadError'
+      methodName: "loadError"
     };
     window.webkit.messageHandlers.ActivityGiftCenter.postMessage(message);
   }
@@ -159,5 +160,36 @@ function getQueryVariable(variable) {
     }
   }
 
-  return '';
+  if (variable === "packageName") {
+    return "default";
+  }
+
+  return "";
+}
+
+function getIconName() {
+  var packageName = getQueryVariable("packageName");
+  var packageNameArr = {
+    zakzak: ["com.hiyaa.videochat", "com.hiyaa.videochat", "com.live.videochat.india", "com.zakzak.lite.chat", "com.zakzak.live.chat"],
+    fachat: ["com.fachat.freechat", "com.fachat.freechat", "com.yochat.freechat"],
+    mumu: ["com.parau.videochat", "com.parau.pro.videochat", "com.mumu.videochat", "com.mumu.videochat.india"],
+    cherru: ["com.cherru.video.chat", "com.cherru.pro.video.chat", "com.cherru.video.live.chat"],
+    parame: ["com.parame.live.chat", "com.parame.chat"],
+    zakulive: ["com.zaku.live.chat"],
+    miki: ["com.miki.chat"],
+    topu: ["com.topu.livechat"],
+    videochat: ["com.videochat.livechat", "com.videochat.livchat"]
+  };
+  var newArr = Object.values(packageNameArr);
+  var arr = JSON.parse('[' + JSON.stringify(newArr).replace(/\[|\]/g, '') + ']');
+
+  if (arr.includes(packageName)) {
+    for (var item in packageNameArr) {
+      if (packageNameArr[item].includes(packageName)) {
+        return item;
+      }
+    }
+  } else {
+    return "default";
+  }
 }

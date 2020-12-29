@@ -58,7 +58,7 @@
 </template>
 <script>
 import { mapGetters, mapState, mapActions } from "vuex";
-import {jumpPersonDetail,jumpMessage, getQueryVariable} from "../common/jsInteractive";
+import {jumpPersonDetail,jumpMessage, getIconName} from "../common/jsInteractive";
 export default {
   props:['list','coinslist','giftIcon'],
   data () {
@@ -68,8 +68,8 @@ export default {
     };
   },
   mounted(){
-    const packageName=getQueryVariable('packageName');
-    this.coinsIcon=require(`../static/img/ic_coins_${packageName}.png`);
+    const packageName=getIconName();
+    this.coinsIcon=require(`../static/img/${packageName}.png`);
   },
   watch:{
     lastActive(){

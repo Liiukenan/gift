@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getQueryVariable(variable) {
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    if (pair[0] == variable) {
+      return pair[1];
+    }
+  }
+  if(variable==="packageName"){
+    return "default"
+  }
+  return "";
+}
+        function getIconName() {
+            const packageName = getQueryVariable("packageName");
+            const packageNameArr = {
+                zakzak: [
+                    "com.hiyaa.videochat",
+                    "com.hiyaa.videochat",
+                    "com.live.videochat.india",
+                    "com.zakzak.lite.chat",
+                    "com.zakzak.live.chat"
+                ],
+                fachat: [
+                    "com.fachat.freechat",
+                    "com.fachat.freechat",
+                    "com.yochat.freechat"
+                ],
+                mumu: [
+                    "com.parau.videochat",
+                    "com.parau.pro.videochat",
+                    "com.mumu.videochat",
+                    "com.mumu.videochat.india"
+                ],
+                cherru: [
+                    "com.cherru.video.chat",
+                    "com.cherru.pro.video.chat",
+                    "com.cherru.video.live.chat"
+                ],
+                parame: ["com.parame.live.chat", "com.parame.chat"],
+                zakulive: ["com.zaku.live.chat"],
+                miki: ["com.miki.chat"],
+                topu: ["com.topu.livechat"],
+                videochat: ["com.videochat.livechat", "com.videochat.livchat"]
+            };
+            let newArr = Object.values(packageNameArr);
+            let arr = JSON.parse('[' + JSON.stringify(newArr).replace(/\[|\]/g, '') + ']');
+            if (arr.includes(packageName)) {
+                for (const item in packageNameArr) {
+                    if (packageNameArr[item].includes(packageName)) {
+                        return item;
+                    }
+                }
+            } else {
+                return "default";
+            }
+        }
+
+
+        console.log(getIconName());
+
+
+    </script>
+</body>
+
+</html>
