@@ -338,7 +338,7 @@ export default {
     width 1.25rem
     height 1.25rem
     color: rgba(255,255,255,0.80);
-    background-image: linear-gradient(0deg, #450087 0%, #BE00A1 100%);
+    background-image: linear-gradient(0deg, #3700A4 0%, #AD00AD 100%);
     span{
       transform scale(0.8)
       display inline-block
