@@ -90,7 +90,7 @@ export default {
 <style lang='stylus' scoped>
 .myself {
   .help-girl{
-    background-image: linear-gradient(180deg, #FF29A3 0%, #880BDB 100%);
+    background-image: linear-gradient(180deg, #B81DFF 0%, #00048C 100%);
     border-radius: 2.7778rem 0 0 2.7778rem;
     height 1.5556rem
     padding 0 .2778rem
