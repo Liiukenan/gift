@@ -5,467 +5,2187 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.activityInfo = exports.activityrank = void 0;
 var activityrank = [{
-  jid: "anchor_1024827@bj2.1-1.io",
-  avatarUrl: "http://54.222.148.146:8000/s/files/bd/53/bd53e5c1437ff5594780ca027b23462eca1d883c/j0DNi2drlGzlgnko6E7zb66LamHTEVbb32Oqpqsb/JPEG_20200730_172956_8461157934147318256.jpg",
+  avatarUrl: "http://cdn2.1-1.io/s/files/ac/f6/acf69686a6564777b21690bc28bf4b214d3ec694/abw1r8VVo8LdiFJfTKFJNSihumb7ybn1QzPQSrjr/JPEG_20210210_112741_247615115359092251.jpg",
+  jid: "anchor_25230078@vshow-euc1.1-1.io",
   ranking: 1,
   gifts: 12,
-  nickname: "Arminthing"
+  nickname: "\uD83C\uDF38 amanda \uD83C\uDF38"
 }, {
-  jid: "anchor_1011796@bj2.1-1.io",
-  avatarUrl: "http://54.222.148.146:8000/s/files/39/6e/396ea77948d0dc7ba241469986907940a3f3aff9/hLmc7j3fTsJ3YgdwRoVLJdbKl79F4JiOr1OcjP73/avatar.jpg",
+  avatarUrl: "http://cdn2.1-1.io/s/files/db/54/db549f8e2bc0d0c974c682e59cc1d6c7304bc666/HXSoxSWRpjjAhZfMlk4NHtMZHmGSydyBvYFQPtS3/JPEG_20210219_134807_1437845898831619069.jpg",
+  jid: "anchor_22311732@vshow-euc1.1-1.io",
   ranking: 2,
-  gifts: 8,
-  nickname: "\u8DF3\u821E\u6BEFIndia"
+  gifts: 11,
+  nickname: "A_na  \uD83D\uDDA4\uD83D\uDDA4"
 }, {
-  jid: "anchor_1047127@bj2.1-1.io",
-  avatarUrl: "http://54.222.148.146:8000/s/files/7f/e8/7fe82041bfe6ed7cc8799c829acda70d1ce959c3/lLaP3KcA7qf7uOr0g82JQac7OKYxZ9r3GmLH4CMi/avatar.jpg",
+  avatarUrl: "http://cdn2.1-1.io/s/files/8c/23/8c2364fa226f617fb6b9a8f3eb399904940e0f83/q3KbqGHkLZsmDo78qgqa8fI7iCu7LYjSrcAi8TeP/JPEG_20200604_014059_1365893250259651890.jpg",
+  jid: "anchor_73812216@vshow-euc1.1-1.io",
   ranking: 3,
+  gifts: 11,
+  nickname: "lauren"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/76/68/7668022c2097d594fc5f8edf1a2153beee720fcb/wElDUwo9kK4VBtau6DMI7Gm7aub6xXM9OTbf4gD7/JPEG_20210125_222116_5534409961003830931.jpg",
+  jid: "anchor_128029014@vshow-euc1.1-1.io",
+  ranking: 4,
+  gifts: 10,
+  nickname: "sweetteen"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/9d/02/9d02456b4a06adae50b1bbee7c014204a2c610fa/msiJY9soYEdLpE5F9BZpDLdmkJFnHUSpdIv4iX2H/JPEG_20210113_064243_-680498576.jpg",
+  jid: "anchor_24842526@vshow-euc1.1-1.io",
+  ranking: 5,
+  gifts: 9,
+  nickname: "Jazz \uD83D\uDC51\uD83D\uDC51"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/26/26/2626cbaa6b73b1dcb7606be46eef411731ce5d6f/sewvUTB9RIpiaOlrgGlKGkDFKUBmTjOMfqDzrxox/JPEG_20200514_101421_7117927204390117056.jpg",
+  jid: "anchor_71531549@vshow-euc1.1-1.io",
+  ranking: 6,
+  gifts: 9,
+  nickname: "Ana \uD83D\uDC8B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/a4/07/a407e0c88fee3a5bf9690259726153d36460fdb7/8AgFETlu5GeG4unHKolIlur2toyF9VOKSn5EY3Co/_____2021-02-15___54708_1613382442.png",
+  jid: "anchor_138470064@vshow-euc1.1-1.io",
+  ranking: 7,
+  gifts: 8,
+  nickname: "chachoma mirna\uD83C\uDDF8\uD83C\uDDE6"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/63/d3/63d34d72579a444f5577dcb0e3db441e6e213daa/i5cTxCthsuceFpys4p0zExtAIU7DN10O1JK8HJUv/JPEG_20210201_100436_4212288190636949029.jpg",
+  jid: "anchor_44121799@vshow-euc1.1-1.io",
+  ranking: 8,
+  gifts: 6,
+  nickname: "\uD83C\uDF53\u2764\uFE0FYour dream\u2764\uFE0F\uD83C\uDF53"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/b6/91/b691c78f5663802a2ba5979bc58f5410d0f06dd3/jkhrz4ZQcXA78KZwiCmTV2yON7gjhwKgBr2OxX8u/JPEG_20201117_165329_5162600970040555200.jpg",
+  jid: "anchor_68708608@vshow-euc1.1-1.io",
+  ranking: 9,
+  gifts: 5,
+  nickname: "\uD83D\uDC9CSoraya\uD83D\uDCA5"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/89/3e/893e4de48c5e7ec1a02d04fb60d8326650d6d7d3/dqw1IdRaFB6JzPyeDtl8OoDe4zNarxvgJdJa0hPk/JPEG_20200623_124527_1337319533445050964.jpg",
+  jid: "anchor_53284723@vshow-euc1.1-1.io",
+  ranking: 10,
+  gifts: 4,
+  nickname: "\uD83C\uDF3B Blythe\uD83C\uDF3B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/94/46/94465418adae7e1c6b59406d5d3618604188814e/tvu4aHu31HSoJIIhcPjoekMqjAGMJDXgqCCJMb8m/JPEG_20210113_102857_3914775813105741256.jpg",
+  jid: "anchor_70253048@vshow-euc1.1-1.io",
+  ranking: 11,
+  gifts: 4,
+  nickname: "\u2764\uD83D\uDC8B\uD83D\uDCA5ADRIANA \uD83D\uDCA5\uD83D\uDC8B\u2665\uFE0F"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/4b/e3/4be32bf90064842064ca10e35b6346fdfbda5015/tTjXagCGCZiSppSMwsOcdXBhOGZyAVPtfYFar7PN/_____2020-12-17___31703_1608189437.png",
+  jid: "anchor_129268643@vshow-euc1.1-1.io",
+  ranking: 12,
+  gifts: 4,
+  nickname: "\u0641\u0631\u0648\u0644\u0629 \u0645\u0646\u064A\uD83D\uDC1B\u0648\u0643\u0629"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/35/d3/35d3e879b3d1789b8efc0cb9e88c0e753eecad69/o6kXVbesLBcS4XAs5EZDfzSPGCq7SpTUCXrP28Ea/JPEG_20210205_211304_7191718792767816473.jpg",
+  jid: "anchor_110426513@vshow-euc1.1-1.io",
+  ranking: 13,
+  gifts: 4,
+  nickname: "\uD83D\uDD25Ay\uD83C\uDF19Balam\uD83C\uDF19\uD83D\uDC08"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/31/43/3143fbb2d8bcf97fcbed5a6317601acb3392fe38/Cb1Z8IX8EchbEVHm6YkJBE0KLEo2ls6Do8Y1QFG9/JPEG_20191013_154007_767455561.jpg",
+  jid: "anchor_25236986@vshow-euc1.1-1.io",
+  ranking: 14,
+  gifts: 4,
+  nickname: "L_sally"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/3d/37/3d373c6a7191e8ff69f3457c8e027d81b6c7e8b6/tabccA98d5JldiBEB5YsPy2J3ujiDb8KTywxOqk1/JPEG_20200908_113659_2683928649500257242.jpg",
+  jid: "anchor_99974372@vshow-euc1.1-1.io",
+  ranking: 15,
+  gifts: 4,
+  nickname: "Kendra\uD83D\uDC83\uD83C\uDFFE\uD83C\uDF3B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c7/c7/c7c752f434c2c7cce16965ca54c0ceff46dadd23/5YO4VEIlojQUAX6MF9Wrp85szD7p7ijXygteSUpB/JPEG_20210105_230001_4738405541055852515.jpg",
+  jid: "anchor_132068686@vshow-euc1.1-1.io",
+  ranking: 16,
+  gifts: 4,
+  nickname: "\u0633\u0627\u062D\u0631\u0629\uD83D\uDE0D \u0627\u0644\u0642\u0644\u0648\u0628\u2764\uFE0F\uD83D\uDC1B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/51/73/5173d93820d538d4b0d75dfda7e25632fd969578/rg0u9Wp9g8zMyPybmjDQaoaAG8gwPxLEkZxfdgXX/JPEG_20200622_221231_1013787490943045204.jpg",
+  jid: "anchor_105766011@vshow-euc1.1-1.io",
+  ranking: 17,
+  gifts: 3,
+  nickname: "\u2764NAZSU\u2764"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/d4/10/d410627a513f938327abcc8e17a4d503a0a16602/uBnOruW7AVMbP4ZgllxWCl2nz0ngA5B3NL9bWRhv/JPEG_20210113_193237_7734725364224379741.jpg",
+  jid: "anchor_133476465@vshow-euc1.1-1.io",
+  ranking: 18,
+  gifts: 3,
+  nickname: "Ana Let\xEDcia Moreira"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/ba/d9/bad9bb6865fd73f5a467057a0c35271ffc148916/g4TQfllvRY09qBbQavwGZkJCfRcvjyOWh1WUBSdu/JPEG_20200330_094036_6803504136797734513.jpg",
+  jid: "anchor_80820986@vshow-euc1.1-1.io",
+  ranking: 19,
+  gifts: 3,
+  nickname: "Riya G"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/8f/0a/8f0a763d0e589daefaf9a46be74a2a86d551f005/mLw4sWBeN9zssEaFiaiSw3nT6QXaMeJ05CnkSZWE/JPEG_20200916_185747_2894224669426797075.jpg",
+  jid: "anchor_109421717@vshow-euc1.1-1.io",
+  ranking: 20,
+  gifts: 3,
+  nickname: "\uD83D\uDC30Miss Serendipity\uD83D\uDD25"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/81/87/81874e557567974c29a842588d9c121195a60320/2JCUGw2b1nQnsDpP6paUDwULAGx8Ozxax9ra6dhZ/JPEG_20201110_143629_6012261992589381239.jpg",
+  jid: "anchor_124396083@vshow-euc1.1-1.io",
+  ranking: 21,
+  gifts: 3,
+  nickname: "sweet girl \uD83D\uDE18\uD83D\uDE18\uD83D\uDE18"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/66/9c/669c591d23c3bc235814c73542a4165482837a0c/q6E5Z5uNEu2l50ogDG4IfNXTKa645qjaEjf1FAJB/JPEG_20210106_085706_8346520648142142031.jpg",
+  jid: "anchor_75993193@vshow-euc1.1-1.io",
+  ranking: 22,
+  gifts: 3,
+  nickname: "\uD83D\uDC9EEstefany"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/e7/88/e78834a38c9a1f0121d2565ab59eaca9490266af/0YzUcWv0g40KuIG6Ak3T99mnUgcPl2Naqydj66xZ/JPEG_20191011_231254_1761536630.jpg",
+  jid: "anchor_10573240@vshow-euc1.1-1.io",
+  ranking: 23,
+  gifts: 2,
+  nickname: "??spicy??\uD83D\uDC8B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/05/b8/05b8df8696b48c9b71a359e55a39c80b961f57bb/lp0Y9L0gRfZyCwEJV8Ci2oNL17mKaV7J4G1Vf8lC/JPEG_________________6280898238783963779.jpg",
+  jid: "anchor_53603016@vshow-euc1.1-1.io",
+  ranking: 24,
+  gifts: 2,
+  nickname: "\uD83D\uDD25\u0627\u0644\u0634\u0639\u0644\u0629\uD83D\uDD25\u0633\u0646\u0627\u0621\uD83D\uDC15"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/f7/dd/f7dd292700d80498daae4a8cd125fda7805070bf/yTY4vF63q6Iul2ciEjnCDYc3EMUQXDvxucFa0I6V/avatar.jpg",
+  jid: "anchor_131625768@vshow-euc1.1-1.io",
+  ranking: 25,
+  gifts: 2,
+  nickname: "Azra"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/65/f1/65f1791a03bbb8445244a55271eb035ad98bc08c/LwCSNDKJE7l6kTp1II58isA05929HO100sf7MF5v/JPEG_20200425_204701_1099365256045909935.jpg",
+  jid: "anchor_70004467@vshow-euc1.1-1.io",
+  ranking: 26,
+  gifts: 2,
+  nickname: "Camila"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/ab/2f/ab2fb3ff2d58304ea5794de9bf70edd51cd966b7/G8jkoaBM9NEPykIgu9qGEamHl0OfavgPBc1ra72N/JPEG_20191128_125320_7688729495760550794.jpg",
+  jid: "anchor_55260930@vshow-euc1.1-1.io",
+  ranking: 27,
+  gifts: 2,
+  nickname: "\uD83D\uDC51\uD83D\uDC51\u2665\uFE0FCARAMELL\u2665\uFE0F\uD83D\uDC51\uD83D\uDC51"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/80/db/80db9204aaf1a4921f514faa33cb21942f84273a/JnuNoJ027lXIJhMmJAuXiT9FavIJhNtnFX9cadxJ/avatar.jpg",
+  jid: "anchor_87829383@vshow-euc1.1-1.io",
+  ranking: 28,
+  gifts: 2,
+  nickname: "\u0634\u064A\u0645\u0627\u0621 \u0634\u064A\u0634\u064A \uD83C\uDF53 Chichi"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/ca/cb/cacbdc1a3f4522f3c2913618e65ec628d874d13b/rLC9wzk9GQV9Lq3vQ8idp5a2xYQ75v30O9NEAtLS/avatar.jpg",
+  jid: "anchor_121283843@vshow-euc1.1-1.io",
+  ranking: 29,
+  gifts: 2,
+  nickname: "Linaaaa"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/06/fc/06fc23dc69bddfeb2c7f2015ba6daba989703d50/eoV5MKwB2oCwI14ADXr4RS9weumZKdpgxEQAFCx7/JPEG_20210107_093228_4290564695877107389.jpg",
+  jid: "anchor_117108254@vshow-euc1.1-1.io",
+  ranking: 30,
+  gifts: 2,
+  nickname: "salome"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/1b/1f/1b1fa0e811df0e0754d933acf644374ebd6c8950/Ur7J9j7WDZ1Q1CiT3SSfu5JMKi3Hsm83qDPMyepu/JPEG_20201129_180147_952550427171165823.jpg",
+  jid: "anchor_115115753@vshow-euc1.1-1.io",
+  ranking: 31,
+  gifts: 2,
+  nickname: "Nixie_evanss\uD83D\uDC44\uD83D\uDCA5\uD83C\uDF21"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/56/31/563136fc4a0848d253e6e5cf275de01f085dd1f0/5tAgazyJAgybsSgXltu2DCHwgdM8XtDMXsW5x0Yk/JPEG_20210106_172721_3092610876350116191.jpg",
+  jid: "anchor_68915017@vshow-euc1.1-1.io",
+  ranking: 32,
+  gifts: 2,
+  nickname: "Isabel \uD83D\uDC78\uD83C\uDFFD"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/f5/e1/f5e13e307bbc310d1a2dbc26a2b9aa87602d3364/vGCHGm8aJOyaklmNtvDvI6XLiPvPW3E3JSgeR1KY/JPEG_20201223_193428_5624134874666770327.jpg",
+  jid: "anchor_109694698@vshow-euc1.1-1.io",
+  ranking: 33,
+  gifts: 2,
+  nickname: "Mia"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/31/b3/31b3adf93d81fccd4f9d14c0b7e39751b1a2c9ca/r2Rt4rx74pD8iTKgl1F5Bscj5IHzESRIPP0lxN2O/JPEG_20200807_062247_1705867975036748195.jpg",
+  jid: "anchor_37594182@vshow-euc1.1-1.io",
+  ranking: 34,
+  gifts: 2,
+  nickname: "hot girl"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/df/f4/dff42b4cf21bb9321907a9fdeeba22c8fc262385/2TKCZta3p4is7JRx9vqQflOtikGWfQcjRBwGIyA9/JPEG_20210126_191428_4999087350272166795.jpg",
+  jid: "anchor_135429411@vshow-euc1.1-1.io",
+  ranking: 35,
+  gifts: 2,
+  nickname: "Good Girl\uD83C\uDF36\uFE0F\uD83C\uDF52\uD83D\uDC9C"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/2d/91/2d9120b67321a8cd2ee34a84a4849ccfe57538d8/vBQEYm0sydIX6aUbqO60di9XXLoyNJvX4HzpYuri/__2021-01-26_181256_1611655988.png",
+  jid: "anchor_68812057@vshow-euc1.1-1.io",
+  ranking: 36,
+  gifts: 2,
+  nickname: "Noa"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/1c/9c/1c9c0e5c87b91195a15b1ae7d23ef4d546ea49a5/D8bHxS54d0nvyXNPf4S5ymLj7oIvhB2BkYRlhgcR/JPEG_20201103_195948_5718081954173368406.jpg",
+  jid: "anchor_113032073@vshow-euc1.1-1.io",
+  ranking: 37,
+  gifts: 2,
+  nickname: "Miyuki"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/f3/04/f30444eedd8b33804e9a3169bf31c3559eb85de4/6wmYJ5a6t07OoEbaLM9BTTZGejRB9FfRMhdgLKRN/JPEG_20200727_110620_1271646675695420378.jpg",
+  jid: "anchor_111512703@vshow-euc1.1-1.io",
+  ranking: 38,
+  gifts: 2,
+  nickname: "Merry"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/7a/aa/7aaa63ffc2271925a98ad045d11253b61cd04df3/8mli2IPGwgdqf3a8069tTr2aJjfCuoAtznnE3sWH/JPEG_20200929_173433_466993416700694147.jpg",
+  jid: "anchor_119893808@vshow-euc1.1-1.io",
+  ranking: 39,
+  gifts: 2,
+  nickname: "Ari\uD83D\uDC98\uD83D\uDC8B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/10/38/1038950a1109aaf52ba9cac04bd9ca37053f1489/BoOHU3Ja8oYchstdtHzNDGLgnGyiqhWF9S75lvBb/JPEG_20210108_144219_256744743747067728.jpg",
+  jid: "anchor_132550373@vshow-euc1.1-1.io",
+  ranking: 40,
+  gifts: 2,
+  nickname: "molly_murphy\uD83D\uDE08"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/8c/08/8c08d8a76f92d17213c6423cb562a54cea3f827b/fjOvwjjhYfAhvf8hJeVnL7C2loWJiKoD9ayGOXaW/JPEG_20201224_195900_1540506954305946917.jpg",
+  jid: "anchor_74606041@vshow-euc1.1-1.io",
+  ranking: 41,
+  gifts: 2,
+  nickname: "Snowflake"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/31/50/31508ea4d855f89a499d198bbe52dd66cbdefbc1/irOfwnMYqXl9IOK5FThqKr0V0CvvnlaqhIUbRUrG/JPEG_20200923_093839_555816704345302196.jpg",
+  jid: "anchor_113029697@vshow-euc1.1-1.io",
+  ranking: 42,
+  gifts: 2,
+  nickname: "Yumie\uD83D\uDD25"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/00/4b/004bcc9e7ba991856830683fddcb02b01e6aac9c/5IFMqyOBCp5g4BY392VxjUZUTR8iPya3EYD7GTww/JPEG_20200724_133527_473615464.jpg",
+  jid: "anchor_38543547@vshow-euc1.1-1.io",
+  ranking: 43,
+  gifts: 2,
+  nickname: "gunnu"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/7b/8a/7b8af5eaabade87bc137a1bfbdde99d02bc74989/sp1aWZTyQuNqX8lACudIJKmWEhRz8fvFWlShqdSp/JPEG_20210113_174656_9088474881001405060.jpg",
+  jid: "anchor_133392815@vshow-euc1.1-1.io",
+  ranking: 44,
+  gifts: 2,
+  nickname: "Tatti\uD83D\uDC1E\u2764\uD83D\uDC1E"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/41/7b/417b750cb026f7effc56134b7f46ca1865ab5a95/kp7zafwwZqL93XP1yo0sMQOPZ4fStgmnBptS8Psc/JPEG_20210108_040645_8770645238684896663.jpg",
+  jid: "anchor_132380255@vshow-euc1.1-1.io",
+  ranking: 45,
+  gifts: 2,
+  nickname: "\u0641\u062A\u0648\u0646\uD83D\uDCCDfofa\u2764"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/5b/4c/5b4ceafff14e797fd00a5698bf9059a499909f1a/EECvmeYzIfhg8QYniFkE4GjnG0TUl1C4VcpiSjJj/JPEG_20210112_203646_6060557312247606546.jpg",
+  jid: "anchor_133136303@vshow-euc1.1-1.io",
+  ranking: 46,
   gifts: 1,
-  nickname: "3724076"
+  nickname: "Katya"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c2/05/c20590a6d498a6147cb5b0d897eab65ed6c0f992/eSoE3s0Q9InLI7SgiV3BMQF3ZjFTQA9f8IsDMWFt/JPEG_20201115_150024_8319848767352489761.jpg",
+  jid: "anchor_125027183@vshow-euc1.1-1.io",
+  ranking: 47,
+  gifts: 1,
+  nickname: "barbie \u0645\u062F\u0644\u0639\u0629\uD83D\uDD25\uD83C\uDDF8\uD83C\uDDE6\uD83C\uDDFA\uD83C\uDDF8"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c5/e2/c5e252d9896cab1b73b0ab1a56913ab412b74e97/pdhOoa4VbcR8PlbNGH81zhOFJBPBUFTi3unZqKLC/avatar.jpg",
+  jid: "anchor_29624575@vshow-euc1.1-1.io",
+  ranking: 48,
+  gifts: 1,
+  nickname: "\u0633\u0627\u062F\u064A\u0629 \u0645\u062B\u064A\u0631\u0629"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/b3/b6/b3b672bd577febf3ebe06b51e210bdc95ecac980/yyjLxxhicVU42kJRjERWUUHlWZH5ndxwyK901qzN/JPEG_20210123_021126_1179428263698291726.jpg",
+  jid: "anchor_75312196@vshow-euc1.1-1.io",
+  ranking: 49,
+  gifts: 1,
+  nickname: "\u062A\u0646\u0647\u064A\u062F\u0629"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/74/5b/745b7b266ae576386d7441965e45667f8c5d415d/yRJNf5loroaFw52cV72mck3d7tSs3rSfyup9KD9B/JPEG_20200517_222329_9073448570252575226.jpg",
+  jid: "anchor_72254137@vshow-euc1.1-1.io",
+  ranking: 50,
+  gifts: 1,
+  nickname: "\u0627\u062D\u0628 \u0627\u0644\u0648\u0627\u0648\u0627 \uD83C\uDDF8\uD83C\uDDE6\u0627\u062D\u062D\uD83C\uDF6D"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/17/0a/170ab02cfdf986025681ee046638c959bfc876fe/8TdTLz3iLhMDNVpamqegPXeZsXKEeLCpplXGSKbw/JPEG_20190730_013756_6663470665370664050.jpg",
+  jid: "anchor_20162545@vshow-euc1.1-1.io",
+  ranking: 51,
+  gifts: 1,
+  nickname: "Linaa"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/09/07/0907a6f73d5e08ec3e8bb6b888639cbcd676aff3/xu2F8HaMrXzy6t3zu2Ews58HckmnXekTClHzaOcC/JPEG_20210204_203806_733895053456319965.jpg",
+  jid: "anchor_18082899@vshow-euc1.1-1.io",
+  ranking: 52,
+  gifts: 1,
+  nickname: "Viktoria"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/40/68/40688bb1edf924e55a98bb3e1b5dd26b720c14e2/CPqniAd3qN0SrfZHpG57errnPBRfMAibHtpt8mIQ/JPEG_20201228_133842_6951424237519131688.jpg",
+  jid: "anchor_130858458@vshow-euc1.1-1.io",
+  ranking: 53,
+  gifts: 1,
+  nickname: "\u2764\uFE0F\u2764\uFE0F Azraaa\u2764\uFE0F\u2764\uFE0F\u2764\uFE0F"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/bb/41/bb41dc4dfd621bd91e3e2b00da9049e3ab60c91e/T7zgHbTAWJTjKlH9eDNagXhKKnY1B93yACknMFsw/JPEG_20210204_164925_-1342364522.jpg",
+  jid: "anchor_137116875@vshow-euc1.1-1.io",
+  ranking: 54,
+  gifts: 1,
+  nickname: "Martina"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/32/e1/32e1a9b52e888a028931d6ad784e1c603c132fa8/WaESBysDbVhRYfmpDujMopBExlHUTbZNcg2fO3GK/JPEG_20210130_155225_189905586086534257.jpg",
+  jid: "anchor_136158875@vshow-euc1.1-1.io",
+  ranking: 55,
+  gifts: 1,
+  nickname: "\u041E\u043B\u044C\u0433\u0430 \u0421\u0438\u043D\u0438\u0446\u0430"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/87/ee/87ee6afbc65aa4601f2d3055d52845d3f26572a2/E1bXK3HsNzvgjICXh4RoNFHhEyO9J2XNIWgkv1rV/JPEG_20201222_230123_4675087776790898378.jpg",
+  jid: "anchor_130217503@vshow-euc1.1-1.io",
+  ranking: 56,
+  gifts: 1,
+  nickname: "Sasha"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/5f/db/5fdbe59eb845503b2712ebdb4b2c6e34a4d39664/dm6QFvh32DNERTs0i8yYQKq0fzJiyW8FoeVFgIAm/JPEG_20190907_124044_2647198153956736382.jpg",
+  jid: "anchor_24778493@vshow-euc1.1-1.io",
+  ranking: 57,
+  gifts: 1,
+  nickname: "Siya"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c2/b0/c2b0be3d7911171ef5ad48cbed2299128f4a3b09/N9JEf6jXfaXAdh26dwibKxqAYhqYQDVZJ7OOZbui/JPEG_20210120_194917_8453578069527760652.jpg",
+  jid: "anchor_134539637@vshow-euc1.1-1.io",
+  ranking: 58,
+  gifts: 1,
+  nickname: "\u062F\u0644\u0648\u0639\u0629\uD83E\uDE90"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/66/d6/66d6e8e8049b5ab0c7fbde2107911e5f4384bc2c/ihNGmPy4mdET9zg6eWXLE97kP1jmDJDAEjUW2i2Q/JPEG_20200331_133052_3734914577289014545.jpg",
+  jid: "anchor_81622366@vshow-euc1.1-1.io",
+  ranking: 59,
+  gifts: 1,
+  nickname: "Sumi"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c1/c4/c1c4414739643932085729958d85a3cc4b14c82b/gAL81rRMJKrk58CT131BsOtxiiQ7VXXdfmkGhzbd/JPEG_20201127_195008_960481849786354798.jpg",
+  jid: "anchor_126825122@vshow-euc1.1-1.io",
+  ranking: 60,
+  gifts: 1,
+  nickname: "nina\uD83D\uDC51\u2764\uFE0F\uD83D\uDD25"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/47/c5/47c57a4a041cac90469142adeae68541d4aa4679/S6pIIPiQ4JAojlUIc2zMHjxXjtOIB03MVPWDRmXC/JPEG_20210114_164309_3340827057471719407.jpg",
+  jid: "anchor_118466590@vshow-euc1.1-1.io",
+  ranking: 61,
+  gifts: 1,
+  nickname: "\uD83E\uDD29\uD83E\uDD29candy_gift\uD83D\uDE18\uD83D\uDE18"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/e9/31/e931960a53e0e4e03a6632466d522548c8c710f2/FlAIDX4cYGdPjeU3095bZOrPsv1aGEJfo61Byy59/JPEG_20201024_112300_7200113178787351741.jpg",
+  jid: "anchor_24354601@vshow-euc1.1-1.io",
+  ranking: 62,
+  gifts: 1,
+  nickname: "\uD83D\uDD25\uD83C\uDF53\uD83C\uDF53\uD83D\uDC9ENatka\uD83D\uDC9E\uD83C\uDF53\uD83C\uDF53\uD83D\uDD25"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/b0/71/b071aa442830e233f61f4780e1c3045234b429d0/CkrGFipLM6f199GhqOdcbukWhUyAc74TKBgbw0nr/JPEG_20201218_022428_527635757992578855.jpg",
+  jid: "anchor_100626378@vshow-euc1.1-1.io",
+  ranking: 63,
+  gifts: 1,
+  nickname: "Sweet\uD83D\uDCDE\u0627\u0644\u0623\u0646\u0648\u062B\u0647 \u0627\u0644\u0637\u0627\u063A\u064A\u0647"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/ce/dc/cedcfaedb221a9310fab2eacd991df78aeae8ce4/3XaMkZtiv4QSLpcvfzEYxIyZ1wqiMErMiMLtdH3T/JPEG_20200228_055218_6449268933339269341.jpg",
+  jid: "anchor_51062629@vshow-euc1.1-1.io",
+  ranking: 64,
+  gifts: 1,
+  nickname: "rhea"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/e7/9c/e79c3e54c6ae337d5aaf311b98333b3c4e324b94/7TvIviWc34SxKvQx3mI7Z4fAFGU4J5p9eOoIW3R5/_____2020-03-24___41749_1585037879.png",
+  jid: "anchor_39259283@vshow-euc1.1-1.io",
+  ranking: 65,
+  gifts: 1,
+  nickname: "\uD83C\uDF38\uD83C\uDF39\uD83C\uDF39chinita22\uD83C\uDF38\uD83C\uDF38\uD83C\uDF3B"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/ad/2f/ad2f0df1552833af1e18a6ea9ada67f8cee3d6a5/QOH2MMhOQfgmTiQy7A7LqZ6QQb3dJrarLwhSmSav/JPEG_20210115_012756_5294471598282259376.jpg",
+  jid: "anchor_120901580@vshow-euc1.1-1.io",
+  ranking: 66,
+  gifts: 1,
+  nickname: "\u2764\xD6YK\xDC\xDC\xDC\u2764"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/0b/7f/0b7f6a13d70214c42f548c04fe3b6cdab28eb583/yPkVRjeH8w0Rt8KvCeBiLYJaOd3zwBTCJRUUqqw0/JPEG_20200907_021752_1995476212.jpg",
+  jid: "anchor_85884791@vshow-euc1.1-1.io",
+  ranking: 67,
+  gifts: 1,
+  nickname: "\u0631\u0648\u0628\u064A"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/f4/89/f4893e17a39e011d29f21cbc2c4c455b0520f7c0/vaXOTLOkXHAoffcQmxDkz0tRrvQ3JiuFN5oYXJZx/JPEG_20190601_161612_1812296720.jpg",
+  jid: "anchor_24510580@vshow-euc1.1-1.io",
+  ranking: 68,
+  gifts: 1,
+  nickname: "Monalisha"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/07/3a/073a0c3dcdb2c649034d688b807d5443a89739d6/pc3KxO1TS1QCQj2StbLtJf3HJI2bG6FRGajPXHqV/JPEG_20201204_100948_160865588985040140.jpg",
+  jid: "anchor_94101182@vshow-euc1.1-1.io",
+  ranking: 69,
+  gifts: 1,
+  nickname: "Valencia"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/50/76/50768236599075240fc20d4a5404a496edcc927a/FWw8ZuuswHJOyJzXssr1A2VEaaF8QP3vTRGFtTF3/JPEG_20210202_004626_8919285826132518242.jpg",
+  jid: "anchor_113862305@vshow-euc1.1-1.io",
+  ranking: 70,
+  gifts: 1,
+  nickname: "\u0627\u0631\u064A\u062C \u2764\uD83D\uDC44"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/63/23/6323da0e894e10094e62ee7e5d60ae6efd7519d8/tSPsRKIUQLcqglJOWAXTVZQkomgBybibm1C2b9p1/JPEG_20200801_202239_495355895312472812.jpg",
+  jid: "anchor_66324791@vshow-euc1.1-1.io",
+  ranking: 71,
+  gifts: 1,
+  nickname: "Martina \uD83D\uDC30\uD83D\uDC95"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/12/39/12396a62b65564ae858d3a00894e59dff571eb83/fsKQQ3MBY9qDIXqvtO9KTW2rXv9A98EGBg5s2giU/JPEG_20200717_171919_1902482705168690748.jpg",
+  jid: "anchor_109822686@vshow-euc1.1-1.io",
+  ranking: 72,
+  gifts: 1,
+  nickname: "Pamela"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/60/12/6012d773fe625b4f2f7bfd044f134efe3ce95e05/Z7xmDkroGc0KdeoWuTdNVtimoBnbteeuQOFDNaXw/JPEG_20200429_131452_5051085396747396647.jpg",
+  jid: "anchor_92949976@vshow-euc1.1-1.io",
+  ranking: 73,
+  gifts: 1,
+  nickname: "Riya"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/2a/07/2a0731c9e6956c927219fb1373b0be7abffdfea9/e63DPR4KGZZSlC1iAVyMwAosZfwKxSyr8qmwORsv/JPEG_20191228_203757_7985602721758089773.jpg",
+  jid: "anchor_60989834@vshow-euc1.1-1.io",
+  ranking: 74,
+  gifts: 1,
+  nickname: "sanvi"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/f6/a0/f6a002b5b669acc3631bde365062b82ac938ea14/2xUtwCk54CSu3VE1YYugK836DWlz9BOlNfEoDoe7/JPEG_20201108_210730_3041505777353545292.jpg",
+  jid: "anchor_100793414@vshow-euc1.1-1.io",
+  ranking: 75,
+  gifts: 1,
+  nickname: "\uD83C\uDF53\uD83D\uDCAFHOT GIRL\uD83D\uDCAF\uD83C\uDF53"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/4b/7c/4b7c6ca950b39e8ecd3cc97ba315b6f776a9b3fe/73i39rjkvIBuHnErvTLiZ04aOGAG9VIwAggBdKEn/JPEG_20210202_130409_6264136459436044456.jpg",
+  jid: "anchor_130874260@vshow-euc1.1-1.io",
+  ranking: 76,
+  gifts: 1,
+  nickname: "Bad girl \uD83D\uDC9C"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c4/8e/c48e34ca38a2fbf6864115d65b0f2f6a87929c9d/6JYVIC1K1OdcZsiGkUY7NaSDtpbSfvj7qVjKTJ9o/JPEG_20210129_114733_3518376704772699702.jpg",
+  jid: "anchor_135966834@vshow-euc1.1-1.io",
+  ranking: 77,
+  gifts: 1,
+  nickname: "L\xEDdia"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/e0/82/e082d0ab825af80930826a8cf6cfe60af10522b3/UWONsAbjoRavio6WYGQ8Uh7nlIg3bN0p0V9ObnL5/JPEG_20201203_114437_7602431493051544072.jpg",
+  jid: "anchor_127382412@vshow-euc1.1-1.io",
+  ranking: 78,
+  gifts: 1,
+  nickname: "Isa"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/b4/3b/b43b9e9a42c27d76dc5042afba35f7677387ec0e/oG5kfAL8MfQjeBsIYcOC3bUpVnD2vmBiNs9jpahZ/JPEG_20200214_063451_8429909290675577850.jpg",
+  jid: "anchor_39642611@vshow-euc1.1-1.io",
+  ranking: 79,
+  gifts: 1,
+  nickname: "\uD83C\uDF3A\uD83C\uDF3A killer smile\uD83C\uDF3A\uD83C\uDF3A"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/02/50/0250e39cd5015c2dfb6c726469d80fd1c8ca4d56/nt8JJFxoIiUh6nFpNgkhoeNbUTq9nUnwpas7lDZv/JPEG_20201112_144122_3825113967322446822.jpg",
+  jid: "anchor_124650242@vshow-euc1.1-1.io",
+  ranking: 80,
+  gifts: 1,
+  nickname: "mahi"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/01/cd/01cd19bd55e24ac544cd7ab579f7b914c526c8c7/CVgbmU4tL28WsXZ4BNMFi6Fo6QQ2GgOV8rfDJjKV/JPEG_20200810_142236_999141808721188190.jpg",
+  jid: "anchor_113757850@vshow-euc1.1-1.io",
+  ranking: 81,
+  gifts: 1,
+  nickname: "Prachi "
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/83/28/8328f4bfc34f2c21b2c25c7e6003f6854c3c0fdf/vnDkUVIcirYMjUDmiw4qiaWJWzLlJmghTHZ3b4FI/JPEG_20201022_142814_8316705014955529240.jpg",
+  jid: "anchor_121504963@vshow-euc1.1-1.io",
+  ranking: 82,
+  gifts: 1,
+  nickname: "KC\uD83D\uDC8Byu.yu"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/11/b3/11b36cd784b18a0570a0cb6292b52f4afc34c7f7/vbitGyAO3Qd4bSC28SFdJRy0tTwM4WdbgrSAcipH/JPEG_20210124_155727_6919787101606175033.jpg",
+  jid: "anchor_135063047@vshow-euc1.1-1.io",
+  ranking: 83,
+  gifts: 1,
+  nickname: "\uD83D\uDD25Erika\uD83D\uDD25"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/0e/96/0e96320bc780c1b76a30e9690ff1f944e0792ed3/c2nDiFXzokWPgMnsHFGJLAUBBCMDmtBqAlyEh8q4/avatar.jpg",
+  jid: "anchor_128135436@vshow-euc1.1-1.io",
+  ranking: 84,
+  gifts: 1,
+  nickname: "Sahra"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/c1/78/c1781cd58e67c0bb1fb1f4822f158dc5f2af69fd/wIQJXP6ptsoR9zKEwHAJSdpp8PyMelih0JTBOQMd/JPEG_20190819_161534_836501271.jpg",
+  jid: "anchor_35187662@vshow-euc1.1-1.io",
+  ranking: 85,
+  gifts: 1,
+  nickname: "ruhi"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/25/f5/25f5d72a5b3cd1588b56b3ba5d6a62bc527be142/7no4DKVqgkhoNy1msD82AilJdxBgKCIG1Qgt3bbq/JPEG_20200727_063214_2125404787764140368.jpg",
+  jid: "anchor_10967316@vshow-euc1.1-1.io",
+  ranking: 86,
+  gifts: 1,
+  nickname: "\uD83D\uDC9E\uD83C\uDF39(fairy )\uD83C\uDF39\uD83D\uDC9E"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/3d/11/3d11a54ec7dbf960c57d11e9bdd674f6bc73865a/pYSLDLlRrevj2420mDoiY4VfwtlVLUI6ufK68Yfk/JPEG_20210127_020310_8511193403006257984.jpg",
+  jid: "anchor_72971770@vshow-euc1.1-1.io",
+  ranking: 87,
+  gifts: 1,
+  nickname: "zule"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/2e/4c/2e4c9bae8f47a9668862cdb7a8b300dd7eff7b7f/ud73iDbaNEblC4IqbrZLr6kTY0aJFI9DfB95lWgr/avatar.jpg",
+  jid: "anchor_121474870@vshow-euc1.1-1.io",
+  ranking: 88,
+  gifts: 1,
+  nickname: "Natasha caldeir\xE3o"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/44/1d/441daecbe01a8a433ea002d37f4ae3b8a87891e0/Z0iscPabYzYbM6IyKZ4Y7ObOgDOzpHZhkbmq0OT1/JPEG_________________457329918.jpg",
+  jid: "anchor_137466666@vshow-euc1.1-1.io",
+  ranking: 89,
+  gifts: 1,
+  nickname: "basma"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/af/db/afdbcdd9de91eebf2a0b8c1b1105ac826d6b4b25/lwDvGpR6eYA2AuqbiA7IdvX079x4v3zPpx7yYnIz/JPEG_20200204_221437_2555926184491667541.jpg",
+  jid: "anchor_68920248@vshow-euc1.1-1.io",
+  ranking: 90,
+  gifts: 1,
+  nickname: "karla"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/11/0a/110ae1142c8a8748d9fc263dc373308467d0b6a0/l3mqOFzGz2iosj3zlnYhjnBdggYsM5CxFhunsIOy/JPEG_20200402_135939_2345969356559144224.jpg",
+  jid: "anchor_82473909@vshow-euc1.1-1.io",
+  ranking: 91,
+  gifts: 1,
+  nickname: "Dia Tanisha"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/7c/71/7c719ffcc09f9befbbb993c9ad954f721b2f8b58/BaCaYX2OOPqwXb08A1gCROqhdr1yQQat6hE0ZdaR/_____2021-01-12___112547_1610421959.png",
+  jid: "anchor_132752071@vshow-euc1.1-1.io",
+  ranking: 92,
+  gifts: 1,
+  nickname: "\uD83C\uDF2A\u0645\u0631\u0628\u0631\u0628\u0629\uD83C\uDF29\u0647\u0627\u064A\u062C\u0629\uD83C\uDF2A"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/04/83/0483c48093e2780243c739930c12a565462ba7bc/b6QwCkvNZcccWoRlsHw6EJ8EPbaaPwiLUXd5OyDp/JPEG_20201109_014639_3078177736675164642.jpg",
+  jid: "anchor_119084211@vshow-euc1.1-1.io",
+  ranking: 93,
+  gifts: 1,
+  nickname: "Abby Avelyn"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/33/e9/33e9e1d0af1c36c3c0ebc7065bbb6146ac7c2f53/r27oFr6E1E1hQ8MtPvNgzovY75lpncyJqNRmgAJo/JPEG_20201017_112117_7399894776274911332.jpg",
+  jid: "anchor_121844445@vshow-euc1.1-1.io",
+  ranking: 94,
+  gifts: 1,
+  nickname: "juuh"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/78/9d/789dee184233dd58c1ac34dc500b5c2f383b25fc/x5MeQRIEoO0iDXvJGjKM8lN8zpodQigAhpwnxY7Q/JPEG_20200519_070012_6094131229449230424.jpg",
+  jid: "anchor_97191501@vshow-euc1.1-1.io",
+  ranking: 95,
+  gifts: 1,
+  nickname: "Hema"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/d1/e6/d1e63ac4bdf84d004737e12589036d882761c6d8/mW5K7oEXPzNaC1xLk7LxpV39xtm1B8NeQk724I56/JPEG_20200828_193909_2302818712511802124.jpg",
+  jid: "anchor_57730841@vshow-euc1.1-1.io",
+  ranking: 96,
+  gifts: 1,
+  nickname: "Babie\u2764\uFE0F"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/b6/f3/b6f36fb515f84a270f401f4c14569695e315bf32/eg7aURStQI8lb4TaUJ3OCMx3vJHcSv4wjErxhq5f/JPEG_20210130_222306_1954473757530718322.jpg",
+  jid: "anchor_136170073@vshow-euc1.1-1.io",
+  ranking: 97,
+  gifts: 1,
+  nickname: "\uD83C\uDF4EJpple"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/fc/d4/fcd43967d0b4fc9f279affd54c38abd294104406/nNE9N9B512bm1Ki6VOxCRiyzCKfwreHwo2YUlwVT/JPEG_20210130_152935_4932848866231573237.jpg",
+  jid: "anchor_134908213@vshow-euc1.1-1.io",
+  ranking: 98,
+  gifts: 1,
+  nickname: "Simran Beniwal"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/62/38/623854a8d9715952cf89d9a9864322bf6abe29a8/raayk1MTWkv1DYpd0zE3UDcZBOs2Ec7nzDLUgvRY/JPEG_20210109_033151_-6493754.jpg",
+  jid: "anchor_11342603@vshow-euc1.1-1.io",
+  ranking: 99,
+  gifts: 1,
+  nickname: "\uD83D\uDC9E\uD83D\uDD25\uD83D\uDCA3LEDi\uD83D\uDC96\uD83C\uDF81\uD83D\uDC51"
+}, {
+  avatarUrl: "http://cdn2.1-1.io/s/files/72/ec/72ec2beed96943bb5d12e4020c40d2511b0410cc/TcXtszMCkdmIGyT4YJftUntYZWQs1ZejklpgGRsM/JPEG_20201202_222924_2863718693990243896_1606985104.jpg",
+  jid: "anchor_127553857@vshow-euc1.1-1.io",
+  ranking: 100,
+  gifts: 1,
+  nickname: "Mar\xEDa Mulata"
 }];
 exports.activityrank = activityrank;
 var activityInfo = {
+  receiveGifts: [{
+    gifts: 244,
+    jid: "anchor_25230078@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ac/f6/acf69686a6564777b21690bc28bf4b214d3ec694/abw1r8VVo8LdiFJfTKFJNSihumb7ybn1QzPQSrjr/JPEG_20210210_112741_247615115359092251.jpg",
+    ranking: 1,
+    nickname: "\uD83C\uDF38 amanda \uD83C\uDF38"
+  }, {
+    gifts: 86,
+    jid: "anchor_44121799@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/63/d3/63d34d72579a444f5577dcb0e3db441e6e213daa/i5cTxCthsuceFpys4p0zExtAIU7DN10O1JK8HJUv/JPEG_20210201_100436_4212288190636949029.jpg",
+    ranking: 2,
+    nickname: "\uD83C\uDF53\u2764\uFE0FYour dream\u2764\uFE0F\uD83C\uDF53"
+  }, {
+    gifts: 70,
+    jid: "anchor_118440164@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/10/51/105165d8405b3452f6a67c83c7eb59bf193b8d19/W1uivgkokxk7qL7Dic8BHYl59UDFpOBCcUH3L4hN/JPEG_20210111_192742_7143464621270763732.jpg",
+    ranking: 3,
+    nickname: "\u2764\uFE0F DIANA\uD83D\uDDA4\uD83D\uDCAF\uD83D\uDCA5"
+  }, {
+    gifts: 65,
+    jid: "anchor_133392815@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/7b/8a/7b8af5eaabade87bc137a1bfbdde99d02bc74989/sp1aWZTyQuNqX8lACudIJKmWEhRz8fvFWlShqdSp/JPEG_20210113_174656_9088474881001405060.jpg",
+    ranking: 4,
+    nickname: "Tatti\uD83D\uDC1E\u2764\uD83D\uDC1E"
+  }, {
+    gifts: 61,
+    jid: "anchor_69707080@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/2d/fb/2dfb9c11dc7984e69fe51de568d41441ee271814/5i1UUjphxHSJgSK9kcYQfK0PI00eVIBdCk6zKfcQ/JPEG_20201210_143016_1948077699802531453.jpg",
+    ranking: 5,
+    nickname: "\uD83D\uDCA3 GiZeM \uD83D\uDCA5"
+  }, {
+    gifts: 59,
+    jid: "anchor_80820986@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ba/d9/bad9bb6865fd73f5a467057a0c35271ffc148916/g4TQfllvRY09qBbQavwGZkJCfRcvjyOWh1WUBSdu/JPEG_20200330_094036_6803504136797734513.jpg",
+    ranking: 6,
+    nickname: "Riya G"
+  }, {
+    gifts: 54,
+    jid: "anchor_22311732@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/db/54/db549f8e2bc0d0c974c682e59cc1d6c7304bc666/HXSoxSWRpjjAhZfMlk4NHtMZHmGSydyBvYFQPtS3/JPEG_20210219_134807_1437845898831619069.jpg",
+    ranking: 7,
+    nickname: "A_na  \uD83D\uDDA4\uD83D\uDDA4"
+  }, {
+    gifts: 52,
+    jid: "anchor_60708362@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/58/f7/58f730b6e35cc5709c69b74224c6860e13bdd24c/YLqk6mtREZPJSg6RwHcgiJDWvXc8WhaEJ3i8lUgz/JPEG_20210215_165006_4789398145837792042.jpg",
+    ranking: 8,
+    nickname: "\uD83D\uDD25Vanessa \uD83D\uDD25"
+  }, {
+    gifts: 48,
+    jid: "anchor_113032073@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/1c/9c/1c9c0e5c87b91195a15b1ae7d23ef4d546ea49a5/D8bHxS54d0nvyXNPf4S5ymLj7oIvhB2BkYRlhgcR/JPEG_20201103_195948_5718081954173368406.jpg",
+    ranking: 9,
+    nickname: "Miyuki"
+  }, {
+    gifts: 46,
+    jid: "anchor_99160113@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/71/12/7112f74a5e73bafacecc772363a70addcc747327/IGw58Nfb6F3imNKPYRyO241cimHOTRHvF9P6U9ep/JPEG_20200519_232704_3377862293378889922.jpg",
+    ranking: 10,
+    nickname: "\uD83D\uDD25 \u0645\u0648\u0644\u0639\u0647 \uD83D\uDD25"
+  }, {
+    gifts: 44,
+    jid: "anchor_69424505@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/24/73/2473fee821c239d627727efa624c1c9c316c4251/z2EoCqrRHg7mRsozGzuyYBYMXnjJigSJXoghyq2b/JPEG_20201224_025850_2753478200777281035.jpg",
+    ranking: 11,
+    nickname: "\uD83D\uDD25BLONDE\uD83D\uDCA3\uD83D\uDD25"
+  }, {
+    gifts: 44,
+    jid: "anchor_53603016@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/05/b8/05b8df8696b48c9b71a359e55a39c80b961f57bb/lp0Y9L0gRfZyCwEJV8Ci2oNL17mKaV7J4G1Vf8lC/JPEG_________________6280898238783963779.jpg",
+    ranking: 12,
+    nickname: "\uD83D\uDD25\u0627\u0644\u0634\u0639\u0644\u0629\uD83D\uDD25\u0633\u0646\u0627\u0621\uD83D\uDC15"
+  }, {
+    gifts: 42,
+    jid: "anchor_24842526@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/9d/02/9d02456b4a06adae50b1bbee7c014204a2c610fa/msiJY9soYEdLpE5F9BZpDLdmkJFnHUSpdIv4iX2H/JPEG_20210113_064243_-680498576.jpg",
+    ranking: 13,
+    nickname: "Jazz \uD83D\uDC51\uD83D\uDC51"
+  }, {
+    gifts: 41,
+    jid: "anchor_90682600@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/16/56/165621dbacde8835f45c8d9d515cade74c309a0f/rv4Zuk8bboNTg7FzmTgyih2IXIW8dc8LQaWG0k2c/JPEG_20210219_104318_41999693460934030.jpg",
+    ranking: 14,
+    nickname: "\uD83D\uDC8B\uD83D\uDD25Natali\uD83D\uDD25\uD83D\uDC8B"
+  }, {
+    gifts: 39,
+    jid: "anchor_57730841@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d1/e6/d1e63ac4bdf84d004737e12589036d882761c6d8/mW5K7oEXPzNaC1xLk7LxpV39xtm1B8NeQk724I56/JPEG_20200828_193909_2302818712511802124.jpg",
+    ranking: 15,
+    nickname: "Babie\u2764\uFE0F"
+  }, {
+    gifts: 38,
+    jid: "anchor_70253048@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/94/46/94465418adae7e1c6b59406d5d3618604188814e/tvu4aHu31HSoJIIhcPjoekMqjAGMJDXgqCCJMb8m/JPEG_20210113_102857_3914775813105741256.jpg",
+    ranking: 16,
+    nickname: "\u2764\uD83D\uDC8B\uD83D\uDCA5ADRIANA \uD83D\uDCA5\uD83D\uDC8B\u2665\uFE0F"
+  }, {
+    gifts: 37,
+    jid: "anchor_118777675@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/87/5d/875dd65868b738df1df3ac03354e02f198028512/cB70s1Ay5VEAyHy9fi0OLdd5e9fo0pF3U9hh2kRk/avatar.jpg",
+    ranking: 17,
+    nickname: "-AFRA-"
+  }, {
+    gifts: 36,
+    jid: "anchor_34098934@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ec/45/ec45e2182e6b8b7463930548a71f9f58bb54d762/nBfLAeKnPsZWcNTYVzogvTsX36WySt9zmoDpDYfT/JPEG_20210213_155341_6449707957176510096.jpg",
+    ranking: 18,
+    nickname: "\uD83D\uDC9DPAULINA\uD83D\uDC9D\uD83D\uDC9D\uD83D\uDD25\uD83D\uDD25"
+  }, {
+    gifts: 34,
+    jid: "anchor_105766011@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/51/73/5173d93820d538d4b0d75dfda7e25632fd969578/rg0u9Wp9g8zMyPybmjDQaoaAG8gwPxLEkZxfdgXX/JPEG_20200622_221231_1013787490943045204.jpg",
+    ranking: 19,
+    nickname: "\u2764NAZSU\u2764"
+  }, {
+    gifts: 33,
+    jid: "anchor_31909469@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ae/23/ae23ae83ca85613aabea27ca49f1e10121fb818e/52D9ynoHoG5NbLKKGVCMCBNts1hkdByviO8q6NEg/JPEG_20210202_112550_196355445890487707.jpg",
+    ranking: 20,
+    nickname: "Rosalyne"
+  }, {
+    gifts: 31,
+    jid: "anchor_106484875@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/08/b4/08b4a63c043fb2ffa907f911dd24d85ca0d71647/qWXdPs6tMJO7tMDb53VZqRI9kzdXswFuOPzgclaZ/JPEG_20200628_092858_-177862107.jpg",
+    ranking: 21,
+    nickname: "\u0627\u0644\u062D\u0644\u0648\u0629"
+  }, {
+    gifts: 31,
+    jid: "anchor_133136303@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/5b/4c/5b4ceafff14e797fd00a5698bf9059a499909f1a/EECvmeYzIfhg8QYniFkE4GjnG0TUl1C4VcpiSjJj/JPEG_20210112_203646_6060557312247606546.jpg",
+    ranking: 22,
+    nickname: "Katya"
+  }, {
+    gifts: 30,
+    jid: "anchor_139042184@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/3a/88/3a885d6665b8c5631b7067161015f16681fe8755/e2zCVU8J6p13sSVVN4Thx0k9NTEn9crSVbGiiHcw/JPEG_20210216_095858_790794215288223959.jpg",
+    ranking: 23,
+    nickname: "Jasmine \uD83D\uDE18"
+  }, {
+    gifts: 30,
+    jid: "anchor_45477126@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/a3/1d/a31d6a5bfbb9c5772c44c33ea851c63404f57257/1cJJDE8tMk75yDYvWE7pFFhy4tgGUXqdizqAsWmn/JPEG_20191202_143041_1187645626065267164.jpg",
+    ranking: 24,
+    nickname: "\uD83D\uDE18jaan\uD83D\uDE18"
+  }, {
+    gifts: 30,
+    jid: "anchor_46328974@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/9c/ee/9cee3f6e5811282f723c06bf22d465cfa8ded167/rHDyENodFVtViSgyF9tj9VDrUxMhvh8z2z4IECKW/JPEG_20200728_160540_3336978911532310017.jpg",
+    ranking: 25,
+    nickname: "\uD83D\uDC9CSweetheart\uD83D\uDC9C"
+  }, {
+    gifts: 29,
+    jid: "anchor_22680839@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/cc/75/cc7521a50cbcc5f09e38490ec29065f2cef01f1b/R5TAvULTxtuWrXOVJfCp5DyD6a67EEL9FfaLJs6C/JPEG_20201224_133811_1519829645215002231.jpg",
+    ranking: 26,
+    nickname: "Full"
+  }, {
+    gifts: 29,
+    jid: "anchor_117108254@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/06/fc/06fc23dc69bddfeb2c7f2015ba6daba989703d50/eoV5MKwB2oCwI14ADXr4RS9weumZKdpgxEQAFCx7/JPEG_20210107_093228_4290564695877107389.jpg",
+    ranking: 27,
+    nickname: "salome"
+  }, {
+    gifts: 27,
+    jid: "anchor_78634377@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/3b/dd/3bdd10db95b0841e305058402efdf95743dd328f/3usreD7YIOQfGwrlos53y1fqAAuSi4dTQTaeB5T1/JPEG_20210114_181522_4014713252908385727.jpg",
+    ranking: 28,
+    nickname: "I love you \uD83D\uDE18\uD83D\uDC51"
+  }, {
+    gifts: 26,
+    jid: "anchor_88827206@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/05/6f/056f7c8d46bbc8035d4963a737ba9e93d8275f45/gvrh9Y0KTi32E08rWF8awUubOhDKqNvFq8mNfigT/JPEG_20200623_130012_4200345042651974121.jpg",
+    ranking: 29,
+    nickname: "Sunny\u2764"
+  }, {
+    gifts: 25,
+    jid: "anchor_72454659@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/dc/84/dc847a6c796aed0caf476d7159bedeb8ca1ff182/HsSDIR7Xr0EZPSCDPeUyA6mLaGcqRZhudvtIp76J/JPEG_20210125_084427_3913822504850320230.jpg",
+    ranking: 30,
+    nickname: "\u2764BALLI LOKUM\uD83D\uDCA3\uD83D\uDC8B"
+  }, {
+    gifts: 24,
+    jid: "anchor_128029014@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/76/68/7668022c2097d594fc5f8edf1a2153beee720fcb/wElDUwo9kK4VBtau6DMI7Gm7aub6xXM9OTbf4gD7/JPEG_20210125_222116_5534409961003830931.jpg",
+    ranking: 31,
+    nickname: "sweetteen"
+  }, {
+    gifts: 24,
+    jid: "anchor_110426513@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/35/d3/35d3e879b3d1789b8efc0cb9e88c0e753eecad69/o6kXVbesLBcS4XAs5EZDfzSPGCq7SpTUCXrP28Ea/JPEG_20210205_211304_7191718792767816473.jpg",
+    ranking: 32,
+    nickname: "\uD83D\uDD25Ay\uD83C\uDF19Balam\uD83C\uDF19\uD83D\uDC08"
+  }, {
+    gifts: 23,
+    jid: "anchor_71699504@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/82/3e/823e0ffc07cbfdf11d4f4a033a09ec85f9878f2f/8j6QbknKUWLNQEhQwMQ9hzzqa0eI1PKQlJxBec6w/JPEG_20200315_064308_11067245.jpg",
+    ranking: 33,
+    nickname: "almira\uD83D\uDC8B\uD83D\uDC8B"
+  }, {
+    gifts: 23,
+    jid: "anchor_132068686@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/c7/c7/c7c752f434c2c7cce16965ca54c0ceff46dadd23/5YO4VEIlojQUAX6MF9Wrp85szD7p7ijXygteSUpB/JPEG_20210105_230001_4738405541055852515.jpg",
+    ranking: 34,
+    nickname: "\u0633\u0627\u062D\u0631\u0629\uD83D\uDE0D \u0627\u0644\u0642\u0644\u0648\u0628\u2764\uFE0F\uD83D\uDC1B"
+  }, {
+    gifts: 22,
+    jid: "anchor_122768835@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/65/0f/650fe4d995cce95c134ea085da830c78680b7111/r8UTJcKaMTi4bZxPUZYCJ0ogQgGY2WZZtnQW8jBk/JPEG_20210123_202118_756800119160737470.jpg",
+    ranking: 35,
+    nickname: "\uD83D\uDCA5\u2763OLGA\u2763\uD83D\uDCA5"
+  }, {
+    gifts: 22,
+    jid: "anchor_68708608@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/b6/91/b691c78f5663802a2ba5979bc58f5410d0f06dd3/jkhrz4ZQcXA78KZwiCmTV2yON7gjhwKgBr2OxX8u/JPEG_20201117_165329_5162600970040555200.jpg",
+    ranking: 36,
+    nickname: "\uD83D\uDC9CSoraya\uD83D\uDCA5"
+  }, {
+    gifts: 21,
+    jid: "anchor_121623253@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/f5/23/f52318e5022de57c375b24d6bd6aeacc0c7bfe4d/nlBL9nM0jW0uiVBy0ui20xbYtbf9DEY2PpvGzDOg/JPEG_20210217_152830_5277174204761967568.jpg",
+    ranking: 37,
+    nickname: "\u0631\u064A\u062A\u0627\u062C \u0627\u0644\u0646\u0631\u062C\u0633\u064A\u0629\uD83D\uDC95"
+  }, {
+    gifts: 21,
+    jid: "anchor_52563068@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/57/47/5747dd15a49cf57644cadd55e9aafb4989f4649c/9pDIAPPpJaXeXYR5z8avBX3TzCIJdGW98JjCQU2X/JPEG_20191117_113408_4117430651786606996.jpg",
+    ranking: 38,
+    nickname: "riya singh"
+  }, {
+    gifts: 20,
+    jid: "anchor_124008683@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d2/cb/d2cbdbb6ae6915ccac1ca88eabbb70b222d9bebe/inJaX3o5wUgG4jCwo6nKbpEuTsANW1JVi6tlk2SO/JPEG_20210203_071159_8159373430404812018.jpg",
+    ranking: 39,
+    nickname: "\uD83D\uDC6FBiricik\u2601\uFE0F\uD83D\uDC6F"
+  }, {
+    gifts: 19,
+    jid: "anchor_129114570@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ed/da/edda4603ab78d8bedf57bee926cb6c65c2c5114c/ybxxH25eo4D0V8B4mpMnIkXgqW4FTgSOgBYBbsuK/JPEG_20201217_124128_3820616170340617168.jpg",
+    ranking: 40,
+    nickname: "Tanvi"
+  }, {
+    gifts: 19,
+    jid: "anchor_68915017@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/56/31/563136fc4a0848d253e6e5cf275de01f085dd1f0/5tAgazyJAgybsSgXltu2DCHwgdM8XtDMXsW5x0Yk/JPEG_20210106_172721_3092610876350116191.jpg",
+    ranking: 41,
+    nickname: "Isabel \uD83D\uDC78\uD83C\uDFFD"
+  }, {
+    gifts: 19,
+    jid: "anchor_138470064@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/a4/07/a407e0c88fee3a5bf9690259726153d36460fdb7/8AgFETlu5GeG4unHKolIlur2toyF9VOKSn5EY3Co/_____2021-02-15___54708_1613382442.png",
+    ranking: 42,
+    nickname: "chachoma mirna\uD83C\uDDF8\uD83C\uDDE6"
+  }, {
+    gifts: 18,
+    jid: "anchor_106485442@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/1e/78/1e78395d0938d99cbff33132c67ea62af14594c8/R7ZbkaDkQ8e4SV5OoGPlNCpWIqOPbRGhPKgGmHl1/JPEG_20200629_045714_7179672668947124165.jpg",
+    ranking: 43,
+    nickname: "\u062D\u0628\u064A\u0628\u0629 \u0627\u0644\u062F\u064A\u0648\u062B"
+  }, {
+    gifts: 18,
+    jid: "anchor_28383832@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/10/78/10785e9ef913747837a1e3a58a65e6036ce9f4b0/8pomaigLsYi7VkI1S4PJ7aSkZ2ffp3sdeEIU9wvY/_____2021-02-19___42518_1613723129.png",
+    ranking: 44,
+    nickname: "\uD83D\uDD25Hot Lady for you \uD83D\uDD25"
+  }, {
+    gifts: 18,
+    jid: "anchor_56836317@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/cb/55/cb55bdcb2ab27b49743b433561d19009600d6fe1/HsHqgUZjJziFKZF5y3JAwc4LEtX91UBvXnqTws5Y/JPEG_20201017_164915_4268922305716247681.jpg",
+    ranking: 45,
+    nickname: "\uD83D\uDC51\u0645\u0644\u0643\u0629 \u062F\u0644\u0639\uD83D\uDC51"
+  }, {
+    gifts: 17,
+    jid: "anchor_111168126@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/c0/86/c086ad43da2fb61e1888f594160a86b26b4c4b3d/jGxyygVDyCcW9G61BLOBbkThJAuwDypaeWEYRIsR/JPEG_20200725_234418_997361528.jpg",
+    ranking: 46,
+    nickname: "candy girl \uD83D\uDC44"
+  }, {
+    gifts: 17,
+    jid: "anchor_123790697@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/b9/41/b9413fa256415a3130de82bc75b4ca5a4c4d1b9a/Xpgp297GEWkssYNtqWjsYu3CAgqpCf8h0uARw0GX/JPEG_20210107_191453_7768840218706872790.jpg",
+    ranking: 47,
+    nickname: "\uD83D\uDCA5KISS ME \uD83D\uDCA5"
+  }, {
+    gifts: 17,
+    jid: "anchor_118556080@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/06/b2/06b23a6e445e22dd34ec99f2f5a872af86f8bc21/t6PCxtFaDBU4WO8gZwqRNqkow67IxqhiJQlFO2QT/JPEG_20210106_235145_7396791726352765853.jpg",
+    ranking: 48,
+    nickname: "\uD83E\uDD8B\u0645\u069C\u0622\u0639\u0631\uD83E\uDD8B"
+  }, {
+    gifts: 17,
+    jid: "anchor_53284723@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/89/3e/893e4de48c5e7ec1a02d04fb60d8326650d6d7d3/dqw1IdRaFB6JzPyeDtl8OoDe4zNarxvgJdJa0hPk/JPEG_20200623_124527_1337319533445050964.jpg",
+    ranking: 49,
+    nickname: "\uD83C\uDF3B Blythe\uD83C\uDF3B"
+  }, {
+    gifts: 17,
+    jid: "anchor_109421717@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8f/0a/8f0a763d0e589daefaf9a46be74a2a86d551f005/mLw4sWBeN9zssEaFiaiSw3nT6QXaMeJ05CnkSZWE/JPEG_20200916_185747_2894224669426797075.jpg",
+    ranking: 50,
+    nickname: "\uD83D\uDC30Miss Serendipity\uD83D\uDD25"
+  }, {
+    gifts: 16,
+    jid: "anchor_18297898@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/4f/ca/4fca45bfa44bbdf9c4f9c2eb2293d9b4828eeec1/Q6jck5POlGqMpXZ6xWS6marcgcqXQk5vm66hR03b/JPEG_20190919_221550_8807935204575486977.jpg",
+    ranking: 51,
+    nickname: "KiraLove"
+  }, {
+    gifts: 16,
+    jid: "anchor_68294691@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/4d/76/4d7641bc94785e274d451c79738b57b0bcca5ee2/VkuRco2TkjOgnMsiiVtUxIrMls0gQtjAZuPhLXBF/JPEG_20200902_153951_4105847951402073190.jpg",
+    ranking: 52,
+    nickname: "\u0646\u0648\u0627\u0639\u0645 \u0645\u0644\u0643\u0629 \uD83D\uDC51\u062A\u062C\u062C\u0644\u064A\u062E\uD83E\uDD0D"
+  }, {
+    gifts: 16,
+    jid: "anchor_34848830@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/7c/5e/7c5e9cbffd1ae6c23756a15a6d41b35381e3c976/N6SyycJ20neHEa3bap6tlLAxfLLKGNkTOUqcHdcS/JPEG_20210208_093004_4324028197540642295.jpg",
+    ranking: 53,
+    nickname: "\uD83D\uDD25 Mona\uD83D\uDD25"
+  }, {
+    gifts: 15,
+    jid: "anchor_113752658@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/db/93/db93d1e1b1d5cf66b02e0816c06ba80eeed41363/mb3xI0heFUPqCPfX24jrnXiZPuBbJlV1gFPDiEEb/JPEG_20201207_100732_2686202267097834830.jpg",
+    ranking: 54,
+    nickname: "ALL SHOW G\u0130RLS"
+  }, {
+    gifts: 15,
+    jid: "anchor_136593212@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/ba/d1/bad19964ce0c69ef2d68abb29ec33813467976c8/9yPeusx5nFLpFfQy9eWA63ZKqTrmKFmDb4ALVftX/JPEG_20210201_231944_2865753451875744478.jpg",
+    ranking: 55,
+    nickname: "Melissa \u2728\uD83D\uDC9D"
+  }, {
+    gifts: 15,
+    jid: "anchor_109694698@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/f5/e1/f5e13e307bbc310d1a2dbc26a2b9aa87602d3364/vGCHGm8aJOyaklmNtvDvI6XLiPvPW3E3JSgeR1KY/JPEG_20201223_193428_5624134874666770327.jpg",
+    ranking: 56,
+    nickname: "Mia"
+  }, {
+    gifts: 15,
+    jid: "anchor_111512703@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/f3/04/f30444eedd8b33804e9a3169bf31c3559eb85de4/6wmYJ5a6t07OoEbaLM9BTTZGejRB9FfRMhdgLKRN/JPEG_20200727_110620_1271646675695420378.jpg",
+    ranking: 57,
+    nickname: "Merry"
+  }, {
+    gifts: 14,
+    jid: "anchor_24624235@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/09/f8/09f8b8438205b3ab4365f7a7ecad3b9c1e81b7fc/vdHvJBSv3Hftp6OZi414UXNqJ4JUQwSgNBAzw9Pk/JPEG_20200229_015955_2979016740387524527.jpg",
+    ranking: 58,
+    nickname: "jenny\uD83D\uDC8B"
+  }, {
+    gifts: 14,
+    jid: "anchor_74797194@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/2a/7a/2a7afc1e237e433664275772e295e8b44d37bdd4/Vw8DoWgH6FFXEIidVsrcVk7ei83PWWwg8DfM5CSs/JPEG_20200910_011352_7973251667266062106.jpg",
+    ranking: 59,
+    nickname: "inass\uD83D\uDC8B\uD83D\uDC8B"
+  }, {
+    gifts: 14,
+    jid: "anchor_56563674@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/b2/12/b212663fec4228dba4b28972f2a4a7f7360b30e6/7NgkhDJA4TKt5rY3miESH06nwJrdJVEJI4mvmOYZ/JPEG_20201211_222406_5925107210426926541.jpg",
+    ranking: 60,
+    nickname: "\uD83E\uDD0D WhiTe \uD83E\uDD0D"
+  }, {
+    gifts: 14,
+    jid: "anchor_72254137@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/74/5b/745b7b266ae576386d7441965e45667f8c5d415d/yRJNf5loroaFw52cV72mck3d7tSs3rSfyup9KD9B/JPEG_20200517_222329_9073448570252575226.jpg",
+    ranking: 61,
+    nickname: "\u0627\u062D\u0628 \u0627\u0644\u0648\u0627\u0648\u0627 \uD83C\uDDF8\uD83C\uDDE6\u0627\u062D\u062D\uD83C\uDF6D"
+  }, {
+    gifts: 14,
+    jid: "anchor_39259283@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/e7/9c/e79c3e54c6ae337d5aaf311b98333b3c4e324b94/7TvIviWc34SxKvQx3mI7Z4fAFGU4J5p9eOoIW3R5/_____2020-03-24___41749_1585037879.png",
+    ranking: 62,
+    nickname: "\uD83C\uDF38\uD83C\uDF39\uD83C\uDF39chinita22\uD83C\uDF38\uD83C\uDF38\uD83C\uDF3B"
+  }, {
+    gifts: 14,
+    jid: "anchor_100793414@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/f6/a0/f6a002b5b669acc3631bde365062b82ac938ea14/2xUtwCk54CSu3VE1YYugK836DWlz9BOlNfEoDoe7/JPEG_20201108_210730_3041505777353545292.jpg",
+    ranking: 63,
+    nickname: "\uD83C\uDF53\uD83D\uDCAFHOT GIRL\uD83D\uDCAF\uD83C\uDF53"
+  }, {
+    gifts: 14,
+    jid: "anchor_73812216@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8c/23/8c2364fa226f617fb6b9a8f3eb399904940e0f83/q3KbqGHkLZsmDo78qgqa8fI7iCu7LYjSrcAi8TeP/JPEG_20200604_014059_1365893250259651890.jpg",
+    ranking: 64,
+    nickname: "lauren"
+  }, {
+    gifts: 14,
+    jid: "anchor_127553857@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/72/ec/72ec2beed96943bb5d12e4020c40d2511b0410cc/TcXtszMCkdmIGyT4YJftUntYZWQs1ZejklpgGRsM/JPEG_20201202_222924_2863718693990243896_1606985104.jpg",
+    ranking: 65,
+    nickname: "Mar\xEDa Mulata"
+  }, {
+    gifts: 14,
+    jid: "anchor_74606041@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8c/08/8c08d8a76f92d17213c6423cb562a54cea3f827b/fjOvwjjhYfAhvf8hJeVnL7C2loWJiKoD9ayGOXaW/JPEG_20201224_195900_1540506954305946917.jpg",
+    ranking: 66,
+    nickname: "Snowflake"
+  }, {
+    gifts: 13,
+    jid: "anchor_131253262@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/38/64/386412b3848545e5e96b739188c28fff8dffeef1/mz0A1is0j6K4pcZONyJGhixO95S8mctCQWbdj1I6/JPEG_20201230_205345_1643123201055741811.jpg",
+    ranking: 67,
+    nickname: "Mia"
+  }, {
+    gifts: 13,
+    jid: "anchor_66296349@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d0/04/d0043014fa570f4c3d2cfd2eb05f756aa0a3090a/i0qvoDgHwRD4yO3WWkilPx91FfvqDKULtMV2SOsF/JPEG_20200826_200840_7423882013034671979.jpg",
+    ranking: 68,
+    nickname: "\uD83D\uDD25 Williams 69\uD83D\uDD25"
+  }, {
+    gifts: 13,
+    jid: "anchor_100588809@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/4f/f3/4ff3e0a5fb1f1f84757a8adc0462815f13f3a0d0/5HxKScWfm8p0mlefHGJYJiPLpynLfmYWcHv47BLf/_____2020-05-26___33718_1590478654.png",
+    ranking: 69,
+    nickname: "Nova\uD83D\uDC52\uD83D\uDC7C\uD83D\uDC85\uD83D\uDC44"
+  }, {
+    gifts: 13,
+    jid: "anchor_44165115@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/79/a3/79a3b3572b3d2f963705388fff2ba972fc6c88c4/UImhLNJmdDg6kHBU8pV1DGyOj96jFHgBIYf3zJuV/JPEG_20210202_042407_6053296293769765267.jpg",
+    ranking: 70,
+    nickname: "Syreiy"
+  }, {
+    gifts: 13,
+    jid: "anchor_33649829@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/e0/27/e0276a1eaf73a62547c62f00f23c725f43d592fd/0l74lRgzJ92YdGBIT6GFmLWohW8ehiuxRBBeU5K3/JPEG_20190805_165524_4836501365264014161.jpg",
+    ranking: 71,
+    nickname: "\u062C\u0646\u0627\u062A"
+  }, {
+    gifts: 13,
+    jid: "anchor_112416918@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8f/6f/8f6f89bb007057c9d7fe94154747ebf1d2b48c53/DZZUFI761MUh3ujSIlP8bYYqRdgUUGn9i9e56XC1/JPEG_20210104_090444_6263926546344946041.jpg",
+    ranking: 72,
+    nickname: "\uD83C\uDF38\uD83C\uDF3ALove\uD83C\uDF3A\uD83C\uDF38"
+  }, {
+    gifts: 13,
+    jid: "anchor_123157521@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d2/18/d2186f0b568b3f5247b90e387d6866baae8b0252/9XgPnLqEBx3mf0W8cVA90rwArpyM1wL7qApHaqq0/JPEG_20210216_085602_2604984153601224416.jpg",
+    ranking: 73,
+    nickname: "Katheryn \uD83D\uDD25"
+  }, {
+    gifts: 12,
+    jid: "anchor_93662460@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/6b/e5/6be5b80bbfb27b8c0336540c1634bc869662b2ee/cSE2msh2erLrwBLrpwUFgRLRtg5LRqSSupNOdXQN/JPEG_20200429_143444_-2045863020.jpg",
+    ranking: 74,
+    nickname: "canela"
+  }, {
+    gifts: 12,
+    jid: "anchor_125456790@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/3d/01/3d010ea75c2f7dc7e4794bfb300dd67155890247/dj0rD1TQhFkweRBpFF2Y6WGwDGL1VSdhOo1T4K1C/JPEG_20210108_162023_3925672337997147246.jpg",
+    ranking: 75,
+    nickname: "\u2600\uFE0FSena\uD83D\uDD25\uD83D\uDD25\uD83D\uDD25"
+  }, {
+    gifts: 12,
+    jid: "anchor_127641981@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/15/60/1560df4a2ee57142096a993b387ad421e817d9b0/znKOufuT3hquzmrH3DrYoGGubznxyPYeZ1a1hpnk/_____2021-01-07___113610_1609990586.png",
+    ranking: 76,
+    nickname: "\uD83C\uDF47 \uD83C\uDF7C \u0631\u0648\u0628\u064A \uD83D\uDC51"
+  }, {
+    gifts: 12,
+    jid: "anchor_22250665@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/59/7f/597f7a332ff41c3f05d15d12f2e490a94bb9c7c6/11A2jrMIKWCURj91LgKTZlWsh9ufHkFv2PNw9D9S/avatar.jpg",
+    ranking: 77,
+    nickname: "Irina  "
+  }, {
+    gifts: 12,
+    jid: "anchor_37594182@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/31/b3/31b3adf93d81fccd4f9d14c0b7e39751b1a2c9ca/r2Rt4rx74pD8iTKgl1F5Bscj5IHzESRIPP0lxN2O/JPEG_20200807_062247_1705867975036748195.jpg",
+    ranking: 78,
+    nickname: "hot girl"
+  }, {
+    gifts: 12,
+    jid: "anchor_99974372@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/3d/37/3d373c6a7191e8ff69f3457c8e027d81b6c7e8b6/tabccA98d5JldiBEB5YsPy2J3ujiDb8KTywxOqk1/JPEG_20200908_113659_2683928649500257242.jpg",
+    ranking: 79,
+    nickname: "Kendra\uD83D\uDC83\uD83C\uDFFE\uD83C\uDF3B"
+  }, {
+    gifts: 11,
+    jid: "anchor_44836244@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8c/40/8c404e023a20d272666e0ab8bb21612211851cf2/yWok3iOYcuhmDl4R6d7k13mOTDln3qJ5fiwDWvzK/JPEG_20210219_162509_8864056676698424666.jpg",
+    ranking: 80,
+    nickname: "Marina\uD83D\uDC8B\u2665\uFE0F"
+  }, {
+    gifts: 11,
+    jid: "anchor_124475327@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/84/12/84127df02e7132847f05f58ae56e5d6e260d3299/jPv8zCsUnr2pvADyBPbCvk6y5TVXJ21Yiuerz6Yp/JPEG_20210115_132925_2616330395098132546.jpg",
+    ranking: 81,
+    nickname: "\xE7\u0131lg\u0131n hatun\uD83D\uDC8B\uD83C\uDF4A"
+  }, {
+    gifts: 11,
+    jid: "anchor_137716863@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/1f/6a/1f6a3e875238b2e30bbb599c50f54ce3074a29e8/3w8BglXk86TL8MK07bzP33Vk3ySDIzU4hhlRZ3Fl/avatar.jpg",
+    ranking: 82,
+    nickname: "Sugar\uD83C\uDF6Cbaby "
+  }, {
+    gifts: 11,
+    jid: "anchor_124772251@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/34/2e/342e39171c6484759f344a64b55e963293dc54b5/x0iJCR2pdPeShidf88l5kkoHmKYLle037K0VAqcn/JPEG_20201113_174754_8080433009738654750.jpg",
+    ranking: 83,
+    nickname: "Thusocute"
+  }, {
+    gifts: 11,
+    jid: "anchor_22427250@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/04/31/043120560055ba3a7dfaa0b0d5c7a10934049c33/ZXIEG9wa2ZzhTgL6164SqunGvd8SArfezK3r7lX2/JPEG_20210112_083452_1219971269823912409.jpg",
+    ranking: 84,
+    nickname: "\uD83C\uDF52"
+  }, {
+    gifts: 11,
+    jid: "anchor_20162545@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/17/0a/170ab02cfdf986025681ee046638c959bfc876fe/8TdTLz3iLhMDNVpamqegPXeZsXKEeLCpplXGSKbw/JPEG_20190730_013756_6663470665370664050.jpg",
+    ranking: 85,
+    nickname: "Linaa"
+  }, {
+    gifts: 11,
+    jid: "anchor_25236986@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/31/43/3143fbb2d8bcf97fcbed5a6317601acb3392fe38/Cb1Z8IX8EchbEVHm6YkJBE0KLEo2ls6Do8Y1QFG9/JPEG_20191013_154007_767455561.jpg",
+    ranking: 86,
+    nickname: "L_sally"
+  }, {
+    gifts: 10,
+    jid: "anchor_113805296@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/53/4a/534ac12961c37ac010817c4ad90a4a63d7bad1f1/zXhkTATeMNGLsxkjh1eOXJT2sMvrzi4CCMmuq5bT/JPEG_20200826_204606_3229447132452267129.jpg",
+    ranking: 87,
+    nickname: "\u2764\uFE0FVictoria Brand \u2764\uFE0F\uD83D\uDD25"
+  }, {
+    gifts: 10,
+    jid: "anchor_7399247@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d7/85/d78580eaecb51a32a3c070fc33f085375b5e99fa/TTiTRcGUpNjyFCPZKyU60SpV41yFfCnhP8YnXa8S/JPEG_20210202_025825_364691586254643739.jpg",
+    ranking: 88,
+    nickname: "\uD83D\uDCA5\uD83D\uDD25 Ceydaa \uD83D\uDD25\uD83D\uDCA5"
+  }, {
+    gifts: 10,
+    jid: "anchor_118801785@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d0/71/d0712184101be087618ce58c06524a758a581fee/N2VICJPzv980MMSwVay3OryvpegLzUzNhHr8F4Cf/JPEG_20200921_064257_882740385648997698.jpg",
+    ranking: 89,
+    nickname: "Katty Beauty\u2764\uFE0F"
+  }, {
+    gifts: 10,
+    jid: "anchor_66911352@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/19/50/1950c3cf342d4972f6f6999baa2e21aa3d1af8e6/kDnGWJpjoVtHsu2BXlBWegdJ1R5Hm0UZOHophIT4/JPEG_20200901_041352_5853113749358816681.jpg",
+    ranking: 90,
+    nickname: "\uD83D\uDCAF\uD83C\uDF08\u0631\u0648\u064A\u062F\u0629 \u0645\u0646\u062D\u0631\u0641\u0629\uD83C\uDF08\uD83D\uDCAF"
+  }, {
+    gifts: 10,
+    jid: "anchor_106414367@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/f2/af/f2af4acb29b6f34f6a50ff9b77b361b12f091a02/O3EhHteGJoq52cqUKm8qPSxcmTTlsmEno2rn9o4l/JPEG_20200626_133011_1915000218301544267.jpg",
+    ranking: 91,
+    nickname: "\u062A\u0639\u0627\u0644 \u0627\u0631\u064A\u062D\u0643 \uD83D\uDD25"
+  }, {
+    gifts: 10,
+    jid: "anchor_137950349@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/9a/6f/9a6fa332b989eb6b7bb230d44ea072f901b0299a/Cl0nVXYNv2gK09ZJNKvbG5bRuqDJkyGnq9K1Wzye/JPEG_20210209_223503_2045599098889012453.jpg",
+    ranking: 92,
+    nickname: "\uD83D\uDD25  \u062F\u0644\u0648\u0639\u0629 \u0646\u0648\u0631\uD83C\uDDF8\uD83C\uDDE6\uD83D\uDD25"
+  }, {
+    gifts: 10,
+    jid: "anchor_133476465@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/d4/10/d410627a513f938327abcc8e17a4d503a0a16602/uBnOruW7AVMbP4ZgllxWCl2nz0ngA5B3NL9bWRhv/JPEG_20210113_193237_7734725364224379741.jpg",
+    ranking: 93,
+    nickname: "Ana Let\xEDcia Moreira"
+  }, {
+    gifts: 10,
+    jid: "anchor_121474870@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/2e/4c/2e4c9bae8f47a9668862cdb7a8b300dd7eff7b7f/ud73iDbaNEblC4IqbrZLr6kTY0aJFI9DfB95lWgr/avatar.jpg",
+    ranking: 94,
+    nickname: "Natasha caldeir\xE3o"
+  }, {
+    gifts: 9,
+    jid: "anchor_129801537@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/16/cc/16cc74443ca498eb53c612a513a6c2e47911134d/pSwATI2DRV0QU9OriTTDGUx4xtirI5T9DKcfhT7Y/JPEG_20201224_211622_1175837492.jpg",
+    ranking: 95,
+    nickname: "Hot Love"
+  }, {
+    gifts: 9,
+    jid: "anchor_96146323@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/75/dd/75dd0174a3b777becbf2726f22f321f7c38f80b4/MwoGKLpy8cGoJeOZVdeGhGw2qUnUg60Ax6JFvXkX/JPEG_20200624_125437_6497751353700095269.jpg",
+    ranking: 96,
+    nickname: "\uD83D\uDD25\uD83D\uDD25\u062F\u0644\u0648\u0639\u0629 \u0627\u0644\u062E\u0644\u064A\u062C\uD83D\uDD25\uD83D\uDD25"
+  }, {
+    gifts: 9,
+    jid: "anchor_131849984@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/1e/a8/1ea8471393716d826b84b5ac3bd09a1d7cdacd62/gzuYtwr0L5RrJf0UbdDD2qcGh9wcWrbIVsqM6d8v/JPEG_20210121_010120_6750807474520708320.jpg",
+    ranking: 97,
+    nickname: "\uD83D\uDC51 Minchu\uD83D\uDC51"
+  }, {
+    gifts: 9,
+    jid: "anchor_54976400@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/a4/68/a468d052138cba82e0580291cfb2410ee5181fcb/6B75heAG1n2IlKE9AMT1AqAbRsdFlHBTtmQRDdcj/JPEG_20210119_004026_4096293647168393861.jpg",
+    ranking: 98,
+    nickname: "Polinka"
+  }, {
+    gifts: 9,
+    jid: "anchor_80727682@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/1a/d0/1ad090742af8cc44b24bd6c8d0001b4ef697d750/x0sTtL9yMCBVDW20hAecrR0aLD0ewJKaWLozSslq/JPEG_20200329_105441_1959119701.jpg",
+    ranking: 99,
+    nickname: "rusha"
+  }, {
+    gifts: 9,
+    jid: "anchor_91892180@vshow-euc1.1-1.io",
+    avatarUrl: "http://cdn2.1-1.io/s/files/8d/eb/8deb32f5b9881f9084b199698f401c7f5150588f/T6Yfj6q65tFuyOj0tFTSJRnDLnonhYj6M7PZyz31/JPEG_20210205_125808_1569812582606550635.jpg",
+    ranking: 100,
+    nickname: "Sammy\uD83D\uDC9E"
+  }],
+  activity: {
+    end_time: "2021/02/24 23:50:00",
+    activity_id: 83,
+    now_time: "2021/02/23 06:35:57",
+    status: 0,
+    gift_id: ["g_1001000053"],
+    thumbnail_url: "http://cdn2.1-1.io/s/files/da/39/da39a3ee5e6b4b0d3255bfef95601890afd80709/ZrY2bbXdiXf4vKy2V3yM7KRPhaqPbadXq6Sq5JjO/ic_list_gift_1x_1612495461.png",
+    time: "2021/02/18\u20142021/02/24",
+    start_time: "2021/02/18 00:10:00"
+  },
   reward_daily: {
     anchor: [{
+      user_type: "anchor",
       reward_num: 999,
+      invite_days: 0,
       user_rank: 1,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000012",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 699,
+      invite_days: 0,
       user_rank: 2,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000017",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 699,
+      invite_days: 0,
       user_rank: 3,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000017",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 699,
+      invite_days: 0,
       user_rank: 4,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000017",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 499,
+      invite_days: 0,
       user_rank: 5,
-      reward_type: "charms_invite",
-      user_type: "anchor",
+      gift_id: "g_1001000034",
       gift_url: "",
-      invite_days: 0,
-      gift_id: "g_1001000035",
-      gift_num: 1,
-      invite_times: 0
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 499,
+      invite_days: 0,
       user_rank: 6,
-      reward_type: "charms_invite",
-      user_type: "anchor",
+      gift_id: "g_1001000034",
       gift_url: "",
-      invite_days: 0,
-      gift_id: "g_1001000035",
-      gift_num: 1,
-      invite_times: 0
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 499,
+      invite_days: 0,
       user_rank: 7,
-      reward_type: "charms_invite",
-      user_type: "anchor",
+      gift_id: "g_1001000034",
       gift_url: "",
-      invite_days: 0,
-      gift_id: "g_1001000035",
-      gift_num: 1,
-      invite_times: 0
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 199,
+      invite_days: 0,
       user_rank: 8,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000002",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
+      user_type: "anchor",
       reward_num: 199,
+      invite_days: 0,
       user_rank: 9,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 0,
       gift_id: "g_1001000002",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }, {
-      reward_num: 199,
-      user_rank: 10,
-      reward_type: "charms_invite",
       user_type: "anchor",
-      gift_url: "",
+      reward_num: 199,
       invite_days: 0,
+      user_rank: 10,
       gift_id: "g_1001000002",
-      gift_num: 1,
-      invite_times: 0
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 0,
+      gift_num: 1
     }]
   },
+  sendGifts: [{
+    gifts: 52,
+    jid: "user_84046841@vshow-euc1.1-1.io",
+    ranking: 1,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/ae/b9/aeb93b2a005856edea986227d855fded0ca17329/a7VoYio7lyiZxcOZZ7Adw8EQ9AzXMO8r2I1c1J4O/JPEG_20201212_033353_3650617485091214065.jpg",
+    nickname: "Oguzhan"
+  }, {
+    gifts: 29,
+    jid: "user_72046533@vshow-euc1.1-1.io",
+    ranking: 2,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_72046533_vshow-euc1.1-1.io.jpg",
+    nickname: "Aver"
+  }, {
+    gifts: 25,
+    jid: "user_42391564@vshow-euc1.1-1.io",
+    ranking: 3,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/30/c9/30c9e50070348cd08d333f8f3361cb610feee517/8AwWeP3vWbXsTcbPUYAeJvUWq0dvIMBAbSxuqgpc/avatar.jpg",
+    nickname: "D"
+  }, {
+    gifts: 24,
+    jid: "user_120112904@vshow-euc1.1-1.io",
+    ranking: 4,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_120112904_vshow-euc1.1-1.io.jpg",
+    nickname: "MISTER ICE"
+  }, {
+    gifts: 21,
+    jid: "user_118903421@vshow-euc1.1-1.io",
+    ranking: 5,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_118903421_vshow-euc1.1-1.io.jpg",
+    nickname: "\u05D3\u05E7\u05DC \u05D0\u05E8\u05D5\u05DA"
+  }, {
+    gifts: 19,
+    jid: "user_116668843@vshow-euc1.1-1.io",
+    ranking: 6,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/18/1d/181d2cc5eefccaa1824a2cf03d679a8c70cfb23e/KcPTIWZowfVEzIyxA8PUXzsfyevryqD2XpaLeB7F/JPEG_20201123_023457_7240996308731112039.jpg",
+    nickname: "Big"
+  }, {
+    gifts: 18,
+    jid: "user_46340779@vshow-euc1.1-1.io",
+    ranking: 7,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/ba/1f/ba1f072fd86f67ca494bb0e336684315b0bd8338/RBH2ZS1gwJ8vMRo8TMzTVpXfi7fIrFJ493LeonFp/avatar.jpg",
+    nickname: "K"
+  }, {
+    gifts: 17,
+    jid: "user_126080998@vshow-euc1.1-1.io",
+    ranking: 8,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_126080998_vshow-euc1.1-1.io.jpg",
+    nickname: "jonathan"
+  }, {
+    gifts: 16,
+    jid: "user_108593088@vshow-euc1.1-1.io",
+    ranking: 9,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/fb/ea/fbea7648258b521495459cb600442f9a8046a1f2/VaEE6OGGAmx06rYSwCtzAFK8D5ICsBUDl5gV3cae/JPEG_20210217_172302_6188155790868409832.jpg",
+    nickname: "Jose"
+  }, {
+    gifts: 16,
+    jid: "user_139650493@vshow-euc1.1-1.io",
+    ranking: 10,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/a4/45/a445aa4e8c4edaa9dca4db0efcfe3621df5c24ac/rdtsgTUWdZcI6WGhIf7fMJ8lBLtQHAG05w54sYMt/JPEG_________________6789027855798103596.jpg",
+    nickname: "\u062F\u064A\u0648\u062B \u0627\u0644\u062D\u0644\u0648\u0647"
+  }, {
+    gifts: 15,
+    jid: "user_137953700@vshow-euc1.1-1.io",
+    ranking: 11,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_qvhQhp"
+  }, {
+    gifts: 15,
+    jid: "user_116827071@vshow-euc1.1-1.io",
+    ranking: 12,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_116827071_vshow-euc1.1-1.io.jpg",
+    nickname: "M"
+  }, {
+    gifts: 14,
+    jid: "user_116367431@vshow-euc1.1-1.io",
+    ranking: 13,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/57/ef/57ef469a4e430288eec487be9262f6517ea308d0/tk0dRUQqdnuUjGI25lf0efBHRVjgqcrZ9xbZcBjM/avatar.jpg",
+    nickname: "Tyr"
+  }, {
+    gifts: 14,
+    jid: "user_131366948@vshow-euc1.1-1.io",
+    ranking: 14,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_NJtXWB"
+  }, {
+    gifts: 13,
+    jid: "user_130748756@vshow-euc1.1-1.io",
+    ranking: 15,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
+    nickname: "Guest_U5jXLO"
+  }, {
+    gifts: 13,
+    jid: "user_139380373@vshow-euc1.1-1.io",
+    ranking: 16,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/66/ac/66ac9e17d477f8ebafb2a071afa0debb577e1840/FGz257jyPWb1KBBe3Ic0U74UbLg5FOzPFNLFdAAl/JPEG_20210218_193347_7655604845751548570.jpg",
+    nickname: "Vishal Kumar"
+  }, {
+    gifts: 13,
+    jid: "user_77655276@vshow-euc1.1-1.io",
+    ranking: 17,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_77655276_vshow-euc1.1-1.io.jpg",
+    nickname: "Tomy Awad"
+  }, {
+    gifts: 13,
+    jid: "user_7600266@vshow-euc1.1-1.io",
+    ranking: 18,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_7600266_vshow-euc1.1-1.io.jpg",
+    nickname: "jack"
+  }, {
+    gifts: 13,
+    jid: "user_119687812@vshow-euc1.1-1.io",
+    ranking: 19,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_36RhrA"
+  }, {
+    gifts: 12,
+    jid: "user_139657433@vshow-euc1.1-1.io",
+    ranking: 20,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_4L4XeH"
+  }, {
+    gifts: 12,
+    jid: "user_135637073@vshow-euc1.1-1.io",
+    ranking: 21,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_kCHhBV"
+  }, {
+    gifts: 12,
+    jid: "user_50612617@vshow-euc1.1-1.io",
+    ranking: 22,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_50612617_vshow-euc1.1-1.io.jpg",
+    nickname: "Gamal Dafor"
+  }, {
+    gifts: 12,
+    jid: "user_55470733@vshow-euc1.1-1.io",
+    ranking: 23,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/3c/96/3c961b6af4c77825a8bd5fed9de282f8eb47516b/VNb5iospGjZuIpSQykXMvELdURzHLHpyu4AZOh2y/avatar.jpg",
+    nickname: "Bryan Martins"
+  }, {
+    gifts: 12,
+    jid: "user_89193476@vshow-euc1.1-1.io",
+    ranking: 24,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
+    nickname: "guest_19OKvg"
+  }, {
+    gifts: 12,
+    jid: "user_131859904@vshow-euc1.1-1.io",
+    ranking: 25,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_fFQCLk"
+  }, {
+    gifts: 12,
+    jid: "user_86842701@vshow-euc1.1-1.io",
+    ranking: 26,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
+    nickname: "guest_6tTBWp"
+  }, {
+    gifts: 11,
+    jid: "user_93082559@vshow-euc1.1-1.io",
+    ranking: 27,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/8d/02/8d02740ee4f9d61c750a2995f9b8a02db3375225/AWEWyUMljcknOzlg308L47MHw2ShHc47eenC97Cg/avatar.jpg",
+    nickname: "Jon"
+  }, {
+    gifts: 11,
+    jid: "user_124809092@vshow-euc1.1-1.io",
+    ranking: 28,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_124809092_vshow-euc1.1-1.io.jpg",
+    nickname: "dhak"
+  }, {
+    gifts: 11,
+    jid: "user_115649465@vshow-euc1.1-1.io",
+    ranking: 29,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_115649465_vshow-euc1.1-1.io.jpg",
+    nickname: "Ugur "
+  }, {
+    gifts: 11,
+    jid: "user_78571507@vshow-euc1.1-1.io",
+    ranking: 30,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_78571507_vshow-euc1.1-1.io.jpg",
+    nickname: "sarbu adrian"
+  }, {
+    gifts: 11,
+    jid: "user_45342051@vshow-euc1.1-1.io",
+    ranking: 31,
+    isVip: false,
+    avatarUrl: "https://lh3.googleusercontent.com/a-/AAuE7mA-6o-E6WvL_ZgSDLzMMeJKfMM6bzNGN6qoE30Uhg=s96-c",
+    nickname: "t k"
+  }, {
+    gifts: 11,
+    jid: "user_118717031@vshow-euc1.1-1.io",
+    ranking: 32,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_pIpkaj"
+  }, {
+    gifts: 10,
+    jid: "user_56251324@vshow-euc1.1-1.io",
+    ranking: 33,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/f8/eb/f8eb89106861a76e5773c877e658f4f729a3b301/2CDIViqRrVNbtpEyPtNxWtcT0euhNILOK1jSge2t/avatar.jpg",
+    nickname: "jeff"
+  }, {
+    gifts: 10,
+    jid: "user_56465200@vshow-euc1.1-1.io",
+    ranking: 34,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_56465200_vshow-euc1.1-1.io.jpg",
+    nickname: "Nolan Maliszewski"
+  }, {
+    gifts: 10,
+    jid: "user_134891967@vshow-euc1.1-1.io",
+    ranking: 35,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_134891967_vshow-euc1.1-1.io.jpg",
+    nickname: "Ahmed Ahmed"
+  }, {
+    gifts: 10,
+    jid: "user_130748412@vshow-euc1.1-1.io",
+    ranking: 36,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_130748412_vshow-euc1.1-1.io.jpg",
+    nickname: "Royalty Social media management"
+  }, {
+    gifts: 10,
+    jid: "user_130208717@vshow-euc1.1-1.io",
+    ranking: 37,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_vsfpZ8"
+  }, {
+    gifts: 10,
+    jid: "user_138961422@vshow-euc1.1-1.io",
+    ranking: 38,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_138961422_vshow-euc1.1-1.io.jpg",
+    nickname: "Joseph"
+  }, {
+    gifts: 10,
+    jid: "user_50073804@vshow-euc1.1-1.io",
+    ranking: 39,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/c5/0b/c50b07fa9f6bda450a085c21623eb9233c9943b5/EIskoqI8UvcR5qO5EnaygtZQMYKVTCk1R1HtzoUo/avatar.jpg",
+    nickname: "Konre "
+  }, {
+    gifts: 10,
+    jid: "user_75460397@vshow-euc1.1-1.io",
+    ranking: 40,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "guest_dgnFIp"
+  }, {
+    gifts: 10,
+    jid: "user_123856339@vshow-euc1.1-1.io",
+    ranking: 41,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_L3yPXo"
+  }, {
+    gifts: 10,
+    jid: "user_71313724@vshow-euc1.1-1.io",
+    ranking: 42,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/b1/45/b145fbc9d667f41e9f37cdb413bdf1ad90c19e84/ZbgKD1ROPNx9GuJ7ShFx6wiRETD8hupCZl7plib8/avatar.jpg",
+    nickname: "Nirajan"
+  }, {
+    gifts: 9,
+    jid: "user_138129634@vshow-euc1.1-1.io",
+    ranking: 43,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/b7/c9/b7c9df727d95f60b229640dd8676279f084354eb/2KmQG2EBrJrmFzrd7D5x1LC9hYN7Xaq7Q2VoSlzx/JPEG_20210210_185049_2854477026390011635.jpg",
+    nickname: "God of Blue"
+  }, {
+    gifts: 9,
+    jid: "user_139512687@vshow-euc1.1-1.io",
+    ranking: 44,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_wiXQYE"
+  }, {
+    gifts: 9,
+    jid: "user_119548000@vshow-euc1.1-1.io",
+    ranking: 45,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_ofBZuO"
+  }, {
+    gifts: 9,
+    jid: "user_54310220@vshow-euc1.1-1.io",
+    ranking: 46,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/d5/9d/d59d98b844620da4c6e70a3655341681ac29d52c/sbOAnjUkgMDACSVer330oAQv4yWbwVLA3Ucwru5h/avatar.jpg",
+    nickname: "Chris"
+  }, {
+    gifts: 9,
+    jid: "user_138980229@vshow-euc1.1-1.io",
+    ranking: 47,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_4EeCVL"
+  }, {
+    gifts: 9,
+    jid: "user_105176897@vshow-euc1.1-1.io",
+    ranking: 48,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_105176897_vshow-euc1.1-1.io.jpg",
+    nickname: "Tiago"
+  }, {
+    gifts: 9,
+    jid: "user_126867416@vshow-euc1.1-1.io",
+    ranking: 49,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/d6/62/d6627852965fc735768afd560d8a3ff0c3ef3976/0RwRZDMXThUVR7oJcRdGowixjSe4pD2ZzoPHbYeC/avatar.jpg",
+    nickname: "ermel Rivera"
+  }, {
+    gifts: 9,
+    jid: "user_131594466@vshow-euc1.1-1.io",
+    ranking: 50,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_BFng97"
+  }, {
+    gifts: 9,
+    jid: "user_139162834@vshow-euc1.1-1.io",
+    ranking: 51,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_ySgsRj"
+  }, {
+    gifts: 9,
+    jid: "user_111137130@vshow-euc1.1-1.io",
+    ranking: 52,
+    isVip: false,
+    avatarUrl: "https://lh3.googleusercontent.com/-IkkMucrtsyk/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmt30Mc78IElexMv3Vxh4Svi8qJ0A/s96-c/photo.jpg",
+    nickname: "\u062E\u0627\u0644\u062F"
+  }, {
+    gifts: 9,
+    jid: "user_128895317@vshow-euc1.1-1.io",
+    ranking: 53,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_ZPPA3C"
+  }, {
+    gifts: 9,
+    jid: "user_122019951@vshow-euc1.1-1.io",
+    ranking: 54,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_122019951_vshow-euc1.1-1.io.jpg",
+    nickname: "Harry G"
+  }, {
+    gifts: 8,
+    jid: "user_80122081@vshow-euc1.1-1.io",
+    ranking: 55,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_80122081_vshow-euc1.1-1.io.jpg",
+    nickname: "Hala Hala"
+  }, {
+    gifts: 8,
+    jid: "user_55493510@vshow-euc1.1-1.io",
+    ranking: 56,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/42/c8/42c87660226b4d27fff3bcb83b052e54ac5d4c16/wOB7p1MOqvFuZPwj4g4HZVIvqG3A2el5DAn1Ihth/avatar.jpg",
+    nickname: "Rick"
+  }, {
+    gifts: 8,
+    jid: "user_111895733@vshow-euc1.1-1.io",
+    ranking: 57,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_111895733_vshow-euc1.1-1.io.jpg",
+    nickname: "atul"
+  }, {
+    gifts: 8,
+    jid: "user_119481678@vshow-euc1.1-1.io",
+    ranking: 58,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_119481678_vshow-euc1.1-1.io.jpg",
+    nickname: "\u05D3\u05D5\u05DC\u05D1 ;\u05DB\u05D4\u05DF"
+  }, {
+    gifts: 8,
+    jid: "user_11800128@vshow-euc1.1-1.io",
+    ranking: 59,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/user/user_11800128_vshow-euc1.1-1.io.jpg",
+    nickname: "Naif"
+  }, {
+    gifts: 8,
+    jid: "user_98308412@vshow-euc1.1-1.io",
+    ranking: 60,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/21/f5/21f5c7e4b12c275c677d44c6938e640c988bb97b/VWstq7eorsQ3Z8KZvEB1hYlNii13cRlrUbtES6KK/avatar.jpg",
+    nickname: "The King"
+  }, {
+    gifts: 8,
+    jid: "user_99989998@vshow-euc1.1-1.io",
+    ranking: 61,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/25/22/25227cefd518324921de6ea4ce914cdf238078dd/HDBkIABzVH8PlhRsYbLPtLfyrnobNEYZ2zDrRD6n/avatar.jpg",
+    nickname: "Jesus"
+  }, {
+    gifts: 8,
+    jid: "user_70712877@vshow-euc1.1-1.io",
+    ranking: 62,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "guest_a2uhJD"
+  }, {
+    gifts: 8,
+    jid: "user_82405546@vshow-euc1.1-1.io",
+    ranking: 63,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/cd/ed/cdeda36aeff85ba8f40bf1a044c985b4755860a6/4WupTT0tUdpgfT1m11GvlMccKf8VB6fNyp2yUPxO/avatar.jpg",
+    nickname: "Cozumel "
+  }, {
+    gifts: 8,
+    jid: "user_139654585@vshow-euc1.1-1.io",
+    ranking: 64,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_aNLaZJ"
+  }, {
+    gifts: 8,
+    jid: "user_14326478@vshow-euc1.1-1.io",
+    ranking: 65,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/s/files/ea/00/ea001b29b4a782862a11b7c18191a6b903b338ca/w3d8gVCyvkO76koAkYzeLyraW25tL137dXOKEqAE/avatar.jpg",
+    nickname: "Kaz"
+  }, {
+    gifts: 8,
+    jid: "user_129253444@vshow-euc1.1-1.io",
+    ranking: 66,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_MUvALe"
+  }, {
+    gifts: 8,
+    jid: "user_137767918@vshow-euc1.1-1.io",
+    ranking: 67,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_YePVe9"
+  }, {
+    gifts: 8,
+    jid: "user_94775345@vshow-euc1.1-1.io",
+    ranking: 68,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_94775345_vshow-euc1.1-1.io.jpg",
+    nickname: "Charles"
+  }, {
+    gifts: 8,
+    jid: "user_111669920@vshow-euc1.1-1.io",
+    ranking: 69,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_111669920_vshow-euc1.1-1.io.jpg",
+    nickname: "Peet Each"
+  }, {
+    gifts: 7,
+    jid: "user_139301740@vshow-euc1.1-1.io",
+    ranking: 70,
+    isVip: false,
+    avatarUrl: "https://lh5.googleusercontent.com/-SUFTS9tCYFU/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmp78b43UcpuvZhDGjA_uk6C4lw9A/s96-c/photo.jpg",
+    nickname: "Miguel "
+  }, {
+    gifts: 7,
+    jid: "user_45110976@vshow-euc1.1-1.io",
+    ranking: 71,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/b2/01/b201b9df4cb65759571e7e68a14afa1b846f3897/0ZZTbv8hWEZ222VboDF2NmakCvKJnlpuI2XJTbZJ/JPEG_________________1401756043008000854.jpg",
+    nickname: "$$$"
+  }, {
+    gifts: 7,
+    jid: "user_111493933@vshow-euc1.1-1.io",
+    ranking: 72,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_111493933_vshow-euc1.1-1.io.jpg",
+    nickname: "Sari"
+  }, {
+    gifts: 7,
+    jid: "user_117077901@vshow-euc1.1-1.io",
+    ranking: 73,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/dd/3a/dd3a44347c584478058d56f39e32294d1957dbc1/FeiuEUteHmgwrauO5orx9Uv2qq2S3dKJYGllBv9U/JPEG_20201030_120626_6423007260674101067.jpg",
+    nickname: "GLE 1925"
+  }, {
+    gifts: 7,
+    jid: "user_124118724@vshow-euc1.1-1.io",
+    ranking: 74,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_LlWFVW"
+  }, {
+    gifts: 7,
+    jid: "user_124307824@vshow-euc1.1-1.io",
+    ranking: 75,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_N9lxvV"
+  }, {
+    gifts: 7,
+    jid: "user_123660681@vshow-euc1.1-1.io",
+    ranking: 76,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_123660681_vshow-euc1.1-1.io.jpg",
+    nickname: "Guest_3815zj"
+  }, {
+    gifts: 7,
+    jid: "user_139077358@vshow-euc1.1-1.io",
+    ranking: 77,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_eM0GUA"
+  }, {
+    gifts: 7,
+    jid: "user_139292247@vshow-euc1.1-1.io",
+    ranking: 78,
+    isVip: false,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
+    nickname: "Guest_0rkkEn"
+  }, {
+    gifts: 7,
+    jid: "user_128795035@vshow-euc1.1-1.io",
+    ranking: 79,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_1eBZxb"
+  }, {
+    gifts: 7,
+    jid: "user_116917552@vshow-euc1.1-1.io",
+    ranking: 80,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_116917552_vshow-euc1.1-1.io.jpg",
+    nickname: "Oscar Cardoza"
+  }, {
+    gifts: 7,
+    jid: "user_77639497@vshow-euc1.1-1.io",
+    ranking: 81,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/e7/4c/e74c08b25274e353ec4ba027f2835841e48b45cc/mZFNfU25rmxA2e52vbFZWhN3zJlqYhhx00yUHy3Q/avatar.jpg",
+    nickname: "Ion"
+  }, {
+    gifts: 7,
+    jid: "user_56382549@vshow-euc1.1-1.io",
+    ranking: 82,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/1c/9c/1c9c141b609e6f0e607ac0831a3ee29d21d4f692/ooiGkD66qQ39mSIAL1WDhQQvegvInTJ8l0z0O6pe/avatar.jpg",
+    nickname: "Portgas"
+  }, {
+    gifts: 7,
+    jid: "user_119188573@vshow-euc1.1-1.io",
+    ranking: 83,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_119188573_vshow-euc1.1-1.io.jpg",
+    nickname: "\uAE30\uCCA0 \uC11C"
+  }, {
+    gifts: 7,
+    jid: "user_62547246@vshow-euc1.1-1.io",
+    ranking: 84,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_62547246_vshow-euc1.1-1.io.jpg",
+    nickname: "\u7950\u5178"
+  }, {
+    gifts: 7,
+    jid: "user_116094912@vshow-euc1.1-1.io",
+    ranking: 85,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/5e/4d/5e4d458984e37102936048df3b11c98ad0981c7b/MNdFU1pJJMCbYy7NBKfIQk4Y1FYgsMr4VkKSc1al/avatar.jpg",
+    nickname: "\u4F50\u3005\u6728 \u6052\u7950"
+  }, {
+    gifts: 7,
+    jid: "user_9306255@vshow-euc1.1-1.io",
+    ranking: 86,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/user/user_9306255_vshow-euc1.1-1.io.jpg",
+    nickname: "Vikrant Verma Shyam"
+  }, {
+    gifts: 7,
+    jid: "user_136558789@vshow-euc1.1-1.io",
+    ranking: 87,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/s/files/3c/ee/3cee96024e314a3ac8da370ab1fafb72e9336ba2/YyyvPy42C2RfsGpZzKEzZqWu3FaSDMicUV1Qx0TL/JPEG_20210201_223209_6368353194807429983.jpg",
+    nickname: "........"
+  }, {
+    gifts: 7,
+    jid: "user_44908668@vshow-euc1.1-1.io",
+    ranking: 88,
+    isVip: false,
+    avatarUrl: "https://lh3.googleusercontent.com/-jow8zG4Rd60/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rcKf-Kh5msdNmtTX8CRfzXueRDgNw/s96-c/photo.jpg",
+    nickname: "Fredrik Finstad"
+  }, {
+    gifts: 7,
+    jid: "user_120092059@vshow-euc1.1-1.io",
+    ranking: 89,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
+    nickname: "Guest_NIFe2q"
+  }, {
+    gifts: 7,
+    jid: "user_139892419@vshow-euc1.1-1.io",
+    ranking: 90,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_XCoyZL"
+  }, {
+    gifts: 7,
+    jid: "user_101836534@vshow-euc1.1-1.io",
+    ranking: 91,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_7LJ64F"
+  }, {
+    gifts: 6,
+    jid: "user_132355411@vshow-euc1.1-1.io",
+    ranking: 92,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_132355411_vshow-euc1.1-1.io.jpg",
+    nickname: "ASIF SHARIF"
+  }, {
+    gifts: 6,
+    jid: "user_139075731@vshow-euc1.1-1.io",
+    ranking: 93,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
+    nickname: "Guest_UdXQVE"
+  }, {
+    gifts: 6,
+    jid: "user_129614273@vshow-euc1.1-1.io",
+    ranking: 94,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_129614273_vshow-euc1.1-1.io.jpg",
+    nickname: "Jamel Bellmir"
+  }, {
+    gifts: 6,
+    jid: "user_126106930@vshow-euc1.1-1.io",
+    ranking: 95,
+    isVip: true,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_126106930_vshow-euc1.1-1.io.jpg",
+    nickname: "Abo aymn Doble"
+  }, {
+    gifts: 6,
+    jid: "user_111738441@vshow-euc1.1-1.io",
+    ranking: 96,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/b0c13e1156b8032309f578b2d290c40b.png",
+    nickname: "Guest_X3XCus"
+  }, {
+    gifts: 6,
+    jid: "user_138494501@vshow-euc1.1-1.io",
+    ranking: 97,
+    isVip: true,
+    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
+    nickname: "Guest_NFfWuC"
+  }, {
+    gifts: 6,
+    jid: "user_131534520@vshow-euc1.1-1.io",
+    ranking: 98,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_131534520_vshow-euc1.1-1.io.jpg",
+    nickname: "Bbc Worlde"
+  }, {
+    gifts: 6,
+    jid: "user_113397297@vshow-euc1.1-1.io",
+    ranking: 99,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/zakzak/avatar/user/user_113397297_vshow-euc1.1-1.io.jpg",
+    nickname: "Jacob "
+  }, {
+    gifts: 6,
+    jid: "user_113571033@vshow-euc1.1-1.io",
+    ranking: 100,
+    isVip: false,
+    avatarUrl: "http://cdn2.1-1.io/s/files/7f/ad/7fad54831c79e725d4fa3abd709e1bc2eeb97231/cXiH1lIYL4UHjhj37dp9zNhdjKrsGNQOLDRoa1Mz/avatar.jpg",
+    nickname: "Yes man"
+  }],
+  profile: {
+    gifts: 0,
+    jid: "anchor_1019281@bj2.1-1.io",
+    isVip: false,
+    is_india_anchor: false,
+    distance: 0,
+    ranking: "--",
+    role: "anchor",
+    avatarUrl: "",
+    nickname: ""
+  },
   reward_alltime: {
+    anchor: [{
+      user_type: "anchor",
+      reward_num: 9999,
+      invite_days: 10,
+      user_rank: 1,
+      gift_id: "g_1001000015",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 7999,
+      invite_days: 9,
+      user_rank: 2,
+      gift_id: "g_1001000018",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 4999,
+      invite_days: 8,
+      user_rank: 3,
+      gift_id: "g_1001000014",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 3699,
+      invite_days: 7,
+      user_rank: 4,
+      gift_id: "g_1001000019",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 3699,
+      invite_days: 6,
+      user_rank: 5,
+      gift_id: "g_1001000019",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 1999,
+      invite_days: 5,
+      user_rank: 6,
+      gift_id: "g_1001000036",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 1999,
+      invite_days: 4,
+      user_rank: 7,
+      gift_id: "g_1001000036",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 999,
+      invite_days: 3,
+      user_rank: 8,
+      gift_id: "g_1001000012",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 699,
+      invite_days: 2,
+      user_rank: 9,
+      gift_id: "g_1001000017",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }, {
+      user_type: "anchor",
+      reward_num: 699,
+      invite_days: 1,
+      user_rank: 10,
+      gift_id: "g_1001000017",
+      gift_url: "",
+      reward_type: "charms_invite",
+      invite_times: 100,
+      gift_num: 1
+    }],
     user: [{
       user_type: "user",
-      reward_num: 8200,
       reward_type: "gem",
+      reward_num: 8200,
       user_rank: 1
     }, {
       user_type: "user",
-      reward_num: 7400,
       reward_type: "gem",
+      reward_num: 7400,
       user_rank: 2
     }, {
       user_type: "user",
-      reward_num: 6500,
       reward_type: "gem",
+      reward_num: 6500,
       user_rank: 3
     }, {
       user_type: "user",
-      reward_num: 5700,
       reward_type: "gem",
+      reward_num: 5700,
       user_rank: 4
     }, {
       user_type: "user",
-      reward_num: 4900,
       reward_type: "gem",
+      reward_num: 4900,
       user_rank: 5
     }, {
       user_type: "user",
-      reward_num: 4100,
       reward_type: "gem",
+      reward_num: 4100,
       user_rank: 6
     }, {
       user_type: "user",
-      reward_num: 3200,
       reward_type: "gem",
+      reward_num: 3200,
       user_rank: 7
     }, {
       user_type: "user",
-      reward_num: 2400,
       reward_type: "gem",
+      reward_num: 2400,
       user_rank: 8
     }, {
       user_type: "user",
-      reward_num: 1600,
       reward_type: "gem",
+      reward_num: 1600,
       user_rank: 9
     }, {
       user_type: "user",
-      reward_num: 1000,
       reward_type: "gem",
+      reward_num: 1000,
       user_rank: 10
-    }],
-    anchor: [{
-      reward_num: 9999,
-      user_rank: 1,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 10,
-      gift_id: "g_1001000015",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 7999,
-      user_rank: 2,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 9,
-      gift_id: "g_1001000018",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 4999,
-      user_rank: 3,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 8,
-      gift_id: "g_1001000014",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 3699,
-      user_rank: 4,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 7,
-      gift_id: "g_1001000019",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 3699,
-      user_rank: 5,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 6,
-      gift_id: "g_1001000019",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 1999,
-      user_rank: 6,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 5,
-      gift_id: "g_1001000037",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 1999,
-      user_rank: 7,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 4,
-      gift_id: "g_1001000037",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 999,
-      user_rank: 8,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 3,
-      gift_id: "g_1001000012",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 699,
-      user_rank: 9,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 2,
-      gift_id: "g_1001000017",
-      gift_num: 1,
-      invite_times: 100
-    }, {
-      reward_num: 499,
-      user_rank: 10,
-      reward_type: "charms_invite",
-      user_type: "anchor",
-      gift_url: "",
-      invite_days: 1,
-      gift_id: "g_1001000035",
-      gift_num: 1,
-      invite_times: 100
     }]
-  },
-  receiveGifts: [{
-    jid: "anchor_1024827@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/bd/53/bd53e5c1437ff5594780ca027b23462eca1d883c/j0DNi2drlGzlgnko6E7zb66LamHTEVbb32Oqpqsb/JPEG_20200730_172956_8461157934147318256.jpg",
-    ranking: 1,
-    gifts: 12,
-    nickname: "Arminthing"
-  }, {
-    jid: "anchor_1011796@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/39/6e/396ea77948d0dc7ba241469986907940a3f3aff9/hLmc7j3fTsJ3YgdwRoVLJdbKl79F4JiOr1OcjP73/avatar.jpg",
-    ranking: 2,
-    gifts: 8,
-    nickname: "\u8DF3\u821E\u6BEFIndia"
-  }, {
-    jid: "anchor_1007440@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/3f/4c/3f4c1c8e056b06815c5037f2945a5b28f932c266/bpZMRzYqdNvZqz6ZdmCizosJf42dmZTS5N56aoS5/JPEG_20190919_143639_892767456.jpg",
-    ranking: 3,
-    gifts: 1,
-    nickname: "Hago\u865A\u6784Vietnam"
-  }, {
-    jid: "anchor_1006257@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/c6/7d/c67dc13305feb8693fe4ec6d9d31711f98700f31/j2ise0sXqSrJh4s5jpeSl2tPQd4Rw3MEJblPoWzO/JPEG_20180528_142335_2032432220.jpg",
-    ranking: 4,
-    gifts: 1,
-    nickname: "3777\u660E\u5929\u592B\u4EBA\u7684yh hnknnkjhhj"
-  }, {
-    jid: "anchor_1011622@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/7c/08/7c081953787a15e23dfb8e05309a94f922625156/v83EkWabyXH0tzzgEajga2tQKLKPVUyLKLex27Kh/JPEG_20180530_164405_396256770.jpg",
-    ranking: 5,
-    gifts: 1,
-    nickname: "7923505"
-  }, {
-    jid: "anchor_1008527@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/46/c5/46c524644857027f344c062fb94f679545775c85/SwvYQL5pqDATohqxUBvnxJUv61IOG4zzHoYyxNB7/JPEG_20190906_174606_1331311646.jpg",
-    ranking: 6,
-    gifts: 1,
-    nickname: "xhhjj"
-  }, {
-    jid: "anchor_1008069@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/9a/34/9a34f14ec72a7f25486f9c2b23df180d2682ed24/VKPSryv3aWK8QtOhO3tmq3PLmYXCXaU1SAzzaaMf/avatar.jpg",
-    ranking: 7,
-    gifts: 1,
-    nickname: "1299979"
-  }, {
-    jid: "anchor_1011729@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/39/14/391413eed1ef93d2c05685d564452621cd4bdf81/vHNEP9QjgiTaANu2mv8eIYBFjzNGHMmMO3ir5ql6/JPEG_20180604_112708_6363570270699564879.jpg",
-    ranking: 8,
-    gifts: 1,
-    nickname: "Nexus 5x anchor<3"
-  }, {
-    jid: "anchor_1011744@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/8c/61/8c61ac51a8b8be6b62f04637e2bcaad1a680c660/tgzerSSxg7ZgfnmRGWsfQa6AG6U5FoffoI2XoSqT/JPEG_20180926_204525_-351552710.jpg",
-    ranking: 9,
-    gifts: 1,
-    nickname: "3291951"
-  }, {
-    jid: "anchor_1012473@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/5f/66/5f665686d5d75e713e70ca917cae3a1e5c493ea7/ncuSIM1lL4RxgQlDPE8VwxdNiluqSPnk8xWTeLah/JPEG_20180615_202535_2084182376.jpg",
-    ranking: 10,
-    gifts: 1,
-    nickname: "Hiyaa anchor"
-  }, {
-    jid: "anchor_1013919@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/c0/42/c042bc6db952a59ab9fdbc246896c9f7e926448b/YdenXqYHTj1ANGVlqARnkxVRrxplzNCoxi8hV8Zo/JPEG_20180706_045004_503859842.jpg",
-    ranking: 11,
-    gifts: 1,
-    nickname: "\u5251\u5FC3\uFF01"
-  }, {
-    jid: "anchor_1014939@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/c0/61/c06114ad87c0d5862e17a6c124c0b9828c6441eb/D2k7bEasJzfN8Yp1N89BAmfY7LJu7Gby3zAEi7eV/JPEG_20200730_102529_4968944383576781842.jpg",
-    ranking: 12,
-    gifts: 1,
-    nickname: "\u963F\u95E8Egypt"
-  }, {
-    jid: "anchor_1047127@bj2.1-1.io",
-    avatarUrl: "http://54.222.148.146:8000/s/files/7f/e8/7fe82041bfe6ed7cc8799c829acda70d1ce959c3/lLaP3KcA7qf7uOr0g82JQac7OKYxZ9r3GmLH4CMi/avatar.jpg",
-    ranking: 13,
-    gifts: 1,
-    nickname: "3724076"
-  }],
-  profile: {
-    is_india_anchor: false,
-    avatarUrl: "http://54.222.148.146:8000/s/files/6a/53/6a53c4a1d1a549a7100a96d7516763fe0ed18bbf/BQO1MnBDxs4WbBnqNT8npVX5EackpvV4Vd0c4hGG/JPEG_20190428_154703_718472604.jpg",
-    gifts: 0,
-    nickname: "Amy:)Morocco",
-    role: "anchor",
-    distance: 0,
-    jid: "anchor_1019281@bj2.1-1.io",
-    isVip: false,
-    ranking: "--"
-  },
-  activity: {
-    activity_id: 139,
-    start_time: "2021/02/22 00:10:00",
-    thumbnail_url: "http://54.222.148.146:20010/static/tmpgyrqcu.png",
-    gift_id: ["g_1001000059"],
-    status: 0,
-    end_time: "2021/02/26 00:00:00",
-    time: "2021/02/22\u20142021/02/26",
-    now_time: "2021/02/23 06:01:35"
-  },
-  sendGifts: [{
-    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/af8d867b7ead2c2d7607cbfbb80e53fb.png",
-    gifts: 12,
-    nickname: "Guest_N29iwa",
-    jid: "user_1064624@bj2.1-1.io",
-    isVip: false,
-    ranking: 1
-  }, {
-    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
-    gifts: 8,
-    nickname: "Guest_z6NsTj",
-    jid: "user_1064625@bj2.1-1.io",
-    isVip: false,
-    ranking: 2
-  }, {
-    avatarUrl: "http://54.222.148.146:8000/s/files/08/24/08243cf5b8fc094d33daa5c776cc58b468b3e657/sW90Wab1yaCDLPhwi0Dp1O5eup3MD8zy8z6PpXQD/avatar.jpg",
-    gifts: 1,
-    nickname: "3931217",
-    jid: "user_1014299@bj2.1-1.io",
-    isVip: false,
-    ranking: 3
-  }, {
-    avatarUrl: "http://54.222.148.146:8000/s/files/f9/59/f959284e4775bd2bec223978eaa26db2e5b3ee19/t0jIPiXjtlNpdE8dupg2aP3cY0Ux26ld1pRpid8H/avatar.jpg",
-    gifts: 1,
-    nickname: "\u6211\u4EEC\u90FD\u5728\u8FD9\u91CC",
-    jid: "user_1015547@bj2.1-1.io",
-    isVip: true,
-    ranking: 4
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "6238670",
-    jid: "user_1012394@bj2.1-1.io",
-    isVip: false,
-    ranking: 5
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "8670026",
-    jid: "user_1015004@bj2.1-1.io",
-    isVip: true,
-    ranking: 6
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "3199947",
-    jid: "user_1013731@bj2.1-1.io",
-    isVip: false,
-    ranking: 7
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "2535576",
-    jid: "user_1015188@bj2.1-1.io",
-    isVip: false,
-    ranking: 8
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "7399769",
-    jid: "user_1015522@bj2.1-1.io",
-    isVip: true,
-    ranking: 9
-  }, {
-    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/bfe7962844b4d71c07e02dc07aca9d88.png",
-    gifts: 1,
-    nickname: "8816469",
-    jid: "user_1015392@bj2.1-1.io",
-    isVip: true,
-    ranking: 10
-  }, {
-    avatarUrl: "http://cdn.1-1.io/ic_male_sele.png",
-    gifts: 1,
-    nickname: "7849174",
-    jid: "user_1017360@bj2.1-1.io",
-    isVip: false,
-    ranking: 11
-  }, {
-    avatarUrl: "http://cdn.1-1.io/zakzak/avatar/guest_avatar/65a173134c6d5963b137c84ba9869029.png",
-    gifts: 1,
-    nickname: "1759659",
-    jid: "user_1015499@bj2.1-1.io",
-    isVip: false,
-    ranking: 12
-  }]
+  }
 };
 exports.activityInfo = activityInfo;

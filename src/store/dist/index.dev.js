@@ -17,8 +17,6 @@ var _qs = _interopRequireDefault(require("qs"));
 
 var _jsInteractive = require("../common/jsInteractive");
 
-var _data = require("./data");
-
 var _ApiHelper = require("./ApiHelper");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -104,10 +102,11 @@ var store = new _vuex["default"].Store({
       var activityId = context.state.activityId;
       var listData = context.state.activityState;
       return _vue["default"].axios.post(api, _qs["default"].stringify(options)).then(function (response) {
-        // console.log("新活动状态", response.data)
-        // context.commit("list", {result: response.data})
-        // return response.data;
-        return _data.activityrank;
+        // console.log("新活动状态", response)
+        context.commit("list", {
+          result: response.data
+        });
+        return response.data;
       })["catch"](function (reason) {});
     },
     ACTIVITYSTATE: function ACTIVITYSTATE(context, options) {
@@ -120,9 +119,8 @@ var store = new _vuex["default"].Store({
         limit: '100',
         is_old_actitiy: options
       })).then(function (response) {
-        // context.commit("loadState", {result: response.data})
         context.commit("loadState", {
-          result: _data.activityInfo
+          result: response.data
         });
         return response.data;
       })["catch"](function (reason) {});

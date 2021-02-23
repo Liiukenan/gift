@@ -3,10 +3,10 @@ export function requestApiUrl(apiName){
     var api = '/ranking_activity/has_reward'
     let HOST = process.env.HOST;
     if (HOST === 'dev' || HOST === 'prod'){
-        api = 'http://54.222.148.146:46000' + apiName
+        api = 'https://www.fastmock.site/mock/348b3d6d2caee5a41791c6b57688ac48/hiyya' + apiName
     }
     if (HOST === 'B0'){
-        api = 'http://54.222.148.146:46000' + apiName
+        api = 'https://www.fastmock.site/mock/348b3d6d2caee5a41791c6b57688ac48/hiyya' + apiName
     } else if (HOST === 'B1'){
         api = 'http://vshow-api-ra.1-1.io' + apiName
     }
