@@ -4,6 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import qs from 'qs';
 import {loadError} from "../common/jsInteractive";
+import {activityInfo,activityrank} from './data'
 import {requestApiUrl,getCurrentJid,buildUserGiftTestData,buildUserLuckDrawTestData,buildAnchorGiftTestData,buildAnchorLuckDrawTestData} from './ApiHelper'
 
 Vue.use(Vuex);
@@ -82,10 +83,12 @@ const store = new Vuex.Store({
           var api = requestApiUrl('/ranking_activity/get_actitiyrank')
           var activityId = context.state.activityId
           var listData=context.state.activityState
+
           return Vue.axios.post(api,qs.stringify(options)).then((response) => {
             // console.log("新活动状态", response.data)
             // context.commit("list", {result: response.data})
-            return response.data;
+            // return response.data;
+            return activityrank;
           }).catch(reason => {
 
           })
@@ -95,7 +98,8 @@ const store = new Vuex.Store({
           var api = requestApiUrl('/ranking_activity/get_actitiyinfo')
           var activityId = context.state.activityId
           return Vue.axios.post(api,qs.stringify({jid:currentJid,pkg_name:pkgname,limit:'100',is_old_actitiy:options})).then((response) => {
-            context.commit("loadState", {result: response.data})
+            // context.commit("loadState", {result: response.data})
+            context.commit("loadState", {result: activityInfo})
             return response.data;
           }).catch(reason => {
           })
